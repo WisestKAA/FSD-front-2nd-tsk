@@ -90,10 +90,26 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_0__);
+
+console.log("Hello");
+
+/***/ }),
+
+/***/ "./src/style.scss":
+/*!************************!*\
+  !*** ./src/style.scss ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log("Hello");
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleParseError: Module parse failed: Unexpected character '\u0000' (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n(Source code omitted for this binary file)\n    at handleParseError (C:\\front\\FSD-front-2nd-tsk\\node_modules\\webpack\\lib\\NormalModule.js:469:19)\n    at doBuild.err (C:\\front\\FSD-front-2nd-tsk\\node_modules\\webpack\\lib\\NormalModule.js:503:5)\n    at runLoaders (C:\\front\\FSD-front-2nd-tsk\\node_modules\\webpack\\lib\\NormalModule.js:358:12)\n    at C:\\front\\FSD-front-2nd-tsk\\node_modules\\loader-runner\\lib\\LoaderRunner.js:373:3\n    at iterateNormalLoaders (C:\\front\\FSD-front-2nd-tsk\\node_modules\\loader-runner\\lib\\LoaderRunner.js:214:10)\n    at Array.<anonymous> (C:\\front\\FSD-front-2nd-tsk\\node_modules\\loader-runner\\lib\\LoaderRunner.js:205:4)\n    at Storage.finished (C:\\front\\FSD-front-2nd-tsk\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:55:16)\n    at provider (C:\\front\\FSD-front-2nd-tsk\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:91:9)\n    at C:\\front\\FSD-front-2nd-tsk\\node_modules\\graceful-fs\\graceful-fs.js:115:16\n    at FSReqWrap.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:53:3)");
 
 /***/ })
 

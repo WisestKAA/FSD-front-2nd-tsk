@@ -32,17 +32,21 @@ module.exports = {
                 }
             },
             {
-                test: /\.(sa|sc|c)ss$/,
+                test: /\.s[ac]ss$/i,
                 use: [
-                    {
-                      loader: MiniCssExtractPlugin.loader,
-                      options: {
-                        publicPath: './src/*',
-                      },
-                    },
-                    'css-loader',
-                    'sass-loader',
-                ]
+                'style-loader',
+                'css-loader',
+                'sass-loader',
+                ],
+            },
+            {
+                test: /\.(ttf|eot|woff|svg|woff2)$/,
+                use: {
+                  loader: "file-loader",
+                  options: {
+                    name: `./src/fonts/[name].[ext]`,
+                  }
+                }
             }
         ]
     },
