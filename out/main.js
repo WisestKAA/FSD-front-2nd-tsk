@@ -101,7 +101,7 @@ exports = ___CSS_LOADER_API_IMPORT___(false);
 exports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
 exports.i(___CSS_LOADER_AT_RULE_IMPORT_1___);
 // Module
-exports.push([module.i, "body {\n  font-family: Montserrat;\n  font-style: normal;\n  font-weight: normal;\n  font-size: 14px;\n  line-height: 24px;\n  color: rgba(31, 32, 65, 0.75); }\n\nh1 {\n  font-family: Quicksand;\n  font-style: normal;\n  font-weight: bold;\n  font-size: 24px;\n  line-height: 30px;\n  color: #1F2041; }\n\nh2 {\n  font-family: Quicksand;\n  font-style: normal;\n  font-weight: bold;\n  font-size: 19px;\n  line-height: 24px;\n  color: #1F2041; }\n\nh3 {\n  font-family: Montserrat;\n  font-style: normal;\n  font-weight: bold;\n  font-size: 12px;\n  line-height: 15px;\n  text-transform: uppercase;\n  color: #1F2041; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: Montserrat;\n  font-style: normal;\n  font-weight: normal;\n  font-size: 14px;\n  line-height: 24px;\n  color: rgba(31, 32, 65, 0.75); }\n\nh1 {\n  font-family: Quicksand;\n  font-style: normal;\n  font-weight: bold;\n  font-size: 24px;\n  line-height: 30px;\n  color: #1F2041; }\n\nh2 {\n  font-family: Quicksand;\n  font-style: normal;\n  font-weight: bold;\n  font-size: 19px;\n  line-height: 24px;\n  color: #1F2041; }\n\nh3 {\n  font-family: Montserrat;\n  font-style: normal;\n  font-weight: bold;\n  font-size: 12px;\n  line-height: 15px;\n  text-transform: uppercase;\n  color: #1F2041; }\n\n.text-field {\n  width: 320px;\n  height: 44px;\n  background: #FFFFFF;\n  box-sizing: border-box;\n  border-radius: 4px; }\n", ""]);
 // Exports
 module.exports = exports;
 
