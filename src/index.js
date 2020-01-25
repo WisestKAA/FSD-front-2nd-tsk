@@ -1,2 +1,2 @@
-import './style.scss';
+//import './style.scss';
 import './common.blocks/text-field/text-field.js'
