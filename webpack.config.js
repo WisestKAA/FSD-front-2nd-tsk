@@ -14,7 +14,7 @@ module.exports = {
     // },
     entry:{
         'main.js': './src/index.js',
-        'style.css': './src/style.scss'
+        // 'style.css': './src/style.scss'
     },
     output: {
         filename: '[name]',
@@ -42,17 +42,22 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                'style-loader',
-                'css-loader',
-                'sass-loader',
-                ],
+                    {
+                        loader: MiniCssExtractPlugin.loader, 
+                        options: {
+                            publicPath: './out/',
+                        }
+                    },
+                    'css-loader', 
+                    'sass-loader'
+                ]                
             },
             {
                 test: /\.(ttf|eot|woff|svg|woff2)$/,
                 use: {
                   loader: "file-loader",
                   options: {
-                    name: `./src/fonts/[name].[ext]`,
+                    name: `../fonts/[name].[ext]`,
                   }
                 }
             }
@@ -68,6 +73,6 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'style.css'
-        })
+        }),
     ]
 };

@@ -4,4 +4,7 @@
     background: #FFFFFF;
     box-sizing: border-box;
     border-radius: 4px;
+    outline: none;
 }
+@import './_theme/text-field_theme_default.scss';
+@import './_theme/text-field_theme_hover-focused.scss';
