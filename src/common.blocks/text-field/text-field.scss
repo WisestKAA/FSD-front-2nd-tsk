@@ -5,6 +5,10 @@
     box-sizing: border-box;
     border-radius: 4px;
     outline: none;
+    border: 1px solid $dark25;
+
+    &:focus,
+    &:hover {
+        border: 1px solid $dark50;
+    }
 }
-@import './_theme/text-field_theme_default.scss';
-@import './_theme/text-field_theme_hover-focused.scss';
