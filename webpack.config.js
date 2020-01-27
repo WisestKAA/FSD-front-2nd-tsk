@@ -1,20 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require ('webpack');
 
 module.exports = {
     mode: 'development',
     devtool: 'source-map',
-    // entry: {
-    //     main: './src/index.js'
-    // },
-    // output: {
-    //     filename: '[name].js',
-    //     path: path.join(__dirname, 'out')
-    // },
     entry:{
         'main.js': './src/index.js',
-        // 'style.css': './src/style.scss'
     },
     output: {
         filename: '[name]',
@@ -74,5 +67,9 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'style.css'
         }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          }),
     ]
 };

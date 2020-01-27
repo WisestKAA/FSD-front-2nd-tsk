@@ -1,4 +1,13 @@
-mixin text_field(_placeholder, _id)
-    input(type="text" placeholder=_placeholder id=_id class="text-field text-field_theme_default body")    
-   
-//input(type="text" placeholder="E-mail" onfocus="text_field_focus(e)" onblur="text_field_unfocused(e)" onmouseover="text_field_focus(e)" onmouseout="text_field_unfocused(e)").text-field.text-field_theme_default.body
+mixin text_field({_placeholder, _id, isMasked=false}={})
+
+    - let maskedMod = '';
+
+    if isMasked
+        - maskedMod = ' text_field_masked'
+    
+    input(
+        type="text" 
+        placeholder=_placeholder 
+        id=_id 
+        class=`text-field body ${maskedMod}`
+    )
