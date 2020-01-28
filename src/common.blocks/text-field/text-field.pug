@@ -1,13 +1,14 @@
-mixin text_field({_placeholder, _id, isMasked=false}={})
+mixin text_field(_placeholder, _id, isMasked)
 
-    - let maskedMod = '';
+    - var maskedMod = '';
 
-    if isMasked
+    if isMasked  
         - maskedMod = ' text_field_masked'
+        - _placeholder = 'ДД.ММ.ГГГГ'
     
     input(
         type="text" 
         placeholder=_placeholder 
         id=_id 
-        class=`text-field body ${maskedMod}`
+        class=`text-field${maskedMod}`
     )
