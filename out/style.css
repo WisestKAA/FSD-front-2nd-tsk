@@ -137,7 +137,8 @@
   color: #1F2041; }
 
 .text-field {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: 44px;
   background: #FFFFFF;
   box-sizing: border-box;
@@ -152,6 +153,52 @@
   padding-left: 15px; }
   .text-field:focus, .text-field:hover {
     border: 1px solid rgba(31, 32, 65, 0.5); }
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  background: #FFFFFF;
+  margin-top: 5px; }
+  .dropdown__select {
+    box-sizing: border-box;
+    font-family: Montserrat;
+    position: relative;
+    height: 44px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    outline: none;
+    padding: 8px 15px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px; }
+  .dropdown__arrow {
+    display: flex;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    right: 0;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center; }
+
+.material-icons {
+  display: inline-block;
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  user-select: none; }
 
 
 /*# sourceMappingURL=style.css.map*/

@@ -1,10 +1,11 @@
 include common.blocks/text-field/text-field.pug
+include common.blocks/dropdown/dropdown.pug
 
 doctype html
 html
     head
     body.body
-        p It's a new texta
-
+        
         form(action="post")
-            +text_field('E-mail', 'inp1', 'true')
+            +text_field({_placeholder:'E-mail', _id: 'inp1', isMasked: 'true'})
+        +dropdown({_text: "hello"})

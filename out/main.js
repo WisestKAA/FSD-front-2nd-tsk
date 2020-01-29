@@ -10738,12 +10738,10 @@ module.exports = function(module) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
   var $textFields = $('.text-field');
-  console.log($textFields);
   $textFields.each(function (_, val) {
     var isMaskedTextField = $(val).hasClass('text_field_masked');
 
     if (isMaskedTextField) {
-      console.log(val);
       $(val).inputmask({
         alias: 'datetime',
         inputFormat: 'dd.mm.yyyy',

@@ -1,0 +1,35 @@
+.dropdown{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    background: #FFFFFF;   
+    margin-top: 5px;
+        
+    &__select{
+        box-sizing: border-box;
+        font-family: Montserrat;
+        position: relative;
+        height: 44px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark75;
+        outline: none;
+        padding: 8px 15px;
+        border: 1px solid $dark25;
+        border-radius: 4px; 
+    }
+
+    &__arrow{
+        display: flex;
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        right: 0;        
+        vertical-align: middle;        
+        justify-content: center;
+        align-items: center;
+    }
+}

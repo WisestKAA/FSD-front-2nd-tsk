@@ -1,0 +1,9 @@
+include ../material-icons/material-icons.pug
+
+mixin dropdown ({_text} = {})
+        
+    section.dropdown
+        .dropdown__arrow
+            +material-icons({_type: 'keyboard_arrow_down'})
+        .dropdown__select
+            span=_text
