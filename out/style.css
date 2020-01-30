@@ -233,10 +233,8 @@
     align-items: center; }
   .dropdown__options {
     display: none; }
-  .dropdown__options:hover {
-    display: block; }
-  .dropdown:focus .dropdown__options {
-    display: block; }
+    .dropdown__options_active {
+      display: block; }
 
 .material-icons {
   display: inline-block;
