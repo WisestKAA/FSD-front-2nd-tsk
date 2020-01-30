@@ -154,13 +154,62 @@
   .text-field:focus, .text-field:hover {
     border: 1px solid rgba(31, 32, 65, 0.5); }
 
+.dropdown-option {
+  width: auto;
+  max-width: 318px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .dropdown-option__text {
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px; }
+  .dropdown-option__button-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 92px;
+    width: 100%;
+    padding-right: 7px; }
+  .dropdown-option__circle {
+    display: flex;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgba(31, 32, 65, 0.5);
+    font-family: 'Montserrat'; }
+  .dropdown-option__number {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center; }
+
 .dropdown {
   display: inline-block;
   position: relative;
   width: 100%;
-  max-width: 320px;
+  max-width: 318px;
   background: #FFFFFF;
-  margin-top: 5px; }
+  margin-top: 5px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px; }
   .dropdown__select {
     box-sizing: border-box;
     font-family: Montserrat;
@@ -172,9 +221,7 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
     outline: none;
-    padding: 8px 15px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px; }
+    padding: 8px 15px; }
   .dropdown__arrow {
     display: flex;
     position: absolute;
@@ -184,6 +231,12 @@
     vertical-align: middle;
     justify-content: center;
     align-items: center; }
+  .dropdown__options {
+    display: none; }
+  .dropdown__options:hover {
+    display: block; }
+  .dropdown:focus .dropdown__options {
+    display: block; }
 
 .material-icons {
   display: inline-block;

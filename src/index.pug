@@ -1,5 +1,7 @@
 include common.blocks/text-field/text-field.pug
 include common.blocks/dropdown/dropdown.pug
+include common.blocks/dropdown/dropdown.pug
+include common.blocks/dropdown-option/dropdown-option.pug
 
 doctype html
 html
@@ -8,4 +10,12 @@ html
         
         form(action="post")
             +text_field({_placeholder:'E-mail', _id: 'inp1', isMasked: 'true'})
-        +dropdown({_text: "hello"})
+        
+        +dropdown({_text: "hello",
+             _options: [
+                 {_text: 'взрослые', _number: 0},
+                 {_text: 'дети', _number: 0}
+                 ],
+            })
+        
+        //+dropdown-option({_text: "asdasd", _number: 0})
