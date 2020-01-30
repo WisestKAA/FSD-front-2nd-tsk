@@ -6,7 +6,7 @@ mixin dropdown ({_text, _options=[], } = {})
     section.dropdown
         .dropdown__arrow
             +material-icons({_type: 'keyboard_arrow_down'})
-        .dropdown__select(tabindex="100")
+        .dropdown__select
             span=_text
         .dropdown__options
             each option in _options
