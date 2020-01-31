@@ -33,7 +33,7 @@ class DropdownOption {
         this.number.textContent = this.value;
     }
 
-    handlePlusClick(){
+    handlePlusClick(){        
         this.value += 1;
         this.number.textContent = this.value;
     }
