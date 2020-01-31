@@ -43,6 +43,11 @@
         font-size: 18px;
         color: $dark50;
         font-family: 'Montserrat';
+
+        &_disable{
+            border: 1px solid $dark25;
+            color: $dark25;
+        }
     }
 
     &__number{
