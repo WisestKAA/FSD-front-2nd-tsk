@@ -1,5 +1,6 @@
 include ../material-icons/material-icons.pug
 include ../dropdown-option/dropdown-option.pug
+include ../dropdown-option-button/dropdown-option-button.pug
 
 mixin dropdown ({_text, _options=[], } = {})
         
@@ -12,3 +13,4 @@ mixin dropdown ({_text, _options=[], } = {})
             each option in _options
                 - const {_text, _number} = option
                 +dropdown-option({_text, _number})
+            +dropdown-option-button({_drop_text: 'очистить', _apply_text: 'применить'})

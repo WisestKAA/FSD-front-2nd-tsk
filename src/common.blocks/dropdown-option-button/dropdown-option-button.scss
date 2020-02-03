@@ -1,0 +1,38 @@
+
+.dropdown-option-button{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    width: auto;
+    max-width: 318px;
+    height: 44px;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__drop{
+        display: inline-block;
+        color: $dark50;
+        padding-left: 14px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &_hide{
+            visibility: hidden;
+            cursor: row-resize;
+        }
+    }
+
+    &__apply{
+        color: $purple;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 7px;
+        cursor: pointer;
+    }
+}

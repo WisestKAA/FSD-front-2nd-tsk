@@ -19,23 +19,22 @@ class DropdownOption {
         this.value = parseInt(this.number.textContent, 10);
         if (this.value === '') this.value = 0;
         if (this.value === 0) this.disableMinus();
+        this.number.addEventListener('DOMSubtreeModified', this.handleValueModifed.bind(this));
     }
 
     handleMinusClick(){
         if(this.value > 0){
             this.value -= 1;
         }
-        
-        if(this.value === 0){
-            this.disableMinus();
-        }
-
         this.number.textContent = this.value;
     }
 
     handlePlusClick(){        
         this.value += 1;
         this.number.textContent = this.value;
+        if(this.minusButton.classList.contains('dropdown-option__circle_disable')){
+            this.enableMinus();
+        }
     }
 
     enableMinus(){
@@ -44,6 +43,18 @@ class DropdownOption {
 
     disableMinus(){
         this.minusButton.classList.add('dropdown-option__circle_disable');
+    }
+
+    handleValueModifed() {
+        if(this.value === 0){
+            this.disableMinus();
+        }
+    }
+
+    clearValue(){
+        this.number.textContent = 0;
+        this.value =0;
+        this.disableMinus();
     }
 }
 

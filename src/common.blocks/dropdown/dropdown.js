@@ -1,4 +1,5 @@
 import DropdownOption from '../dropdown-option/dropdown-option.js'; 
+import DropdownOptionButton from '../dropdown-option-button/dropdown-option-button.js';
 
 class DropDown {
     constructor (element){
@@ -11,11 +12,15 @@ class DropDown {
         
         this.options = this.dropdown.querySelector('.dropdown__options');
         
-        this.optionsList = this.options.querySelectorAll('.dropdown-option'); 
+        this.optionsList = this.options.querySelectorAll('.dropdown-option');
+        this.optionsListObj = new Array();
         this.optionsList.forEach((val => {
-            new DropdownOption(val);
+            this.optionsListObj.push(new DropdownOption(val));
         }));
         this.options.addEventListener('DOMSubtreeModified', this.optionsModifed.bind(this));
+
+        this.optionButton = this.options.querySelector('.dropdown-option-button');
+        this.optionButtons = new DropdownOptionButton(this.optionButton, this.selectTextm, this.optionsListObj);
         
         this.optionsText = {
             guest : {
@@ -25,8 +30,6 @@ class DropDown {
             }            
         };
     }
-
-    
 
     handleSelectClick(){ 
         if (this.dropdown.classList.contains('dropdown_active')) {
@@ -55,7 +58,11 @@ class DropDown {
         
         if(this.sum === 0){
             this.selectText.textContent = 'Сколько гостей';
+            this.optionButtons.hideDrop();
             return;
+        }
+        else{
+            this.optionButtons.checkHiden();
         }
         
         let newval = this.sum % 100;
