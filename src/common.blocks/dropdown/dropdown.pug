@@ -2,9 +2,12 @@ include ../material-icons/material-icons.pug
 include ../dropdown-option/dropdown-option.pug
 include ../dropdown-option-button/dropdown-option-button.pug
 
-mixin dropdown ({_text, _options=[], } = {})
-        
-    section.dropdown
+mixin dropdown ({_text, _options=[], _isShort=false, } = {})
+    - var short=''
+    if _isShort == true
+        - short='dropdown_width-short'
+
+    section.dropdown(class=short)
         .dropdown__arrow
             +material-icons({_type: 'keyboard_arrow_down'})
         .dropdown__select

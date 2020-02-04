@@ -9,17 +9,25 @@
     border-radius: 4px; 
         
     &__select{
-        box-sizing: border-box;
-        font-family: 'Montserrat', sans-serif;
+        box-sizing: border-box;        
         position: relative;
-        height: 44px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
-        color: $dark75;
-        outline: none;
+        height: 44px; 
         padding: 8px 15px;
+        
+       &_text{
+            display: block;
+            max-width: 70.5%;  
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            color: $dark75;
+            outline: none;
+       }        
     }
 
     &__arrow{
@@ -43,5 +51,9 @@
     
     &_active{
         border: 1px solid $dark50;
+    }
+
+    &_width-short{
+        max-width: 264px;
     }
 }
