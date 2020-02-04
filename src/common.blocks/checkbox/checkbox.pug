@@ -1,0 +1,9 @@
+
+mixin checkbox ({_text, _isCheched=false}={})
+    - var checked=''
+    if(_isCheched)
+        - checked = 'checkbox__button_checked'
+    
+    .checkbox
+        .checkbox__button(class=checked)
+        .checkbox__text

@@ -1,0 +1,22 @@
+.checkbox{
+    display: block;
+    background: #FFFFFF;
+
+    &__button{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $dark25;
+        box-sizing: border-box;
+        border-radius: 4px;
+        
+
+        &_checked{
+            border: 1px solid $purple;
+        }
+    }
+
+    &__text{
+
+    }
+}
