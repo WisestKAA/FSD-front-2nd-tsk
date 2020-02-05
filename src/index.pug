@@ -2,6 +2,7 @@ include common.blocks/text-field/text-field.pug
 include common.blocks/dropdown/dropdown.pug
 include common.blocks/dropdown-option/dropdown-option.pug
 include common.blocks/checkbox/checkbox.pug
+include common.blocks/expandable-checkbox-list/expandable-checkbox-list.pug
 
 doctype html
 html
@@ -44,4 +45,22 @@ html
             _text: 'Тестовый текст adasdasdasd asd asdasdasdasd asd asd',
             _isChecked: false,
             _header: 'Заголовок'
+        })
+        br
+        +expandable-checkbox-list({
+            _header: 'expandable checkbox list',
+            _checkboxes: [
+                {
+                    _text: 'Тестовый текст1',
+                    _isChecked: false
+                },
+                {
+                    _text: 'Тестовый текст2',
+                    _isChecked: false
+                },
+                {
+                    _text: 'Тестовый текст3',
+                    _isChecked: false
+                },
+            ]
         })
