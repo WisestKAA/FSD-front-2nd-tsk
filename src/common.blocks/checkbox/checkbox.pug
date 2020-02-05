@@ -1,9 +1,14 @@
+include ../material-icons/material-icons.pug
 
-mixin checkbox ({_text, _isCheched=false}={})
+mixin checkbox ({_text, _isChecked=false}={})
     - var checked=''
-    if(_isCheched)
+    - var checkMarkDisplay=''
+    if(_isChecked)
         - checked = 'checkbox__button_checked'
+        - checkMarkDisplay = 'checkbox__button__check-mark_display'
     
     .checkbox
         .checkbox__button(class=checked)
-        .checkbox__text
+            .checkbox__button__check-mark(class=checkMarkDisplay)
+                +material-icons({_type: 'done', _fontSize: 18})
+        .checkbox__text=_text

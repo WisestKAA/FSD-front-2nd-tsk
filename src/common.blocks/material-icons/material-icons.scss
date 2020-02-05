@@ -2,7 +2,6 @@
     display: inline-block;
     font-family: 'Material Icons';
     font-style: normal;
-    font-weight: normal;
     font-size: 24px;
     line-height: 24px;
     color: $dark50;
@@ -12,4 +11,9 @@
     white-space: nowrap;
     direction: ltr;
     user-select: none;
+
+    &_font-size-18{
+        font-size: 18px;
+        line-height: 18px;        
+    }
 }

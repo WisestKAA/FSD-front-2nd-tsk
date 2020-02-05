@@ -1,6 +1,7 @@
 include common.blocks/text-field/text-field.pug
 include common.blocks/dropdown/dropdown.pug
 include common.blocks/dropdown-option/dropdown-option.pug
+include common.blocks/checkbox/checkbox.pug
 
 doctype html
 html
@@ -26,4 +27,15 @@ html
                 {_text: 'ванные комнаты', _number: 0},
             ],
             _isShort: true,
+        })
+        br
+        br
+        +checkbox({
+            _text: 'Тестовый текст',
+            _isChecked: true,
+        })
+        br
+        +checkbox({
+            _text: 'Тестовый текст adasdasdasd asd asdasdasdasd asd asd',
+            _isChecked: false,
         })
