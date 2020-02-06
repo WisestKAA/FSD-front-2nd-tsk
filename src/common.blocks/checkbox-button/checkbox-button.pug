@@ -1,0 +1,7 @@
+include ../material-icons/material-icons.pug
+
+mixin checkbox-button ({_text, _name, _isChecked=false, _header}={})
+    .checkbox-button
+        label.checkbox-button__label
+            input(type="checkbox", name=_name).checkbox-button__input
+            .checkbox-button__text=_text
