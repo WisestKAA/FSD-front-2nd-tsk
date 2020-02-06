@@ -1,17 +1,29 @@
 .expandable-checkbox-list{
+    display: inline-block;
+    position: relative;
     width: 100%;
     max-width: 266px;
     height: 44px;
-    display: inline-block;
+    display: block;
     position: relative;
 
     &__header{
         display: flex;
+        height: 44px;
+        width: 100%;
+        justify-content: left;
+        align-items: center;
+        cursor: default;
+        user-select: none;
+        
     }
 
     &__checkboxes{
-        display: inline-block;
+        display: none;
         position: relative;
+        &_display{
+            display: block;
+        }
     }
 
     &__arrow {
@@ -23,5 +35,6 @@
         vertical-align: middle;        
         justify-content: center;
         align-items: center;
+        z-index: -1;
     }
 }
