@@ -31,23 +31,17 @@ html
             ],
             _isShort: true,
         })
+        br       
+        +checkbox-button({
+            _text: 'checkbox-button asdasdasd asd asd asdas dasdasdas asd a',
+            _name: 'textCBB',
+            })
         br
-        br
-        +checkbox({
-            _text: 'Тестовый текст',
-            _isChecked: true,
-        })
-        br
-        +checkbox({
-            _text: 'Тестовый текст adasdasdasd asd asdasdasdasd asd asd',
-            _isChecked: false,
-        })
-        br
-        +checkbox({
-            _text: 'Тестовый текст adasdasdasd asd asdasdasdasd asd asd',
-            _isChecked: false,
-            _header: 'Заголовок'
-        })
+        +checkbox-button({
+            _text: 'checkbox-button asdasdasd asd asd asdas dasdasdas asd a',
+            _name: 'textCBB',
+            _header: 'Rich checkbox'
+            })
         br
         +expandable-checkbox-list({
             _header: 'expandable checkbox list',
@@ -66,8 +60,4 @@ html
                 },
             ]
         })
-        br
-        +checkbox-button({
-            _text: 'checkbox-button',
-            _name: 'textCBB',
-            })
+        
