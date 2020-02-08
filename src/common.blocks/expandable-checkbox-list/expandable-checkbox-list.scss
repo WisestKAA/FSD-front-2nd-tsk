@@ -20,6 +20,7 @@
         position: relative;
         &_display{
             display: block;
+            box-sizing: border-box;
         }
     }
 

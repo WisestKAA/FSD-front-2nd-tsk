@@ -3,6 +3,7 @@ include common.blocks/dropdown/dropdown.pug
 include common.blocks/dropdown-option/dropdown-option.pug
 include common.blocks/expandable-checkbox-list/expandable-checkbox-list.pug
 include common.blocks/checkbox-button/checkbox-button.pug
+include common.blocks/radio-buttons/radio-buttons.pug
 
 doctype html
 html
@@ -59,4 +60,17 @@ html
                 },
             ]
         })
-        
+        br
+        +radio-buttons({
+            _name: 'sex',
+            _radioButtons: [
+                {
+                    _text: 'Мужчина',
+                    _value: 'men'
+                },
+                {
+                    _text: 'Женщина',
+                    _value: 'women'
+                },
+            ]
+        })        

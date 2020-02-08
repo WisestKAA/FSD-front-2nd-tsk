@@ -6,3 +6,4 @@ mixin radio-buttons({_name, _radioButtons=[],}={})
                 - const {_text, _value} = rb
                 input(type="radio", name=_name).radio-buttons__input
                 .radio-buttons__text
+                    .radio-buttons__text__content=_text
