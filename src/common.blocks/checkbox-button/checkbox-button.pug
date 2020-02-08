@@ -3,11 +3,11 @@ include ../material-icons/material-icons.pug
 mixin checkbox-button ({_text, _name, _isChecked=false, _header}={})
     - var rich = ''
     if(_header)
-        - rich = 'checkbox-button__text__content_rich'
+        - rich = 'checkbox-button__content_rich'
         
     section.checkbox-button
         label.checkbox-button__label
             input(type="checkbox", name=_name, checked=_isChecked).checkbox-button__input
             .checkbox-button__text
-                .checkbox-button__text__header=_header
-                .checkbox-button__text__content(class=rich)=_text
+                .checkbox-button__header=_header
+                .checkbox-button__content(class=rich)=_text

@@ -16,32 +16,30 @@
         position: relative;
         padding-left: 30px;
         cursor: pointer;
+    }
 
-        &__header{
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 18px;
-            color: $dark75;
+    &__header{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark75;
+    }
+
+    &__content{
+        white-space: normal;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $dark50;
+
+        &_rich{
+            font-size: 12px;
+            line-height: 14px;
         }
-
-        &__content{
-            white-space: normal;
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 18px;
-            color: $dark50;
-
-            &_rich{
-                font-size: 12px;
-                line-height: 14px;
-            }
-        }
-
-        
     }
 
     &__text::before{
