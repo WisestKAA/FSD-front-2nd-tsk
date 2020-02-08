@@ -1,0 +1,65 @@
+.toggle{
+    display: inline-block;
+    width: 100%;
+    max-width: 260px;    
+    margin-bottom: 10px;    
+    box-sizing: border-box;
+
+    &__label{
+        display: inline-block;
+    }
+
+    &__input{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &__text{
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__content{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark75;
+        padding-left: 50px;
+        margin-top: -2px;
+    }
+
+    &__text::before{
+        content: '';
+        width: 40px;
+        height: 20px;
+        border: 1px solid $dark25;
+        box-sizing: border-box;
+        border-radius: 10px;
+        position: absolute;
+        left: 0;        
+    }
+
+    &__text::after{
+        content: '';
+        width: 12px;
+        height: 12px;
+        background: $dark25;
+        border-radius: 10px;
+        position: absolute;
+        left: 4px;
+        top: 4px; 
+    }
+}
+
+.toggle .toggle__input:checked + .toggle__text::before{
+    border: 1px solid $purple;
+}
+
+.toggle .toggle__input:checked + .toggle__text::after{
+    left: 24px;
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+}

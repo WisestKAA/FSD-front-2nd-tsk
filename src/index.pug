@@ -4,6 +4,7 @@ include common.blocks/dropdown-option/dropdown-option.pug
 include common.blocks/expandable-checkbox-list/expandable-checkbox-list.pug
 include common.blocks/checkbox-button/checkbox-button.pug
 include common.blocks/radio-buttons/radio-buttons.pug
+include common.blocks/toggle/toggle.pug
 
 doctype html
 html
@@ -73,4 +74,9 @@ html
                     _value: 'women'
                 },
             ]
-        })        
+        }) 
+        br
+        +toggle({
+            _name: 'textToggle',
+            _text: 'Подписаться на рассылку'
+        })

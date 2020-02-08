@@ -1,0 +1,7 @@
+
+mixin toggle({_name, _text}={})
+    .toggle
+        label.toggle__label
+            input(type="checkbox", name=_name).toggle__input
+            .toggle__text
+                .toggle__content=_text
