@@ -1,0 +1,8 @@
+
+mixin radio-buttons({_name, _radioButtons=[],}={})
+    .radio-buttons        
+        each rb in _radioButtons
+            label.radio-buttons__label
+                - const {_text, _value} = rb
+                input(type="radio", name=_name).radio-buttons__input
+                .radio-buttons__text
