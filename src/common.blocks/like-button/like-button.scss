@@ -1,0 +1,49 @@
+.like-button{
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 20px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid $dark25;
+    box-sizing: border-box;
+    border-radius: 10px;    
+    color: $dark25;
+    text-overflow: nowrap;
+
+    &__icon{ 
+        display: flex;
+        position: relative;
+        left: 0;
+        width: 20px;
+        height: 20px; 
+        box-sizing: border-box;        
+        vertical-align: middle;        
+        justify-content: center;
+        align-items: center;
+        margin-top: -1px;
+    }
+
+    &__number{
+        display: flex;
+        position: relative;
+        right: 0;
+        width: 20px;
+        height: 20px; 
+        box-sizing: border-box;       
+        vertical-align: middle;        
+        justify-content: left;
+        align-items: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        margin-top: -1px;
+        margin-left: 3px;
+    }
+
+    &_active{
+        color: $purple;
+        border-color: $purple;
+    }
+}

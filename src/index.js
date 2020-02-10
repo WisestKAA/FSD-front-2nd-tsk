@@ -3,3 +3,4 @@ import './common.blocks/text-field/text-field.js';
 import './js/jquery.inputmask';
 import './common.blocks/dropdown/dropdown.js';
 import './common.blocks/expandable-checkbox-list/expandable-checkbox-list.js';
+import './common.blocks/like-button/like-button.js'

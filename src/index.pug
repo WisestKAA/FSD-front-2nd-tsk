@@ -5,6 +5,7 @@ include common.blocks/expandable-checkbox-list/expandable-checkbox-list.pug
 include common.blocks/checkbox-button/checkbox-button.pug
 include common.blocks/radio-buttons/radio-buttons.pug
 include common.blocks/toggle/toggle.pug
+include common.blocks/like-button/like-button.pug
 
 doctype html
 html
@@ -81,3 +82,5 @@ html
             _name: 'textToggle',
             _text: 'Подписаться на рассылку'
         })
+        br
+        +like-button({_number: 2})
