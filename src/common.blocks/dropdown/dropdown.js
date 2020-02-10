@@ -10,7 +10,7 @@ class DropDown {
         this.select = this.dropdown.querySelector('.dropdown__select');
         this.select.addEventListener('click', this.handleSelectClick.bind(this));
 
-        this.selectText = this.select.querySelector('.dropdown__select_text');
+        this.selectText = this.select.querySelector('.dropdown__text');
         if(isShort){
             this.defaultSelectText = '0 ' + optionText.bedroom.third + ' 0 ' + optionText.bed.third + ' 0 ' + optionText.bathroom.third;
             this.selectText.textContent = this.defaultSelectText;

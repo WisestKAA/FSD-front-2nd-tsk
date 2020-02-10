@@ -13,22 +13,22 @@
         position: relative;
         height: 44px; 
         padding: 8px 15px;
-        
-       &_text{
-            display: block;
-            max-width: 70.5%;  
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-family: 'Montserrat', sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 24px;
-            color: $dark75;
-            outline: none;
-       }        
     }
+
+    &__text{
+        display: block;
+        max-width: 70.5%;  
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark75;
+        outline: none;
+   } 
 
     &__arrow{
         display: flex;
