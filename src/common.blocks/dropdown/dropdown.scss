@@ -2,17 +2,23 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    max-width: 318px;
-    background: #FFFFFF;   
-    margin-top: 5px;    
-    border: 1px solid $dark25;
-    border-radius: 4px; 
+    max-width: 320px;
+    box-sizing: border-box; 
+    margin-top: 5px;
         
     &__select{
         box-sizing: border-box;        
         position: relative;
         height: 44px; 
-        padding: 8px 15px;
+        padding: 8px 15px;    
+        border: 1px solid $dark25;
+        border-radius: 4px; 
+
+        &_active{
+            border: 1px solid $dark50;
+            border-radius: 4px 4px 0 0;
+            outline: none;
+        }
     }
 
     &__text{
@@ -43,15 +49,20 @@
 
     &__options{
         display: none;
-        &_active{
-            display: block;
-            border-top: 1px solid $dark50;
-        }        
-    }  
-    
-    &_active{
+        position: absolute;
+        z-index: 10000;
+        background-color: white;
+        width: 100%;
+        max-width: 320px;
+        box-sizing: inherit;
         border: 1px solid $dark50;
-    }
+        border-radius: 0 0 4px 4px;
+        border-top: none;
+        &_active{
+            display: flex;
+            flex-direction: column;            
+        }        
+    } 
 
     &_width-short{
         max-width: 264px;

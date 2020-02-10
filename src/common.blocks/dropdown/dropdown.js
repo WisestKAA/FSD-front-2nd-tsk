@@ -33,7 +33,7 @@ class DropDown {
     }
 
     handleSelectClick(){ 
-        if (this.dropdown.classList.contains('dropdown_active')) {
+        if (this.select.classList.contains('dropdown__select_active')) {
             this.hideDropdown();
           } else {
             this.showDropdown();
@@ -41,13 +41,18 @@ class DropDown {
     }
 
     showDropdown(){
-        this.dropdown.classList.add('dropdown_active');
+        this.select.classList.add('dropdown__select_active');
         this.options.classList.add('dropdown__options_active');
+        
+        this.handleDocumentClick = this.handleDocumentClick.bind(this);
+        document.addEventListener('click', this.handleDocumentClick);
     }
 
     hideDropdown(){
-        this.dropdown.classList.remove('dropdown_active');
+        this.select.classList.remove('dropdown__select_active');
         this.options.classList.remove('dropdown__options_active');
+
+        document.removeEventListener('click', this.handleDocumentClick);
     }
 
     handleOptionsModifed(){
@@ -109,6 +114,14 @@ class DropDown {
         finalText += this.getRightText(optionText.bed, nums[1])+' ';
         finalText += this.getRightText(optionText.bathroom, nums[2]);
         return finalText;
+    }
+
+    handleDocumentClick(event){
+        const { target } = event;
+        const itsDropdown = target === this.dropdown || this.dropdown.contains(target);
+        if (!itsDropdown) {
+            this.hideDropdown(event);
+        }
     }
 
 }
