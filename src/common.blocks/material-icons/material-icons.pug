@@ -1,10 +1,4 @@
 
-mixin material-icons ({_type, _fontSize = 24, _color = ''} = {})
-    - var mods = ''
-    if(_fontSize != 24)
-        - mods = 'material-icons_font-size-' + _fontSize
-
-    if(_color != '')
-        - mods += ' material-icons_color-' + _color
-
+mixin material-icons ({_type, _fontSize = 24} = {})
+    
     i.material-icons(class = mods)=_type

@@ -29,7 +29,9 @@ class DropDown {
         this.options.addEventListener('DOMSubtreeModified', this.handleOptionsModifed.bind(this));
 
         this.optionButton = this.options.querySelector('.dropdown-option-button');
-        this.optionButtons = new DropdownOptionButton(this.optionButton, this.selectTextm, this.optionsListObj);        
+        this.optionButtons = new DropdownOptionButton(this.optionButton, this.selectTextm, this.optionsListObj);
+        
+        this.arrow = element.querySelector('.material-icons');
     }
 
     handleSelectClick(){ 
@@ -46,6 +48,8 @@ class DropDown {
         
         this.handleDocumentClick = this.handleDocumentClick.bind(this);
         document.addEventListener('click', this.handleDocumentClick);
+
+        this.arrow.textContent = 'keyboard_arrow_up';
     }
 
     hideDropdown(){
@@ -53,6 +57,8 @@ class DropDown {
         this.options.classList.remove('dropdown__options_active');
 
         document.removeEventListener('click', this.handleDocumentClick);
+
+        this.arrow.textContent = 'keyboard_arrow_down';
     }
 
     handleOptionsModifed(){
