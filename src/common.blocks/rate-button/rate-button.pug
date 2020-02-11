@@ -1,0 +1,16 @@
+include ../material-icons/material-icons.pug
+
+mixin rate-button ({_rate}={})
+    - var i = 0
+    - var n = 5 - _rate
+
+    .rate-button
+        while i < _rate
+            .rate-button__star
+                +material-icons({_type: 'star'})
+            - i++;
+        - i = 0
+        while i < n
+            .rate-button__star-border
+                +material-icons({_type: 'star_border'})
+            - i++

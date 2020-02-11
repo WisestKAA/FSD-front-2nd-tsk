@@ -6,6 +6,7 @@ include common.blocks/checkbox-button/checkbox-button.pug
 include common.blocks/radio-buttons/radio-buttons.pug
 include common.blocks/toggle/toggle.pug
 include common.blocks/like-button/like-button.pug
+include common.blocks/rate-button/rate-button.pug
 
 doctype html
 html
@@ -84,3 +85,5 @@ html
         })
         br
         +like-button({_number: 2})
+        br
+        +rate-button({_rate: 0})
