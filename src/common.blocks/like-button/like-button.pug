@@ -1,6 +1,6 @@
 include ../material-icons/material-icons.pug
 
-mixin like-button({_number, _isClicked=true}={})
+mixin like-button({_number, _isClicked=false}={})
     -var active = ''
     if _isClicked
         - active = 'like-button_active'
@@ -8,7 +8,7 @@ mixin like-button({_number, _isClicked=true}={})
     .like-button(class=active)
         .like-button__icon
             if _isClicked    
-                +material-icons({_type: 'favorite', _fontSize: 10, _color: 'purple'})
+                +material-icons({_type: 'favorite', _fontSize: 10})
             else
-                +material-icons({_type: 'favorite_border',  _fontSize: 10, _color: 'dark25'})
+                +material-icons({_type: 'favorite_border',  _fontSize: 10})
         .like-button__number=_number

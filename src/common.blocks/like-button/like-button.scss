@@ -10,6 +10,7 @@
     border-radius: 10px;    
     color: $dark25;
     text-overflow: nowrap;
+    cursor: pointer;
 
     &__icon{ 
         display: flex;
@@ -22,6 +23,8 @@
         justify-content: center;
         align-items: center;
         margin-top: -1px;
+        font-size: 10px;
+        line-height: 9px;
     }
 
     &__number{
