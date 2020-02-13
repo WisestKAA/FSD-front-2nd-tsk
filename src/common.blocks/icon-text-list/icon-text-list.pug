@@ -1,0 +1,10 @@
+include ../common.blocks/material-icons/material-icons.pug
+
+mixin material-icons({_icon, _header, _content}={})
+    
+    .material-icons
+        .material-icons__icon
+            +material-icons(_type: _icon, _fontSize: 48)
+        .material-icons__content
+            .material-icons__header=_header
+            .material-icons__content=_content
