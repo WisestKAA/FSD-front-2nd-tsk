@@ -1,4 +1,16 @@
+include ../material-icons/material-icons.pug
 
-mixin button ({_type, _isClicked}={})
-    - var type = '_'+_type
-    input.button
+mixin button ({_type, _name, _value, _actionLink}={})    
+
+    section.button        
+        if (_type === 'rich')
+            - var type = 'button__wraper-rich_' + _type           
+            .button__wraper-rich 
+                .button__arrow
+                    +material-icons({_type: 'arrow_forward'})  
+                .button__text=_value             
+                input(type='button', name=_name, value=_value, class=type)
+        else
+            - var type = 'button__wraper_' + _type
+            .button__wraper            
+                a(href=_actionLink, class=type)=_value

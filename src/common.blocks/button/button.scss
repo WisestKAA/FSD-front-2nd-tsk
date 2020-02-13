@@ -1,0 +1,106 @@
+.button{
+    display: block;
+    position: relative;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    box-sizing: border-box;
+    max-width: 320px;
+
+    &__arrow{
+        display: flex;
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        right: 0;      
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    &__wraper{
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+        box-sizing: border-box;
+        max-width: 99px;
+        height: 44px;        
+        border-radius: 22px;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        
+
+        &_gradient-background{
+            display: flex;        
+            color: #FFFFFF;
+            justify-content: center;
+            padding-right: 2px;
+            text-decoration: none;
+        }
+
+        &_bordered{
+            display: flex; 
+            justify-content: center;
+            align-items: center;    
+            background-color: #FFFFFF;
+            color: $purple;
+            border: none;
+            text-decoration: none;
+            border-radius: 20px;
+            width: 97px;
+            height: 40px;
+        }
+
+        &:hover{
+            opacity: 0.5;            
+        }
+    }
+
+    &__wraper-rich{
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+        box-sizing: border-box;
+        max-width: 320px;
+        width: 100%;    
+        height: 44px;        
+        border-radius: 22px;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin: 0;
+        
+        &_rich{
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            width: 100%;
+            max-width: 320px;
+            height: 44px;
+        }
+
+        &_rich::before{
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+            width: 100%;
+            max-width: 320px;
+            height: 44px;
+        }
+    }
+
+    &__text{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+}
