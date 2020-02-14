@@ -9,6 +9,7 @@ include common.blocks/like-button/like-button.pug
 include common.blocks/rate-button/rate-button.pug
 include common.blocks/button/button.pug
 include common.blocks/bullet-list/bullet-list.pug
+include common.blocks/icon-text-list/icon-text-list.pug
 
 doctype html
 html
@@ -119,3 +120,18 @@ html
             'Без вечеринок и мероприятий',
             'Время прибытия — после 13:00, а выезд до 12:00',
         ]})
+        br
+        +icon-text-list({
+            _items: [
+                {
+                    _icon: 'insert_emoticon',
+                    _header: 'Комфорт',
+                    _content: 'Шумопоглощающие стены'
+                },
+                {
+                    _icon: 'location_city',
+                    _header: 'Удобство',
+                    _content: 'Окно в каждой из спален'
+                },
+            ]
+        })

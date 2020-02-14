@@ -1,10 +1,13 @@
-include ../common.blocks/material-icons/material-icons.pug
+include ../material-icons/material-icons.pug
 
-mixin material-icons({_icon, _header, _content}={})
+mixin icon-text-list ({_items=[]}={})
     
-    .material-icons
-        .material-icons__icon
-            +material-icons(_type: _icon, _fontSize: 48)
-        .material-icons__content
-            .material-icons__header=_header
-            .material-icons__content=_content
+    .icon-text-list
+        each item in _items
+            - const {_icon, _header, _content} = item
+            .icon-text-list__wraper
+                .icon-text-list__icon
+                    +material-icons({_type: _icon, _fontSize: 48})
+                .icon-text-list__content
+                    .icon-text-list__header=_header
+                    .icon-text-list__text=_content
