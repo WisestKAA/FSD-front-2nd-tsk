@@ -53,7 +53,16 @@ module.exports = {
                     name: `../fonts/[name].[ext]`,
                   }
                 }
-            }
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: 'file-loader',
+                exclude: [/fonts/, /static/],
+                options: {
+                  name: './img/[name].[ext]',
+                  //publicPath: '../',
+                },
+            },
         ]
     },
     devServer: {

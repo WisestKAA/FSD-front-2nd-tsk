@@ -1,0 +1,51 @@
+.comment{
+    display: inline-block;
+    max-width: 711px;
+    width: 100%;
+
+    &__head{
+        display: inline-block;
+        position: relative;
+    }
+
+    &__avatar{
+        width: 48px;
+        height: 48px;
+        border: 2px solid white;
+        box-sizing: border-box;
+        box-shadow: 0px 10px 20px $dark10;
+        border-radius: 32px;
+    }
+
+    &__avatar-text{
+        display: flex;
+        flex-direction: column;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark75;
+    }
+
+    &__avatar-name{             
+        font-weight: bold;
+    }
+
+    &__avatar-date{
+        
+    }
+
+    &__body{
+        display: inline-block;
+        position: relative;
+    }
+
+    &__like{
+        display: inline-block;
+    }
+
+    &__content{
+        
+    }
+}
