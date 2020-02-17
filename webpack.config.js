@@ -56,12 +56,14 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file-loader',
-                exclude: [/fonts/, /static/],
-                options: {
-                  name: './img/[name].[ext]',
-                  //publicPath: '../',
-                },
+                use: {
+                    loader: 'file-loader',
+                    //exclude: [/fonts/, /static/],
+                    options: {
+                        name: `./img/[name].[ext]`,
+                        //publicPath: '../',
+                    },
+                }
             },
         ]
     },
