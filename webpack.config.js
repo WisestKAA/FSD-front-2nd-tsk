@@ -56,9 +56,9 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
+                exclude: [/fonts/,],
                 use: {
                     loader: 'file-loader',
-                    //exclude: [/fonts/, /static/],
                     options: {
                         name: `./img/[name].[ext]`,
                         //publicPath: '../',

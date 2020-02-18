@@ -4,7 +4,7 @@ mixin comment ({_avatarSrc, _avatarName, _avatarDate, _likeNumber, _text}={})
     .comment
         .comment__head
             .comment__avatar
-                img(src= _avatarSrc, alt=_avatarName)
+                img(src= _avatarSrc, alt=_avatarName).comment__avatar
             .comment__avatar-text.body
                 .comment__avatar-name=_avatarName
                 .comment__avatar-date=_avatarDate
