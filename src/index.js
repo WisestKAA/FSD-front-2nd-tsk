@@ -5,6 +5,7 @@ function importAll(val) {
 importAll(require.context('./img', true, /\.(jpg|png|svg|png)$/));
 importAll(require.context('./', true, /\.(js)$/));
 importAll(require.context('./common.blocks', true, /\.(js)$/));
+importAll(require.context('./library.blocks', true, /\.(js)$/));
 importAll(require.context('./js', true, /\.(js)$/));
 
 import './style.scss';

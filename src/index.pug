@@ -11,6 +11,7 @@ include common.blocks/button/button.pug
 include common.blocks/bullet-list/bullet-list.pug
 include common.blocks/icon-text-list/icon-text-list.pug
 include common.blocks/comment/comment.pug
+include common.blocks/range-slider/range-slider.pug
 
 doctype html
 html
@@ -143,4 +144,21 @@ html
             _avatarDate: '5 дней назад', 
             _likeNumber: 11, 
             _text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей'
+        })
+        br
+        +range-slider({_name: 'asd'})
+        br
+        +icon-text-list({
+            _items: [
+                {
+                    _icon: 'insert_emoticon',
+                    _header: 'Комфорт',
+                    _content: 'Шумопоглощающие стены'
+                },
+                {
+                    _icon: 'location_city',
+                    _header: 'Удобство',
+                    _content: 'Окно в каждой из спален'
+                },
+            ]
         })
