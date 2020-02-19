@@ -13,15 +13,15 @@ class RangeSlider{
         this.$slider.ionRangeSlider({
             onStart(data) {
                 const { from, to } = data;
-
-                // var _from = from.replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1");
-                // var _to = to.replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1");
-                $price.val(`${from}₽ - ${to}₽`);
-                //$price.val(`${_from}₽ - ${_to}₽`);
+                var _from = from.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1");
+                var _to = to.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1");
+                $price.val(`${_from}₽ - ${_to}₽`);
             },
             onChange(data) {
                 const { from, to } = data;
-                $price.val(`${from}₽ - ${to}₽`);
+                var _from = from.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1");
+                var _to = to.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, " $1");
+                $price.val(`${_from}₽ - ${_to}₽`);
             },
         });
     }
