@@ -9,6 +9,7 @@ importAll(require.context('./library.blocks', true, /\.(js)$/));
 importAll(require.context('./js', true, /\.(js)$/));
 
 import './style.scss';
+import 'air-datepicker/dist/js/datepicker';
 
 // import './common.blocks/text-field/text-field.js';
 // import './js/jquery.inputmask';

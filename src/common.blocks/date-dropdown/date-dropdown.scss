@@ -1,0 +1,190 @@
+.date-dropdown{
+    // position: relative;
+    // max-width: 266px;
+    // width: 100%;
+    // height: 44px;
+    // box-sizing: border-box;
+
+    // &__arrow{
+    //     display: flex;
+    //     position: absolute;
+    //     width: 44px;
+    //     height: 44px;
+    //     right: 0;        
+    //     vertical-align: middle;        
+    //     justify-content: center;
+    //     align-items: center;
+    //     color: $dark50;
+    // }
+
+    // &__select{
+    //     background: #FFFFFF;
+    //     border: 1px solid $dark25;
+    //     box-sizing: border-box;
+    //     border-radius: 4px;
+    //     font-family: 'Montserrat';
+    //     font-style: normal;
+    //     font-weight: normal;
+    //     font-size: 14px;
+    //     line-height: 24px;
+    //     color: $dark75;
+    //     outline: none;
+    //     height: 44px;
+    //     }
+
+    // &__picker-wrapper{
+        
+    // }
+}
+
+.datepicker{
+    width: 320px;
+    background: #FFFFFF;
+    border: 1px solid $dark25;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px $dark05;
+    border-radius: 4px;
+    font-family: 'Montserrat';
+
+    &--nav{        
+        height: 64px;
+        border-bottom: none;
+        box-sizing: border-box;
+        padding: 0;
+
+        &-action{
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 20px;
+        }
+
+        &-title,
+        &-title i{
+            font-family: 'Quicksand', 'Open Sans';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 19px;
+            line-height: 24px;
+            text-align: center;
+            color: $dark100;
+        }
+    }
+
+    &--days{        
+        margin: 10px 19px 0px 19px;        
+        box-sizing: border-box;
+        &-names{
+            height: 40px;
+            box-sizing: border-box;
+            margin: 0;
+        }
+    }
+
+    &--day{
+
+        &-name{ 
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;           
+            color: $purple;
+        }
+    }
+
+    &--content{
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    &--cell{
+
+        &-day{
+            width: 40px;
+            height: 40px;
+            box-sizing: border-box;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            color: $dark50;
+        }
+    }
+
+    .-other-month-{
+        color: $dark25;
+    }
+    
+    .-current-{
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        border-radius: 22px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+
+    .-range-from-,
+    .-range-to-{
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 22px;
+        font-weight: bold;
+        color: #FFFFFF;
+       &.-focus-{            
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        }
+    }
+
+    .-range-to-.-focus-{
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+    .-in-range- {        
+        color: $dark50;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+          opacity: 0.25;
+        }
+    }
+
+    .-range-from-::after {
+        content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+          border-radius: 50% 0 0 50%;
+          opacity: 0.25;
+      }
+
+      .-range-to-::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 0 50% 50% 0;
+        opacity: 0.25;
+      }
+}
