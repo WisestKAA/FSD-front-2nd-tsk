@@ -12,6 +12,7 @@ include common.blocks/bullet-list/bullet-list.pug
 include common.blocks/icon-text-list/icon-text-list.pug
 include common.blocks/comment/comment.pug
 include common.blocks/range-slider/range-slider.pug
+include common.blocks/subscription-text-field/subscription-text-field.pug
 
 doctype html
 html
@@ -19,7 +20,8 @@ html
     body.body
         
         form(action="post")
-            +text_field({_placeholder:'E-mail', _id: 'inp1', isMasked: 'true'})
+            +text_field({_placeholder:'E-mail', _id: 'inp1', _isMasked: false})
+            +text_field({_placeholder:'', _id: 'inp2', _isMasked: true})
             
         
         +dropdown({_text: "Сколько гостей",
@@ -148,17 +150,4 @@ html
         br
         +range-slider({_name: 'asd'})
         br
-        +icon-text-list({
-            _items: [
-                {
-                    _icon: 'insert_emoticon',
-                    _header: 'Комфорт',
-                    _content: 'Шумопоглощающие стены'
-                },
-                {
-                    _icon: 'location_city',
-                    _header: 'Удобство',
-                    _content: 'Окно в каждой из спален'
-                },
-            ]
-        })
+        +subscription-text-field()

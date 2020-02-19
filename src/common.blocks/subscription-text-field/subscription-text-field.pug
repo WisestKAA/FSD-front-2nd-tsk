@@ -1,0 +1,11 @@
+include ../text-field/text-field.pug
+include ../material-icons/material-icons.pug
+
+mixin subscription-text-field ({_name = 'subscrip', _value='subscrip'}={})
+    .subscription-text-field
+        .subscription-text-field__button-wrapper
+            .subscription-text-field__button-arrow
+                +material-icons({_type: 'arrow_forward'})
+            input(type='button' name=_name value=_value).subscription-text-field__button
+        .subscription-text-field__text-field
+            +text_field({_placeholder: 'E-mail', _isPaddingRightMode: true})
