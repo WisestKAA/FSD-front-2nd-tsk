@@ -2,7 +2,10 @@ include ../material-icons/material-icons.pug
 
 mixin date-dropdown ({}={})
     .date-dropdown    
-        .datepicker-here(data-range="true")
+        .date-dropdown__arrow
+            +material-icons({_type: 'keyboard_arrow_down'})
+        input(type="text" data-range="true").datepicker-here.date-dropdown__input
+
     
     //- 
     //-     .date-dropdown__arrow
