@@ -30,13 +30,7 @@ class DateDropdown{
             },
             prevHtml: '<i class="date-dropdown__navigation">arrow_back</i>',
             nextHtml: '<i class="date-dropdown__navigation">arrow_forward</i>',
-        });
-
-        datePiker.$el.datepicker({
-
-        });
-
-        
+        });        
     }
 }
 

@@ -1,8 +1,11 @@
 .date-dropdown{
     position: relative;
-    max-width: 260px;
+    max-width: 320px;
+    width: 100%;
     height: 44px;
     box-sizing: border-box;
+    display: inline-block;
+    white-space: nowrap;
 
     &__arrow{
         display: flex;
@@ -14,25 +17,41 @@
         justify-content: center;
         align-items: center;
         color: $dark50;
+        margin-top: 1px;
     }
 
     &__input{
-        max-width: 260px;
-        width: 100%;
-        background: #FFFFFF;
-        border: 1px solid $dark25;
-        box-sizing: border-box;
-        border-radius: 4px;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
-        color: $dark75;
-        outline: none;
-        height: 44px;
-        padding-left: 15px;
-        padding-right: 44px;
+        cursor: pointer;
+
+        &-wrapper{
+            max-width: 150px;
+            position: relative;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+        &-wrapper:last-child{
+            margin-left: 17px;
+        }
+
+        &-from,
+        &-to,
+        &-filtred{
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid $dark25;
+            box-sizing: border-box;
+            border-radius: 4px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            color: $dark75;
+            outline: none;
+            height: 44px;
+            padding-left: 15px;
+            padding-right: 44px;
+        }
     }
 
     &__navigation{
@@ -46,8 +65,7 @@
 }
 
 .datepicker{
-    max-width: 320px;
-    width: 260px;
+    width: 320px;
     background: #FFFFFF;
     border: 1px solid $dark25;
     box-sizing: border-box;
@@ -89,13 +107,13 @@
         justify-content: center;
         align-items: center;
         max-width: 280px;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0 auto;        
 
         &-names{
-            height: 40px;
+            height: 40px;            
             box-sizing: border-box;
-            margin: 0;
-            
+            margin: 0;            
         }
     }
 
@@ -115,18 +133,22 @@
         padding: 0;
     }
 
-    &--cells-days{           
-        display: grid;
-        grid-template-columns: repeat(7, auto);
+    &--cells-days{
         max-width: 280px;
+        width: 100%;
         margin: 0 auto;
+        box-sizing: border-box;
     }
 
     &--cell{
-        padding: 50%;
+        &::before{
+            content: "";
+            padding-top: 100%;
+        }
         &-day{
             max-width: 40px;
             max-height: 40px;
+            height: auto;
             box-sizing: border-box;
             font-family: 'Montserrat';
             font-style: normal;
@@ -147,8 +169,8 @@
     }
     
     .-current-{
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-        border-radius: 22px;
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);        
+        border-radius: 50%;
         font-weight: bold;
         color: #FFFFFF;
         
@@ -170,9 +192,9 @@
         border-radius: 50%;
         font-weight: bold;
         color: #FFFFFE;
-    &.-focus-{            
-            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        }
+        &.-focus-{            
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            }
     }
 
     .-range-to-.-focus-{
@@ -198,22 +220,7 @@
         }
     }
 
-    .-range-from-::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        border-radius: 50% 0 0 50%;
-        opacity: 0.25;
-        z-index: -1;
-    }
-
+    .-range-from-::after,
     .-range-to-::after {
         content: '';
         display: block;
@@ -225,8 +232,16 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        border-radius: 0 50% 50% 0;
         opacity: 0.25;
         z-index: -1;
     }
+
+    .-range-to-::after {        
+        border-radius: 0 50% 50% 0;
+    }
+
+    .-range-from-::after{
+        border-radius: 50% 0 0 50%;
+    }
+
 }

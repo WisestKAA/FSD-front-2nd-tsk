@@ -1,10 +1,20 @@
 include ../material-icons/material-icons.pug
 
-mixin date-dropdown ({}={})
-    .date-dropdown    
-        .date-dropdown__arrow
-            +material-icons({_type: 'keyboard_arrow_down'})
-        input(type="text" readonly="true").date-dropdown__input
+mixin date-dropdown ({_isFiltred=false,}={})
+    .date-dropdown
+        if(_isFiltred)    
+            .date-dropdown__arrow
+                +material-icons({_type: 'keyboard_arrow_down'})
+            input(type="text" readonly="true").date-dropdown__input.date-dropdown__input-filtred
+        else
+            .date-dropdown__input-wrapper
+                .date-dropdown__arrow
+                    +material-icons({_type: 'keyboard_arrow_down'})
+                input(type="text" readonly="true").date-dropdown__input.date-dropdown__input-from
+            .date-dropdown__input-wrapper
+                .date-dropdown__arrow
+                    +material-icons({_type: 'keyboard_arrow_down'})
+                input(type="text" readonly="true").date-dropdown__input-to
 
     
     //- 
