@@ -3,16 +3,36 @@ class DateDropdown{
     constructor(elem){
         this.dateDropdown = elem;
         this.datePiker = elem.querySelector('.date-dropdown__input');
-        this.datePikerInit(this.datePiker)
+        this.datepikerContainer = document.querySelector('.datepicker');
+
+        this.isFiltred = this.datePiker.classList.contains('date-dropdown__input-filtred') ? true : false;
+        if(this.isFiltred){
+            this.dateDropdown.style.width='260px';
+            this.datePikerInit(this.datePiker, this.dateDropdown);
+
+        }else{
+            this.dateDropdown.style.width='320px';
+            this.inputFrom = elem.querySelector('.date-dropdown__input-from');           
+            this.inputTo = elem.querySelector('.date-dropdown__input-to');
+            this.inputTo.addEventListener('click', this.handleShowDatePiker.bind(this));
+            this.datePikerInit(this.datePiker, this.dateDropdown, true, this.inputFrom, this.inputTo);
+        }
+
+
+        
+        $(window).on('resize', this.handleCalendarWindowResize.bind(this));
     }
 
-    datePikerInit(datePiker){
+    datePikerInit(datePiker, dateDropdown, isFiltred=false, inputFrom, inputTo){
         
+        var dateForm = isFiltred ? 'dd.mm.yyyy' : 'dd M' ;
+
         $(datePiker).datepicker({
             minDate: new Date(),
             range: true,
             multipleDatesSeparator: ' - ',
-            dateFormat: 'dd M',
+            dateFormat: dateForm,
+            clearButton: true,
             language: {
                 days: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
                 daysShort: ['вос','пон','вто','сре','чет','пят','суб'],
@@ -30,13 +50,39 @@ class DateDropdown{
             },
             prevHtml: '<i class="date-dropdown__navigation">arrow_back</i>',
             nextHtml: '<i class="date-dropdown__navigation">arrow_forward</i>',
-        });        
+            onShow: function(inst, animationCompleted){
+                const datePikerWidth = dateDropdown.style.width;
+                const datepikerContainer = document.querySelector('.datepicker');
+                $(datepikerContainer).css('width', datePikerWidth);
+            },
+            onSelect: function(formattedDate, date, inst){
+                if(isFiltred){ 
+                    if (formattedDate.toString().length == 10){   
+                        inputTo.value='';
+                    }                
+                    if (formattedDate.toString().length > 10){
+                        inputFrom.value = formattedDate.substring(0, 10);
+                        inputTo.value = formattedDate.substring(13, 23);
+                    }
+                }
+            }
+        });
+
+    }
+
+    handleCalendarWindowResize() {
+        const datePikerWidth = this.dateDropdown.style.width;
+        $(this.datepikerContainer).css('width', datePikerWidth);
+    }
+
+    handleShowDatePiker(){
+        $(this.datePiker).datepicker().data('datepicker').show();
     }
 }
 
 $(document).ready(() => {
     const dateDropdowns = document.querySelectorAll('.date-dropdown');
     dateDropdowns.forEach((val =>{
-        new DateDropdown(val);      
+        new DateDropdown(val);
     }));
 });

@@ -1,6 +1,6 @@
 include ../material-icons/material-icons.pug
 
-mixin date-dropdown ({_isFiltred=false,}={})
+mixin date-dropdown ({_isFiltred=true,}={})
     .date-dropdown
         if(_isFiltred)    
             .date-dropdown__arrow
@@ -10,19 +10,8 @@ mixin date-dropdown ({_isFiltred=false,}={})
             .date-dropdown__input-wrapper
                 .date-dropdown__arrow
                     +material-icons({_type: 'keyboard_arrow_down'})
-                input(type="text" readonly="true").date-dropdown__input.date-dropdown__input-from
+                input(type="text" readonly="true" placeholder="ДД.ММ.ГГГГ").date-dropdown__input.date-dropdown__input-from
             .date-dropdown__input-wrapper
                 .date-dropdown__arrow
                     +material-icons({_type: 'keyboard_arrow_down'})
-                input(type="text" readonly="true").date-dropdown__input-to
-
-    
-    //- 
-    //-     .date-dropdown__arrow
-    //-         +material-icons({_type: 'keyboard_arrow_down'})
-    //-     .date-dropdown__select
-    //-     .date-dropdown__picker-wrapper
-    //-         input(
-    //-             type='text'
-    //-             class='datepicker-here'
-    //-         )
+                input(type="text" readonly="true" placeholder="ДД.ММ.ГГГГ").date-dropdown__input-to

@@ -21,13 +21,13 @@
     }
 
     &__input{
-        cursor: pointer;
 
         &-wrapper{
             max-width: 150px;
             position: relative;
             display: inline-block;
             box-sizing: border-box;
+            cursor: pointer;
         }
         &-wrapper:last-child{
             margin-left: 17px;
@@ -51,6 +51,7 @@
             height: 44px;
             padding-left: 15px;
             padding-right: 44px;
+            cursor: pointer;
         }
     }
 
