@@ -3,7 +3,6 @@ class DateDropdown{
     constructor(elem){
         this.dateDropdown = elem;
         this.datePiker = elem.querySelector('.date-dropdown__input');
-        this.datepikerContainer = document.querySelector('.datepicker');
 
         this.isFiltred = this.datePiker.classList.contains('date-dropdown__input-filtred') ? true : false;
         if(this.isFiltred){
@@ -12,15 +11,11 @@ class DateDropdown{
 
         }else{
             this.dateDropdown.style.width='320px';
-            this.inputFrom = elem.querySelector('.date-dropdown__input-from');           
+            this.inputFrom = elem.querySelector('.date-dropdown__input-from');          
             this.inputTo = elem.querySelector('.date-dropdown__input-to');
             this.inputTo.addEventListener('click', this.handleShowDatePiker.bind(this));
             this.datePikerInit(this.datePiker, this.dateDropdown, true, this.inputFrom, this.inputTo);
-        }
-
-
-        
-        $(window).on('resize', this.handleCalendarWindowResize.bind(this));
+        }      
     }
 
     datePikerInit(datePiker, dateDropdown, isFiltred=false, inputFrom, inputTo){
@@ -52,10 +47,13 @@ class DateDropdown{
             nextHtml: '<i class="date-dropdown__navigation">arrow_forward</i>',
             onShow: function(inst, animationCompleted){
                 const datePikerWidth = dateDropdown.style.width;
-                const datepikerContainer = document.querySelector('.datepicker');
-                $(datepikerContainer).css('width', datePikerWidth);
+                const $datepikerContainer = $(datePiker).datepicker().data('datepicker').$datepicker;
+                $datepikerContainer.css('width', datePikerWidth);
+                if(isFiltred){
+                    inputFrom.value = inputFrom.value.substring(0, 10);
+                }
             },
-            onSelect: function(formattedDate, date, inst){
+            onSelect: function(formattedDate){
                 if(isFiltred){ 
                     if (formattedDate.toString().length == 10){   
                         inputTo.value='';
@@ -65,18 +63,35 @@ class DateDropdown{
                         inputTo.value = formattedDate.substring(13, 23);
                     }
                 }
+            },
+            onHide: function(){
+                if(isFiltred){
+                    inputFrom.value = inputFrom.value.substring(0, 10);
+                }
             }
         });
 
+        this.$buttonsContainer = $(this.datePiker).datepicker().data('datepicker').$datepicker.find('.datepicker--buttons');
+        this.applyButton = $('<span>', {
+            text: 'применить',
+            class: 'date-dropdown__apply-button',
+        }).appendTo(this.$buttonsContainer);
+        this.applyButton[0].addEventListener('click', this.handleApplyButtonClick.bind(this));
+
+        this.clearButton = $(this.datePiker).datepicker().data('datepicker').$datepicker.find('.datepicker--button');
+        this.clearButton[0].addEventListener('click', this.handleClearButtonClick.bind(this));
     }
 
-    handleCalendarWindowResize() {
-        const datePikerWidth = this.dateDropdown.style.width;
-        $(this.datepikerContainer).css('width', datePikerWidth);
+    handleApplyButtonClick() {
+        $(this.datePiker).datepicker().data('datepicker').hide();
     }
 
     handleShowDatePiker(){
         $(this.datePiker).datepicker().data('datepicker').show();
+    }
+
+    handleClearButtonClick(){
+        this.inputTo.value='';
     }
 }
 
