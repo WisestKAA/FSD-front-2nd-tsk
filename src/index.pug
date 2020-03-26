@@ -14,7 +14,7 @@ include common.blocks/comment/comment.pug
 include common.blocks/range-slider/range-slider.pug
 include common.blocks/subscription-text-field/subscription-text-field.pug
 include common.blocks/date-dropdown/date-dropdown.pug
-
+include common.blocks/pagination/pagination.pug
 doctype html
 html
     head
@@ -157,3 +157,34 @@ html
         br
         br
         +date-dropdown({_isFiltred: false})
+        br
+        br
+        +pagination({
+            _links: [
+                {
+                    href: '/page1',
+                    isActive: true, 
+                    number: 1,
+                },
+                {
+                    href: '/page2',
+                    isActive: false, 
+                    number: 2,
+                },
+                {
+                    href: '/page3',
+                    isActive: false, 
+                    number: 3,
+                },
+                {
+                    href: '',
+                    isActive: false, 
+                    number: 0,
+                },
+                {
+                    href: '/page15',
+                    isActive: false, 
+                    number: 15,
+                },
+            ],
+        })
