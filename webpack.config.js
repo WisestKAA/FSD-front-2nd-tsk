@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require ('webpack');
+const PAGES_DIR = path+`src/pages/`;
 
 module.exports = {
     mode: 'development',
@@ -81,6 +82,10 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
-          }),
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/ui-kit/colors-and-type/colors-and-type.pug`,
+            filename: './colors-and-type.html',
+        }),
     ]
 };
