@@ -1,0 +1,5 @@
+
+mixin types({_tag, _text, _font, _fontSize, _color, _fontWeight, }={})
+    .types
+        .types__tag=_tag
+        .types__text(class=`types__text_font-${_font} types__text_font-weight-${_fontWeight} types__text_font-size-${_fontSize} types__text_color-${_color}`)=_text

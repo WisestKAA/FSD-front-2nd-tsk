@@ -1,0 +1,42 @@
+.types{
+    display: flex;
+    flex-direction: row;
+
+    &__tag{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        color: $dark25;
+    }
+
+    &__text{
+        font-weight: bold;
+
+        &_font-Quicksand{
+            font-family: 'Quicksand';
+        }
+
+        &_font-Montserrat{
+            font-family: 'Montserrat';
+        }
+
+        &_font-weight-normal{
+            font-weight: normal;
+        }
+
+        &_font-size-24{
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        &_color-dark100{
+            color: $dark100;
+        }
+
+        &_color-dark75{
+            color: $dark75;
+        }
+    }
+}

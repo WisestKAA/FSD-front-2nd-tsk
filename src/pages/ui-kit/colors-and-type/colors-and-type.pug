@@ -1,4 +1,23 @@
 extends ../../index
 
+block variables
+    - var _bgcolor='#FFFFFF'
+
 block content
-    
+
+    include ../../../common.blocks/logo-ui-kit/logo-ui-kit.pug
+    include ../../../common.blocks/colors/colors.pug
+
+    .colors-and-type
+        .colors-and-type__logo
+            +logo-ui-kit()
+        .colors-and-type__content
+            .colors-and-type__colors
+                +colors({_color: 'dark100', _text: 'Dark Shade 100%', _code: '#1F2041'})
+                +colors({_color: 'dark75', _text: 'Dark Shade 75%', _code: '#1F2041'})
+                +colors({_color: 'dark50', _text: 'Dark Shade 50%', _code: '#1F2041'})
+                +colors({_color: 'dark25', _text: 'Dark Shade 25%', _code: '#1F2041'})
+                +colors({_color: 'dark5', _text: 'Dark Shade 5%', _code: '#1F2041'})
+                +colors({_color: 'purple', _text: 'Purple', _code: '#BC9CFF'})
+                +colors({_color: 'green', _text: 'Green', _code: '#6FCF97'})
+            .colors-and-type__types

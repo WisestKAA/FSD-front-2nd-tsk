@@ -2,7 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require ('webpack');
-const PAGES_DIR = path+`src/pages/`;
+const PATHS = {
+    src: path.join(__dirname, './src'),
+  };
+const PAGES_DIR = `${PATHS.src}/pages/`;
 
 module.exports = {
     mode: 'development',
