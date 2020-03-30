@@ -1,18 +1,40 @@
 .types{
     display: flex;
     flex-direction: row;
+    margin-bottom: 50px;
 
     &__tag{
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
-        font-size: 24px;
-        line-height: 29px;
         color: $dark25;
+        max-width: 37px;
+        width: 100%;
+        text-align: right;
+        margin-right: 30px;
+
+        &_font-size-24{
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        &_font-size-19{
+            font-size: 19px;
+            line-height: 23px;
+        }
+
+        &_font-size-14{
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        &_font-size-12{
+            font-size: 12px;
+            line-height: 15px;
+        }
     }
 
     &__text{
-        font-weight: bold;
 
         &_font-Quicksand{
             font-family: 'Quicksand';
@@ -26,9 +48,29 @@
             font-weight: normal;
         }
 
+        &_font-weight-bold{
+            font-weight: bold;
+        }
+
         &_font-size-24{
             font-size: 24px;
             line-height: 30px;
+        }
+
+        &_font-size-19{
+            font-size: 19px;
+            line-height: 24px;
+        }
+
+        &_font-size-14{
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        &_font-size-12{
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
         }
 
         &_color-dark100{

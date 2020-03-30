@@ -7,17 +7,51 @@ block content
 
     include ../../../common.blocks/logo-ui-kit/logo-ui-kit.pug
     include ../../../common.blocks/colors/colors.pug
+    include ../../../common.blocks/types/types.pug
 
     .colors-and-type
         .colors-and-type__logo
             +logo-ui-kit()
-        .colors-and-type__content
-            .colors-and-type__colors
-                +colors({_color: 'dark100', _text: 'Dark Shade 100%', _code: '#1F2041'})
-                +colors({_color: 'dark75', _text: 'Dark Shade 75%', _code: '#1F2041'})
-                +colors({_color: 'dark50', _text: 'Dark Shade 50%', _code: '#1F2041'})
-                +colors({_color: 'dark25', _text: 'Dark Shade 25%', _code: '#1F2041'})
-                +colors({_color: 'dark5', _text: 'Dark Shade 5%', _code: '#1F2041'})
-                +colors({_color: 'purple', _text: 'Purple', _code: '#BC9CFF'})
-                +colors({_color: 'green', _text: 'Green', _code: '#6FCF97'})
-            .colors-and-type__types
+        .colors-and-type__content-wrapper
+            .colors-and-type__content
+                .colors-and-type__colors
+                    +colors({_color: 'dark100', _text: 'Dark Shade 100%', _code: '#1F2041'})
+                    +colors({_color: 'dark75', _text: 'Dark Shade 75%', _code: '#1F2041'})
+                    +colors({_color: 'dark50', _text: 'Dark Shade 50%', _code: '#1F2041'})
+                    +colors({_color: 'dark25', _text: 'Dark Shade 25%', _code: '#1F2041'})
+                    +colors({_color: 'dark5', _text: 'Dark Shade 5%', _code: '#1F2041'})
+                    +colors({_color: 'purple', _text: 'Purple', _code: '#BC9CFF'})
+                    +colors({_color: 'green', _text: 'Green', _code: '#6FCF97'})
+                .colors-and-type__types
+                    +types({
+                        _tag: 'H1',
+                        _text: 'This one is the sub-section or widget title', 
+                        _font: 'Quicksand', 
+                        _fontSize: '24', 
+                        _color: 'dark100', 
+                        _fontWeight: 'bold',
+                    })
+                    +types({
+                        _tag: 'H2',
+                        _text: 'Next one is the item title inside widgets', 
+                        _font: 'Quicksand', 
+                        _fontSize: '19', 
+                        _color: 'dark100', 
+                        _fontWeight: 'bold',
+                    })
+                    +types({
+                        _tag: 'H3',
+                        _text: 'This is a label or CTA text', 
+                        _font: 'Montserrat', 
+                        _fontSize: '12', 
+                        _color: 'dark100', 
+                        _fontWeight: 'bold',
+                    })
+                    +types({
+                        _tag: 'Body',
+                        _text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', 
+                        _font: 'Montserrat', 
+                        _fontSize: '14', 
+                        _color: 'dark25', 
+                        _fontWeight: 'normal',
+                    })
