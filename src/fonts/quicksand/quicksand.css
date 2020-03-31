@@ -1,15 +1,23 @@
 @font-face {
-	font-family: 'Quicksand';
-	src: url('Quicksand-Bold.eot');
-	src: local('☺'), url('Quicksand-Bold.woff') format('woff'), url('Quicksand-Bold.ttf') format('truetype'), url('Quicksand-Bold.svg') format('svg');
-	font-weight: bold;
-	font-style: normal;
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand-Bold.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/Quicksand-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/Quicksand-Bold.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/Quicksand-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/Quicksand-Bold.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/Quicksand-Bold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Quicksand';
-	src: url('Quicksand-Regular.eot');
-	src: local('☺'), url('Quicksand-Regular.woff') format('woff'), url('Quicksand-Regular.ttf') format('truetype'), url('Quicksand-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+  font-family: "Quicksand-Regular";
+  src: url("./fonts/Quicksand-Regular.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/Quicksand-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/Quicksand-Regular.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/Quicksand-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/Quicksand-Regular.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/Quicksand-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+} 
