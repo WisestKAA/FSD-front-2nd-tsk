@@ -90,5 +90,9 @@ module.exports = {
             template: `${PAGES_DIR}/ui-kit/colors-and-type/colors-and-type.pug`,
             filename: './colors-and-type.html',
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/ui-kit/form-elements/form-elements.pug`,
+            filename: './form-elements.html',
+        }),
     ]
 };

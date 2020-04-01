@@ -4,29 +4,33 @@
         display: block;
         margin-left: 30px;
         margin-top: 30px;
+        margin-bottom: 65px;
     }
-
+    
     &__main-wrapper{
-
+        display: flex;
+        justify-content: center;
     }
 
     &__main{
-
+        
+        max-width: 1158px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
-    &__content-left{
-
+    &__content-left,
+    &__content-center,
+    &__content-right{
+        max-width: 320px;
+        width: 100%;
     }
 
     &__content-right-wrapper{
-
-    }
-
-    &__content-center{
-
-    }
-
-    &__content-right{
-        
+        display: flex;
+        justify-content: space-between;
+        max-width: 712px;
+        width: 100%;
     }
 }
