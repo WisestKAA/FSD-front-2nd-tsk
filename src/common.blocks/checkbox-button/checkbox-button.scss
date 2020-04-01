@@ -3,7 +3,7 @@
     white-space: nowrap;
     width: 100%;
     max-width: 260px;
-    margin-bottom: 10px;    
+    margin-bottom: 12px;    
     box-sizing: border-box;
 
     &__input{
@@ -35,10 +35,12 @@
         font-size: 14px;
         line-height: 18px;
         color: $dark50;
+        max-width: 192px;
 
         &_rich{
             font-size: 12px;
             line-height: 14px;
+            max-width: 230px;
         }
     }
 

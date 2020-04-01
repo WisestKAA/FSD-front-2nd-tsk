@@ -8,6 +8,7 @@ block content
     include ../../../common.blocks/text-field/text-field.pug
     include ../../../common.blocks/checkbox-button/checkbox-button.pug
     include ../../../common.blocks/range-slider/range-slider.pug
+    include ../../../common.blocks/label/label.pug
 
     .form-elements
         .form-elements__logo
@@ -15,12 +16,19 @@ block content
         .form-elements__main-wrapper
             .form-elements__main
                 .form-elements__content-left
-                    +text-field({_placeholder: 'Email'})
+                    .form-elements__item.form-elements__item_margin-bottom-20
+                        +label({_text: 'Text Field', _marginBottom: '5'})
+                        +text-field({_placeholder: 'Email'})
                 .form-elements__content-right-wrapper
                     .form-elements__content-center
-                        +checkbox-button({_text: 'Можно курить', _name: 'smoking'})
+                        .form-elements__item.form-elements__item_margin-bottom-40
+                            +label({_text: 'Checkbox Buttons', _marginBottom: '16'})
+                            +checkbox-button({_text: 'Можно курить', _name: 'smoking'})
+                            +checkbox-button({_text: 'Можно с питомцами', _name: 'pets', _isChecked: true})
+                            +checkbox-button({_text: 'Можно пригласить гостей (до 10 человек)', _name: 'guests', _isChecked: true})
                     .form-elements__content-right
-                        +range-slider({})
+                        .form-elements__content-center.form-elements__item.form-elements__item_margin-bottom-40
+                            +range-slider({})
         
         
         
