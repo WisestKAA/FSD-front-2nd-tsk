@@ -35,7 +35,7 @@
     }
 
     &__item{
-
+        
         &_margin-bottom-20{
             margin-bottom: 20px;
         }
@@ -43,5 +43,9 @@
         &_margin-bottom-40{
             margin-bottom: 40px;
         }
+    }
+
+    &__masked-text-field{
+        padding-top: 2px;
     }
 }

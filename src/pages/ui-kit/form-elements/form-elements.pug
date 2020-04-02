@@ -9,6 +9,8 @@ block content
     include ../../../common.blocks/checkbox-button/checkbox-button.pug
     include ../../../common.blocks/range-slider/range-slider.pug
     include ../../../common.blocks/label/label.pug
+    include ../../../common.blocks/dropdown/dropdown.pug
+    include ../../../common.blocks/date-dropdown/date-dropdown.pug
 
     .form-elements
         .form-elements__logo
@@ -17,8 +19,26 @@ block content
             .form-elements__main
                 .form-elements__content-left
                     .form-elements__item.form-elements__item_margin-bottom-20
-                        +label({_text: 'Text Field', _marginBottom: '5'})
+                        +label({_text: 'Text Field', _marginBottom: '5', _caption: 'Default', _marginCaption: '3'})
                         +text-field({_placeholder: 'Email'})
+                    .form-elements__item.form-elements__item_margin-bottom-20
+                        +label({_text: 'Text Field', _marginBottom: '5', _caption: 'Hover / Focus'})
+                        +text-field({_placeholder: 'Email', _text: 'This is pretty awesome'})
+                    .form-elements__item.form-elements__item_margin-bottom-20
+                        +label({_text: 'Dropdown', _marginBottom: '0', _caption: 'Default'})
+                        +dropdown({_text: "Сколько гостей",
+                            _options: [
+                                {_text: 'спальни', _number: 0},
+                                {_text: 'кровати', _number: 0},
+                                {_text: 'ванные комнаты', _number: 0},
+                            ],
+                        })
+                    .form-elements__item.form-elements__item_margin-bottom-40.form-elements__masked-text-field
+                        +label({_text: 'masked text field', _marginBottom: '5', _caption: 'Default', _marginCaption: '3'})
+                        +text-field({_isMasked: true})
+                    .form-elements__item.form-elements__item_margin-bottom-40
+                        +date-dropdown ({_isFiltred: false, _startText: 'date Dropdown', _finishText: 'date Dropdown'})
+                        
                 .form-elements__content-right-wrapper
                     .form-elements__content-center
                         .form-elements__item.form-elements__item_margin-bottom-40
@@ -27,8 +47,9 @@ block content
                             +checkbox-button({_text: 'Можно с питомцами', _name: 'pets', _isChecked: true})
                             +checkbox-button({_text: 'Можно пригласить гостей (до 10 человек)', _name: 'guests', _isChecked: true})
                     .form-elements__content-right
-                        .form-elements__content-center.form-elements__item.form-elements__item_margin-bottom-40
-                            +range-slider({})
+                        .form-elements__content-center
+                            .form-elements__item.form-elements__item_margin-bottom-40
+                                +range-slider({})
         
         
         

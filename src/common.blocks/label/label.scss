@@ -1,4 +1,6 @@
 .label{
+    display: flex;
+    justify-content: space-between;
 
     &_margin-bottom-5{
         margin-bottom: 5px;
@@ -10,5 +12,19 @@
 
     &__text{
 
+    }
+
+    &__caption{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $dark50;
+
+        &_margin-top-3{
+            margin-top: -3px;
+        }
     }
 }

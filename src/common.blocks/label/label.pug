@@ -1,4 +1,9 @@
 
-mixin label({_text, _marginBottom}={})
+mixin label({_text, _marginBottom, _caption, _marginCaption}={})
+    - var margtop = ''
+    if(_marginCaption==3) 
+        - margtop = 'label__caption_margin-top-3'
+
     .label(class=`label_margin-bottom-${_marginBottom}`)
         .label__text.h3=_text
+        .label__caption(class=`${margtop}`)=_caption

@@ -1,16 +1,19 @@
 .dropdown{
     display: inline-block;
-    position: relative;
     width: 100%;
     max-width: 320px;
-    box-sizing: border-box; 
-    margin-top: 5px;
+    box-sizing: border-box;
+    margin-top: 6px; 
+
+    &__wrapper{
+        position: relative;
+    }
         
     &__select{
         box-sizing: border-box;        
         position: relative;
         height: 44px; 
-        padding: 8px 15px;    
+        padding: 8px 14px;    
         border: 1px solid $dark25;
         border-radius: 4px; 
 

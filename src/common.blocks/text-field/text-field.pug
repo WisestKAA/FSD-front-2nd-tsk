@@ -1,4 +1,4 @@
-mixin text-field({_placeholder, _id, _isMasked = false, _isPaddingRightMode = false}={})
+mixin text-field({_placeholder, _id, _isMasked = false, _isPaddingRightMode = false, _text}={})
 
     - var maskedMod = '';
     if _isMasked  
@@ -14,4 +14,5 @@ mixin text-field({_placeholder, _id, _isMasked = false, _isPaddingRightMode = fa
         placeholder=_placeholder 
         id=_id 
         class=`text-field${maskedMod}${addPadding}`
+        value=_text
     )

@@ -7,13 +7,14 @@ mixin dropdown ({_text, _options=[], _isShort=false, } = {})
     if _isShort == true
         - short='dropdown_width-short'
 
-    section.dropdown(class=short)
-        .dropdown__arrow
-            +material-icons({_type: 'keyboard_arrow_down'})
-        .dropdown__select
-            span.dropdown__text=_text
-        .dropdown__options
-            each option in _options
-                - const {_text, _number} = option
-                +dropdown-option({_text, _number})
-            +dropdown-option-button({_drop_text: 'очистить', _apply_text: 'применить'})
+    .dropdown(class=short)
+        .dropdown__wrapper
+            .dropdown__arrow
+                +material-icons({_type: 'keyboard_arrow_down'})
+            .dropdown__select
+                span.dropdown__text=_text
+            .dropdown__options
+                each option in _options
+                    - const {_text, _number} = option
+                    +dropdown-option({_text, _number})
+                +dropdown-option-button({_drop_text: 'очистить', _apply_text: 'применить'})
