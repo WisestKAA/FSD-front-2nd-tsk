@@ -11,6 +11,11 @@ block content
     include ../../../common.blocks/label/label.pug
     include ../../../common.blocks/dropdown/dropdown.pug
     include ../../../common.blocks/date-dropdown/date-dropdown.pug
+    include ../../../common.blocks/subscription-text-field/subscription-text-field.pug
+    include ../../../common.blocks/radio-buttons/radio-buttons.pug
+    include ../../../common.blocks/toggle/toggle.pug
+    include ../../../common.blocks/like-button/like-button.pug
+    include ../../../common.blocks/rate-button/rate-button.pug
 
     .form-elements
         .form-elements__logo
@@ -37,15 +42,43 @@ block content
                         +label({_text: 'masked text field', _marginBottom: '5', _caption: 'Default', _marginCaption: '3'})
                         +text-field({_isMasked: true})
                     .form-elements__item.form-elements__item_margin-bottom-40
-                        +date-dropdown ({_isFiltred: false, _startText: 'date Dropdown', _finishText: 'date Dropdown'})
+                        +date-dropdown ({_isFiltred: false, _demoText: '19.08.2019', _startText: 'date Dropdown', _finishText: 'date Dropdown'})
+                    .form-elements__item.form-elements__item_margin-bottom-40
+                        +label({_text: 'filter date dropdown', _marginBottom: '5'})
+                        +date-dropdown ({_isFiltred: true})
+                    .form-elements__item.form-elements__item_margin-bottom-40.form-elements__subscription-text-field
+                        +label({_text: 'subscription text field', _marginBottom: '5'})
+                        +subscription-text-field({_value: 'Email'})
                         
                 .form-elements__content-right-wrapper
                     .form-elements__content-center
                         .form-elements__item.form-elements__item_margin-bottom-40
-                            +label({_text: 'Checkbox Buttons', _marginBottom: '16'})
+                            +label({_text: 'Checkbox Buttons', _marginBottom: '17'})
                             +checkbox-button({_text: 'Можно курить', _name: 'smoking'})
                             +checkbox-button({_text: 'Можно с питомцами', _name: 'pets', _isChecked: true})
                             +checkbox-button({_text: 'Можно пригласить гостей (до 10 человек)', _name: 'guests', _isChecked: true})
+                        .form-elements__item.form-elements__item_margin-bottom-40.form-elements__radio-buttons
+                            +label({_text: 'Radio Buttons', _marginBottom: '16'})
+                            +radio-buttons({_name: 'radioButtons', _radioButtons:[
+                                {_text: 'Мужчина', _value: 'men', _isChecked: true},
+                                {_text: 'Женщина', _value: 'women', _isChecked: false},
+                            ]})
+                        .form-elements__item.form-elements__item_margin-bottom-40
+                            +label({_text: 'Toggle', _marginBottom: '16'})
+                            +toggle({_name: 'togen', _text: 'Получать спецпредложения', _isChecked: true})
+                            +toggle({_name: 'togdis', _text: 'Получать спецпредложения', _isChecked: false})
+                        .form-elements__item.form-elements__item_margin-bottom-40.form-elements__like-button
+                            +label({_text: 'like button', _marginBottom: '16'})
+                            .form-elements__like-buttons
+                                +like-button({_number: '2', _isClicked: false})
+                                +like-button({_number: '12', _isClicked: true})
+                        .form-elements__item.form-elements__item_margin-bottom-40
+                            +label({_text: 'rate button', _marginBottom: '16'})
+                            .form-elements__rate-buttons
+                                +rate-button({_rate: '4'})
+                                +rate-button({_rate: '5'})
+
+                    
                     .form-elements__content-right
                         .form-elements__content-center
                             .form-elements__item.form-elements__item_margin-bottom-40

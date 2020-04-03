@@ -6,7 +6,7 @@ class DateDropdown{
 
         this.isFiltred = this.datePiker.classList.contains('date-dropdown__input-filtred') ? true : false;
         if(this.isFiltred){
-            this.dateDropdown.style.width='260px';
+            this.dateDropdown.style.width='266px';
             this.datePikerInit(this.datePiker, this.dateDropdown);
 
         }else{

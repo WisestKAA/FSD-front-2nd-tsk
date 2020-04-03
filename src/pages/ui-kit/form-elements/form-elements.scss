@@ -48,4 +48,40 @@
     &__masked-text-field{
         padding-top: 2px;
     }
+
+    &__subscription-text-field{
+        margin-left: -1px;
+        padding-top: 1px;
+    }
+
+    &__radio-buttons{
+        padding-top: 2px;
+    }
+
+    &__like-button{
+        padding-top: 3px;
+    }
+
+    &__like-buttons{
+        display: flex;
+        justify-content: space-between;
+        max-width: 90px;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    &__rate-buttons{
+        display: flex;
+        justify-content: space-between;
+        max-width: 260px;
+        width: 100%;
+    }
+
+    .checkbox-button:last-child{
+        margin-bottom: 0px;
+    }
+
+    .toggle:last-child{
+        margin-bottom: 0px;
+    }
 }
