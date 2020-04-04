@@ -1,7 +1,8 @@
 .dropdown-option{
     width: auto;
     max-width: 318px;
-    height: 44px;   
+    height: 30px;
+    margin-bottom: 7px;   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,8 +10,8 @@
     &__text{
         display: inline-block;
         justify-content: center;
-        align-items: center;
-        padding-left: 15px;
+        align-items: flex-start;
+        padding-left: 14px;
     }
 
     &__button-block{
@@ -50,5 +51,10 @@
         vertical-align: middle;        
         justify-content: center;
         align-items: center;      
+    }
+
+    &__number,
+    &__text{        
+        margin-top: -7px;
     }
 }

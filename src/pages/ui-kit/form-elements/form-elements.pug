@@ -16,6 +16,8 @@ block content
     include ../../../common.blocks/toggle/toggle.pug
     include ../../../common.blocks/like-button/like-button.pug
     include ../../../common.blocks/rate-button/rate-button.pug
+    include ../../../common.blocks/button/button.pug
+    include ../../../common.blocks/pagination/pagination.pug
 
     .form-elements
         .form-elements__logo
@@ -33,9 +35,9 @@ block content
                         +label({_text: 'Dropdown', _marginBottom: '0', _caption: 'Default'})
                         +dropdown({_text: "Сколько гостей",
                             _options: [
-                                {_text: 'спальни', _number: 0},
-                                {_text: 'кровати', _number: 0},
-                                {_text: 'ванные комнаты', _number: 0},
+                                {_text: 'взрослые', _number: 0},
+                                {_text: 'дети', _number: 0},
+                                {_text: 'младенцы', _number: 0},
                             ],
                         })
                     .form-elements__item.form-elements__item_margin-bottom-40.form-elements__masked-text-field
@@ -46,7 +48,7 @@ block content
                     .form-elements__item.form-elements__item_margin-bottom-40
                         +label({_text: 'filter date dropdown', _marginBottom: '5'})
                         +date-dropdown ({_isFiltred: true})
-                    .form-elements__item.form-elements__item_margin-bottom-40.form-elements__subscription-text-field
+                    .form-elements__item.form-elements__subscription-text-field
                         +label({_text: 'subscription text field', _marginBottom: '5'})
                         +subscription-text-field({_value: 'Email'})
                         
@@ -80,12 +82,52 @@ block content
 
                     
                     .form-elements__content-right
-                        .form-elements__content-center
-                            .form-elements__item.form-elements__item_margin-bottom-40
-                                +range-slider({})
-        
-        
-        
+                        .form-elements__item.form-elements__item_margin-bottom-40.form-elements__range-slider
+                            +range-slider({})
+                        .form-elements__item.form-elements__item_margin-bottom-40
+                            +label({_text: 'buttons', _marginBottom: '16'})
+                            .form-elements__button-wrapper
+                                +button({_type: 'gradient-background', _name: 'default', _value: 'CLICK ME', _actionLink: '/#moke'})
+                            .form-elements__button-wrapper
+                                +button({_type: 'bordered', _name: 'bordered', _value: 'CLICK ME', _actionLink: '/#moke'})
+                            .form-elements__button-wrapper
+                                +button({_type: 'empty', _name: 'empty', _value: 'CLICK ME', _actionLink: '/#moke'})
+                            +button({_type: 'rich', _name: 'default', _value: 'перейти к оплате', _actionLink: '/#moke'})
+                        .form-elements__item.form-elements__item_margin-bottom-40
+                            +label({_text: 'pagination', _marginBottom: '16'})
+                            +pagination({_links :[
+                                {href: '/page1', isActive: true, number: 1,},
+                                {href: '/page2', isActive: false,  number: 2,},
+                                {href: '/page3', isActive: false,  number: 3,},
+                                {href: '', isActive: false, number: 0,},
+                                {href: '/page15', isActive: false,  number: 15,},
+                            ]})
+        .form-elements__separator_margin-100
+
+        .form-elements__main-wrapper
+            .form-elements__main
+                .form-elements__content-left
+                    +label({_text: 'Dropdown', _marginBottom: '0', _caption: 'Default', _isShort: true})
+                    +dropdown({_text: "",
+                        _options: [
+                            {_text: 'спальни', _number: 0},
+                            {_text: 'кровати', _number: 0},
+                            {_text: 'ванные комнаты', _number: 0},
+                        ],
+                        _isShort: true
+                    })
+                .form-elements__content-right-wrapper
+                    .form-elements__content-center
+                        +label({_text: 'Dropdown', _marginBottom: '0',})
+                        +dropdown({_text: "Сколько гостей",
+                            _options: [
+                                {_text: 'взрослые', _number: 0},
+                                {_text: 'дети', _number: 0},
+                                {_text: 'младенцы', _number: 0},
+                            ],
+                        })
+                    .form-elements__content-right
+
         .form-elements__main-wrapper
             .form-elements__main
                 .form-elements__content-left

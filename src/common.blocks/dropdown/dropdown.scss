@@ -65,6 +65,8 @@
         border: 1px solid $dark50;
         border-radius: 0 0 4px 4px;
         border-top: none;
+        margin-top: 7px;
+
         &_active{
             display: flex;
             flex-direction: column;            
@@ -72,6 +74,6 @@
     } 
 
     &_width-short{
-        max-width: 264px;
+        max-width: 266px;
     }
 }

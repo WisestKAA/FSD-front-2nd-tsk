@@ -7,8 +7,7 @@
     }
 
     &__label{
-        display: flex;   
-        margin-top: -5px;     
+        display: flex;     
     }
 
     &__price{
@@ -25,16 +24,16 @@
         color: $dark50;         
         border: none;
         pointer-events: none;
-        margin-top: -6px;
+        margin-top: -1px;
     }
 
     &__slider-wraper{
-        width: 100%;
-        margin-top: -5px;
+        width: 100%;        
     }
-    
-    span.irs.irs--flat{
-        max-height: 16px;
+
+        
+    span.irs.irs--flat{       
+        margin-top: -2px;
 
         .irs-line {
             height: 6px;
@@ -42,7 +41,7 @@
             border: 1px solid $dark25;
             box-sizing: border-box;
             border-radius: 3px;
-            box-sizing: border-box;            
+            box-sizing: border-box;
         }
 
         .irs-handle {

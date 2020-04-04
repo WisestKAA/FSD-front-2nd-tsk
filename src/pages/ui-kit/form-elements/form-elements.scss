@@ -12,8 +12,7 @@
         justify-content: center;
     }
 
-    &__main{
-        
+    &__main{        
         max-width: 1158px;
         width: 100%;
         display: flex;
@@ -75,6 +74,21 @@
         justify-content: space-between;
         max-width: 260px;
         width: 100%;
+    }
+
+    &__range-slider{
+        margin-bottom: 34px;
+    }
+
+    &__button-wrapper{
+        margin-bottom: 30px;
+    }
+
+    &__separator{
+
+        &_margin-100{
+            margin-bottom: 99px;
+        }
     }
 
     .checkbox-button:last-child{
