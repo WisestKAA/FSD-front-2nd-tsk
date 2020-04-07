@@ -17,4 +17,5 @@ mixin dropdown ({_text, _options=[], _isShort=false, } = {})
                 each option in _options
                     - const {_text, _number} = option
                     +dropdown-option({_text, _number})
-                +dropdown-option-button({_drop_text: 'очистить', _apply_text: 'применить'})
+                if(!_isShort)
+                    +dropdown-option-button({_drop_text: 'очистить', _apply_text: 'применить'})

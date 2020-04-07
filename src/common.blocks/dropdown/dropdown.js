@@ -29,7 +29,9 @@ class DropDown {
         this.options.addEventListener('DOMSubtreeModified', this.handleOptionsModifed.bind(this));
 
         this.optionButton = this.options.querySelector('.dropdown-option-button');
-        this.optionButtons = new DropdownOptionButton(this.optionButton, this.selectTextm, this.optionsListObj);
+        if(this.optionButton != null){
+            this.optionButtons = new DropdownOptionButton(this.optionButton, this.selectTextm, this.optionsListObj);
+        }
         
         this.arrow = element.querySelector('.material-icons');
     }

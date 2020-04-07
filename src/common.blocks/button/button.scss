@@ -93,6 +93,7 @@
     &__wraper-empty{        
         display: flex;        
         width: max-content;
+        padding-top: 1px;
 
         &_empty{
             color: $purple;

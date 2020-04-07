@@ -12,12 +12,13 @@
         align-items: center;
         cursor: default;
         user-select: none;
-        
+        margin-top: -2px;
     }
 
     &__checkboxes{
         display: none;
         position: relative;
+        margin-top: 4px;
         &_display{
             display: block;
             box-sizing: border-box;

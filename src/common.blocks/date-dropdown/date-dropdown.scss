@@ -66,6 +66,11 @@
             padding-right: 44px;
             cursor: pointer;
         }
+
+        &-from,
+        &-to{
+            padding-bottom: 5px;
+        }
     }
 
     &__navigation{
