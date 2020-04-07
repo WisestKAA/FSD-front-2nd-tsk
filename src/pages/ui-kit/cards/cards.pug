@@ -1,0 +1,20 @@
+extends ../../index
+
+block variables
+    - var _bgcolor='#FFFFFF'
+
+block content
+    include ../../../common.blocks/logo-ui-kit/logo-ui-kit.pug
+    include ../../../common.blocks/room-filter/room-filter.pug 
+
+    .cards
+        .form-elements__logo
+            +logo-ui-kit()
+        .cards__main-wrapper
+            .cards__main
+                .cards__content-left
+                    +room-filter({_header: 'Найдём номера под ваши пожелания'})
+                .cards__content-center
+                    +room-filter({_header: 'Найдём номера под ваши пожелания'})
+                .cards__content-right
+                    +room-filter({_header: 'Найдём номера под ваши пожелания'})

@@ -94,5 +94,9 @@ module.exports = {
             template: `${PAGES_DIR}/ui-kit/form-elements/form-elements.pug`,
             filename: './form-elements.html',
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/ui-kit/cards/cards.pug`,
+            filename: './cards.html',
+        }),
     ]
 };

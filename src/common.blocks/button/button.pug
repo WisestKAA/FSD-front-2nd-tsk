@@ -10,7 +10,7 @@ mixin button ({_type, _name, _value, _actionLink}={})
                     .button__arrow
                         +material-icons({_type: 'arrow_forward'})  
                     .button__text=_value             
-                    input(type='button', name=_name, value=_value, class=type)
+                    input(type='button', name=_name, value=_value, class=type, formaction=_actionLink)
             when 'empty'
                 - var type = 'button__wraper-empty_' + _type
                     .button__wraper-empty

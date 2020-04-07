@@ -2,8 +2,10 @@
 @import "./fonts/quicksand/quicksand.css";
 @import "./fonts/materialicons/material-icons.css";
 @import "./fonts/opensans/OpenSans.css";
+
 @import "./scss/colors.scss";
 @import "./scss/main.scss";
+
 @import "./common.blocks/text-field/text-field.scss";
 @import "./common.blocks/dropdown-option/dropdown-option.scss";
 @import "./common.blocks/dropdown/dropdown.scss";
@@ -18,7 +20,6 @@
 @import "./common.blocks/button/button.scss";
 @import "./common.blocks/bullet-list/bullet-list.scss";
 @import "./common.blocks/icon-text-list/icon-text-list.scss";
-@import "./common.blocks/comment/comment.scss";
 @import "./library.blocks/ion.rangeSlider-2.3.1/css/ion.rangeSlider.min.css";
 @import "./common.blocks/range-slider/range-slider.scss";
 @import "./common.blocks/subscription-text-field/subscription-text-field.scss";
@@ -28,6 +29,12 @@
 @import './common.blocks/pagination/pagination.scss';
 @import './common.blocks/colors/colors.scss';
 @import './common.blocks/types/types.scss';
+@import './common.blocks/label/label.scss';
+@import './common.blocks/room-filter/room-filter.scss';
+
+
+@import "./common.blocks/comment/comment.scss";
+
 @import './pages/ui-kit/colors-and-type/colors-and-type.scss';
 @import './pages/ui-kit/form-elements/form-elements.scss';
-@import './common.blocks/label/label.scss';
+@import './pages/ui-kit/cards/cards.scss';

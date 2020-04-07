@@ -1,0 +1,29 @@
+.cards{
+    
+    &__logo{
+        display: block;
+        margin-left: 30px;
+        margin-top: 30px;
+        margin-bottom: 61px;
+    }
+
+    &__main-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__main{
+        max-width: 1160px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__content-left,
+    &__content-center,
+    &__content-right{
+        max-width: 380px;
+        width: 100%;
+    }
+}

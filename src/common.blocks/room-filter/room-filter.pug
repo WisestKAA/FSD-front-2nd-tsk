@@ -1,0 +1,20 @@
+include ../date-dropdown/date-dropdown.pug 
+include ../dropdown/dropdown.pug
+include ../button/button.pug
+include ../label/label.pug 
+
+mixin room-filter({_header, }={}) 
+    .room-filter
+        .room-filter__header.h1=_header
+        form.room-filter__form
+            .room-filter__date
+                +date-dropdown({_isFiltred: false,  _startText: 'прибытие', _finishText: 'выезд'})
+            .room-filter__guests
+                +label({_text: 'гости', _marginBottom: '5'})
+                +dropdown({_text: 'Сколько гостей', _options: [
+                    {_text: 'взрослые', _number: 0},
+                    {_text: 'дети', _number: 0},
+                    {_text: 'младенцы', _number: 0},
+                ]})
+            .room-filter__search-button
+                +button({_type: 'rich', _name: 'findRoom', _value: 'подобрать номер', _actionLink: '/#moke'})
