@@ -4,7 +4,7 @@
         display: block;
         margin-left: 30px;
         margin-top: 30px;
-        margin-bottom: 61px;
+        margin-bottom: 68px;
     }
 
     &__main-wrapper{
@@ -21,9 +21,13 @@
     }
 
     &__content-left,
-    &__content-center,
-    &__content-right{
+    &__content-center{
         max-width: 380px;
+        width: 100%;
+    }
+
+    &__content-right{
+        max-width: 320px;
         width: 100%;
     }
 }
