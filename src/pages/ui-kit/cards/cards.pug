@@ -6,6 +6,7 @@ block variables
 block content
     include ../../../common.blocks/logo-ui-kit/logo-ui-kit.pug
     include ../../../common.blocks/room-filter/room-filter.pug 
+    include ../../../common.blocks/sign-up/sign-up.pug
 
     .cards
         .cards__logo
@@ -14,6 +15,8 @@ block content
             .cards__main
                 .cards__content-left
                     +room-filter({_header: 'Найдём номера под ваши пожелания'})
+                    .cards__separator
+                    +sign-up({_header: 'Регистрация аккаунта',})
                 .cards__content-center
                     +room-filter({_header: 'Найдём номера под ваши пожелания'})
                 .cards__content-right

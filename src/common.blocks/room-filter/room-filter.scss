@@ -6,23 +6,12 @@
     border-radius: 4px;
     padding: 39px 29px 29px 29px;
 
+    &__date,
     &__header{
         margin-bottom: 20px;
     }
-
-    &__form{
-
-    }
-
-    &__date{
-        margin-bottom: 20px;
-    }
-
+    
     &__guests{
         margin-bottom: 31px;
-    }
-
-    &__search-button{
-
     }
 }

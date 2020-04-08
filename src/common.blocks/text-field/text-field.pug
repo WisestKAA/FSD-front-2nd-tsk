@@ -1,4 +1,4 @@
-mixin text-field({_placeholder, _id, _isMasked = false, _isPaddingRightMode = false, _text}={})
+mixin text-field({_placeholder, _id, _isMasked = false, _isPaddingRightMode = false, _text, _isPassword=false}={})
 
     - var maskedMod = '';
     if _isMasked  
@@ -8,9 +8,12 @@ mixin text-field({_placeholder, _id, _isMasked = false, _isPaddingRightMode = fa
     - var addPadding = '';
     if _isPaddingRightMode
         - addPadding = ' text-field_addPaddingRight'
+    - var type = 'text'
+    if(_isPassword) 
+        - type = 'password'
     
     input(
-        type="text" 
+        type=type 
         placeholder=_placeholder 
         id=_id 
         class=`text-field${maskedMod}${addPadding}`
