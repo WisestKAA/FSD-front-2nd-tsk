@@ -7,6 +7,7 @@ block content
     include ../../../common.blocks/logo-ui-kit/logo-ui-kit.pug
     include ../../../common.blocks/room-filter/room-filter.pug 
     include ../../../common.blocks/sign-up/sign-up.pug
+    include ../../../common.blocks/room-price/room-price.pug
 
     .cards
         .cards__logo
@@ -18,6 +19,14 @@ block content
                     .cards__separator
                     +sign-up({_header: 'Регистрация аккаунта',})
                 .cards__content-center
-                    +room-filter({_header: 'Найдём номера под ваши пожелания'})
+                    +room-price({_number: '888', 
+                        _isLuxe: true,
+                        _pricePerDay: '9 990', 
+                        _servicePrice: '2179', 
+                        _discountForService: '2179',
+                        _serviceInfo: '', 
+                        _addServicePrice: '300', 
+                        _addServiceInfo: ''
+                    })
                 .cards__content-right
                     +room-filter({_header: 'Найдём номера под ваши пожелания'})
