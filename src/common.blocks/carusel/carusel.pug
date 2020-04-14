@@ -1,0 +1,5 @@
+mixin carusel({ _imgLinks=[], }={}) 
+    .carusel
+        .carusel__wrapper.owl-carousel
+            each item in _imgLinks            
+                img(src=item).carusel__img

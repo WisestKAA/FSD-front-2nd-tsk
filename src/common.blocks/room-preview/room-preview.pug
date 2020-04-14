@@ -1,0 +1,27 @@
+include ../rate-button/rate-button.pug 
+include ../carusel/carusel.pug
+
+mixin room-preview({ _imgLinks=[], _number, _isLuxe=false, _price, _rate, _comments }={})
+    - var luxe = ''
+    if(!_isLuxe)
+        - luxe = '.room-preview__discripton-top-luxe_hide'
+    
+    .room-preview
+        .room-preview__carusel
+            +carusel({ _imgLinks: _imgLinks })
+        .room-preview__discripton-wrapper
+            .room-preview__discripton-top
+                .room-preview__discripton-top-wrapper-num
+                    .room-preview__discripton-top-number='№'
+                    .room-preview__discripton-top-num=_number
+                    .room-preview__discripton-top-luxe(class=luxe)='люкс'
+                .room-preview__discripton-top-wrapper-price
+                    .room-preview__discripton-top-price=`${_price}₽`
+                    .room-preview__discripton-top-price-per-day='в сутки'
+            .room-preview__separator
+            .room-preview__discripton-bot
+                .room-preview__discripton-bot-rate
+                    +rate-button({ _rate: _rate })
+                .room-preview__discripton-bot-wrapper-comment
+                    .room-preview__discripton-bot-comment-num=_comments
+                    .room-preview__discripton-bot-comment='Отзывов'

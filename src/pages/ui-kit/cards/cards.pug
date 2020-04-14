@@ -8,6 +8,8 @@ block content
     include ../../../common.blocks/room-filter/room-filter.pug 
     include ../../../common.blocks/sign-up/sign-up.pug
     include ../../../common.blocks/room-price/room-price.pug
+    include ../../../common.blocks/sign-in/sign-in.pug
+    include ../../../common.blocks/room-preview/room-preview.pug
 
     .cards
         .cards__logo
@@ -28,5 +30,16 @@ block content
                         _addServicePrice: '300', 
                         _addServiceInfo: ''
                     })
+                    .cards__separator
+                    +sign-in({_header: 'Войти'})
                 .cards__content-right
-                    +room-filter({_header: 'Найдём номера под ваши пожелания'})
+                    .cards__calendar-moke
+                    .cards__separator
+                    +room-preview({
+                        _imgLinks:['/img/room888.png','/img/room888.png','/img/room888.png','/img/room888.png'], 
+                        _number: 888, 
+                        _isLuxe: true, 
+                        _price: '9 990', 
+                        _rate: 5, 
+                        _comments: 145
+                    })

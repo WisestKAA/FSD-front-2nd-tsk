@@ -1,4 +1,4 @@
-.sign-up{
+.sign-in{
     max-width: 380px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
@@ -6,43 +6,39 @@
     border-radius: 4px;
     padding: 39px 29px 29px 29px;
 
-    &__header,
-    &__birthday{
+    &__header{
         margin-bottom: 20px;
     }
 
-    &__name,
-    &__surname,
-    &__authorization-data,
-    &__e-mail,
-    &__mailing{
+    &__email{
         margin-bottom: 10px;
     }
 
-    &__sex{
-        margin-bottom: 23px;
+    &__password{
+        margin-bottom: 20px;
     }
 
-    &__go-to-payment{
+    &__button{
         margin-bottom: 30px;
     }
 
-    &__go-to-sign-in{
+    &__sign-up{
         max-width: 320px;
         width: 100%;
         display: flex;
         justify-content: space-between;
-    }
+        margin-bottom: 2px;
 
-    &__sign-in-text{
-        display: flex;
-        align-items: center;
-        margin-top: -2px;
-        color: #000000;
-    }
+        &-text{
+            display: flex;
+            align-items: center;
+            margin-top: -2px;
+            color: #000000;
+        }
 
-    &__sign-in-button{
-        max-width: 99px;
-        width: 100%;
+        &-button{
+            max-width: 99px;
+            width: 100%;
+        }
     }
 }

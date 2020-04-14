@@ -34,6 +34,7 @@
         "install": "^0.13.0",
         "jq-paginator": "^2.0.2",
         "jquery": "^3.4.1",
+        "owl.carousel": "^2.3.4",
         "paginationjs": "^2.1.5"
     }
 }

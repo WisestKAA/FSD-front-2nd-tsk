@@ -84,7 +84,8 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
         }),
         new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/ui-kit/colors-and-type/colors-and-type.pug`,
