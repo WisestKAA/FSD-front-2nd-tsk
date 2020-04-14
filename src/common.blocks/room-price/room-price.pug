@@ -3,7 +3,7 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 include ../label/label.pug
 
-mixin room-price({_number, _isLuxe=false, _pricePerDay, _servicePrice, _discountForService='', _serviceInfo, _addServicePrice, _addServiceInfo}={})
+mixin room-price({ _actionLink='/#moke', _number, _isLuxe=false, _pricePerDay=0, _servicePrice=0, _discountForService='', _serviceInfo, _addServicePrice=0, _addServiceInfo }={})
     - var luxe = ''
     if(!_isLuxe)
         - luxe = 'room-price__room-number-luxe_hide'
@@ -13,10 +13,10 @@ mixin room-price({_number, _isLuxe=false, _pricePerDay, _servicePrice, _discount
         - service += ` скидка ${_discountForService}₽`
         - servicePrice = _servicePrice - _discountForService
     .room-price
-        form.room-price__form 
+        form(action=_actionLink).room-price__form 
             .room-price__header
                 .room-price__room-number
-                    .room-price__room-number-text-number='№ '
+                    .room-price__room-number-text-number='№'
                     .room-price__room-number-text=`${_number}`
                     .room-price__room-number-luxe(class = luxe)='люкс'
                 .room-price__price
@@ -48,6 +48,6 @@ mixin room-price({_number, _isLuxe=false, _pricePerDay, _servicePrice, _discount
             .room-price__total
                 .room-price__total-text='Итого'
                 .room-price__total-separator
-                .room-price__total-price=`38 081₽`
+                .room-price__total-price=`0₽`
             .room-price__book-a-room
-                +button({_type: 'rich', _name: 'bookARoom', _value: 'забронировать', _actionLink: '/#moke'})
+                +button({_type: 'rich', _name: 'bookARoom', _value: 'забронировать',})

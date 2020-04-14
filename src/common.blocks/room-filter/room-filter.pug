@@ -3,10 +3,10 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 include ../label/label.pug 
 
-mixin room-filter({_header, }={}) 
+mixin room-filter({ _header, _actionLink='/#moke' }={}) 
     .room-filter
         .room-filter__header.h1=_header
-        form.room-filter__form
+        form(action=_actionLink).room-filter__form
             .room-filter__date
                 +date-dropdown({_isFiltred: false,  _startText: 'прибытие', _finishText: 'выезд'})
             .room-filter__guests
