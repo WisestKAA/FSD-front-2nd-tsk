@@ -6,11 +6,11 @@
     border-radius: 4px;
 
     &__carusel{
-        //margin-bottom: 20px;
+
     }
 
     &__discripton-wrapper{
-        padding: 20px;
+        padding: 20px 18px 15px 20px;
     }
 
     &__discripton-top{
@@ -46,9 +46,9 @@
         &-num{
             font-family: 'Quicksand';
             font-style: normal;
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 30px;
+            font-weight: bold;            
+            font-size: 19px;
+            line-height: 25px;
             color: $dark100;
         }
 
@@ -96,7 +96,7 @@
         max-width: 230px;
         width: 100%;
         border-bottom: 1px solid $dark10;
-        margin-top: 10px 0px;
+        margin: 10px 0 7px 0;
     }
 
     &__discripton-bot{
@@ -109,7 +109,8 @@
 
         &-wrapper-comment{
             display: flex;
-            flex-direction: row;
+            align-items: center;
+            margin-right: 2px;
         }
 
         &-comment-num,
@@ -124,9 +125,9 @@
 
         &-comment{
             font-weight: normal;
-            font-size: 12px;
+            font-size: 14px;
             margin-left: 4px;
-            padding-bottom: 1px;
+            padding-bottom: 2px;
 
             &-num{
                 font-weight: bold;
