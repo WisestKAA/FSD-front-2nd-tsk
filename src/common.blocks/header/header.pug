@@ -1,0 +1,38 @@
+
+include ../logo-site/logo-site.pug
+include ../button/button.pug
+
+mixin header({ _navOptions=[],  _isLogged, _username, _loginButtonText, _signupButtonText}={}) 
+    - var unlogged = ''
+    - var logged = ''
+    if (_isLogged)
+        - unlogged = 'header__unlogged_hide'
+    else
+        - logged = 'header__logged_hide'
+    
+    -var current = 'header__navigation-link_font-weight-bold'
+    
+    header.header
+        .header__wrapper
+            .header__logo
+                +logo-site()
+            .header__navigation-wrapper
+                .header__navigation                    
+                    each navoption in _navOptions
+                        - const {_text, _link, _isCurrent, _sublinks} = navoption
+                        if (_sublinks)
+                            a(href='moke').header__navigation-sublinks=_text
+                        else
+                            if (_isCurrent)
+                                a(href=_link, class=current).header__navigation-link=_text
+                            else
+                                a(href=_link).header__navigation-link=_text
+                .header__sign
+                    .header__unlogged(class=unlogged)
+                        .header__login-button
+                            +button({ _type: 'short-bordered', _name: 'headerLogin', _value: _loginButtonText, _actionLink: '/moke' })
+                        .header__sign-up-button
+                            +button({ _type: 'short-gradient-background', _name: 'headerSignUp', _value: _signupButtonText, _actionLink: '/moke' })
+                    .header__logged(class=logged)
+                        .header__username=_username
+                

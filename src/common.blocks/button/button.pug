@@ -1,6 +1,6 @@
 include ../material-icons/material-icons.pug
 
-mixin button ({ _type, _name, _value, _actionLink }={})    
+mixin button({ _type, _name, _value, _actionLink }={})    
 
     .button
         case _type
@@ -13,9 +13,17 @@ mixin button ({ _type, _name, _value, _actionLink }={})
                     input(type='submit', name=_name, value=_value, class=type)
             when 'empty'
                 - var type = 'button__wraper-empty_' + _type
-                    .button__wraper-empty
-                        a(href=_actionLink, class=type)=_value
+                .button__wraper-empty
+                    a(href=_actionLink, class=type)=_value
+            when 'short-gradient-background'
+                -var type = 'button__wraper-short_gradient-background'
+                .button__wraper-short
+                    a(href=_actionLink, class=type)=_value
+            when 'short-bordered'
+                -var type = 'button__wraper-short_bordered'
+                .button__wraper-short
+                    a(href=_actionLink, class=type)=_value         
             default
                 - var type = 'button__wraper_' + _type
-                    .button__wraper            
-                        a(href=_actionLink, class=type)=_value
+                .button__wraper            
+                    a(href=_actionLink, class=type)=_value

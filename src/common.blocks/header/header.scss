@@ -1,0 +1,90 @@
+.header{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    
+    &__wrapper{
+        max-width: 1160px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo{
+        margin-top: 3px;
+        
+    }
+
+    &__navigation-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__navigation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-link,
+        &-sublinks{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: $dark50;
+            margin-right: 30px;
+            text-decoration: none;
+
+            &_font-weight-bold{
+                font-weight: bold;
+                color: $dark75;
+            }
+        }
+    }
+
+    &__sign{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__unlogged{
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        height: 34px;
+    }
+
+    &__login-button{
+        width: 79px;
+    }
+
+    &__sign-up-button{
+        width: 101px;
+    }
+
+    &__logged{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__username{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark50;
+        height: 30px;
+        border-left: 1px solid $dark10;
+        padding-left: 30px;
+    }
+
+    &__logged_hide,
+    &__username_hide{
+        display: none;
+    }
+}
