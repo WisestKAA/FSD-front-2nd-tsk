@@ -45,12 +45,17 @@
                 font-weight: bold;
                 color: $dark75;
             }
+        }        
+
+        &-link:last-child{
+            margin-right: 0;
         }
     }
 
     &__sign{
         display: flex;
         justify-content: flex-end;
+        margin-left: 30PX;
     }
 
     &__unlogged{
@@ -70,7 +75,8 @@
 
     &__logged{
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-end;;
+        margin-right: 1px;
     }
 
     &__username{
@@ -83,10 +89,12 @@
         height: 30px;
         border-left: 1px solid $dark10;
         padding-left: 30px;
+        display: flex;
+        align-items: center;
     }
 
     &__logged_hide,
-    &__username_hide{
+    &__unlogged_hide{
         display: none;
     }
 }
