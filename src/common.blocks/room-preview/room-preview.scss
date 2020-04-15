@@ -4,10 +4,7 @@
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
-
-    &__carusel{
-
-    }
+    background-color: white;
 
     &__discripton-wrapper{
         padding: 20px 18px 15px 20px;
@@ -102,10 +99,6 @@
     &__discripton-bot{
         display: flex;
         justify-content: space-between;
-
-        &-rate{
-            
-        }
 
         &-wrapper-comment{
             display: flex;
