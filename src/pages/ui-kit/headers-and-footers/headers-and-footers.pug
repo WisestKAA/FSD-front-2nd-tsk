@@ -14,7 +14,11 @@ block content
             +header({ _navOptions:[
                 {_text: 'Home', _link: '/', _isCurrent: true, _sublinks: ''},
                 {_text: 'About Us', _link: '/about-us', _isCurrent: false, _sublinks: ''},
-                {_text: 'Services', _link: '/services', _isCurrent: false, _sublinks: 'asd'},
+                {_text: 'Services', _link: '/services', _isCurrent: false, _sublinks: [
+                    {_textLink: 'Service1', _link: '/Service1'},
+                    {_textLink: 'Service2', _link: '/Service2'},
+                    {_textLink: 'Service3', _link: '/Service3'},
+                ]},
                 {_text: 'Careers', _link: '/careers', _isCurrent: false, _sublinks: ''},
                 {_text: 'News', _link: '/news', _isCurrent: false, _sublinks: ''},
                 {_text: 'Documentation', _link: '/documentation', _isCurrent: false, _sublinks: ''},
@@ -24,5 +28,21 @@ block content
             _loginButtonText: 'Login', 
             _signupButtonText: 'REGISTER'})
         .headers-and-footers__header
+            +header({ _navOptions:[
+                {_text: 'Home', _link: '/', _isCurrent: true, _sublinks: ''},
+                {_text: 'About Us', _link: '/about-us', _isCurrent: false, _sublinks: ''},
+                {_text: 'Services', _link: '/services', _isCurrent: false, _sublinks: [
+                    {_textLink: 'Service1', _link: '/Service1'},
+                    {_textLink: 'Service2', _link: '/Service2'},
+                    {_textLink: 'Service3', _link: '/Service3'},
+                ]},
+                {_text: 'Careers', _link: '/careers', _isCurrent: false, _sublinks: ''},
+                {_text: 'News', _link: '/news', _isCurrent: false, _sublinks: ''},
+                {_text: 'Documentation', _link: '/documentation', _isCurrent: false, _sublinks: ''},
+            ],  
+            _isLogged: true, 
+            _username: 'Cosmin Negoita', 
+            _loginButtonText: 'Login', 
+            _signupButtonText: 'REGISTER'})
         .headers-and-footers__footer-with-copiright
         .headers-and-footers__footer    

@@ -4,6 +4,7 @@
     background-color: white;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 10px 20px $dark05;
     
     &__wrapper{
         max-width: 1160px;
@@ -38,6 +39,7 @@
             color: $dark50;
             margin-right: 30px;
             text-decoration: none;
+            letter-spacing: -0.0135em;
 
             &_font-weight-bold{
                 font-weight: bold;

@@ -1,0 +1,48 @@
+.dropdown-nemu{
+    width: max-content;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin-right: 20px;
+    padding-top: 2px;
+
+    &__link,
+    &__text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark50;
+        text-decoration: none;
+    }
+
+    &__arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 18px;
+        color: $dark50;
+    }
+
+    &__links{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        border-radius: 0 0 4px 4px;
+        display: none; 
+        background-color: white;
+        margin-top: 17px;  
+    }
+
+    &__link{
+        padding: 10px 10px;
+    }
+
+    &:hover &__links{
+        display: flex;
+        flex-direction: column;
+    }
+}
