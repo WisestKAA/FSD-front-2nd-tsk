@@ -7,6 +7,7 @@ block content
     include ../../../common.blocks/logo-ui-kit/logo-ui-kit.pug
     include ../../../common.blocks/header/header.pug
     include ../../../common.blocks/footer-with-copyright/footer-with-copyright.pug
+    include ../../../common.blocks/footer/footer.pug
 
     .headers-and-footers
         .headers-and-footers__logo
@@ -70,4 +71,5 @@ block content
             _subscribeDescription: 'Receive our latest news and promotions in your inbox!', 
             _sybscribePlaceholder: 'Your email address', 
             _copyrightText: 'Copyright © 2018 Toxin UI Kit. All rights reserved.', })
-        .headers-and-footers__footer    
+        .headers-and-footers__footer  
+            +footer({ _descriptionText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.' })  
