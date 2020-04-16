@@ -15,8 +15,7 @@
     }
 
     &__logo{
-        margin-top: 3px;
-        
+        margin-top: 3px;        
     }
 
     &__navigation-wrapper{
@@ -31,7 +30,7 @@
 
         &-link,
         &-sublinks{
-            font-family: 'Montserrat';
+            font-family: 'Montserrat', sans-serif;;
             font-style: normal;
             font-weight: normal;
             font-size: 14px;
@@ -50,12 +49,20 @@
         &-link:last-child{
             margin-right: 0;
         }
+
+        &_margin-bottom-1{
+            margin-bottom: 1px;
+        }
     }
 
     &__sign{
         display: flex;
         justify-content: flex-end;
         margin-left: 30PX;
+
+        &_margin-left-27{
+            margin-left: 33PX;
+        }
     }
 
     &__unlogged{

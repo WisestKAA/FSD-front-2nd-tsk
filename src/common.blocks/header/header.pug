@@ -6,8 +6,12 @@ include ../dropdown-nemu/dropdown-nemu.pug
 mixin header({ _navOptions=[],  _isLogged, _username, _loginButtonText, _signupButtonText}={}) 
     - var unlogged =  ''
     - var logged = ''
+    - var navlogged = ''
+    - var singlogged =''
     if(_isLogged)
         - unlogged = 'header__unlogged_hide'
+        - navlogged = 'header__navigation_margin-bottom-1'
+        - singlogged = 'header__sign_margin-left-27'
     else
         - logged = 'header__logged_hide'
     
@@ -18,7 +22,7 @@ mixin header({ _navOptions=[],  _isLogged, _username, _loginButtonText, _signupB
             .header__logo
                 +logo-site()
             .header__navigation-wrapper
-                .header__navigation                    
+                .header__navigation(class=navlogged)                    
                     each navoption in _navOptions
                         - const {_text, _link, _isCurrent, _sublinks} = navoption
                         if (_sublinks)
@@ -28,7 +32,7 @@ mixin header({ _navOptions=[],  _isLogged, _username, _loginButtonText, _signupB
                                 a(href=_link, class=current).header__navigation-link=_text
                             else
                                 a(href=_link).header__navigation-link=_text
-                .header__sign
+                .header__sign(class=singlogged)
                     .header__unlogged(class=unlogged)
                         .header__login-button
                             +button({ _type: 'short-bordered', _name: 'headerLogin', _value: _loginButtonText, _actionLink: '/moke' })
