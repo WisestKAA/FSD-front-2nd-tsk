@@ -1,0 +1,24 @@
+.social-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 112px;
+    
+    &__ico{
+        width: 24px;
+        height: 24px;
+
+        &-twitter{
+            margin-top: 5px;
+        }
+
+        &-facebook{
+            margin-top: 4px;
+            margin-left: -1px;
+        }
+
+        &-instagram{
+            margin-top: 4px;
+            margin-right: 1px;
+        }
+    }
+}
