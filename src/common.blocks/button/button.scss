@@ -18,6 +18,10 @@
         color: white;
     }
 
+    // &__wraper-for-arrow{
+    //     pos
+    // }
+
     &__wraper,
     &__wraper-short,
     &__wraper-rich{
@@ -60,19 +64,23 @@
     }
 
     &__wraper-short{
-        max-width: 101px;
+        max-width: 200px;
+        width: max-content;
         height: 34px;        
         border-radius: 17px;
 
         &_bordered{
             border-radius: 15px;
-            width: 75px;
+            //width: 75px;
+            width: max-content;
             height: 29px;
-            padding-bottom: 1px;
+            margin: 0 2px;
+            padding: 0 18px 1px 18px;
         }
 
         &_gradient-background{
-            padding-bottom: 1px;
+            width: max-content;
+            padding: 0 21px 1px 19px;
         }
     }
 
@@ -90,7 +98,8 @@
         width: 100%;    
         height: 44px;        
         border-radius: 22px;
-        margin: 0;       
+        margin: 0;        
+        position: relative;     
         
         &_rich{
             position: absolute;

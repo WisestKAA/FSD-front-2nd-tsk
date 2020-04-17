@@ -44,11 +44,15 @@
                 font-weight: bold;
                 color: $dark75;
             }
+
+            &_short{
+                margin-right: 20px;                
+            }
         }        
 
-        &-link:last-child{
-            margin-right: 0;
-        }
+        // &-link:last-child{
+        //     margin-right: 0;
+        // }
 
         &_margin-bottom-1{
             margin-bottom: 1px;
@@ -58,26 +62,22 @@
     &__sign{
         display: flex;
         justify-content: flex-end;
-        margin-left: 30PX;
-
-        &_margin-left-27{
-            margin-left: 33PX;
-        }
     }
 
     &__unlogged{
         display: flex;
         justify-content: space-between;
-        width: 200px;
+        //width: 200px;
         height: 34px;
     }
 
     &__login-button{
-        width: 79px;
+        //width: 79px;
     }
 
     &__sign-up-button{
-        width: 101px;
+        //width: 101px;
+        margin-left: 20px;
     }
 
     &__logged{

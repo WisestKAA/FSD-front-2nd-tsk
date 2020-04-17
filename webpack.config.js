@@ -103,5 +103,13 @@ module.exports = {
             template: `${PAGES_DIR}/ui-kit/headers-and-footers/headers-and-footers.pug`,
             filename: './headers-and-footers.html',
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/website-pages/landing/landing.pug`,
+            filename: './landing.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/website-pages/landing/landing.pug`,
+            filename: './landing.html',
+        }),
     ]
 };

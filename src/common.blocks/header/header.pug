@@ -3,19 +3,21 @@ include ../logo-site/logo-site.pug
 include ../button/button.pug
 include ../dropdown-nemu/dropdown-nemu.pug
 
-mixin header({ _navOptions=[],  _isLogged, _username, _loginButtonText, _signupButtonText}={}) 
+mixin header({ _navOptions=[], _isShortMenu=false,  _isLogged, _username, _loginButtonText, _signupButtonText}={}) 
     - var unlogged =  ''
     - var logged = ''
     - var navlogged = ''
-    - var singlogged =''
     if(_isLogged)
         - unlogged = 'header__unlogged_hide'
         - navlogged = 'header__navigation_margin-bottom-1'
-        - singlogged = 'header__sign_margin-left-27'
     else
         - logged = 'header__logged_hide'
     
     -var current = 'header__navigation-link_font-weight-bold'
+    
+    - var shrtmenu = ''
+    if(_isShortMenu)
+        - var shrtmenu = 'header__navigation-link_short'
     
     header.header
         .header__wrapper
@@ -29,10 +31,10 @@ mixin header({ _navOptions=[],  _isLogged, _username, _loginButtonText, _signupB
                             +dropdown-nemu({ _text: _text, _navOptions: _sublinks })
                         else
                             if (_isCurrent)
-                                a(href=_link, class=current).header__navigation-link=_text
+                                a(href=_link, class=`${current} ${shrtmenu}`).header__navigation-link=_text
                             else
-                                a(href=_link).header__navigation-link=_text
-                .header__sign(class=singlogged)
+                                a(href=_link class=shrtmenu).header__navigation-link=_text
+                .header__sign
                     .header__unlogged(class=unlogged)
                         .header__login-button
                             +button({ _type: 'short-bordered', _name: 'headerLogin', _value: _loginButtonText, _actionLink: '/moke' })
