@@ -1,6 +1,4 @@
 .pagination{
-    
-    width: 100%;
 
     &__container{
         margin: 0px;
@@ -10,11 +8,12 @@
     }
 
     &__item{           
-        font-family: Montserrat;
+        font-family: 'Montserrat';
         font-style: normal;
         font-weight: normal;
         font-size: 12px;
         line-height: 15px;
+        margin-top: -1px;
 
         &_active{
             border-radius: 22px;
@@ -63,5 +62,14 @@
         color: $dark75;
         margin-top: 8px;
         margin-left: 5px;
+    }
+
+    &__ellipsis{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: $dark50;
     }
 }

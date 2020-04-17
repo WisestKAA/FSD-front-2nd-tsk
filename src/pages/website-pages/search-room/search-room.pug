@@ -1,0 +1,225 @@
+extends ../../index
+
+block variables
+    - var _bgcolor='#FFFFFF'
+
+block content
+    include ../../../common.blocks/header/header.pug
+    include ../../../common.blocks/label/label.pug
+    include ../../../common.blocks/range-slider/range-slider.pug
+    include ../../../common.blocks/checkbox-button/checkbox-button.pug
+    include ../../../common.blocks/date-dropdown/date-dropdown.pug
+    include ../../../common.blocks/dropdown/dropdown.pug
+    include ../../../common.blocks/expandable-checkbox-list/expandable-checkbox-list.pug
+    include ../../../common.blocks/room-preview/room-preview.pug
+    include ../../../common.blocks/pagination/pagination.pug
+    include ../../../common.blocks/footer-with-copyright/footer-with-copyright.pug   
+
+    .search-room
+        .search-room__header
+            +header({ _navOptions: [
+                {_text: 'О нас', _link: '/about-us', _isCurrent: false},
+                {_text: 'Услуги', _link: '/services', _isCurrent: false, _sublinks: [
+                    {_textLink: 'Service1', _link: '/service/1'},
+                    {_textLink: 'Service2', _link: '/service/2'},
+                    {_textLink: 'Service3', _link: '/service/3'},
+                ]},
+                {_text: 'Вакансии', _link: '/vacancies', _isCurrent: false},
+                {_text: 'Новости', _link: '/news', _isCurrent: false},
+                {_text: 'Соглашения', _link: '/agreements', _isCurrent: false, _sublinks: [
+                    {_textLink: 'agreements1', _link: '/agreements/1'},
+                    {_textLink: 'agreements2', _link: '/agreements/2'},
+                    {_textLink: 'agreements3', _link: '/agreements/3'},
+                ]},
+            ],
+            _isShortMenu: true,
+            _isLogged: false,
+            _username: '', 
+            _loginButtonText: 'войти', 
+            _signupButtonText: 'зарегистрироваться'})
+        .search-room__main
+            .search-room__wrapper
+                .search-room__wrapper-left
+                    .search-room__dates
+                        +label({_text: 'даты пребывания в отеле', _marginBottom: '5'})
+                        +date-dropdown ({_isFiltred: true})
+                    .search-room__guests
+                        +label({_text: 'гости', _marginBottom: '5'})
+                        +dropdown({_text: "Сколько гостей",
+                            _options: [
+                                {_text: 'взрослые', _number: 0},
+                                {_text: 'дети', _number: 0},
+                                {_text: 'младенцы', _number: 0},
+                            ],
+                        })
+                    .search-room__price-range
+                        +range-slider({ _label: 'диапазон цены' })
+                        .search-room__price-caption='Стоимость за сутки пребывания в номере'
+                    .search-room__checkbox-buttons
+                        +label({_text: 'Checkbox Buttons', _marginBottom: '17'})
+                        +checkbox-button({_text: 'Можно курить', _name: 'smoking'})
+                        +checkbox-button({_text: 'Можно с питомцами', _name: 'pets', _isChecked: true})
+                        +checkbox-button({_text: 'Можно пригласить гостей (до 10 человек)', _name: 'guests', _isChecked: true})
+                    .search-room__availability
+                        +label({_text: 'доступность', _marginBottom: '16'})
+                        +checkbox-button({_text: 'Ширина коридоров в номере не менее 91 см.', _name: 'width', _header: 'Широкий коридор'})
+                        +checkbox-button({_text: 'На 1 этаже вас встретит специалист и проводит до номера.', _name: 'help', _header: 'Помощник для инвалидов'})
+                    .search-room__amenities
+                        +label({_text: 'удобства номера', _marginBottom: '5'})
+                        +dropdown({_text: "",
+                            _options: [
+                                {_text: 'спальни', _number: 0},
+                                {_text: 'кровати', _number: 0},
+                                {_text: 'ванные комнаты', _number: 0},
+                            ],
+                            _isShort: true
+                        })
+                    .search-room__add-amenities
+                        +expandable-checkbox-list({_header: 'дополнительные удобства', 
+                            _checkboxes :[
+                                {_text: 'Завтрак', _isChecked: false},
+                                {_text: 'Письменный стол', _isChecked: true},
+                                {_text: 'Стул для кормления', _isChecked: true},
+                                {_text: 'Кроватка', _isChecked: true},
+                                {_text: 'Телевизор', _isChecked: false},
+                                {_text: 'Шампунь', _isChecked: false},
+                                {_text: 'Телевизор', _isChecked: false},
+                                {_text: 'Шампунь', _isChecked: false},
+                            ],
+                        })
+                .search-room__wrapper-right
+                    .search-room__preview-header.h1='Номера, которые мы для вас подобрали'
+                    .search-room__wrapper-preview
+                        .search-room__preview
+                            +room-preview({
+                                _imgLinks:['/img/room888.png','/img/room888.png','/img/room888.png','/img/room888.png'], 
+                                _number: 888, 
+                                _isLuxe: true, 
+                                _price: '9 990', 
+                                _rate: 5, 
+                                _comments: 145
+                            })
+                            +room-preview({
+                                _imgLinks:['/img/room840.png','/img/room840.png','/img/room840.png','/img/room840.png'], 
+                                _number: 840, 
+                                _isLuxe: false, 
+                                _price: '9 990', 
+                                _rate: 4, 
+                                _comments: 65
+                            })
+                            +room-preview({
+                                _imgLinks:['/img/room980.png','/img/room980.png','/img/room980.png','/img/room980.png'], 
+                                _number: 980, 
+                                _isLuxe: true, 
+                                _price: '8 500', 
+                                _rate: 3, 
+                                _comments: 35
+                            })           
+                        .search-room__preview
+                            +room-preview({
+                                _imgLinks:['/img/room856.png','/img/room856.png','/img/room856.png','/img/room856.png'], 
+                                _number: 856, 
+                                _isLuxe: false, 
+                                _price: '7 300', 
+                                _rate: 5, 
+                                _comments: 195
+                            })
+                            +room-preview({
+                                _imgLinks:['/img/room740.png','/img/room740.png','/img/room740.png','/img/room740.png'], 
+                                _number: 740, 
+                                _isLuxe: false, 
+                                _price: '6 000', 
+                                _rate: 4, 
+                                _comments: 44
+                            })
+                            +room-preview({
+                                _imgLinks:['/img/room982.png','/img/room982.png','/img/room982.png','/img/room982.png'], 
+                                _number: 982, 
+                                _isLuxe: false, 
+                                _price: '5 800', 
+                                _rate: 3, 
+                                _comments: 56
+                            })
+                        .search-room__preview
+                            +room-preview({
+                                _imgLinks:['/img/room678.png','/img/room678.png','/img/room678.png','/img/room678.png'], 
+                                _number: 678, 
+                                _isLuxe: false, 
+                                _price: '5 500', 
+                                _rate: 5, 
+                                _comments: 45
+                            })
+                            +room-preview({
+                                _imgLinks:['/img/room450.png','/img/room450.png','/img/room450.png','/img/room450.png'], 
+                                _number: 450, 
+                                _isLuxe: false, 
+                                _price: '5 300', 
+                                _rate: 4, 
+                                _comments: 39
+                            })
+                            +room-preview({
+                                _imgLinks:['/img/room350.png','/img/room350.png','/img/room350.png','/img/room350.png'], 
+                                _number: 350, 
+                                _isLuxe: false, 
+                                _price: '5 000', 
+                                _rate: 3, 
+                                _comments: 77
+                            })
+                        .search-room__preview
+                            +room-preview({
+                                _imgLinks:['/img/room666.png','/img/room666.png','/img/room666.png','/img/room666.png'], 
+                                _number: 666, 
+                                _isLuxe: false, 
+                                _price: '5 000', 
+                                _rate: 5, 
+                                _comments: 25
+                            })
+                            +room-preview({
+                                _imgLinks:['/img/room444.png','/img/room444.png','/img/room444.png','/img/room444.png'], 
+                                _number: 444, 
+                                _isLuxe: false, 
+                                _price: '5 000', 
+                                _rate: 3, 
+                                _comments: 15
+                            })
+                            +room-preview({
+                                _imgLinks:['/img/room352.png','/img/room352.png','/img/room352.png','/img/room352.png'], 
+                                _number: 352, 
+                                _isLuxe: false, 
+                                _price: '5 000', 
+                                _rate: 3, 
+                                _comments: 55
+                            })
+                    .search-room__pagination
+                        +pagination({_links :[
+                            {href: '/page1', isActive: true, number: 1,},
+                            {href: '/page2', isActive: false,  number: 2,},
+                            {href: '/page3', isActive: false,  number: 3,},
+                            {href: '', isActive: false, number: 0,},
+                            {href: '/page15', isActive: false,  number: 15,},
+                        ]})
+    .search-room__footer
+        +footer-with-copyright({_descriptionText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»', 
+        _menuItems: [
+            { _header: 'навигация', _options: [
+                { _text: 'О нас', _link: '/about-us' },
+                { _text: 'Новости', _link: '/news' },
+                { _text: 'Служба поддержки', _link: '/support-service' },
+                { _text: 'Услуги', _link: '/services' },
+            ]},
+            { _header: 'о нас', _options: [
+                { _text: 'О сервисе', _link: '/about-us/about-service' },
+                { _text: 'Наша команда', _link: '/about-us/our-team' },
+                { _text: 'Вакансии', _link: '/about-us/vacancies' },
+                { _text: 'Инвесторы', _link: '/about-us/investors' },
+            ]},
+            { _header: 'Служба поддержки', _options: [
+                { _text: 'Соглашения', _link: '/support-service/agreements' },
+                { _text: 'Сообщества', _link: '/support-service/socials' },
+                { _text: 'Связь с нами', _link: '/support-service/contact' },
+            ]},
+        ],
+        _subscribeHeader: 'Подписка', 
+        _subscribeDescription: 'Получайте специальные предложения и новости сервиса', 
+        _sybscribePlaceholder: 'Email', 
+        _copyrightText: 'Copyright © 2018 Toxin отель. Все права зачищены.'})

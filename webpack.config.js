@@ -108,8 +108,8 @@ module.exports = {
             filename: './landing.html',
         }),
         new HtmlWebpackPlugin({
-            template: `${PAGES_DIR}/website-pages/landing/landing.pug`,
-            filename: './landing.html',
+            template: `${PAGES_DIR}/website-pages/search-room/search-room.pug`,
+            filename: './search-room.html',
         }),
     ]
 };
