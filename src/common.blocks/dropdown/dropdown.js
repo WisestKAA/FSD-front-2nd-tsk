@@ -65,9 +65,15 @@ class DropDown {
 
     handleOptionsModifed(){
         this.sum = 0;
+        let babys = 0;
         this.optionsList.forEach((val)=>{
             let num = val.querySelector('.dropdown-option__number');
-            this.sum += parseInt(num.textContent, 10);
+            let tmp = val.querySelector('.dropdown-option__text').textContent;
+            if(val.querySelector('.dropdown-option__text').textContent == 'младенцы'){
+                babys = num.textContent;
+            }else{
+                this.sum += parseInt(num.textContent, 10);
+            }
         });
         
         if(this.sum === 0){
@@ -83,7 +89,9 @@ class DropDown {
             this.selectText.textContent = this.getRightTextShort(this.optionText)
         }
         else{
-            this.selectText.textContent = this.getRightText(this.optionText.guest, this.sum);
+            this.selectText.textContent = babys == 0 ? 
+                this.getRightText(this.optionText.guest, this.sum) : 
+               `${this.getRightText(this.optionText.guest, this.sum)}, ${this.getRightText(this.optionText.baby, babys)}` ;
         }
     }
 
@@ -155,6 +163,11 @@ $(document).ready(() => {
             ferst: ' ванная комната',
             second: ' ванные комнаты',
             third: ' ванных комнат',
+        },
+        baby: {
+            ferst: ' младенец',
+            second: ' младенца',
+            third: ' младенцев',
         },
     }
 

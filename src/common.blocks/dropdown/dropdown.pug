@@ -2,14 +2,18 @@ include ../material-icons/material-icons.pug
 include ../dropdown-option/dropdown-option.pug
 include ../dropdown-option-button/dropdown-option-button.pug
 
-mixin dropdown ({_text, _options=[], _isShort=false, } = {})
+mixin dropdown({ _text, _options=[], _isShort=false, _isDarkArrow=false } = {})
     - var short=''
     if _isShort == true
         - short='dropdown_width-short'
 
+    - var darkArrow = ''
+    if (_isDarkArrow)
+        - darkArrow = 'dropdown__arrow_dark'
+
     .dropdown(class=short)
         .dropdown__wrapper
-            .dropdown__arrow
+            .dropdown__arrow(class=darkArrow)
                 +material-icons({_type: 'keyboard_arrow_down'})
             .dropdown__select
                 span.dropdown__text=_text

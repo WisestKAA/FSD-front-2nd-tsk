@@ -3,7 +3,6 @@
     width: 100%;
     max-width: 320px;
     box-sizing: border-box;
-    //margin-top: 6px; 
 
     &__wrapper{
         position: relative;
@@ -48,11 +47,14 @@
         vertical-align: middle;        
         justify-content: center;
         align-items: center;
-
         font-size: 24px;
         line-height: 24px;
         color: $dark50;
         margin-top: 1px;
+
+        &_dark{
+            color: $dark75;
+        }
     }
 
     &__options{

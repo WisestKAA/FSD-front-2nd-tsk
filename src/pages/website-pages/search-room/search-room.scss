@@ -43,7 +43,9 @@
         }
     }
 
-    &__dates{
+    &__dates,
+    &__checkbox-buttons,
+    &__availability{
         margin-bottom: 20px;
     }
 
@@ -65,20 +67,8 @@
         color: $dark50
     }
 
-    &__checkbox-buttons{      
-        margin-bottom: 20px;
-    }
-
-    &__availability{     
-        margin-bottom: 20px;
-    }
-
     &__amenities{     
         margin-bottom: 17px;
-    }
-
-    &__add-amenities{
-
     }
 
     &__preview-header{
@@ -101,9 +91,5 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-    }
-
-    &__footer{
-
     }
 }
