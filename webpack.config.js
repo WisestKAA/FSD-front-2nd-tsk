@@ -111,5 +111,9 @@ module.exports = {
             template: `${PAGES_DIR}/website-pages/search-room/search-room.pug`,
             filename: './search-room.html',
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/website-pages/room-details/room-details.pug`,
+            filename: './room-details.html',
+        }),
     ]
 };

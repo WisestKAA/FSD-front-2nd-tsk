@@ -1,0 +1,119 @@
+extends ../../index
+
+block variables
+    - var _bgcolor='#FFFFFF'
+
+block content
+    include ../../../common.blocks/header/header.pug
+    include ../../../common.blocks/icon-text-list/icon-text-list.pug
+    include ../../../common.blocks/comment/comment.pug
+    include ../../../common.blocks/bullet-list/bullet-list.pug
+    include ../../../common.blocks/room-price/room-price.pug
+    include ../../../common.blocks/footer-with-copyright/footer-with-copyright.pug   
+
+    .room-details
+        .room-details__header
+            +header({ _navOptions: [
+                {_text: 'О нас', _link: '/about-us', _isCurrent: false},
+                {_text: 'Услуги', _link: '/services', _isCurrent: false, _sublinks: [
+                    {_textLink: 'Service1', _link: '/service/1'},
+                    {_textLink: 'Service2', _link: '/service/2'},
+                    {_textLink: 'Service3', _link: '/service/3'},
+                ]},
+                {_text: 'Вакансии', _link: '/vacancies', _isCurrent: false},
+                {_text: 'Новости', _link: '/news', _isCurrent: false},
+                {_text: 'Соглашения', _link: '/agreements', _isCurrent: false, _sublinks: [
+                    {_textLink: 'agreements1', _link: '/agreements/1'},
+                    {_textLink: 'agreements2', _link: '/agreements/2'},
+                    {_textLink: 'agreements3', _link: '/agreements/3'},
+                ]},
+            ],
+            _isShortMenu: true,
+            _isLogged: false,
+            _username: '', 
+            _loginButtonText: 'войти', 
+            _signupButtonText: 'зарегистрироваться'})
+        .room-details__wrapper-pic
+            img(src='./img/mainpic.png').room-details__pic-main
+            .room-details__pic-right
+                img(src="./img/rtop.png").room-details__pic-right-img
+                img(src="./img/rbot.png").room-details__pic-right-img
+        .room-details__wrapper-main
+            .room-details__main
+                .room-details__datails
+                    .room-details__wrapper-info
+                        .room-details__info
+                            .room-details__info-header.h2='Сведения о номере'
+                            +icon-text-list({_items: [
+                                {_icon: 'insert_emoticon', _header: 'Комфорт', _content: 'Шумопоглощающие стены'},
+                                {_icon: 'location_city', _header: 'Удобство', _content: 'Окно в каждой из спален'},
+                                {_icon: 'whatshot', _header: 'Уют', _content: 'Номер оснащён камином'},
+                            ]})
+                        .room-details__feeling
+                            .room-details__info-header.h2='Впечатления от номера'                            
+                    .room-details__wrapper-comments
+                        .room-details__wrapper-comments-header
+                            .room-details__comments-header.h2='Отзывы посетителей номера'
+                            .room-details__comments-total='2 отзыва'
+                        +comment({
+                            _avatarSrc: './img/avatar1.png',
+                            _avatarName: 'Мурад Сарафанов', 
+                            _avatarDate: '5 дней назад', 
+                            _likeNumber: 12,
+                            _isLiked: true, 
+                            _text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей'
+                        })
+                        +comment({
+                            _avatarSrc: './img/avatar2.png',
+                            _avatarName: 'Патрисия Стёклышкова', 
+                            _avatarDate: 'Неделю назад', 
+                            _likeNumber: 2, 
+                            _text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+                        })
+                    .room-details__wrapper-rulles
+                        .room-details__rulles
+                            .room-details__rulles-header.h2='Правила'
+                            +bullet-list({_list:[
+                                'Нельзя с питомцами',
+                                'Без вечеринок и мероприятий',
+                                'Время прибытия — после 13:00, а выезд до 12:00',
+                            ]})
+                        .room-details__cancel
+                            .room-details__cancel-header.h2='Отмена'
+                            .room-details__cancel-text.body='Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
+                .room-details__price
+                    +room-price({_number: '888', 
+                        _isLuxe: true,
+                        _pricePerDay: '9 990', 
+                        _servicePrice: '2179', 
+                        _discountForService: '2179',
+                        _serviceInfo: '', 
+                        _addServicePrice: '300', 
+                        _addServiceInfo: ''
+                    })
+        .room-details__footer
+            +footer-with-copyright({_descriptionText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»', 
+                _menuItems: [
+                    { _header: 'навигация', _options: [
+                        { _text: 'О нас', _link: '/about-us' },
+                        { _text: 'Новости', _link: '/news' },
+                        { _text: 'Служба поддержки', _link: '/support-service' },
+                        { _text: 'Услуги', _link: '/services' },
+                    ]},
+                    { _header: 'о нас', _options: [
+                        { _text: 'О сервисе', _link: '/about-us/about-service' },
+                        { _text: 'Наша команда', _link: '/about-us/our-team' },
+                        { _text: 'Вакансии', _link: '/about-us/vacancies' },
+                        { _text: 'Инвесторы', _link: '/about-us/investors' },
+                    ]},
+                    { _header: 'Служба поддержки', _options: [
+                        { _text: 'Соглашения', _link: '/support-service/agreements' },
+                        { _text: 'Сообщества', _link: '/support-service/socials' },
+                        { _text: 'Связь с нами', _link: '/support-service/contact' },
+                    ]},
+                ],
+                _subscribeHeader: 'Подписка', 
+                _subscribeDescription: 'Получайте специальные предложения и новости сервиса', 
+                _sybscribePlaceholder: 'Email', 
+                _copyrightText: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+            })
