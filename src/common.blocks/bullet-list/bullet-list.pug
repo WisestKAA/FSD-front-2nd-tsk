@@ -1,7 +1,15 @@
 
-mixin bullet-list ({_list=[]}={})
+mixin bullet-list({ _isColored=false, _list=[] }={})
     .bullet-list
-        each item in _list
-            .bullet-list__wraper
-                .bullet-list__li
-                .bullet-list__text=item
+        if(_isColored)
+            each item in _list
+                - const {text, color} = item
+                - var liMod = `bullet-list__li_bgcolor-${color}`
+                .bullet-list__wraper(class='bullet-list__wraper_margin-bottom-0')
+                    .bullet-list__li(class=liMod)
+                    .bullet-list__text(class='bullet-list__text_padding-left-5')=text
+        else
+            each item in _list
+                .bullet-list__wraper
+                    .bullet-list__li
+                    .bullet-list__text=item
