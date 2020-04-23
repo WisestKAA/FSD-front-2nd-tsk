@@ -116,5 +116,13 @@ module.exports = {
             template: `${PAGES_DIR}/website-pages/room-details/room-details.pug`,
             filename: './room-details.html',
         }),
+        new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/website-pages/registration/registration.pug`,
+            filename: './registration.html',
+        }),
+        // new HtmlWebpackPlugin({
+        //     template: `${PAGES_DIR}/website-pages/sign-in/sign-in.pug`,
+        //     filename: './sign-in.html',
+        // }),
     ]
 };

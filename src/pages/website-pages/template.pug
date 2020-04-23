@@ -1,0 +1,56 @@
+extends ../index
+
+block content
+    include ../../common.blocks/header/header.pug
+    include ../../common.blocks/footer-with-copyright/footer-with-copyright.pug
+    
+    +header({ _navOptions: [
+            {_text: 'О нас', _link: '/about-us', _isCurrent: false},
+            {_text: 'Услуги', _link: '/services', _isCurrent: false, _sublinks: [
+                {_textLink: 'Service1', _link: '/service/1'},
+                {_textLink: 'Service2', _link: '/service/2'},
+                {_textLink: 'Service3', _link: '/service/3'},
+            ]},
+            {_text: 'Вакансии', _link: '/vacancies', _isCurrent: false},
+            {_text: 'Новости', _link: '/news', _isCurrent: false},
+            {_text: 'Соглашения', _link: '/agreements', _isCurrent: false, _sublinks: [
+                {_textLink: 'agreements1', _link: '/agreements/1'},
+                {_textLink: 'agreements2', _link: '/agreements/2'},
+                {_textLink: 'agreements3', _link: '/agreements/3'},
+            ]},
+        ],
+        _isShortMenu: true,
+        _isLogged: false,
+        _username: '', 
+        _loginButtonText: 'войти', 
+        _signupButtonText: 'зарегистрироваться'
+    })
+
+    block template
+
+    +footer-with-copyright({_descriptionText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»', 
+        _menuItems: [
+            { _header: 'навигация', _options: [
+                { _text: 'О нас', _link: '/about-us' },
+                { _text: 'Новости', _link: '/news' },
+                { _text: 'Служба поддержки', _link: '/support-service' },
+                { _text: 'Услуги', _link: '/services' },
+            ]},
+            { _header: 'о нас', _options: [
+                { _text: 'О сервисе', _link: '/about-us/about-service' },
+                { _text: 'Наша команда', _link: '/about-us/our-team' },
+                { _text: 'Вакансии', _link: '/about-us/vacancies' },
+                { _text: 'Инвесторы', _link: '/about-us/investors' },
+            ]},
+            { _header: 'Служба поддержки', _options: [
+                { _text: 'Соглашения', _link: '/support-service/agreements' },
+                { _text: 'Сообщества', _link: '/support-service/socials' },
+                { _text: 'Связь с нами', _link: '/support-service/contact' },
+            ]},
+        ],
+        _subscribeHeader: 'Подписка', 
+        _subscribeDescription: 'Получайте специальные предложения и новости сервиса', 
+        _sybscribePlaceholder: 'Email', 
+        _copyrightText: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+    })
+    

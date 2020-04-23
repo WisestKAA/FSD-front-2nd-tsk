@@ -1,0 +1,11 @@
+extends ../template
+
+block variables
+    - var _bgcolor='#FFFFFF'
+
+block template
+    include ../../../common.blocks/sign-up/sign-up.pug
+        
+    .registration(style='background-image: url(./img/sign.png);')
+        .registration__form
+            +sign-up({_header: 'Регистрация аккаунта',})
