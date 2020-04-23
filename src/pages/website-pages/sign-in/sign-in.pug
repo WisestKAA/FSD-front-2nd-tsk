@@ -1,0 +1,11 @@
+extends ../template
+
+block variables
+    - var _bgcolor='#FFFFFF'
+
+block template
+    include ../../../common.blocks/sign-in-form/sign-in-form.pug
+        
+    .sign-in(style='background-image: url(./img/sign.png);')
+        .sign-in__form
+            +sign-in-form({_header: 'Войти',})
