@@ -2,11 +2,11 @@ import * as d3 from 'd3';
 import 'd3-selection-multi';
 
 class DonutChart{
-    constructor(elem, width=120, height=120, rating, margin=5) {
+    constructor(elem, width=120, height=120, rating) {
         this.donut = elem;        
 
         this.initStyleClasses();
-        this.initDonutChart(width, height, rating, margin);
+        this.initDonutChart(width, height, rating);
     }
 
     initStyleClasses(){
@@ -17,8 +17,8 @@ class DonutChart{
         };
     }
 
-    initDonutChart(width, height, rating, margin){
-        var radius = Math.min(width, height) / 2 ; //- margin
+    initDonutChart(width, height, rating){
+        var radius = Math.min(width, height) / 2 ;
         
         this.svg = d3.select(this.donut)
             .append('svg')
