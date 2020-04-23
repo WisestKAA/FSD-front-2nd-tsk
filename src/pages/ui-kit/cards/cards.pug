@@ -6,9 +6,9 @@ block variables
 block content
     include ../../../common.blocks/logo-ui-kit/logo-ui-kit.pug
     include ../../../common.blocks/room-filter/room-filter.pug 
-    include ../../../common.blocks/sign-up/sign-up.pug
+    include ../../../common.blocks/sign-in-form/sign-in-form.pug
     include ../../../common.blocks/room-price/room-price.pug
-    include ../../../common.blocks/sign-in/sign-in.pug
+    include ../../../common.blocks/sign-up/sign-up.pug
     include ../../../common.blocks/room-preview/room-preview.pug
 
     .cards
@@ -31,7 +31,7 @@ block content
                         _addServiceInfo: ''
                     })
                     .cards__separator
-                    +sign-in({_header: 'Войти'})
+                    +sign-in-form({_header: 'Войти'})
                 .cards__content-right
                     .cards__calendar-moke
                     .cards__separator
