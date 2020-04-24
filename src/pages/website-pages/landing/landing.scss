@@ -2,40 +2,41 @@
 
     &__main{
         display: flex;
-        justify-content: center;        
+        justify-content: center;
+
         background-size: cover;
         background-repeat: no-repeat;
         background-position-y: bottom;
-        min-height: 830px;
+        min-height: 830px;       
         box-sizing: border-box;
-        padding-top: 70px;
+        padding: 65px 0 16px 0;
     }
 
     &__wrapper{
-        max-width: 1160px;
+        max-width: 1182px;
         width: 100%;
-        min-height: 742px;
-        height: inherit;
+        height: auto;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        position: absolute;
-        box-sizing: border-box;
+        box-sizing: border-box;        
+        background-position: 50% 50%;
+
+        padding: 5px;
+
+        &-discription{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
     }
 
-    &__room-filter{
-        position: relative;
-        top: 0;
-        left: 0;
+    &__room-filter{        
+        padding-left: 6px;
     }
 
     &__discription{
-        position: relative;
-        right: -6px;
-        bottom: 3px;
         max-width: 300px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
 
         font-family: 'Montserrat';
         font-style: normal;
