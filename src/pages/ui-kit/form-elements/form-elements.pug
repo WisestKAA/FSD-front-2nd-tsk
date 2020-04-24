@@ -1,5 +1,8 @@
 extends ../ui-kit-template
 
+block variables
+    - var _bgcolor='#FFFFFF'
+
 block template
     include ../../../common.blocks/text-field/text-field.pug
     include ../../../common.blocks/checkbox-button/checkbox-button.pug
@@ -38,7 +41,7 @@ block template
                                 {_text: 'младенцы', _number: 0},
                             ],
                         })
-                    .form-elements__item_margin-bottom-40.form-elements__masked-text-field
+                    .form-elements__item_margin-bottom-38.form-elements__masked-text-field
                         +label({_text: 'masked text field', _marginBottom: '5', _caption: 'Default', _marginCaption: '3'})
                         +text-field({_isMasked: true})
                     .form-elements__item_margin-bottom-40

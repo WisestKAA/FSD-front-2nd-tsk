@@ -19,18 +19,25 @@
         margin-top: 1px;
     }
 
-    &__label{
-        display: flex;
-        justify-content: space-between;
-        max-width: 320px;
-        width: 100%;
-        margin-bottom: 6px;        
+    &__wrapper{
+        
+        &-filtred{
+            display: flex;
+            justify-content: space-between;
+            max-width: 320px;
+            width: 100%;
+        }
+        
+        &-from,
+        &to{            
+            max-width: 150px;
+        }
     }
 
     &__start-text,
     &__finish-text{
         max-width: 150px;
-        width: 100%;
+        margin-bottom: 6px;
     }
 
     &__input{
@@ -41,9 +48,7 @@
             display: inline-block;
             box-sizing: border-box;
             cursor: pointer;
-        }
-        &-wrapper:last-child{
-            margin-left: 16px;
+            width: 100%;
         }
 
         &-from,

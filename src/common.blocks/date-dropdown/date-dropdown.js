@@ -10,7 +10,7 @@ class DateDropdown{
             this.datePikerInit(this.datePiker, this.dateDropdown);
 
         }else{
-            this.dateDropdown.style.width='320px';
+            this.dateDropdown.style.maxWidth='320px';
             this.inputFrom = elem.querySelector('.date-dropdown__input-from');          
             this.inputTo = elem.querySelector('.date-dropdown__input-to');
             this.inputTo.addEventListener('click', this.handleShowDatePiker.bind(this));
@@ -46,7 +46,7 @@ class DateDropdown{
             prevHtml: '<i class="date-dropdown__navigation">arrow_back</i>',
             nextHtml: '<i class="date-dropdown__navigation">arrow_forward</i>',
             onShow: function(inst, animationCompleted){
-                const datePikerWidth = dateDropdown.style.width;
+                const datePikerWidth = dateDropdown.clientWidth;
                 const $datepikerContainer = $(datePiker).datepicker().data('datepicker').$datepicker;
                 $datepikerContainer.css('width', datePikerWidth);
                 if(isFiltred){
