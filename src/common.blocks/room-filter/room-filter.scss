@@ -7,9 +7,12 @@
     padding: 39px 29px 29px 29px;
     background-color: white;
 
-    &__date,
-    &__header{
+    &__date{
         margin-bottom: 20px;
+    }
+    
+    &__header{
+        margin-bottom: 18px;
     }
     
     &__guests{
