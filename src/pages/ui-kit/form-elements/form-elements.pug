@@ -1,10 +1,6 @@
-extends ../../index
+extends ../ui-kit-template
 
-block variables
-    - var _bgcolor='#FFFFFF'
-
-block content
-    include ../../../common.blocks/logo-ui-kit/logo-ui-kit.pug
+block template
     include ../../../common.blocks/text-field/text-field.pug
     include ../../../common.blocks/checkbox-button/checkbox-button.pug
     include ../../../common.blocks/range-slider/range-slider.pug
@@ -24,8 +20,6 @@ block content
     include ../../../common.blocks/comment/comment.pug
 
     .form-elements
-        .form-elements__logo
-            +logo-ui-kit()
         .form-elements__main-wrapper
             .form-elements__main
                 .form-elements__content-left
@@ -92,11 +86,12 @@ block content
                             +label({_text: 'buttons', _marginBottom: '16'})
                             .form-elements__button-wrapper
                                 +button({_type: 'gradient-background', _name: 'default', _value: 'CLICK ME', _actionLink: '/#moke'})
-                            .form-elements__button-wrapper
+                            .form-elements__button-wrapper.form-elements__button-wrapper_margin-left-1
                                 +button({_type: 'bordered', _name: 'bordered', _value: 'CLICK ME', _actionLink: '/#moke'})
                             .form-elements__button-wrapper
                                 +button({_type: 'empty', _name: 'empty', _value: 'CLICK ME', _actionLink: '/#moke'})
-                            +button({_type: 'rich', _name: 'default', _value: 'перейти к оплате', _actionLink: '/#moke'})
+                            .form-elements__button-wrapper_margin-left-1
+                                +button({_type: 'rich', _name: 'default', _value: 'перейти к оплате', _actionLink: '/#moke'})
                         .form-elements__item_margin-bottom-40
                             +label({_text: 'pagination', _marginBottom: '16'})
                             +pagination({_links :[
@@ -178,7 +173,7 @@ block content
         .form-elements__separator_margin-40
         .form-elements__main-wrapper
             .form-elements__main
-                .form-elements.form-elements__content-left_margin-left-1
+                .form-elements__content-left.form-elements__content-left_margin-left-1
                     +icon-text-list({_items: [
                         {_icon: 'insert_emoticon', _header: 'Комфорт', _content: 'Шумопоглощающие стены'},
                         {_icon: 'location_city', _header: 'Удобство', _content: 'Окно в каждой из спален'},

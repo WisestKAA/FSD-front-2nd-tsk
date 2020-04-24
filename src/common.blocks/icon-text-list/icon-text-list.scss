@@ -10,11 +10,13 @@
         margin-bottom: 20px;
         border-bottom: 1px solid $dark10;
         position: relative;
+        width: 100%;
         
-        &:last-child{
-            margin-bottom: 0px;
-            padding-bottom: 0px;
-        }
+        // на формах не идет!
+        // &:last-child{ 
+        //     margin-bottom: 0px;
+        //     padding-bottom: 0px;
+        // }
 
         &_without-lust-border{
             &:last-child{                
