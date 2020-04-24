@@ -1,10 +1,9 @@
-extends ../../index
+extends ../ui-kit-template
 
 block variables
     - var _bgcolor='#F4F4F6'
 
-block content
-    include ../../../common.blocks/logo-ui-kit/logo-ui-kit.pug
+block template
     include ../../../common.blocks/room-filter/room-filter.pug 
     include ../../../common.blocks/sign-in-form/sign-in-form.pug
     include ../../../common.blocks/room-price/room-price.pug
@@ -12,8 +11,6 @@ block content
     include ../../../common.blocks/room-preview/room-preview.pug
 
     .cards
-        .cards__logo
-            +logo-ui-kit()
         .cards__main-wrapper
             .cards__main
                 .cards__content-left
