@@ -17,21 +17,47 @@
         
         &-main,
         &-bottom{
-            max-width: 1160px;
+            max-width: 1170px;
+            padding: 0 5px;
         }
 
         &-bottom{
             height: 71px;
             align-items: center;
+            
+            @media (max-width: 580px){
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: auto;
+                margin: 10px 0;
+            }
         }
 
         &-main{
             margin: 100px 0;
+            
+            @media (max-width: 1060px){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 50px 0;
+            }
+
+            @media (max-width: 780px){
+                margin: 10px 0;
+            }
         }
 
         &-right{
             max-width: 860px;
             margin-top: 4px;
+
+            @media (max-width: 780px){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         &-shadow{
@@ -59,10 +85,27 @@
         flex-direction: column;
         max-width: 260px;
         width: 100%;
+
+        @media (max-width: 1060px){
+            max-width:1060px;
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__logo{
         margin-bottom: 13px;
+    }
+
+    &__description{
+        
+        @media (max-width: 1060px){
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 780px){
+            text-align: center;
+        }
     }
 
     &__menu{
@@ -72,11 +115,24 @@
         width: 100%;
         box-sizing: border-box;
 
+        @media (max-width: 780px){
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 580px){
+            flex-direction: column;
+            align-items: center;
+        }
+
         &-item{
             display: flex;
             flex-direction: column;
             max-width: 150px;
             width: 100%;
+
+            @media (max-width: 580px){
+                margin-bottom: 10px;
+            }
 
             &-header{
                 margin-bottom: 22px;
@@ -102,12 +158,27 @@
         max-width: 260px;
         box-sizing: border-box;
 
+        @media (max-width: 780px){
+            max-width: 780px;
+            align-items: center;
+        }
+
         &-header{            
             margin-bottom: 18px;
         }
 
         &-description{            
             margin-bottom: 23px;
+
+            @media (max-width: 780px){
+                text-align: center;
+            }
+        }
+    }
+
+    &__copyright{
+        @media (max-width: 580px){
+            text-align: center;
         }
     }
 }
