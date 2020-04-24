@@ -1,8 +1,11 @@
 
-mixin colors({_color, _text, _code})
-    
+mixin colors({_color, _text, _code, _marginTopText=''})
+    - var marginTop = ''
+    if (_marginTopText != '')
+        - marginTop = `colors__text_margin-top-${_marginTopText}`
+
     .colors
         .colors__color(class='colors__color_'+_color)
         .colors__content
-            .colors__text=_text
+            .colors__text(class=marginTop)=_text
             .colors__code=_code

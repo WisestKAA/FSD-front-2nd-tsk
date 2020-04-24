@@ -1,9 +1,10 @@
 .colors-and-type{
 
-    &__logo{
-        display: block;
-        margin-left: 30px;
-        margin-top: 30px;
+    &__colors{
+        max-width: 280px;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
     }
 
     &__content-wrapper{        
@@ -12,23 +13,28 @@
     }
 
     &__content{
-        margin-top: 63px;
-        max-width: 1140px;
+        margin-top: 58px;
+        max-width: 1150px;
         width: 100%;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 740px) {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;     
+        }
     }
     
     &__types{
-        //max-width: 395px;
-        max-width: 444px;
+        max-width: 454px;
         width: 100%;
-        padding-right: 40px;
         box-sizing: border-box;
+        padding: 5px 45px 5px 5px;
 
         .types:last-child{            
             padding-right: 20px;
-            margin-top: -2px;
+            margin-top: -3px;
         }
     }
 }
