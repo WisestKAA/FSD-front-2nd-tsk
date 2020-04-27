@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://wisestkaa.github.io/FSD-front-2nd-tsk/style.css" rel="stylesheet"></head>
+  <body bgcolor="#F4F4F6" style="margin: 0; box-sizing: border-box;">
+    <div class="ui-kit-template">
+      <div class="ui-kit-template__logo"><img class="logo-ui-kit" src="./img/logouikit.svg">
+      </div>
+    </div>
+    <div class="cards">
+      <div class="cards__main-wrapper">
+        <div class="cards__main">
+          <div class="cards__content-left">
+                <div class="room-filter">
+                  <div class="room-filter__header h1">Найдём номера под ваши пожелания</div>
+                  <form class="room-filter__form" action="/#moke">
+                    <div class="room-filter__date">
+                          <div class="date-dropdown">
+                            <div class="date-dropdown__wrapper-filtred">
+                              <div class="date-dropdown__wrapper-from">
+                                <div class="date-dropdown__start-text h3">прибытие</div>
+                                <div class="date-dropdown__input-wrapper">
+                                  <div class="date-dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                                  </div>
+                                  <input class="date-dropdown__input date-dropdown__input-from" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ">
+                                </div>
+                              </div>
+                              <div class="date-dropdown__wrapper-to">
+                                <div class="date-dropdown__finish-text h3">выезд</div>
+                                <div class="date-dropdown__input-wrapper">
+                                  <div class="date-dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                                  </div>
+                                  <input class="date-dropdown__input-to" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="room-filter__guests">
+                          <div class="label label_margin-bottom-5">
+                            <div class="label__text h3">гости</div>
+                            <div class="label__caption"></div>
+                          </div>
+                          <div class="dropdown">
+                            <div class="dropdown__wrapper">
+                              <div class="dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                              </div>
+                              <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span></div>
+                              <div class="dropdown__options">
+                                    <section class="dropdown-option">
+                                      <div class="dropdown-option__text h3">взрослые</div>
+                                      <div class="dropdown-option__button-block">
+                                        <div class="dropdown-option__circle">-</div>
+                                        <div class="dropdown-option__number h3">0</div>
+                                        <div class="dropdown-option__circle">+</div>
+                                      </div>
+                                    </section>
+                                    <section class="dropdown-option">
+                                      <div class="dropdown-option__text h3">дети</div>
+                                      <div class="dropdown-option__button-block">
+                                        <div class="dropdown-option__circle">-</div>
+                                        <div class="dropdown-option__number h3">0</div>
+                                        <div class="dropdown-option__circle">+</div>
+                                      </div>
+                                    </section>
+                                    <section class="dropdown-option">
+                                      <div class="dropdown-option__text h3">младенцы</div>
+                                      <div class="dropdown-option__button-block">
+                                        <div class="dropdown-option__circle">-</div>
+                                        <div class="dropdown-option__number h3">0</div>
+                                        <div class="dropdown-option__circle">+</div>
+                                      </div>
+                                    </section>
+                                    <div class="dropdown-option-button">
+                                      <div class="dropdown-option-button__drop">очистить</div>
+                                      <div class="dropdown-option-button__apply">применить</div>
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="room-filter__search-button">
+                          <div class="button">
+                            <div class="button__wraper-rich">
+                              <div class="button__arrow"><i class="material-icons">arrow_forward</i>
+                              </div>
+                              <div class="button__text">подобрать номер</div>
+                              <input class="button__wraper-rich_rich" type="submit" name="findRoom" value="подобрать номер">
+                            </div>
+                          </div>
+                    </div>
+                  </form>
+                </div>
+            <div class="cards__separator"></div>
+                <div class="sign-up">
+                  <div class="sign-up__header h1">Регистрация аккаунта</div>
+                  <form class="sign-up__form" action="/#moke">
+                    <div class="sign-up__name">
+                          <input class="text-field" type="text" placeholder="Имя" id="signUpName">
+                    </div>
+                    <div class="sign-up__surname">
+                          <input class="text-field" type="text" placeholder="Фамилия" id="signUpSurname">
+                    </div>
+                    <div class="sign-up__sex">
+                          <div class="radio-buttons">       
+                            <label class="radio-buttons__label">
+                              <input class="radio-buttons__input" type="radio" name="radioButtons" value="men" checked>
+                              <div class="radio-buttons__text">
+                                <div class="radio-buttons__content">Мужчина</div>
+                              </div>
+                            </label>
+                            <label class="radio-buttons__label">
+                              <input class="radio-buttons__input" type="radio" name="radioButtons" value="women">
+                              <div class="radio-buttons__text">
+                                <div class="radio-buttons__content">Женщина</div>
+                              </div>
+                            </label>
+                          </div>
+                    </div>
+                    <div class="sign-up__birthday">
+                          <div class="label label_margin-bottom-5">
+                            <div class="label__text h3">дата рождения</div>
+                            <div class="label__caption"></div>
+                          </div>
+                          <input class="text-field text-field_masked" type="text" placeholder="ДД.ММ.ГГГГ" id="birthday">
+                    </div>
+                    <div class="sign-up__authorization-data">
+                          <div class="label label_margin-bottom-5">
+                            <div class="label__text h3">данные для входа в сервис</div>
+                            <div class="label__caption"></div>
+                          </div>
+                      <div class="sign-up__e-mail">
+                            <input class="text-field" type="text" placeholder="Email" id="singEmail">
+                      </div>
+                      <div class="sign-up__password">
+                            <input class="text-field" type="password" placeholder="Пароль" id="signPassword">
+                      </div>
+                    </div>
+                    <div class="sign-up__mailing">
+                          <div class="toggle">
+                            <label class="toggle__label">
+                              <input class="toggle__input" type="checkbox" name="mailing">
+                              <div class="toggle__text">
+                                <div class="toggle__content">Получать спецпредложения</div>
+                              </div>
+                            </label>
+                          </div>
+                    </div>
+                    <div class="sign-up__go-to-payment">
+                          <div class="button">
+                            <div class="button__wraper-rich">
+                              <div class="button__arrow"><i class="material-icons">arrow_forward</i>
+                              </div>
+                              <div class="button__text">перейти к оплате</div>
+                              <input class="button__wraper-rich_rich" type="submit" name="goToPayment" value="перейти к оплате">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="sign-up__go-to-sign-in">
+                      <div class="sign-up__sign-in-text body">Уже есть аккаунт на Toxin</div>
+                      <div class="sign-up__sign-in-button">
+                            <div class="button">
+                              <div class="button__wraper">           <a class="button__wraper_bordered" href="/#moke">войти</a></div>
+                            </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+          </div>
+          <div class="cards__content-center">
+                <div class="room-price">
+                  <form class="room-price__form" action="/#moke"> 
+                    <div class="room-price__header">
+                      <div class="room-price__room-number">
+                        <div class="room-price__room-number-text-number">№</div>
+                        <div class="room-price__room-number-text">888</div>
+                        <div class="room-price__room-number-luxe">люкс</div>
+                      </div>
+                      <div class="room-price__price">
+                        <div class="room-price__price-sum">9 990₽</div>
+                        <div class="room-price__price-sum-per-day"> в сутки</div>
+                      </div>
+                    </div>
+                    <div class="room-price__date">
+                          <div class="date-dropdown">
+                            <div class="date-dropdown__wrapper-filtred">
+                              <div class="date-dropdown__wrapper-from">
+                                <div class="date-dropdown__start-text h3">прибытие</div>
+                                <div class="date-dropdown__input-wrapper">
+                                  <div class="date-dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                                  </div>
+                                  <input class="date-dropdown__input date-dropdown__input-from" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ">
+                                </div>
+                              </div>
+                              <div class="date-dropdown__wrapper-to">
+                                <div class="date-dropdown__finish-text h3">выезд</div>
+                                <div class="date-dropdown__input-wrapper">
+                                  <div class="date-dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                                  </div>
+                                  <input class="date-dropdown__input-to" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="room-price__guests">
+                          <div class="label label_margin-bottom-5">
+                            <div class="label__text h3">гости</div>
+                            <div class="label__caption"></div>
+                          </div>
+                          <div class="dropdown">
+                            <div class="dropdown__wrapper">
+                              <div class="dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                              </div>
+                              <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span></div>
+                              <div class="dropdown__options">
+                                    <section class="dropdown-option">
+                                      <div class="dropdown-option__text h3">взрослые</div>
+                                      <div class="dropdown-option__button-block">
+                                        <div class="dropdown-option__circle">-</div>
+                                        <div class="dropdown-option__number h3">0</div>
+                                        <div class="dropdown-option__circle">+</div>
+                                      </div>
+                                    </section>
+                                    <section class="dropdown-option">
+                                      <div class="dropdown-option__text h3">дети</div>
+                                      <div class="dropdown-option__button-block">
+                                        <div class="dropdown-option__circle">-</div>
+                                        <div class="dropdown-option__number h3">0</div>
+                                        <div class="dropdown-option__circle">+</div>
+                                      </div>
+                                    </section>
+                                    <section class="dropdown-option">
+                                      <div class="dropdown-option__text h3">младенцы</div>
+                                      <div class="dropdown-option__button-block">
+                                        <div class="dropdown-option__circle">-</div>
+                                        <div class="dropdown-option__number h3">0</div>
+                                        <div class="dropdown-option__circle">+</div>
+                                      </div>
+                                    </section>
+                                    <div class="dropdown-option-button">
+                                      <div class="dropdown-option-button__drop">очистить</div>
+                                      <div class="dropdown-option-button__apply">применить</div>
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="room-price__calculate body">
+                      <div class="room-price__for-room">
+                        <div class="room-price__for-room-discription">9 990₽ x 0 суток</div>
+                        <div class="room-price__for-room-price">0₽</div>
+                      </div>
+                      <div class="room-price__for-services">
+                        <div class="room-price__for-services-left-wrapper">
+                          <div class="room-price__for-services-discription">Сбор за услуги: скидка 2179₽</div>
+                          <div class="room-price__for-services-info">i</div>
+                        </div>
+                        <div class="room-price__for-services-price">0₽</div>
+                      </div>
+                      <div class="room-price__for-addservices">
+                        <div class="room-price__for-addservices-left-wrapper">
+                          <div class="room-price__for-addservices-discription">Сбор за дополнительные услуги</div>
+                          <div class="room-price__for-addservices-info">i</div>
+                        </div>
+                        <div class="room-price__for-addservices-price">300₽</div>
+                      </div>
+                    </div>
+                    <div class="room-price__total">
+                      <div class="room-price__total-text">Итого</div>
+                      <div class="room-price__total-separator"></div>
+                      <div class="room-price__total-price">0₽</div>
+                    </div>
+                    <div class="room-price__book-a-room">
+                          <div class="button">
+                            <div class="button__wraper-rich">
+                              <div class="button__arrow"><i class="material-icons">arrow_forward</i>
+                              </div>
+                              <div class="button__text">забронировать</div>
+                              <input class="button__wraper-rich_rich" type="submit" name="bookARoom" value="забронировать">
+                            </div>
+                          </div>
+                    </div>
+                  </form>
+                </div>
+            <div class="cards__separator"></div>
+                <div class="sign-in-form">
+                  <form class="sign-in-form__form" action="/#moke">
+                    <div class="sign-in-form__header h1">Войти</div>
+                    <div class="sign-in-form__email">               
+                          <input class="text-field" type="text" placeholder="Email" id="signInEmail">
+                    </div>
+                    <div class="sign-in-form__password">
+                          <input class="text-field" type="password" placeholder="Пароль" id="signInPassword">
+                    </div>
+                    <div class="sign-in-form__button">               
+                          <div class="button">
+                            <div class="button__wraper-rich">
+                              <div class="button__arrow"><i class="material-icons">arrow_forward</i>
+                              </div>
+                              <div class="button__text">войти</div>
+                              <input class="button__wraper-rich_rich" type="submit" name="singIn" value="войти">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="sign-in-form__sign-up">
+                      <div class="sign-in-form__sign-up-text body">Нет аккаунта на Toxin?</div>
+                      <div class="sign-in-form__sign-up-button">
+                            <div class="button">
+                              <div class="button__wraper">           <a class="button__wraper_bordered" href="/#moke">создать</a></div>
+                            </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+          </div>
+          <div class="cards__content-right">
+            <div class="cards__calendar-moke"></div>
+            <div class="cards__separator"></div>
+                <div class="room-preview">
+                  <div class="room-preview__carusel">
+                        <div class="carusel">
+                          <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="/img/room888.png"><img class="carusel__img" src="/img/room888.png"><img class="carusel__img" src="/img/room888.png"><img class="carusel__img" src="/img/room888.png">
+                          </div>
+                        </div>
+                  </div>
+                  <div class="room-preview__discripton-wrapper">
+                    <div class="room-preview__discripton-top">
+                      <div class="room-preview__discripton-top-wrapper-num">
+                        <div class="room-preview__discripton-top-number">№</div>
+                        <div class="room-preview__discripton-top-num">888</div>
+                        <div class="room-preview__discripton-top-luxe">люкс</div>
+                      </div>
+                      <div class="room-preview__discripton-top-wrapper-price">
+                        <div class="room-preview__discripton-top-price">9 990₽</div>
+                        <div class="room-preview__discripton-top-price-per-day">в сутки</div>
+                      </div>
+                    </div>
+                    <div class="room-preview__separator"></div>
+                    <div class="room-preview__discripton-bot">
+                      <div class="room-preview__discripton-bot-rate">
+                            <div class="rate-button">
+                              <div class="rate-button__star"><i class="material-icons">star</i>
+                              </div>
+                              <div class="rate-button__star"><i class="material-icons">star</i>
+                              </div>
+                              <div class="rate-button__star"><i class="material-icons">star</i>
+                              </div>
+                              <div class="rate-button__star"><i class="material-icons">star</i>
+                              </div>
+                              <div class="rate-button__star"><i class="material-icons">star</i>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="room-preview__discripton-bot-wrapper-comment">
+                        <div class="room-preview__discripton-bot-comment-num">145</div>
+                        <div class="room-preview__discripton-bot-comment">Отзывов</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <div class="cards__separator"></div>
+                <div class="room-preview">
+                  <div class="room-preview__carusel">
+                        <div class="carusel">
+                          <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="/img/room840.png"><img class="carusel__img" src="/img/room840.png"><img class="carusel__img" src="/img/room840.png"><img class="carusel__img" src="/img/room840.png">
+                          </div>
+                        </div>
+                  </div>
+                  <div class="room-preview__discripton-wrapper">
+                    <div class="room-preview__discripton-top">
+                      <div class="room-preview__discripton-top-wrapper-num">
+                        <div class="room-preview__discripton-top-number">№</div>
+                        <div class="room-preview__discripton-top-num">840</div>
+                        <div class="room-preview__discripton-top-luxe">люкс</div>
+                      </div>
+                      <div class="room-preview__discripton-top-wrapper-price">
+                        <div class="room-preview__discripton-top-price">9 990₽</div>
+                        <div class="room-preview__discripton-top-price-per-day">в сутки</div>
+                      </div>
+                    </div>
+                    <div class="room-preview__separator"></div>
+                    <div class="room-preview__discripton-bot">
+                      <div class="room-preview__discripton-bot-rate">
+                            <div class="rate-button">
+                              <div class="rate-button__star"><i class="material-icons">star</i>
+                              </div>
+                              <div class="rate-button__star"><i class="material-icons">star</i>
+                              </div>
+                              <div class="rate-button__star"><i class="material-icons">star</i>
+                              </div>
+                              <div class="rate-button__star"><i class="material-icons">star</i>
+                              </div>
+                              <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="room-preview__discripton-bot-wrapper-comment">
+                        <div class="room-preview__discripton-bot-comment-num">65</div>
+                        <div class="room-preview__discripton-bot-comment">Отзывов</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="https://wisestkaa.github.io/FSD-front-2nd-tsk/main.js"></script></body>
+</html>
