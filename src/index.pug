@@ -1,190 +1,26 @@
-include common.blocks/text-field/text-field.pug
-include common.blocks/dropdown/dropdown.pug
-include common.blocks/dropdown-option/dropdown-option.pug
-include common.blocks/expandable-checkbox-list/expandable-checkbox-list.pug
-include common.blocks/checkbox-button/checkbox-button.pug
-include common.blocks/radio-buttons/radio-buttons.pug
-include common.blocks/toggle/toggle.pug
-include common.blocks/like-button/like-button.pug
-include common.blocks/rate-button/rate-button.pug
-include common.blocks/button/button.pug
-include common.blocks/bullet-list/bullet-list.pug
-include common.blocks/icon-text-list/icon-text-list.pug
-include common.blocks/comment/comment.pug
-include common.blocks/range-slider/range-slider.pug
-include common.blocks/subscription-text-field/subscription-text-field.pug
-include common.blocks/date-dropdown/date-dropdown.pug
-include common.blocks/pagination/pagination.pug
 doctype html
 html
     head
     body.body
-        
-        form(action="post")
-            +text-field({_placeholder:'E-mail', _id: 'inp1', _isMasked: false})
-            +text-field({_placeholder:'', _id: 'inp2', _isMasked: true})
-            
-        
-        +dropdown({_text: "Сколько гостей",
-             _options: [
-                 {_text: 'взрослые', _number: 0},
-                 {_text: 'дети', _number: 0},
-                 {_text: 'младенцы', _number: 0},
-                 ],
-            })
-        br
-        +dropdown({
-            _text: "",
-            _options: [
-                {_text: 'спальни', _number: 0},
-                {_text: 'кровати', _number: 0},
-                {_text: 'ванные комнаты', _number: 0},
-            ],
-            _isShort: true,
-        })
-        br       
-        +checkbox-button({
-            _text: 'checkbox-button asdasdasd asd asd asdas dasdasdas asd a',
-            _name: 'textCBB',
-            })
-        br
-        +checkbox-button({
-            _text: 'checkbox-button asdasdasd asd asd asdas dasdasdas asd a',
-            _name: 'textCBB',
-            _header: 'Rich checkbox'
-            })
-        br
-        +expandable-checkbox-list({
-            _header: 'expandable checkbox list',
-            _checkboxes: [
-                {
-                    _text: 'Тестовый текст1',
-                    _isChecked: false
-                },
-                {
-                    _text: 'Тестовый текст2',
-                    _isChecked: false
-                },
-                {
-                    _text: 'Тестовый текст3',
-                    _isChecked: false
-                },
-            ]
-        })
-        br
-        +radio-buttons({
-            _name: 'sex',
-            _radioButtons: [
-                {
-                    _text: 'Мужчина',
-                    _value: 'men',
-                    _isChecked: true
-                },
-                {
-                    _text: 'Женщина',
-                    _value: 'women'
-                },
-            ]
-        }) 
-        br
-        +toggle({
-            _name: 'textToggle',
-            _text: 'Подписаться на рассылку'
-        })
-        br
-        +like-button({_number: 2})
-        br
-        +rate-button({_rate: 0})
-        br
-        +button({
-            _type: 'gradient-background',
-            _value: 'click me',
-            _actionLink: '#'
-            })
-        br
-        +button({
-            _type: 'rich',
-            _value: 'перейти к оплате',
-            _actionLink: '#'
-            })
-        br
-        +button({
-            _type: 'bordered',
-            _value: 'click me',
-            _actionLink: '#'
-            })
-        br    
-        +button({
-            _type: 'empty',
-            _value: 'click me',
-            _actionLink: '#'
-            })
-        br 
-        +bullet-list({_list: [
-            'Нельзя с питомцами',
-            'Без вечеринок и мероприятий',
-            'Время прибытия — после 13:00, а выезд до 12:00',
-        ]})
-        br
-        +icon-text-list({
-            _items: [
-                {
-                    _icon: 'insert_emoticon',
-                    _header: 'Комфорт',
-                    _content: 'Шумопоглощающие стены'
-                },
-                {
-                    _icon: 'location_city',
-                    _header: 'Удобство',
-                    _content: 'Окно в каждой из спален'
-                },
-            ]
-        })
-        br
-        +comment({
-            _avatarSrc: './img/avatar1.png',
-            _avatarName: 'Мурад Сарафанов', 
-            _avatarDate: '5 дней назад', 
-            _likeNumber: 11, 
-            _text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей'
-        })
-        br
-        +range-slider({_name: 'asd'})
-        br
-        +subscription-text-field()
-        br
-        +date-dropdown()
-        br
-        br
-        +date-dropdown({_isFiltred: false})
-        br
-        br
-        +pagination({
-            _links: [
-                {
-                    href: '/page1',
-                    isActive: true, 
-                    number: 1,
-                },
-                {
-                    href: '/page2',
-                    isActive: false, 
-                    number: 2,
-                },
-                {
-                    href: '/page3',
-                    isActive: false, 
-                    number: 3,
-                },
-                {
-                    href: '',
-                    isActive: false, 
-                    number: 0,
-                },
-                {
-                    href: '/page15',
-                    isActive: false, 
-                    number: 15,
-                },
-            ],
-        })
+        h1.h1 Ui kit
+        ul
+            li 
+                a.h3(href="/FSD-front-2nd-tsk/colors-and-type.html") Colors and type
+            li
+                a.h3(href="/FSD-front-2nd-tsk/form-elements.html") Form Elements
+            li
+                a.h3(href="/FSD-front-2nd-tsk/cards.html") Cards
+            li
+                a.h3(href="/FSD-front-2nd-tsk/headers-and-footers.html") Headers and Footers
+        h1.h1 Websute pages
+        ul
+            li
+                a.h3(href="/FSD-front-2nd-tsk/landing.html") Landing page
+            li
+                a.h3(href="/FSD-front-2nd-tsk/search-room.html") Search room/Filter
+            li
+                a.h3(href="/FSD-front-2nd-tsk/room-details.html") Room details
+            li
+                a.h3(href="/FSD-front-2nd-tsk/registration.html") Registration
+            li
+                a.h3(href="/FSD-front-2nd-tsk/sign-in.html") Sign in
