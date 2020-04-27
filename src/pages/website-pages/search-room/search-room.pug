@@ -1,9 +1,9 @@
-extends ../../index
+extends ../template
 
 block variables
     - var _bgcolor='#FFFFFF'
 
-block content
+block template
     include ../../../common.blocks/header/header.pug
     include ../../../common.blocks/label/label.pug
     include ../../../common.blocks/range-slider/range-slider.pug
@@ -16,27 +16,6 @@ block content
     include ../../../common.blocks/footer-with-copyright/footer-with-copyright.pug   
 
     .search-room
-        .search-room__header
-            +header({ _navOptions: [
-                {_text: 'О нас', _link: '/about-us', _isCurrent: false},
-                {_text: 'Услуги', _link: '/services', _isCurrent: false, _sublinks: [
-                    {_textLink: 'Service1', _link: '/service/1'},
-                    {_textLink: 'Service2', _link: '/service/2'},
-                    {_textLink: 'Service3', _link: '/service/3'},
-                ]},
-                {_text: 'Вакансии', _link: '/vacancies', _isCurrent: false},
-                {_text: 'Новости', _link: '/news', _isCurrent: false},
-                {_text: 'Соглашения', _link: '/agreements', _isCurrent: false, _sublinks: [
-                    {_textLink: 'agreements1', _link: '/agreements/1'},
-                    {_textLink: 'agreements2', _link: '/agreements/2'},
-                    {_textLink: 'agreements3', _link: '/agreements/3'},
-                ]},
-            ],
-            _isShortMenu: true,
-            _isLogged: false,
-            _username: '', 
-            _loginButtonText: 'войти', 
-            _signupButtonText: 'зарегистрироваться'})
         .search-room__main
             .search-room__wrapper
                 .search-room__wrapper-left
@@ -91,106 +70,114 @@ block content
                 .search-room__wrapper-right
                     .search-room__preview-header.h1='Номера, которые мы для вас подобрали'
                     .search-room__wrapper-preview
-                        .search-room__preview
-                            +room-preview({
-                                _imgLinks:['/img/room888.png','/img/room888.png','/img/room888.png','/img/room888.png'], 
-                                _number: 888, 
-                                _isLuxe: true, 
-                                _price: '9 990', 
-                                _rate: 5, 
-                                _comments: 145
-                            })
-                            +room-preview({
-                                _imgLinks:['/img/room840.png','/img/room840.png','/img/room840.png','/img/room840.png'], 
-                                _number: 840, 
-                                _isLuxe: false, 
-                                _price: '9 990', 
-                                _rate: 4, 
-                                _comments: 65
-                            })
-                            +room-preview({
-                                _imgLinks:['/img/room980.png','/img/room980.png','/img/room980.png','/img/room980.png'], 
-                                _number: 980, 
-                                _isLuxe: true, 
-                                _price: '8 500', 
-                                _rate: 3, 
-                                _comments: 35
-                            })           
-                        .search-room__preview
-                            +room-preview({
-                                _imgLinks:['/img/room856.png','/img/room856.png','/img/room856.png','/img/room856.png'], 
-                                _number: 856, 
-                                _isLuxe: false, 
-                                _price: '7 300', 
-                                _rate: 5, 
-                                _comments: 195
-                            })
-                            +room-preview({
-                                _imgLinks:['/img/room740.png','/img/room740.png','/img/room740.png','/img/room740.png'], 
-                                _number: 740, 
-                                _isLuxe: false, 
-                                _price: '6 000', 
-                                _rate: 4, 
-                                _comments: 44
-                            })
-                            +room-preview({
-                                _imgLinks:['/img/room982.png','/img/room982.png','/img/room982.png','/img/room982.png'], 
-                                _number: 982, 
-                                _isLuxe: false, 
-                                _price: '5 800', 
-                                _rate: 3, 
-                                _comments: 56
-                            })
-                        .search-room__preview
-                            +room-preview({
-                                _imgLinks:['/img/room678.png','/img/room678.png','/img/room678.png','/img/room678.png'], 
-                                _number: 678, 
-                                _isLuxe: false, 
-                                _price: '5 500', 
-                                _rate: 5, 
-                                _comments: 45
-                            })
-                            +room-preview({
-                                _imgLinks:['/img/room450.png','/img/room450.png','/img/room450.png','/img/room450.png'], 
-                                _number: 450, 
-                                _isLuxe: false, 
-                                _price: '5 300', 
-                                _rate: 4, 
-                                _comments: 39
-                            })
-                            +room-preview({
-                                _imgLinks:['/img/room350.png','/img/room350.png','/img/room350.png','/img/room350.png'], 
-                                _number: 350, 
-                                _isLuxe: false, 
-                                _price: '5 000', 
-                                _rate: 3, 
-                                _comments: 77
-                            })
-                        .search-room__preview
-                            +room-preview({
-                                _imgLinks:['/img/room666.png','/img/room666.png','/img/room666.png','/img/room666.png'], 
-                                _number: 666, 
-                                _isLuxe: false, 
-                                _price: '5 000', 
-                                _rate: 5, 
-                                _comments: 25
-                            })
-                            +room-preview({
-                                _imgLinks:['/img/room444.png','/img/room444.png','/img/room444.png','/img/room444.png'], 
-                                _number: 444, 
-                                _isLuxe: false, 
-                                _price: '5 000', 
-                                _rate: 3, 
-                                _comments: 15
-                            })
-                            +room-preview({
-                                _imgLinks:['/img/room352.png','/img/room352.png','/img/room352.png','/img/room352.png'], 
-                                _number: 352, 
-                                _isLuxe: false, 
-                                _price: '5 000', 
-                                _rate: 3, 
-                                _comments: 55
-                            })
+                        +room-preview({
+                            _imgLinks:['/img/room888.png','/img/room888.png','/img/room888.png','/img/room888.png'], 
+                            _number: 888, 
+                            _isLuxe: true, 
+                            _price: '9 990', 
+                            _rate: 5, 
+                            _comments: 145,
+                            _whithMargin: true,
+                        })
+                        +room-preview({
+                            _imgLinks:['/img/room840.png','/img/room840.png','/img/room840.png','/img/room840.png'], 
+                            _number: 840, 
+                            _isLuxe: false, 
+                            _price: '9 990', 
+                            _rate: 4, 
+                            _comments: 65,
+                            _whithMargin: true,
+                        })
+                        +room-preview({
+                            _imgLinks:['/img/room980.png','/img/room980.png','/img/room980.png','/img/room980.png'], 
+                            _number: 980, 
+                            _isLuxe: true, 
+                            _price: '8 500', 
+                            _rate: 3, 
+                            _comments: 35,
+                            _whithMargin: true,
+                        })   
+                        +room-preview({
+                            _imgLinks:['/img/room856.png','/img/room856.png','/img/room856.png','/img/room856.png'], 
+                            _number: 856, 
+                            _isLuxe: false, 
+                            _price: '7 300', 
+                            _rate: 5, 
+                            _comments: 195,
+                            _whithMargin: true,
+                        })
+                        +room-preview({
+                            _imgLinks:['/img/room740.png','/img/room740.png','/img/room740.png','/img/room740.png'], 
+                            _number: 740, 
+                            _isLuxe: false, 
+                            _price: '6 000', 
+                            _rate: 4, 
+                            _comments: 44,
+                            _whithMargin: true,
+                        })
+                        +room-preview({
+                            _imgLinks:['/img/room982.png','/img/room982.png','/img/room982.png','/img/room982.png'], 
+                            _number: 982, 
+                            _isLuxe: false, 
+                            _price: '5 800', 
+                            _rate: 3, 
+                            _comments: 56,
+                            _whithMargin: true,
+                        })
+                        +room-preview({
+                            _imgLinks:['/img/room678.png','/img/room678.png','/img/room678.png','/img/room678.png'], 
+                            _number: 678, 
+                            _isLuxe: false, 
+                            _price: '5 500', 
+                            _rate: 5, 
+                            _comments: 45,
+                            _whithMargin: true,
+                        })
+                        +room-preview({
+                            _imgLinks:['/img/room450.png','/img/room450.png','/img/room450.png','/img/room450.png'], 
+                            _number: 450, 
+                            _isLuxe: false, 
+                            _price: '5 300', 
+                            _rate: 4, 
+                            _comments: 39,
+                            _whithMargin: true,
+                        })
+                        +room-preview({
+                            _imgLinks:['/img/room350.png','/img/room350.png','/img/room350.png','/img/room350.png'], 
+                            _number: 350, 
+                            _isLuxe: false, 
+                            _price: '5 000', 
+                            _rate: 3, 
+                            _comments: 77,
+                            _whithMargin: true,
+                        })
+                        +room-preview({
+                            _imgLinks:['/img/room666.png','/img/room666.png','/img/room666.png','/img/room666.png'], 
+                            _number: 666, 
+                            _isLuxe: false, 
+                            _price: '5 000', 
+                            _rate: 5, 
+                            _comments: 25,
+                            _whithMargin: true,
+                        })
+                        +room-preview({
+                            _imgLinks:['/img/room444.png','/img/room444.png','/img/room444.png','/img/room444.png'], 
+                            _number: 444, 
+                            _isLuxe: false, 
+                            _price: '5 000', 
+                            _rate: 3, 
+                            _comments: 15,
+                            _whithMargin: true,
+                        })
+                        +room-preview({
+                            _imgLinks:['/img/room352.png','/img/room352.png','/img/room352.png','/img/room352.png'], 
+                            _number: 352, 
+                            _isLuxe: false, 
+                            _price: '5 000', 
+                            _rate: 3, 
+                            _comments: 55,
+                            _whithMargin: true,
+                        })
                     .search-room__pagination
                         +pagination({_links :[
                             {href: '/page1', isActive: true, number: 1,},
@@ -199,28 +186,3 @@ block content
                             {href: '', isActive: false, number: 0,},
                             {href: '/page15', isActive: false,  number: 15,},
                         ]})
-    .search-room__footer
-        +footer-with-copyright({_descriptionText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»', 
-        _menuItems: [
-            { _header: 'навигация', _options: [
-                { _text: 'О нас', _link: '/about-us' },
-                { _text: 'Новости', _link: '/news' },
-                { _text: 'Служба поддержки', _link: '/support-service' },
-                { _text: 'Услуги', _link: '/services' },
-            ]},
-            { _header: 'о нас', _options: [
-                { _text: 'О сервисе', _link: '/about-us/about-service' },
-                { _text: 'Наша команда', _link: '/about-us/our-team' },
-                { _text: 'Вакансии', _link: '/about-us/vacancies' },
-                { _text: 'Инвесторы', _link: '/about-us/investors' },
-            ]},
-            { _header: 'Служба поддержки', _options: [
-                { _text: 'Соглашения', _link: '/support-service/agreements' },
-                { _text: 'Сообщества', _link: '/support-service/socials' },
-                { _text: 'Связь с нами', _link: '/support-service/contact' },
-            ]},
-        ],
-        _subscribeHeader: 'Подписка', 
-        _subscribeDescription: 'Получайте специальные предложения и новости сервиса', 
-        _sybscribePlaceholder: 'Email', 
-        _copyrightText: 'Copyright © 2018 Toxin отель. Все права зачищены.'})

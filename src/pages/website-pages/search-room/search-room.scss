@@ -3,11 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-
-    &__header{
-        width: 100%;
-        margin-bottom: 30px;
-    }
+    margin-top: 25px;
 
     &__main{
         display: flex;
@@ -19,27 +15,40 @@
     &__wrapper{
         display: flex;
         justify-content: space-between;
-        max-width: 1160px;
+        max-width: 1170px;
         width: 100%;
+
+        @media (max-width: 560px){
+            flex-direction: column;
+            align-items: center;
+        }
 
         &-left{
             display: flex;
             flex-direction: column;
             max-width: 266px;
+            padding: 5px;
         }
 
         &-right{
             display: flex;
             flex-direction: column;
-            max-width: 834px;
+            max-width: 844px;
             width: 100%;
         }
 
         &-preview{
             display: flex;
-            flex-direction: column;
-            max-width: 834px;
+            max-width: 844px;
             width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            @media (max-width: 1116px){
+                justify-content: space-around;
+            }
         }
     }
 
@@ -72,20 +81,25 @@
     }
 
     &__preview-header{
-        margin-bottom: 21px;
+        margin-bottom: 11px;
         margin-left: -1px;
+        padding: 5px;
+
+        @media (max-width: 1116px){
+            text-align: center;
+        }
     }
 
     &__preview{
         display: flex;
         justify-content: space-between;
-        max-width: 834px;
+        max-width: 844px;
         width: 100%;
         margin-bottom: 21px;
     }
 
     &__pagination{
-        margin-top: 19px;
+        margin-top: 24px;
         margin-bottom: 72px;
         width: 98%;
         display: flex;
