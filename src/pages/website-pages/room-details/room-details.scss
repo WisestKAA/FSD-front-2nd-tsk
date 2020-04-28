@@ -1,10 +1,6 @@
 .room-details{
     justify-content: center;
 
-    &__header{
-
-    }
-
     &__wrapper{
 
         &-pic{
@@ -13,6 +9,14 @@
             width: 100%;
             overflow: hidden;
             max-height: 485px;
+
+            @media (max-width: 1350px) {
+                flex-direction: column;
+                max-height: 100%;
+                max-width: 100%;
+                width: 100%;
+                align-items: center;
+            }
         }
 
         &-main{
@@ -26,7 +30,12 @@
             justify-content: space-between;
             max-width: 710px;
             width: 100%;
-            margin-bottom: 33px;
+            margin-bottom: -7px;
+
+            @media (max-width: 379px){
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
         }
 
         &-comments{
@@ -48,12 +57,20 @@
             justify-content: space-between;
             max-width: 710px;
             width: 100%;
+
+            @media (max-width: 620px){
+                flex-direction: column;
+            }
         }
 
         &-feeling{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+
+            @media (max-width: 620px){
+                justify-content: center;
+            }
         }
     }
 
@@ -62,9 +79,19 @@
         &-main{
             display: flex;
             justify-content: center;
-            min-width: 981px;
             height: auto;
-            overflow: hidden;
+
+            &-img{
+                width: 100%;
+                height: auto;
+            }
+
+            @media (max-width: 1350px) {
+                min-height: 0;
+                width: auto;
+                height: auto;
+                flex-direction: column;
+            }
         }
 
         &-right{
@@ -72,11 +99,33 @@
             flex-direction: column;
             justify-content: center;
 
+            @media (max-width: 1350px) {
+                flex-direction: row;
+            }
+            
+            @media (max-width: 460px) {
+                flex-direction: column;
+            }
+
             &-img{
                 min-height: 240px;
                 min-width: 460px;
                 height: auto;
                 overflow: hidden;
+
+                @media (max-width: 1350px) {
+                    width: 50%;
+                }
+
+                @media (max-width: 920px) {
+                    min-height: 0;
+                    min-width: 0;
+                }
+
+                @media (max-width: 460px){
+                    width: 100%;
+                
+                }
             }
         }
     }
@@ -84,14 +133,20 @@
     &__main{
         display: flex;
         justify-content: space-between;
-        max-width: 1160px;
+        max-width: 1170px;
         width: 100%;
-        margin: 70px 0 72px 0;
+        margin: 65px 0 67px 0;
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__datails{
         display: flex;
         flex-direction: column;
+        padding: 5px;
     }
 
     &__info,
@@ -101,13 +156,13 @@
         }
     }
 
-    &__info{
-        
-    }
-
     &__feeling{
         max-width: 350px;
         width: 100%;
+
+        &-header{            
+            padding-left: 1px;
+        }
 
         &-chart{
             margin-right: 27px;
@@ -141,19 +196,26 @@
             color: $dark50;
             display: flex;
             align-items: flex-end;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
-    }
-
-    
+    }    
 
     &__rulles{
         max-width: 340px;
         margin-left: -1px;
 
+        @media (max-width: 620px){
+            margin-bottom: 20px;
+        }
+
         &-header{
             padding-left: 21px;
             margin-bottom: 17px;
+
+            @media (max-width: 620px){
+                margin-bottom: 20px;
+                padding-left: 0px;
+            }
         }        
     }
 
@@ -167,10 +229,8 @@
     }
 
     &__price{
-
-    }
-
-    &__footer{
-
+        max-width: 380px;
+        width: 100%;
+        padding: 5px;
     }
 }
