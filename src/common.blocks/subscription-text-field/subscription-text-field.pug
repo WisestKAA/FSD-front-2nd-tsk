@@ -8,4 +8,4 @@ mixin subscription-text-field ({_name = "subscribe", _value="subscribe", _placeh
                 +material-icons({_type: "arrow_forward"})
             input(type="button" name=_name value=_value).subscription-text-field__button
         .subscription-text-field__text-field
-            +text-field({_placeholder: _placeholder, _isPaddingRightMode: true})
+            +text-field({_placeholder: _placeholder, _isPaddingRightMode: true, _type: "email"})

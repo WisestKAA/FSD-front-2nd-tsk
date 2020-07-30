@@ -25,7 +25,7 @@ mixin sign-up({_header, _actionLink="/moke"}={})
                 .sign-up__e-mail
                     +text-field({_placeholder:"Email", _id: "singEmail"})
                 .sign-up__password
-                    +text-field({_placeholder:"Пароль", _isPassword: true, _id: "signPassword"})
+                    +text-field({_placeholder:"Пароль", _type: "password", _id: "signPassword"})
             .sign-up__mailing
                 +toggle({_name: "mailing", _text: "Получать спецпредложения", _isChecked: false})
             .sign-up__go-to-payment

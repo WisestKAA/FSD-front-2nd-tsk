@@ -9,7 +9,7 @@ mixin sign-in-form({ _actionLink="/moke", _header }={})
             .sign-in-form__email                
                 +text-field({_placeholder:"Email", _id: "signInEmail"})
             .sign-in-form__password
-                +text-field({_placeholder:"Пароль", _isPassword: true, _id: "signInPassword"})
+                +text-field({_placeholder:"Пароль", _type: "password", _id: "signInPassword"})
             .sign-in-form__button                
                 +button({_type: "rich", _name: "singIn", _value: "войти"})
             .sign-in-form__sign-up
