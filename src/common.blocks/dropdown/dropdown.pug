@@ -11,7 +11,7 @@ mixin dropdown({ _text, _options=[], _isShort=false, _isDarkArrow=false } = {})
     if (_isDarkArrow)
         - darkArrow = 'dropdown__arrow_dark'
 
-    .dropdown(class=short)
+    section.dropdown(class=short)
         .dropdown__wrapper
             .dropdown__arrow(class=darkArrow)
                 +material-icons({_type: 'keyboard_arrow_down'})

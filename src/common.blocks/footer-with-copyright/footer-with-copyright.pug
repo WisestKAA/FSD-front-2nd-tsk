@@ -7,7 +7,7 @@ mixin footer-with-copyright({ _descriptionText, _menuItems=[], _subscribeHeader,
         .footer-with-copyright__wrapper-shadow-top
             .footer-with-copyright__wrapper-main
                 .footer-with-copyright__logo-and-description
-                    .footer-with-copyright__logo
+                    figure.footer-with-copyright__logo
                         +logo-site()
                     .footer-with-copyright__description.body=_descriptionText
                 .footer-with-copyright__wrapper-right
@@ -15,12 +15,12 @@ mixin footer-with-copyright({ _descriptionText, _menuItems=[], _subscribeHeader,
                         each item in _menuItems
                             .footer-with-copyright__menu-item
                                 - const { _header, _options } = item
-                                .footer-with-copyright__menu-item-header.h3=_header
+                                h3.footer-with-copyright__menu-item-header.h3=_header
                                 each option in _options
                                     - const { _text, _link } = option 
                                     a(href=_link).footer-with-copyright__menu-item-option.body=_text
                     .footer-with-copyright__subscribe
-                        .footer-with-copyright__subscribe-header.h3=_subscribeHeader
+                        h3.footer-with-copyright__subscribe-header.h3=_subscribeHeader
                         .footer-with-copyright__subscribe-description.body=_subscribeDescription
                         .footer-with-copyright__subscribe-field
                             +subscription-text-field({ _name: 'footerSubscribe', _value: 'footerSubscribe', _placeholder: _sybscribePlaceholder })

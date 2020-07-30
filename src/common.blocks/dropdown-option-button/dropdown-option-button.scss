@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    user-select: none;
 
     &__drop{
         display: inline-block;
@@ -34,5 +35,24 @@
         align-items: center;
         padding-right: 7px;
         cursor: pointer;
+    }
+
+    &__drop,
+    &__apply{
+        appearance: button;
+        -webkit-writing-mode: horizontal-tb !important;
+        text-rendering: unset;
+        word-spacing: unset;
+        text-transform: unset;
+        text-indent: unset;
+        text-shadow: unset;
+        background-color: unset;
+        box-sizing: unset;
+        margin: unset;
+        font: inherit;
+        border-width: unset;
+        border-style: unset;
+        border-color: unset;
+        outline: none;
     }
 }

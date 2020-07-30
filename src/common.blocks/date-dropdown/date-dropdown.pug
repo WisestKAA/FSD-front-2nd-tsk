@@ -1,7 +1,7 @@
 include ../material-icons/material-icons.pug
 
 mixin date-dropdown ({_isFiltred=true, _demoText, _startText, _finishText}={})
-    .date-dropdown
+    section.date-dropdown
         if(_isFiltred)    
             .date-dropdown__arrow
                 +material-icons({_type: 'keyboard_arrow_down'})
@@ -9,13 +9,13 @@ mixin date-dropdown ({_isFiltred=true, _demoText, _startText, _finishText}={})
         else
             .date-dropdown__wrapper-filtred
                 .date-dropdown__wrapper-from
-                    .date-dropdown__start-text.h3=_startText
+                    h3.date-dropdown__start-text.h3=_startText
                     .date-dropdown__input-wrapper
                         .date-dropdown__arrow
                             +material-icons({_type: 'keyboard_arrow_down'})
                         input(type="text" readonly="true" placeholder="ДД.ММ.ГГГГ").date-dropdown__input.date-dropdown__input-from
                 .date-dropdown__wrapper-to
-                    .date-dropdown__finish-text.h3=_finishText
+                    h3.date-dropdown__finish-text.h3=_finishText
                     .date-dropdown__input-wrapper
                         .date-dropdown__arrow
                             +material-icons({_type: 'keyboard_arrow_down'})

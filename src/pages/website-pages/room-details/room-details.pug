@@ -11,8 +11,8 @@ block template
     include ../../../common.blocks/room-price/room-price.pug 
     include ../../../common.blocks/donut-chart/donut-chart.pug
 
-    .room-details
-        .room-details__wrapper-pic
+    main.room-details
+        figure.room-details__wrapper-pic
             .room-details__pic-main
                 img(src='./img/mainpic.png').room-details__pic-main-img
                 .room-details__pic-right
@@ -22,8 +22,8 @@ block template
             .room-details__main
                 .room-details__datails
                     .room-details__wrapper-info
-                        .room-details__info
-                            .room-details__info-header.h2='Сведения о номере'
+                        article.room-details__info
+                            h2.room-details__info-header.h2='Сведения о номере'
                             +icon-text-list({_items: [
                                 {_icon: 'insert_emoticon', _header: 'Комфорт', _content: 'Шумопоглощающие стены'},
                                 {_icon: 'location_city', _header: 'Удобство', _content: 'Окно в каждой из спален'},
@@ -31,8 +31,8 @@ block template
                             ],
                             _isLustHaveBorder: false,
                             })
-                        .room-details__feeling
-                            .room-details__feeling-header.h2='Впечатления от номера'
+                        article.room-details__feeling
+                            h2.room-details__feeling-header.h2='Впечатления от номера'
                             .room-details__wrapper-feeling
                                 .room-details__feeling-chart
                                     +donut-chart()
@@ -44,9 +44,9 @@ block template
                                         {text: 'Удовлетворительно', color: 'purple'},
                                         {text: 'Разочарован', color: 'dark'},
                                     ]})
-                    .room-details__wrapper-comments
+                    article.room-details__wrapper-comments
                         .room-details__wrapper-comments-header
-                            .room-details__comments-header.h2='Отзывы посетителей номера'
+                            h2.room-details__comments-header.h2='Отзывы посетителей номера'
                             .room-details__comments-total='2 отзыва'
                         .room-details__comments
                             +comment({
@@ -66,15 +66,15 @@ block template
                                 _text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
                             })
                     .room-details__wrapper-rulles
-                        .room-details__rulles
-                            .room-details__rulles-header.h2='Правила'
+                        article.room-details__rulles
+                            h2.room-details__rulles-header.h2='Правила'
                             +bullet-list({_list:[
                                 'Нельзя с питомцами',
                                 'Без вечеринок и мероприятий',
                                 'Время прибытия — после 13:00, а выезд до 12:00',
                             ]})
-                        .room-details__cancel
-                            .room-details__cancel-header.h2='Отмена'
+                        article.room-details__cancel
+                            h2.room-details__cancel-header.h2='Отмена'
                             .room-details__cancel-text.body='Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
                 .room-details__price
                     +room-price({_number: '888', 

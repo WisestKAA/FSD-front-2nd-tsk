@@ -8,7 +8,7 @@ mixin expandable-checkbox-list ({_header, _checkboxes =[], _isExpanded=false}={}
     section.expandable-checkbox-list
         .expandable-checkbox-list__arrow
             +material-icons({_type: 'keyboard_arrow_down'})
-        .expandable-checkbox-list__header.h3=_header
+        h3.expandable-checkbox-list__header.h3=_header
         .expandable-checkbox-list__checkboxes(class = `${expanded}`)
             each checkbox in _checkboxes
                 - const {_text, _isChecked} = checkbox

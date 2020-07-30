@@ -6,6 +6,8 @@
     font-size: 12px;
     line-height: 15px;
     box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
 
     &__arrow{
         display: flex;
@@ -18,9 +20,30 @@
         color: white;
     }
 
-    // &__wraper-for-arrow{
-    //     pos
-    // }
+    &__wraper,
+    &__wraper-short,
+    &__wraper-empty{
+        appearance: unset;
+        -webkit-writing-mode: unset;
+        text-rendering: unset;
+        color: unset;
+        letter-spacing: unset;
+        word-spacing: unset;
+        text-transform: unset;
+        text-indent: unset;
+        text-shadow: unset;
+        text-align: unset;
+        align-items: unset;
+        background-color: unset;
+        margin: unset;
+        padding: unset;
+        border-width: unset;
+        border-style: unset;
+        border-color: unset;
+        border-image: unset;
+        width: 100%;
+        font: inherit;
+    }
 
     &__wraper,
     &__wraper-short,
@@ -71,7 +94,6 @@
 
         &_bordered{
             border-radius: 15px;
-            //width: 75px;
             width: max-content;
             height: 29px;
             margin: 0 2px;

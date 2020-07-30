@@ -6,6 +6,14 @@
     border-radius: 4px;
     padding: 39px 29px 29px 29px;
     background-color: white;
+    
+    &__header{
+        display: unset;
+        margin-block-start: unset;
+        margin-block-end: unset;
+        margin-inline-start: unset;
+        margin-inline-end: unset;
+    }
 
     &__header,
     &__birthday{

@@ -5,7 +5,7 @@ mixin icon-text-list ({_items=[], _isLustHaveBorder=true}={})
     if(!_isLustHaveBorder)
         - var lustBorder='icon-text-list__wraper_without-lust-border'
 
-    .icon-text-list
+    figure.icon-text-list
         each item in _items
             - const {_icon, _header, _content} = item
             .icon-text-list__wraper(class=lustBorder)

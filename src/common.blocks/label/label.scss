@@ -1,6 +1,7 @@
 .label{
     display: flex;
     justify-content: space-between;
+    
 
     &_margin-bottom-5{
         margin-bottom: 5px;
@@ -23,7 +24,7 @@
     }
 
     &__caption{
-        font-family: Montserrat;
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: normal;
         font-size: 12px;
@@ -34,5 +35,13 @@
         &_margin-top-3{
             margin-top: -3px;
         }
+    }
+
+    &__text{
+        display: inherit;
+        margin-block-start: unset;
+        margin-block-end: unset;
+        margin-inline-start: unset;
+        margin-inline-end: unset;
     }
 }

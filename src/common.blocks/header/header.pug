@@ -21,9 +21,9 @@ mixin header({ _navOptions=[], _isShortMenu=false,  _isLogged, _username, _login
     
     header.header
         .header__wrapper
-            .header__logo
+            figure.header__logo
                 +logo-site()
-            .header__navigation-wrapper
+            nav.header__navigation-wrapper
                 .header__navigation(class=navlogged)                    
                     each navoption in _navOptions
                         - const {_text, _link, _isCurrent, _sublinks} = navoption

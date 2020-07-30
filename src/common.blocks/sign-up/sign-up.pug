@@ -6,7 +6,7 @@ include ../toggle/toggle.pug
 
 mixin sign-up({_header, _actionLink='/#moke'}={})
     .sign-up
-        .sign-up__header.h1=_header
+        h1.sign-up__header.h1=_header
         form(action=_actionLink).sign-up__form
             .sign-up__name
                 +text-field({_placeholder:'Имя', _id: 'signUpName'})

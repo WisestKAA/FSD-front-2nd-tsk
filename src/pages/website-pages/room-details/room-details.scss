@@ -10,6 +10,12 @@
             overflow: hidden;
             max-height: 485px;
 
+            margin-block-start: unset;
+            margin-block-end: unset;
+            margin-inline-start: unset;
+            margin-inline-end: unset;
+
+
             @media (max-width: 1350px) {
                 flex-direction: column;
                 max-height: 100%;

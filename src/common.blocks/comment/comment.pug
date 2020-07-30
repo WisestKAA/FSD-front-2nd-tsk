@@ -1,7 +1,7 @@
 include ../like-button/like-button.pug 
 
 mixin comment({ _avatarSrc, _avatarName, _avatarDate, _likeNumber, _isLiked=false, _text }={})
-    .comment
+    article.comment
         .comment__head
             .comment__avatar
                 img(src= _avatarSrc, alt=_avatarName).comment__avatar

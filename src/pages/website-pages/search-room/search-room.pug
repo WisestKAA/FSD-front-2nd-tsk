@@ -17,7 +17,7 @@ block template
     include ../../../common.blocks/footer-with-copyright/footer-with-copyright.pug   
 
     .search-room
-        .search-room__main
+        main.search-room__main
             .search-room__wrapper
                 .search-room__wrapper-left
                     .search-room__dates
@@ -69,7 +69,7 @@ block template
                             ],
                         })
                 .search-room__wrapper-right
-                    .search-room__preview-header.h1='Номера, которые мы для вас подобрали'
+                    h1.search-room__preview-header.h1='Номера, которые мы для вас подобрали'
                     .search-room__wrapper-preview
                         +room-preview({
                             _imgLinks:['./img/room888.png','./img/room888.png','./img/room888.png','./img/room888.png'], 

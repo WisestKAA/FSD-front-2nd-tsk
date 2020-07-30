@@ -4,7 +4,7 @@ mixin rate-button ({_rate}={})
     - var i = 0
     - var n = 5 - _rate
 
-    .rate-button
+    figure.rate-button
         while i < _rate
             .rate-button__star
                 +material-icons({_type: 'star'})

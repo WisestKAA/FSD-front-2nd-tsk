@@ -1,6 +1,6 @@
 .radio-buttons {
     display: inline-block;
-    widows: auto;
+    width: auto;
 
     &__label{
         display: inline-block;
@@ -42,8 +42,7 @@
         border: 1px solid $dark25;
         border-radius: 10px;
         box-sizing: border-box;
-        vertical-align: middle;
-        //margin-top: -1px;        
+        vertical-align: middle;   
     }
 
     &__text::after{
@@ -58,8 +57,7 @@
         border-radius: 10px;
         padding: 4px;
         background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
-        box-sizing: border-box;
-        //margin-top: -1px;      
+        box-sizing: border-box; 
     }
 }
 

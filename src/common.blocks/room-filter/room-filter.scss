@@ -13,6 +13,11 @@
     
     &__header{
         margin-bottom: 18px;
+        display: inherit;
+        margin-block-start: unset;
+        margin-block-end: unset;
+        margin-inline-start: unset;
+        margin-inline-end: unset;
     }
     
     &__guests{

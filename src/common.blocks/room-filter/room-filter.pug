@@ -5,7 +5,7 @@ include ../label/label.pug
 
 mixin room-filter({ _header, _actionLink='/#moke' }={}) 
     .room-filter
-        .room-filter__header.h1=_header
+        h1.room-filter__header.h1=_header
         form(action=_actionLink).room-filter__form
             .room-filter__date
                 +date-dropdown({_isFiltred: false,  _startText: 'прибытие', _finishText: 'выезд'})
@@ -17,4 +17,4 @@ mixin room-filter({ _header, _actionLink='/#moke' }={})
                     {_text: 'младенцы', _number: 0},
                 ]})
             .room-filter__search-button
-                +button({_type: 'rich', _name: 'findRoom', _value: 'подобрать номер', _actionLink: '/#moke'})
+                +button({_type: 'rich', _name: 'findRoom', _value: 'подобрать номер', _actionLink: _actionLink})

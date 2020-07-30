@@ -4,9 +4,9 @@
     width: 100%;
     background-color: white;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    //padding: 100px 0 110px 0;
     height: 367px;
     align-items: center;
+;
 
     &__wrapper{
         display: flex;
@@ -17,6 +17,12 @@
     &__icon{
         margin-bottom: 13px;
         margin-top: 2px;
+        display: inherit;
+        
+        margin-block-start: unset;
+        margin-block-end: unset;
+        margin-inline-start: unset;
+        margin-inline-end: unset
     }
 
     &__description{

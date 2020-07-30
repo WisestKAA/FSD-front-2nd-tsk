@@ -43,12 +43,7 @@
         flex-direction: column;
     }
 
-    &__text{
-        font-family: 'Quicksand';
-        font-style: normal;
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 29px;
+    &__text{        
         margin-top: 7px;
 
         &_margin-top-6{
@@ -56,7 +51,13 @@
         }
     }
 
+    &__text,
     &__code{
+        display: unset;
+        margin-block-start: unset;
+        margin-block-end: unset;
+        margin-inline-start: unset;
+        margin-inline-end: unset;
         font-family: 'Quicksand';
         font-style: normal;
         font-weight: bold;

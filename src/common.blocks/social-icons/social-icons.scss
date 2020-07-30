@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
     width: 112px;
+    margin-block-start: unset;
+    margin-block-end: unset;
+    margin-inline-start: unset;
+    margin-inline-end: unset;
     
     &__ico{
         width: 24px;
