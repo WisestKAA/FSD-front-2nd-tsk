@@ -3,7 +3,7 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 include ../label/label.pug
 
-mixin room-price({ _actionLink="/#moke", _number, _isLuxe=false, _pricePerDay=0, _servicePrice=0, _discountForService="", _serviceInfo, _addServicePrice=0, _addServiceInfo }={})
+mixin room-price({ _actionLink="/moke", _number, _isLuxe=false, _pricePerDay=0, _servicePrice=0, _discountForService="", _serviceInfo, _addServicePrice=0, _addServiceInfo }={})
     - var luxe = ""
     if(!_isLuxe)
         - luxe = "room-price__room-number-luxe_hide"

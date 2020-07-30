@@ -3,7 +3,7 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 include ../label/label.pug 
 
-mixin room-filter({ _header, _actionLink="/#moke" }={}) 
+mixin room-filter({ _header, _actionLink="/moke" }={}) 
     .room-filter
         h1.room-filter__header.h1=_header
         form(action=_actionLink).room-filter__form
