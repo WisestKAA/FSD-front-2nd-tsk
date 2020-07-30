@@ -1,7 +1,7 @@
 extends ../ui-kit-template
 
 block variables
-    - var _bgcolor='#F4F4F6'
+    - var _bgcolor="#F4F4F6"
     - let title="Cards"
 
 block template
@@ -15,38 +15,38 @@ block template
         .cards__main-wrapper
             main.cards__main
                 .cards__content-left
-                    +room-filter({_header: 'Найдём номера под ваши пожелания'})
+                    +room-filter({_header: "Найдём номера под ваши пожелания"})
                     .cards__separator
-                    +sign-up({_header: 'Регистрация аккаунта',})
+                    +sign-up({_header: "Регистрация аккаунта",})
                 .cards__content-center
-                    +room-price({_number: '888', 
+                    +room-price({_number: "888", 
                         _isLuxe: true,
-                        _pricePerDay: '9 990', 
-                        _servicePrice: '2179', 
-                        _discountForService: '2179',
-                        _serviceInfo: '', 
-                        _addServicePrice: '300', 
-                        _addServiceInfo: ''
+                        _pricePerDay: "9 990", 
+                        _servicePrice: "2179", 
+                        _discountForService: "2179",
+                        _serviceInfo: "", 
+                        _addServicePrice: "300", 
+                        _addServiceInfo: ""
                     })
                     .cards__separator
-                    +sign-in-form({_header: 'Войти'})
+                    +sign-in-form({_header: "Войти"})
                 .cards__content-right
                     .cards__calendar-moke
                     .cards__separator
                     +room-preview({
-                        _imgLinks:['./img/room888.png','./img/room888.png','./img/room888.png','./img/room888.png'], 
+                        _imgLinks:["./img/room888.png","./img/room888.png","./img/room888.png","./img/room888.png"], 
                         _number: 888, 
                         _isLuxe: true, 
-                        _price: '9 990', 
+                        _price: "9 990", 
                         _rate: 5, 
                         _comments: 145
                     })
                     .cards__separator
                     +room-preview({
-                        _imgLinks:['./img/room840.png','./img/room840.png','./img/room840.png','./img/room840.png'], 
+                        _imgLinks:["./img/room840.png","./img/room840.png","./img/room840.png","./img/room840.png"], 
                         _number: 840, 
                         _isLuxe: true, 
-                        _price: '9 990', 
+                        _price: "9 990", 
                         _rate: 4, 
                         _comments: 65
                     })

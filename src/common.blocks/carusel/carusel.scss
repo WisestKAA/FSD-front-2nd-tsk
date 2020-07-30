@@ -33,7 +33,7 @@
 
         &-prev span,
         &-next span{
-            font-family: 'Material Icons';
+            font-family: "Material Icons";
             font-style: normal;
             font-weight: normal;
             font-size: 24px;
@@ -52,7 +52,7 @@
             left: 0;
             border-radius: 4px 0 0 0;
             &::before {
-                content: ''; 
+                content: ""; 
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -67,7 +67,7 @@
         &-next{
             right: 0;
             &::before {
-                content: ''; 
+                content: ""; 
                 position: absolute;
                 top: 0;
                 right: 0;

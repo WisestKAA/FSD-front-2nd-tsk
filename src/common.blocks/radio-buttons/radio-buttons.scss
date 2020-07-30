@@ -25,7 +25,7 @@
 
     &__content{
         margin-top: -3px;
-        font-family: 'Montserrat';
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -34,7 +34,7 @@
 
     &__text::before{
         display: inline-block;
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         width: 20px;
@@ -47,7 +47,7 @@
 
     &__text::after{
         display: none;
-        content: '';
+        content: "";
         position: absolute;
         top: 4px;
         left: 4px;

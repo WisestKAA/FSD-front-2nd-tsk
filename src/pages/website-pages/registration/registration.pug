@@ -1,12 +1,12 @@
 extends ../template
 
 block variables
-    - var _bgcolor='#FFFFFF'
+    - var _bgcolor="#FFFFFF"
     - let title="Registration"
 
 block template
     include ../../../common.blocks/sign-up/sign-up.pug
         
-    main.registration(style='background-image: url(./img/sign.png);')
+    main.registration(style="background-image: url(./img/sign.png);")
         .registration__form
-            +sign-up({_header: 'Регистрация аккаунта',})
+            +sign-up({_header: "Регистрация аккаунта",})

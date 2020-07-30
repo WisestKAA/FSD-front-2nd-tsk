@@ -1,5 +1,5 @@
-import DropdownOption from '../dropdown-option/dropdown-option.js'; 
-import DropdownOptionButton from '../dropdown-option-button/dropdown-option-button.js';
+import DropdownOption from "../dropdown-option/dropdown-option.js"; 
+import DropdownOptionButton from "../dropdown-option-button/dropdown-option-button.js";
 
 class DropDown {
     constructor (element, optionText, isShort = false){
@@ -7,37 +7,37 @@ class DropDown {
         this.isShort = isShort;
         this.optionText = optionText;
 
-        this.select = this.dropdown.querySelector('.dropdown__select');
-        this.select.addEventListener('click', this.handleSelectClick.bind(this));
+        this.select = this.dropdown.querySelector(".dropdown__select");
+        this.select.addEventListener("click", this.handleSelectClick.bind(this));
 
-        this.selectText = this.select.querySelector('.dropdown__text');
+        this.selectText = this.select.querySelector(".dropdown__text");
         if(isShort){
-            this.defaultSelectText = '0 ' + optionText.bedroom.third + ' 0 ' + optionText.bed.third + ' 0 ' + optionText.bathroom.third;
+            this.defaultSelectText = "0 " + optionText.bedroom.third + " 0 " + optionText.bed.third + " 0 " + optionText.bathroom.third;
             this.selectText.textContent = this.defaultSelectText;
         }
         else{
             this.defaultSelectText = this.selectText.textContent;
         }
         
-        this.options = this.dropdown.querySelector('.dropdown__options');
+        this.options = this.dropdown.querySelector(".dropdown__options");
         
-        this.optionsList = this.options.querySelectorAll('.dropdown-option');
+        this.optionsList = this.options.querySelectorAll(".dropdown-option");
         this.optionsListObj = new Array();
         this.optionsList.forEach((val => {
             this.optionsListObj.push(new DropdownOption(val));
         }));
-        this.options.addEventListener('DOMSubtreeModified', this.handleOptionsModifed.bind(this));
+        this.options.addEventListener("DOMSubtreeModified", this.handleOptionsModifed.bind(this));
 
-        this.optionButton = this.options.querySelector('.dropdown-option-button');
+        this.optionButton = this.options.querySelector(".dropdown-option-button");
         if(this.optionButton != null){
             this.optionButtons = new DropdownOptionButton(this.optionButton, this.selectTextm, this.optionsListObj);
         }
         
-        this.arrow = element.querySelector('.material-icons');
+        this.arrow = element.querySelector(".material-icons");
     }
 
     handleSelectClick(){ 
-        if (this.select.classList.contains('dropdown__select_active')) {
+        if (this.select.classList.contains("dropdown__select_active")) {
             this.hideDropdown();
           } else {
             this.showDropdown();
@@ -45,31 +45,31 @@ class DropDown {
     }
 
     showDropdown(){
-        this.select.classList.add('dropdown__select_active');
-        this.options.classList.add('dropdown__options_active');
+        this.select.classList.add("dropdown__select_active");
+        this.options.classList.add("dropdown__options_active");
         
         this.handleDocumentClick = this.handleDocumentClick.bind(this);
-        document.addEventListener('click', this.handleDocumentClick);
+        document.addEventListener("click", this.handleDocumentClick);
 
-        this.arrow.textContent = 'keyboard_arrow_up';
+        this.arrow.textContent = "keyboard_arrow_up";
     }
 
     hideDropdown(){
-        this.select.classList.remove('dropdown__select_active');
-        this.options.classList.remove('dropdown__options_active');
+        this.select.classList.remove("dropdown__select_active");
+        this.options.classList.remove("dropdown__options_active");
 
-        document.removeEventListener('click', this.handleDocumentClick);
+        document.removeEventListener("click", this.handleDocumentClick);
 
-        this.arrow.textContent = 'keyboard_arrow_down';
+        this.arrow.textContent = "keyboard_arrow_down";
     }
 
     handleOptionsModifed(){
         this.sum = 0;
         let babys = 0;
         this.optionsList.forEach((val)=>{
-            let num = val.querySelector('.dropdown-option__number');
-            let tmp = val.querySelector('.dropdown-option__text').textContent;
-            if(val.querySelector('.dropdown-option__text').textContent == 'младенцы'){
+            let num = val.querySelector(".dropdown-option__number");
+            let tmp = val.querySelector(".dropdown-option__text").textContent;
+            if(val.querySelector(".dropdown-option__text").textContent == "младенцы"){
                 babys = num.textContent;
             }else{
                 this.sum += parseInt(num.textContent, 10);
@@ -121,13 +121,13 @@ class DropDown {
     getRightTextShort(optionText){
         var nums = new Array();
         this.optionsList.forEach((val)=>{
-            let num = val.querySelector('.dropdown-option__number');
+            let num = val.querySelector(".dropdown-option__number");
             nums.push(parseInt(num.textContent, 10));
         });
         
-        var finalText = '';
-        finalText += this.getRightText(optionText.bedroom, nums[0])+' ';
-        finalText += this.getRightText(optionText.bed, nums[1])+' ';
+        var finalText = "";
+        finalText += this.getRightText(optionText.bedroom, nums[0])+" ";
+        finalText += this.getRightText(optionText.bed, nums[1])+" ";
         finalText += this.getRightText(optionText.bathroom, nums[2]);
         return finalText;
     }
@@ -150,30 +150,30 @@ $(document).ready(() => {
             third: " гостей"
         },
         bedroom : {
-            ferst: ' спальня',
-            second: ' спальни',
-            third: ' спален',
+            ferst: " спальня",
+            second: " спальни",
+            third: " спален",
         },
         bed : {
-            ferst: ' кровать',
-            second: ' кровати',
-            third: ' кроватей',
+            ferst: " кровать",
+            second: " кровати",
+            third: " кроватей",
         },
         bathroom : {
-            ferst: ' ванная комната',
-            second: ' ванные комнаты',
-            third: ' ванных комнат',
+            ferst: " ванная комната",
+            second: " ванные комнаты",
+            third: " ванных комнат",
         },
         baby: {
-            ferst: ' младенец',
-            second: ' младенца',
-            third: ' младенцев',
+            ferst: " младенец",
+            second: " младенца",
+            third: " младенцев",
         },
     }
 
-    const dropdowns = document.querySelectorAll('.dropdown');
+    const dropdowns = document.querySelectorAll(".dropdown");
     dropdowns.forEach((val =>{
-        if(val.classList.contains('dropdown_width-short')){
+        if(val.classList.contains("dropdown_width-short")){
             new DropDown(val, optionText, true);
         } 
         else{

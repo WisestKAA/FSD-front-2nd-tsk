@@ -4,20 +4,20 @@ include ../button/button.pug
 include ../dropdown-nemu/dropdown-nemu.pug
 
 mixin header({ _navOptions=[], _isShortMenu=false,  _isLogged, _username, _loginButtonText, _signupButtonText}={}) 
-    - var unlogged =  ''
-    - var logged = ''
-    - var navlogged = ''
+    - var unlogged =  ""
+    - var logged = ""
+    - var navlogged = ""
     if(_isLogged)
-        - unlogged = 'header__unlogged_hide'
-        - navlogged = 'header__navigation_margin-bottom-1'
+        - unlogged = "header__unlogged_hide"
+        - navlogged = "header__navigation_margin-bottom-1"
     else
-        - logged = 'header__logged_hide'
+        - logged = "header__logged_hide"
     
-    -var current = 'header__navigation-link_font-weight-bold'
+    -var current = "header__navigation-link_font-weight-bold"
     
-    - var shrtmenu = ''
+    - var shrtmenu = ""
     if(_isShortMenu)
-        - var shrtmenu = 'header__navigation-link_short'
+        - var shrtmenu = "header__navigation-link_short"
     
     header.header
         .header__wrapper
@@ -37,9 +37,9 @@ mixin header({ _navOptions=[], _isShortMenu=false,  _isLogged, _username, _login
                 .header__sign
                     .header__unlogged(class=unlogged)
                         .header__login-button
-                            +button({ _type: 'short-bordered', _name: 'headerLogin', _value: _loginButtonText, _actionLink: '/moke' })
+                            +button({ _type: "short-bordered", _name: "headerLogin", _value: _loginButtonText, _actionLink: "/moke" })
                         .header__sign-up-button
-                            +button({ _type: 'short-gradient-background', _name: 'headerSignUp', _value: _signupButtonText, _actionLink: '/moke' })
+                            +button({ _type: "short-gradient-background", _name: "headerSignUp", _value: _signupButtonText, _actionLink: "/moke" })
                     .header__logged(class=logged)
                         .header__username=_username
                 

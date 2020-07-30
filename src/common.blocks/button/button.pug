@@ -4,26 +4,26 @@ mixin button({ _type, _name, _value, _actionLink }={})
 
     .button
         case _type
-            when 'rich'
-                - var type = 'button__wraper-rich_' + _type           
+            when "rich"
+                - var type = "button__wraper-rich_" + _type           
                 .button__wraper-rich
                     .button__arrow
-                        +material-icons({_type: 'arrow_forward'})  
+                        +material-icons({_type: "arrow_forward"})  
                     .button__text=_value             
-                    input(type='submit', name=_name, value=_value, class=type)
-            when 'empty'
-                - var type = 'button__wraper-empty_' + _type
+                    input(type="submit", name=_name, value=_value, class=type)
+            when "empty"
+                - var type = "button__wraper-empty_" + _type
                 button.button__wraper-empty
                     a(href=_actionLink, class=type)=_value
-            when 'short-gradient-background'
-                -var type = 'button__wraper-short_gradient-background'
+            when "short-gradient-background"
+                -var type = "button__wraper-short_gradient-background"
                 button.button__wraper-short
                     a(href=_actionLink, class=type)=_value
-            when 'short-bordered'
-                -var type = 'button__wraper-short_bordered'
+            when "short-bordered"
+                -var type = "button__wraper-short_bordered"
                 button.button__wraper-short
                     a(href=_actionLink, class=type)=_value  
             default
-                - var type = 'button__wraper_' + _type
+                - var type = "button__wraper_" + _type
                 button.button__wraper            
                     a(href=_actionLink, class=type)=_value

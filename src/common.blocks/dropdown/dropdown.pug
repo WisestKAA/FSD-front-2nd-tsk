@@ -3,18 +3,18 @@ include ../dropdown-option/dropdown-option.pug
 include ../dropdown-option-button/dropdown-option-button.pug
 
 mixin dropdown({ _text, _options=[], _isShort=false, _isDarkArrow=false } = {})
-    - var short=''
+    - var short=""
     if _isShort == true
-        - short='dropdown_width-short'
+        - short="dropdown_width-short"
 
-    - var darkArrow = ''
+    - var darkArrow = ""
     if (_isDarkArrow)
-        - darkArrow = 'dropdown__arrow_dark'
+        - darkArrow = "dropdown__arrow_dark"
 
     section.dropdown(class=short)
         .dropdown__wrapper
             .dropdown__arrow(class=darkArrow)
-                +material-icons({_type: 'keyboard_arrow_down'})
+                +material-icons({_type: "keyboard_arrow_down"})
             .dropdown__select
                 span.dropdown__text=_text
             .dropdown__options
@@ -22,4 +22,4 @@ mixin dropdown({ _text, _options=[], _isShort=false, _isDarkArrow=false } = {})
                     - const {_text, _number} = option
                     +dropdown-option({_text, _number})
                 if(!_isShort)
-                    +dropdown-option-button({_drop_text: 'очистить', _apply_text: 'применить'})
+                    +dropdown-option-button({_drop_text: "очистить", _apply_text: "применить"})

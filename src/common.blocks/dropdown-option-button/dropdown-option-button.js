@@ -1,16 +1,14 @@
-import DropdownOption from '../dropdown-option/dropdown-option.js'; 
-
 class DropdownOptionButton{
     constructor (element, selectText, optionsList, isHide = true){
         this.buttons = element;
         this.selectText = selectText;
         this.optionsList = optionsList;
 
-        this.drop = this.buttons.querySelector('.dropdown-option-button__drop');
-        this.apply = this.buttons.querySelector('.dropdown-option-button__apply');
+        this.drop = this.buttons.querySelector(".dropdown-option-button__drop");
+        this.apply = this.buttons.querySelector(".dropdown-option-button__apply");
 
-        this.drop.addEventListener('click', this.handleDropClick.bind(this));
-        this.apply.addEventListener('click', this.handleApplyClick.bind(this));
+        this.drop.addEventListener("click", this.handleDropClick.bind(this));
+        this.apply.addEventListener("click", this.handleApplyClick.bind(this));
 
         if(isHide) this.hideDrop();
     }
@@ -27,15 +25,15 @@ class DropdownOptionButton{
     }
 
     hideDrop(){
-        this.drop.classList.add('dropdown-option-button__drop_hide');
+        this.drop.classList.add("dropdown-option-button__drop_hide");
     }
 
     showDrop(){
-        this.drop.classList.remove('dropdown-option-button__drop_hide');
+        this.drop.classList.remove("dropdown-option-button__drop_hide");
     }
 
     checkHiden(){
-        if(this.drop.classList.contains('dropdown-option-button__drop_hide')) this.showDrop();
+        if(this.drop.classList.contains("dropdown-option-button__drop_hide")) this.showDrop();
     }
 }
 

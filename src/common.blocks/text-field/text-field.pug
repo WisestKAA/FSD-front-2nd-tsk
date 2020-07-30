@@ -1,16 +1,16 @@
 mixin text-field({_placeholder, _id, _isMasked = false, _isPaddingRightMode = false, _text, _isPassword=false}={})
 
-    - var maskedMod = '';
+    - var maskedMod = "";
     if _isMasked  
-        - maskedMod = ' text-field_masked'
-        - _placeholder = 'ДД.ММ.ГГГГ'
+        - maskedMod = " text-field_masked"
+        - _placeholder = "ДД.ММ.ГГГГ"
     
-    - var addPadding = '';
+    - var addPadding = "";
     if _isPaddingRightMode
-        - addPadding = ' text-field_addPaddingRight'
-    - var type = 'text'
+        - addPadding = " text-field_addPaddingRight"
+    - var type = "text"
     if(_isPassword) 
-        - type = 'password'
+        - type = "password"
     
     input(
         type=type 

@@ -7,10 +7,10 @@ mixin rate-button ({_rate}={})
     figure.rate-button
         while i < _rate
             .rate-button__star
-                +material-icons({_type: 'star'})
+                +material-icons({_type: "star"})
             - i++;
         - i = 0
         while i < n
             .rate-button__star-border
-                +material-icons({_type: 'star_border'})
+                +material-icons({_type: "star_border"})
             - i++

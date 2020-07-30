@@ -1,16 +1,16 @@
 extends ../template
 
 block variables
-    - var _bgcolor='#F4F4F6'
+    - var _bgcolor="#F4F4F6"
     - let title="Landing"
 
 block template
     include ../../../common.blocks/room-filter/room-filter.pug   
 
     main.landing        
-        .landing__main(style=`background-image: url('./img/landingbg.png');`)
+        .landing__main(style=`background-image: url("./img/landingbg.png");`)
             .landing__wrapper
                 .landing__room-filter
-                    +room-filter({_header: 'Найдём номера под ваши пожелания'})
+                    +room-filter({_header: "Найдём номера под ваши пожелания"})
                 .landing__wrapper-discription    
-                    .landing__discription='Лучшие номера для вашей работы, отдыха и просто вдохновения'        
+                    .landing__discription="Лучшие номера для вашей работы, отдыха и просто вдохновения"        

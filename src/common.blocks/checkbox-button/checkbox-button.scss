@@ -23,7 +23,7 @@
     }
 
     &__header{
-        font-family: 'Montserrat';
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: bold;
         font-size: 14px;
@@ -33,7 +33,7 @@
 
     &__content{
         white-space: normal;
-        font-family: 'Montserrat';
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -50,7 +50,7 @@
     }
 
     &__text::before{
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         width: 20px;
@@ -61,9 +61,9 @@
     }
 
     &__text::after{
-        content: 'done';
+        content: "done";
         display: none;
-        font-family: 'Material Icons';
+        font-family: "Material Icons";
         font-size: 18px;
         line-height: 18px;
         text-transform: none;
