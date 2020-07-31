@@ -66,7 +66,7 @@ module.exports = (env, options) => {
                     }
                 },
                 {
-                    test: /\.(png|jpg|gif|svg)$/,
+                    test: /\.(png|jpg|gif|svg|)$/,
                     exclude: [/fonts/,],
                     use: {
                         loader: 'file-loader',
@@ -76,6 +76,17 @@ module.exports = (env, options) => {
                         },
                     }
                 },
+                {
+                    test: /\.(svg|png|ico|xml|json|webmanifest)$/,
+                    exclude: [/common.blocks/, /img/, /node_modules/, /library.blocks/, /pages/],
+                    use: [{
+                      loader: 'file-loader',
+                      options: {
+                        name: './favicons/[name].[ext]',
+                        publicPath: '../',
+                      },
+                    }],
+                  },
             ]
         },
         devServer: {
