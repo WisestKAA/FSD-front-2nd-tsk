@@ -1,28 +1,28 @@
-.social-icons{
-    display: flex;
-    justify-content: space-between;
-    width: 112px;
-    margin-block-start: unset;
-    margin-block-end: unset;
-    margin-inline-start: unset;
-    margin-inline-end: unset;
-    
-    &__ico{
-        width: 24px;
-        height: 24px;
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+  margin-block-start: unset;
+  margin-block-end: unset;
+  margin-inline-start: unset;
+  margin-inline-end: unset;
 
-        &-twitter{
-            margin-top: 5px;
-        }
+  &__ico {
+    width: 24px;
+    height: 24px;
 
-        &-facebook{
-            margin-top: 4px;
-            margin-left: -1px;
-        }
-
-        &-instagram{
-            margin-top: 4px;
-            margin-right: 1px;
-        }
+    &-twitter {
+      margin-top: 5px;
     }
+
+    &-facebook {
+      margin-top: 4px;
+      margin-left: -1px;
+    }
+    
+    &-instagram {
+      margin-top: 4px;
+      margin-right: 1px;
+    }
+  }
 }

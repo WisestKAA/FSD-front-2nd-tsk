@@ -1,15 +1,15 @@
-.sign-in{
-    display: flex;
-    justify-content: center;
+.sign-in {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
+  
+  &__form {
+    margin: 163px 0;
+    max-width: 380px;
     width: 100%;
-    height: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 80%;
-
-    &__form{
-        margin: 163px 0;
-        max-width: 380px;
-        width: 100%;
-    }
+  }
 }

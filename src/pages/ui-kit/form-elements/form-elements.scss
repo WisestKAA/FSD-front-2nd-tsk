@@ -1,147 +1,145 @@
-.form-elements{
-    margin-top: 56px;
-    
-    &__main-wrapper{
-        display: flex;
-        justify-content: center;
+.form-elements {
+  margin-top: 56px;
+
+  &__main-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__main {
+    max-width: 1169px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 870px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__content-left,
+  &__content-center,
+  &__content-right {
+    max-width: 320px;
+    width: 100%;
+    padding: 5px;
+  }
+
+  &__content-right_big {
+    max-width: 714px;
+    padding: 13px 6px 5px 5px;
+  }
+
+  &__content-left_margin-left-1 {
+    margin-left: -1px;
+  }
+
+  &__content-right-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 723px;
+    width: 100%;
+
+    @media (max-width: 870px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    &_margin-bottom-18 {
+      margin-bottom: 22px;
     }
 
-    &__main{        
-        max-width: 1169px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        @media (max-width: 870px){
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    &_margin-bottom-20 {
+      margin-bottom: 20px;
     }
 
-    &__content-left,
-    &__content-center,
-    &__content-right{
-        max-width: 320px;
-        width: 100%;
-        padding: 5px;
+    &_margin-bottom-38 {
+      margin-bottom: 38px;
     }
 
-    &__content-right_big{
-        max-width: 714px;
-        padding: 13px 6px 5px 5px;
+    &_margin-bottom-40 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__masked-text-field {
+    padding-top: 3px;
+  }
+
+  &__subscription-text-field {
+    margin-left: -1px;
+    padding-top: 1px;
+  }
+
+  &__radio-buttons {
+    padding-top: 2px;
+  }
+
+  &__like-button {
+    padding-top: 3px;
+  }
+
+  &__like-buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90px;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  &__rate-buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 260px;
+    width: 100%;
+  }
+
+  &__range-slider {
+    margin-bottom: 34px;
+  }
+
+  &__button-wrapper {
+    margin-bottom: 30px;
+
+    &_margin-left-1 {
+      margin-left: -1px;
+    }
+  }
+
+  &__separator {
+    &_margin-40 {
+      margin-bottom: 32px;
     }
 
-    &__content-left_margin-left-1{
-        margin-left: -1px;
+    &_margin-100 {
+      margin-bottom: 90px;
+
+      @media (max-width: 870px) {
+        margin-bottom: 20px;
+      }
     }
-
-    &__content-right-wrapper{
-        display: flex;
-        justify-content: space-between;
-        max-width: 723px;
-        width: 100%;
-
-        @media (max-width: 870px){
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    &_margin-255 {
+      margin-bottom: 246px;
+      @media (max-width: 870px) {
+        margin-bottom: 20px;
+      }
     }
+  }
 
-    &__item{
-        &_margin-bottom-18{
-            margin-bottom: 22px;
-        }
-        
-        &_margin-bottom-20{
-            margin-bottom: 20px;
-        }
+  &__expandable-checkbox-list {
+    margin-top: -13px;
+  }
 
-        &_margin-bottom-38{
-            margin-bottom: 38px;
-        }
-
-        &_margin-bottom-40{
-            margin-bottom: 40px;
-        }
-    }
-
-    &__masked-text-field{
-        padding-top: 3px;
-    }
-
-    &__subscription-text-field{
-        margin-left: -1px;
-        padding-top: 1px;
-    }
-
-    &__radio-buttons{
-        padding-top: 2px;
-    }
-
-    &__like-button{
-        padding-top: 3px;
-    }
-
-    &__like-buttons{
-        display: flex;
-        justify-content: space-between;
-        max-width: 90px;
-        width: 100%;
-        flex-direction: row;
-    }
-
-    &__rate-buttons{
-        display: flex;
-        justify-content: space-between;
-        max-width: 260px;
-        width: 100%;
-    }
-
-    &__range-slider{
-        margin-bottom: 34px;
-    }
-
-    &__button-wrapper{
-        margin-bottom: 30px;
-
-        &_margin-left-1{
-            margin-left: -1px;
-        }
-    }
-
-    &__separator{
-
-        &_margin-40{
-            margin-bottom: 32px;
-        }
-
-        &_margin-100{
-            margin-bottom: 90px;
-            @media (max-width: 870px){
-                 margin-bottom: 20px;
-            }
-        }
-
-        &_margin-255{
-            margin-bottom: 246px;
-            
-            @media (max-width: 870px){
-                margin-bottom: 20px;
-           }
-        }
-    }
-
-    &__expandable-checkbox-list{
-        margin-top: -13px;
-    }
-
-    .checkbox-button:last-child{
-        margin-bottom: 0px;
-    }
-
-    .toggle:last-child{
-        margin-bottom: 0px;
-    }
+  .checkbox-button:last-child {
+    margin-bottom: 0px;
+  }
+  
+  .toggle:last-child {
+    margin-bottom: 0px;
+  }
 }

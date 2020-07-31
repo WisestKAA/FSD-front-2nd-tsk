@@ -1,71 +1,71 @@
 .bullet-list{
+  display: inline-block;
+  max-width: 292px;
+  width: 100%;
+  box-sizing:border-box;
+  list-style-type: none;
+  margin-block-start: unset;
+  margin-block-end: unset;
+  margin-inline-start: unset;
+  margin-inline-end: unset;
+  padding-inline-start: unset;
+
+  &__wraper{
+    position: relative;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    text-align: unset;
+
+    &:last-child,
+    &_margin-bottom-0{
+        margin-bottom: 0;
+    }
+  }
+
+  &__li{        
     display: inline-block;
-    max-width: 292px;
-    width: 100%;
+    position: absolute;
+    top: 7px;
+    width: 10.43px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $dark25;
+
+  &_bgcolor{
+    &-orange{
+      background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+    }
+
+    &-green{
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+
+    &-purple{
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+    &-dark{
+      background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+    }
+    }
+  }
+
+  &__text{
+    display: inline-block;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark75;
+    white-space: normal;
+    vertical-align: baseline;
+    padding-left: 20.86px;
     box-sizing:border-box;
-    list-style-type: none;
-    margin-block-start: unset;
-    margin-block-end: unset;
-    margin-inline-start: unset;
-    margin-inline-end: unset;
-    padding-inline-start: unset;
+    max-width: 255px;
 
-    &__wraper{
-        position: relative;
-        white-space: nowrap;
-        margin-bottom: 10px;
-        text-align: unset;
-        
-
-        &:last-child,
-        &_margin-bottom-0{
-            margin-bottom: 0;
-        }
+    &_padding-left-5{
+      padding-left: 15px;
     }
-
-    &__li{        
-        display: inline-block;
-        position: absolute;
-        top: 7px;
-        width: 10.43px;
-        height: 10px;
-        border-radius: 5px;
-        background-color: $dark25;
-
-        &_bgcolor{
-            &-orange{
-                background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
-            }
-
-            &-green{
-                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-            }
-
-            &-purple{
-                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            }
-            &-dark{
-                background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
-            }
-        }
-    }
-
-    &__text{
-        display: inline-block;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 24px;
-        color: $dark75;
-        white-space: normal;
-        vertical-align: baseline;
-        padding-left: 20.86px;
-        box-sizing:border-box;
-        max-width: 255px;
-
-        &_padding-left-5{
-            padding-left: 15px;
-        }
-    }
+  }
 }

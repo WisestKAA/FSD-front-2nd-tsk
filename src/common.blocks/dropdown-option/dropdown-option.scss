@@ -1,61 +1,61 @@
-.dropdown-option{
-    width: auto;
-    max-width: 318px;
-    height: 30px;
-    margin-bottom: 7px;   
+.dropdown-option {
+  width: auto;
+  max-width: 318px;
+  height: 30px;
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    display: inline-block;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 14px;
+  }
+
+  &__button-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
-        
-    &__text{
-        display: inline-block;
-        justify-content: center;
-        align-items: flex-start;
-        padding-left: 14px;
-    }
+    max-width: 92px;
+    width: 100%;
+    padding-right: 7px;
+  }
 
-    &__button-block{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 92px;
-        width: 100%;
-        padding-right: 7px;
-    }
+  &__circle {
+    display: flex;
+    border: 1px solid $dark50;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: $dark50;
+    font-family: 'Montserrat';
+    user-select: none;
 
-    &__circle{
-        display: flex;
-        border: 1px solid $dark50;
-        box-sizing: border-box;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        font-weight: normal;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        font-size: 18px;
-        color: $dark50;
-        font-family: "Montserrat";
-        user-select: none;
-
-        &_disable{
-            border: 1px solid $dark25;
-            color: $dark25;
-            cursor: default;
-        }
+    &_disable {
+      border: 1px solid $dark25;
+      color: $dark25;
+      cursor: default;
     }
+  }
 
-    &__number{
-        display: flex;
-        text-align: center; 
-        vertical-align: middle;        
-        justify-content: center;
-        align-items: center;      
-    }
-
-    &__number,
-    &__text{        
-        margin-top: -7px;
-    }
+  &__number {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &__number,
+  &__text {
+    margin-top: -7px;
+  }
 }

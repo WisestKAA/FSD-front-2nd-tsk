@@ -1,43 +1,43 @@
-.expandable-checkbox-list{
-    display: inline-block;
-    position: relative;
+.expandable-checkbox-list {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 266px;
+
+  &__header {
+    display: flex;
+    height: 44px;
     width: 100%;
-    max-width: 266px;
+    justify-content: left;
+    align-items: center;
+    cursor: default;
+    user-select: none;
+    margin-top: -2px;
+  }
 
-    &__header{
-        display: flex;
-        height: 44px;
-        width: 100%;
-        justify-content: left;
-        align-items: center;
-        cursor: default;
-        user-select: none;
-        margin-top: -2px;
-    }
+  &__checkboxes {
+    display: none;
+    position: relative;
+    margin-top: 4px;
 
-    &__checkboxes{
-        display: none;
-        position: relative;
-        margin-top: 4px;
-        &_display{
-            display: block;
-            box-sizing: border-box;
-        }
+    &_display {
+      display: block;
+      box-sizing: border-box;
     }
-
-    &__arrow {
-        display: flex;
-        position: absolute;
-        width: 44px;
-        height: 44px;
-        right: 0;        
-        vertical-align: middle;        
-        justify-content: center;
-        align-items: center;
-        z-index: -1;
-        
-        font-size: 24px;
-        line-height: 24px;
-        color: $dark50;
-    }
+  }
+  
+  &__arrow {
+    display: flex;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    right: 0;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    font-size: 24px;
+    line-height: 24px;
+    color: $dark50;
+  }
 }

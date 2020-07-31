@@ -1,194 +1,192 @@
-.room-price{
-    max-width: 380px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding: 39px 29px 29px 29px;
-    background-color: white;
+.room-price {
+  max-width: 380px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 39px 29px 29px 29px;
+  background-color: white;
 
-    &__header{
-        max-width: 320px;
-        width: 100%;
-        display: flex;        
-        justify-content: space-between;
-        margin-bottom: 18px;
+  &__header {
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  &__room-number {
+    display: flex;
+    flex-direction: row;
+
+    &-text-number,
+    &-text,
+    &-luxe {
+      display: flex;
+      align-items: flex-end;
     }
 
-    &__room-number{
-            display: flex;
-            flex-direction: row;
-
-        &-text-number,
-        &-text,
-        &-luxe{
-            display: flex;
-            align-items: flex-end;
-        }
-        
-        &-text-number{
-            font-family: "Quicksand";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 17px;
-            color: $dark100; 
-            margin-right: 4px;                       
-            padding-bottom: 2px;
-        }
-
-        &-text{
-            font-family: "Quicksand";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 30px;
-            color: $dark100;
-        }
-
-        &-luxe{
-            margin-left: 5px;
-            font-family: "Montserrat";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 12px;
-            line-height: 15px;
-            text-transform: uppercase;
-            color: $purple;                       
-            padding-bottom: 3px;
-
-            &_hide{
-                display: none;
-            }
-        }
+    &-text-number {
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: $dark100;
+      margin-right: 4px;
+      padding-bottom: 2px;
     }
 
-    &__price{
-        display: flex;
-        flex-direction: row;
-
-        &-sum,
-        &-sum-per-day{
-            font-family: Montserrat;
-            font-style: normal;            
-            line-height: 18px;
-            color: $dark50;
-            display: flex;
-            align-items: flex-end;         
-        }
-
-        &-sum{            
-            font-weight: bold;
-            font-size: 14px;
-            padding-bottom: 2px;  
-            &-per-day{                
-                font-weight: normal;
-                font-size: 12px;
-                margin-left: 4px;
-                padding-bottom: 1px;  
-            }
-        }       
+    &-text {
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 30px;
+      color: $dark100;
     }
 
-    &__date{
-        margin-bottom: 19px;
+    &-luxe {
+      margin-left: 5px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $purple;
+      padding-bottom: 3px;
+
+      &_hide {
+        display: none;
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+
+    &-sum,
+    &-sum-per-day {
+      font-family: Montserrat;
+      font-style: normal;
+      line-height: 18px;
+      color: $dark50;
+      display: flex;
+      align-items: flex-end;
     }
 
-    &__guests{
-        margin-bottom: 18px;        
+    &-sum {
+      font-weight: bold;
+      font-size: 14px;
+      padding-bottom: 2px;
+
+      &-per-day {
+        font-weight: normal;
+        font-size: 12px;
+        margin-left: 4px;
+        padding-bottom: 1px;
+      }
+    }
+  }
+
+  &__date {
+    margin-bottom: 19px;
+  }
+  &__guests {
+    margin-bottom: 18px;
+  }
+
+  &__calculate {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-left: 1px;
+  }
+
+  &__for-room,
+  &__for-services,
+  &__for-addservices {
+    display: flex;
+    justify-content: space-between;
+
+    &-price {
+      justify-content: end;
+    }
+  }
+
+  &__for-services,
+  &__for-addservices {
+    &-info {
+      margin-left: 5px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $dark25;
+      border-radius: 50%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    &__calculate{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
-        margin-left: 1px;
+    &-discription {
+      width: 215px;
     }
 
-    &__for-room,
-    &__for-services,
-    &__for-addservices{
-        display: flex;
-        justify-content: space-between;
+    &-left-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+    }
+  }
 
-        &-price{
-            justify-content: end;
-        }
+  &__for-room {
+    margin-bottom: 10px;
+  }
+
+  &__for-services {
+    margin-bottom: 13px;
+  }
+
+  &__for-addservices {
+    line-height: 18px;
+  }
+
+  &__total {
+    margin-bottom: 20px;
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &-text {
+      margin-left: 1px;
     }
 
-    &__for-services,
-    &__for-addservices{
-
-        &-info{
-            margin-left: 5px;
-            width: 20px;
-            height: 20px;
-            border: 1px solid $dark25;
-            border-radius: 50%;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        &-discription{
-            width: 215px;
-        }
-
-        &-left-wrapper{
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-        }
-    }
-        
-    &__for-room{
-        margin-bottom: 10px;
+    &-price {
+      display: inline;
+      white-space: nowrap;
     }
 
-    &__for-services{
-        margin-bottom: 13px;
+    &-text,
+    &-price {
+      font-family: 'Quicksand', 'OpenSans';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 24px;
+      color: $dark100;
     }
     
-    &__for-addservices{
-        line-height: 18px;
+    &-separator {
+      max-width: 300px;
+      width: 100%;
+      margin: 0px 5px;
+      border-bottom: 1px dashed $dark25;
+      margin-bottom: 5px;
     }
-
-    &__total{
-        margin-bottom: 20px;
-        max-width: 320px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        flex-wrap: nowrap;
-
-        &-text{
-            margin-left: 1px;
-        }
-
-        &-price{
-            display: inline;
-            white-space: nowrap;
-        }
-
-        &-text,
-        &-price{
-            font-family: "Quicksand", "OpenSans";
-            font-style: normal;
-            font-weight: bold;
-            font-size: 19px;
-            line-height: 24px;
-            color: $dark100;
-            
-        }
-
-        &-separator{
-            max-width: 300px;
-            width: 100%;
-            margin: 0px 5px;
-            border-bottom: 1px dashed $dark25;
-            margin-bottom: 5px;
-        }
-    }
+  }
 }

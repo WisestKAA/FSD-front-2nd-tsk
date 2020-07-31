@@ -1,69 +1,65 @@
-.icon-text-list{
+.icon-text-list {
+  display: inline-block;
+  max-width: 280px;
+  width: 100%;
+  box-sizing: content-box;
+  margin-block-start: unset;
+  margin-block-end: unset;
+  margin-inline-start: unset;
+  margin-inline-end: unset;
+
+  &__wraper {
     display: inline-block;
-    max-width: 280px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $dark10;
+    position: relative;
     width: 100%;
-    box-sizing: content-box;
+    // на формах не идет!
+    // &:last-child{ 
+    //     margin-bottom: 0px;
+    //     padding-bottom: 0px;
+    // }
 
-    margin-block-start: unset;
-    margin-block-end: unset;
-    margin-inline-start: unset;
-    margin-inline-end: unset;
-
-    &__wraper{
-        display: inline-block;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid $dark10;
-        position: relative;
-        width: 100%;
-        
-        // на формах не идет!
-        // &:last-child{ 
-        //     margin-bottom: 0px;
-        //     padding-bottom: 0px;
-        // }
-
-        &_without-lust-border{
-            &:last-child{                
-                border-bottom: none;
-            }
-        }
+    &_without-lust-border {
+      &:last-child {
+        border-bottom: none;
+      }
     }
+  }
 
-    &__icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        left: 0;
-        width: 48px;
-        height: 48px;
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 
-        background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);            
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text; 
-    }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 232px;
+    margin-left: 58px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark75;
+  }
 
-    &__content{
-        display: flex;
-        flex-direction: column;
-        max-width: 232px;
-        margin-left: 58px;   
-        
-        font-family: "Montserrat";
-        font-style: normal;
-        font-size: 14px;
-        line-height: 24px;
-        color: $dark75;     
-    }
-
-    &__header{ 
-        display: inline-block;      
-        font-weight: bold;
-    }
-
-    &__text{
-        display: inline-block;
-    }
+  &__header {
+    display: inline-block;
+    font-weight: bold;
+  }
+  
+  &__text {
+    display: inline-block;
+  }
 }

@@ -1,58 +1,51 @@
-.comment{
-    display: inline-block;
-    max-width: 714px;
-    width: 100%;
+.comment {
+  display: inline-block;
+  max-width: 714px;
+  width: 100%;
 
-    &__head{
-        display: flex;
-        flex-direction: row;
-    }
+  &__head {
+    display: flex;
+    flex-direction: row;
+  }
 
-    &__avatar{
-        width: 48px;
-        height: 48px;
-        border: 2px solid white;
-        box-sizing: border-box;
-        box-shadow: 0px 10px 20px $dark10;
-        border-radius: 32px;
-    }
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px $dark10;
+    border-radius: 32px;
+  }
 
-    &__avatar-text{
-        display: flex;
-        flex-direction: column;
+  &__avatar-text {
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark75;
+    margin-left: 11px;
+    margin-top: 2px;
+  }
 
-        font-family: Montserrat;
-        font-style: normal;
-        font-size: 14px;
-        line-height: 24px;
-        color: $dark75;
+  &__avatar-name {
+    font-weight: bold;
+  }
+  
+  &__body {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
 
-        margin-left: 11px;
-        margin-top: 2px;
-    }
-
-    &__avatar-name{
-        font-weight: bold;
-    }
-
-    &__avatar-date{
-        
-    }
-
-    &__body{
-        display: flex;
-        flex-direction: row;
-
-        margin-top: 10px;
-    }
-
-    &__like{
-        display: flex;
-        margin-left: 6px;
-        margin-top: 2px;
-    }
-
-    &__content{
-        margin-left: 14px;
-    }
+  &__like {
+    display: flex;
+    margin-left: 6px;
+    margin-top: 2px;
+  }
+  
+  &__content {
+    margin-left: 14px;
+  }
 }

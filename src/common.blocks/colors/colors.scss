@@ -1,71 +1,70 @@
-.colors{
-    display: flex;    
-    flex-direction: row;
-    margin-bottom: 20px;
+.colors {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
 
-    &__color{
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
-        margin-right: 40px;
+  &__color {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
 
-        &_dark100{
-            background: $dark100;
-        }
-
-        &_dark75{
-            background: $dark100;
-        }
-
-        &_dark50{
-            background: $dark50;
-        }
-
-        &_dark25{
-            background: $dark25;
-        }
-
-        &_dark5{
-            background: $dark05;
-        }
-
-        &_purple {
-            background: $purple;
-        }
-
-        &_green {
-            background: $green;
-        }
+    &_dark100 {
+      background: $dark100;
     }
 
-    &__content{
-        display: flex;
-        flex-direction: column;
+    &_dark75 {
+      background: $dark100;
     }
 
-    &__text{        
-        margin-top: 7px;
-
-        &_margin-top-6{
-            margin-top: 6px;
-        }
+    &_dark50 {
+      background: $dark50;
     }
 
-    &__text,
-    &__code{
-        display: unset;
-        margin-block-start: unset;
-        margin-block-end: unset;
-        margin-inline-start: unset;
-        margin-inline-end: unset;
-        font-family: "Quicksand";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 29px;
+    &_dark25 {
+      background: $dark25;
     }
 
-    &__text{
-        margin-top: 7px;
+    &_dark5 {
+      background: $dark05;
     }
+
+    &_purple {
+      background: $purple;
+    }
+
+    &_green {
+      background: $green;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-top: 7px;
+    &_margin-top-6 {
+      margin-top: 6px;
+    }
+  }
+
+  &__text,
+  &__code {
+    display: unset;
+    margin-block-start: unset;
+    margin-block-end: unset;
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 29px;
+  }
+  
+  &__text {
+    margin-top: 7px;
+  }
 }
