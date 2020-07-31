@@ -5,7 +5,7 @@ mixin colors({_color, _text, _code, _marginTopText=""})
         - marginTop = `colors__text_margin-top-${_marginTopText}`
 
     .colors
-        .colors__color(class=""+_color)
+        .colors__color(class="colors__color_"+_color)
         .colors__content
             p.colors__text(class=marginTop)=_text
             p.colors__code=_code
