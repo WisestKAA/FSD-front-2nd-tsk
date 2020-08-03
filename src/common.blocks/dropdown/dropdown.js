@@ -30,7 +30,7 @@ class DropDown {
 
         this.optionButton = this.options.querySelector(".dropdown-option-button");
         if(this.optionButton != null){
-            this.optionButtons = new DropdownOptionButton(this.optionButton, this.selectTextm, this.optionsListObj);
+            this.optionButtons = new DropdownOptionButton(this.optionButton, this.selectText, this.optionsListObj);
         }
         
         this.arrow = element.querySelector(".material-icons");
@@ -78,11 +78,15 @@ class DropDown {
         
         if(this.sum === 0){
             this.selectText.textContent = this.defaultSelectText;
-            this.optionButtons.hideDrop();
+            if(this.optionButtons){
+              this.optionButtons.hideDrop();
+            }
             return;
         }
         else{
-            this.optionButtons.checkHiden();
+          if(this.optionButtons){
+              this.optionButtons.checkHiden();
+          }
         }
         
         if(this.isShort){
