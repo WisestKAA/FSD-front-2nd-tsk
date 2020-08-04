@@ -26,7 +26,7 @@ block template
     main.form-elements
         .form-elements__main-wrapper
             .form-elements__main
-                section.form-elements__content-left
+                section.form-elements__content-left.form-elements__content-left_margin-left-1
                     .form-elements__item_margin-bottom-20
                         +label({_text: "Text Field", _marginBottom: "5", _caption: "Default", _marginCaption: "3"})
                         +text-field({_placeholder: "Email"})
@@ -61,7 +61,7 @@ block template
                             +checkbox-button({_text: "Можно курить", _name: "smoking"})
                             +checkbox-button({_text: "Можно с питомцами", _name: "pets", _isChecked: true})
                             +checkbox-button({_text: "Можно пригласить гостей (до 10 человек)", _name: "guests", _isChecked: true})
-                        .form-elements__item_margin-bottom-40.form-elements__radio-buttons
+                        .form-elements__item_margin-bottom-43.form-elements__radio-buttons
                             +label({_text: "Radio Buttons", _marginBottom: "16"})
                             +radio-buttons({_name: "radioButtons", _radioButtons:[
                                 {_text: "Мужчина", _value: "men", _isChecked: true},
@@ -90,13 +90,13 @@ block template
                             +label({_text: "buttons", _marginBottom: "16"})
                             .form-elements__button-wrapper
                                 +button({_type: "gradient-background", _name: "default", _value: "CLICK ME", _actionLink: "/#moke"})
-                            .form-elements__button-wrapper.form-elements__button-wrapper_margin-left-1
+                            .form-elements__button-wrapper
                                 +button({_type: "bordered", _name: "bordered", _value: "CLICK ME", _actionLink: "/#moke"})
                             .form-elements__button-wrapper
                                 +button({_type: "empty", _name: "empty", _value: "CLICK ME", _actionLink: "/#moke"})
-                            .form-elements__button-wrapper_margin-left-1
+                            .form-elements__button-wrapper_margin-left-0
                                 +button({_type: "rich", _name: "default", _value: "перейти к оплате", _actionLink: "/#moke"})
-                        .form-elements__item_margin-bottom-40
+                        .form-elements__item_margin-bottom-40.form-elements__item_margin-left-1
                             +label({_text: "pagination", _marginBottom: "16"})
                             +pagination({_links :[
                                 {href: "/page1", isActive: true, number: 1,},
@@ -109,7 +109,7 @@ block template
 
         .form-elements__main-wrapper
             .form-elements__main
-                section.form-elements__content-left.form-elements__content-left_margin-left-1
+                section.form-elements__content-left
                     +label({_text: "Dropdown", _marginBottom: "5", _caption: "Default", _isShort: true})
                     +dropdown({_text: "",
                         _options: [
@@ -131,11 +131,11 @@ block template
                         })
                     section.form-elements__content-right
 
-        .form-elements__separator_margin-255
+        .form-elements__separator_margin-233
         .form-elements__main-wrapper
             .form-elements__main
                 section.form-elements__content-left
-                    .form-elements__item_margin-bottom-18.form-elements__expandable-checkbox-list
+                    .form-elements__item_margin-bottom-24.form-elements__expandable-checkbox-list
                         +expandable-checkbox-list({_header: "expandable checkbox list", 
                             _checkboxes :[
                                 {_text: "Завтрак", _isChecked: false},
@@ -148,7 +148,7 @@ block template
                                 {_text: "Шампунь", _isChecked: false},
                             ],
                         })
-                    .form-elements__content-left_margin-left-1
+                    .form-elements__expandable-checkbox-list
                         +expandable-checkbox-list({_header: "expandable checkbox list", 
                             _checkboxes :[
                                 {_text: "Завтрак", _isChecked: false},
@@ -163,11 +163,11 @@ block template
                             _isExpanded: true,
                         })
                 .form-elements__content-right-wrapper
-                    section.form-elements__content-center
+                    section.form-elements__content-center.form-elements__rich-checkbox-buttons
                         +label({_text: "Rich Checkbox Buttons", _marginBottom: "16"})
                         +checkbox-button({_text: "Ширина коридоров в номере не менее 91 см.", _name: "width", _header: "Широкий коридор"})
                         +checkbox-button({_text: "На 1 этаже вас встретит специалист и проводит до номера.", _name: "help", _header: "Помощник для инвалидов"})
-                    section.form-elements__content-right
+                    section.form-elements__content-right.form-elements__bullet-list
                         +label({_text: "bullet list", _marginBottom: "13"})
                         +bullet-list({_list:[
                             "Нельзя с питомцами",
@@ -177,7 +177,7 @@ block template
         .form-elements__separator_margin-40
         .form-elements__main-wrapper
             .form-elements__main
-                section.form-elements__content-left.form-elements__content-left_margin-left-1
+                section.form-elements__content-left
                     +icon-text-list({_items: [
                         {_icon: "insert_emoticon", _header: "Комфорт", _content: "Шумопоглощающие стены"},
                         {_icon: "location_city", _header: "Удобство", _content: "Окно в каждой из спален"},

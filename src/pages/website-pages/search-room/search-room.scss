@@ -33,7 +33,7 @@
     &-right {
       display: flex;
       flex-direction: column;
-      max-width: 844px;
+      max-width: 845px;
       width: 100%;
     }
 
@@ -45,6 +45,8 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      margin-left: 1px;
+
       @media (max-width: 1116px) {
         justify-content: space-around;
       }
@@ -81,7 +83,6 @@
 
   &__preview-header {
     margin-bottom: 11px;
-    margin-left: -1px;
     padding: 5px;
 
     @media (max-width: 1116px) {
@@ -104,5 +105,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-left: 2px;
   }
 }

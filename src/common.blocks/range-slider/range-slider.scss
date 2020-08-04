@@ -18,13 +18,12 @@
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 14px;
     text-align: right;
     text-transform: uppercase;
     color: $dark50;
     border: none;
     pointer-events: none;
-    margin-top: -1px;
   }
 
   &__slider-wraper {
@@ -32,7 +31,9 @@
   }
 
   span.irs.irs--flat {
-    margin-top: -2px;
+    top: -2px;
+    min-height: 38px;
+    height: min-content;
 
     .irs-line {
       height: 6px;
@@ -46,7 +47,7 @@
     .irs-handle {
       width: 16px;
       height: 16px;
-      margin-top: -2px;
+      top: 20px;
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
       border: 2px solid #FFFFFF;
       border-radius: 10px;

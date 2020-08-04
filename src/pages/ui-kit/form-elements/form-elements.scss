@@ -7,7 +7,7 @@
   }
 
   &__main {
-    max-width: 1169px;
+    max-width: 1170px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -22,7 +22,7 @@
   &__content-left,
   &__content-center,
   &__content-right {
-    max-width: 320px;
+    max-width: 321px;
     width: 100%;
     padding: 5px;
   }
@@ -33,7 +33,7 @@
   }
 
   &__content-left_margin-left-1 {
-    margin-left: -1px;
+    margin-left: 1px;
   }
 
   &__content-right-wrapper {
@@ -50,8 +50,8 @@
   }
 
   &__item {
-    &_margin-bottom-18 {
-      margin-bottom: 22px;
+    &_margin-bottom-24 {
+      margin-bottom: 24px;
     }
 
     &_margin-bottom-20 {
@@ -65,14 +65,21 @@
     &_margin-bottom-40 {
       margin-bottom: 40px;
     }
+
+    &_margin-bottom-43 {
+      margin-bottom: 43px;
+    }
+
+    &_margin-left-1{
+      margin-left: 1px;
+    }
   }
 
   &__masked-text-field {
     padding-top: 3px;
   }
 
-  &__subscription-text-field {
-    margin-left: -1px;
+  &__subscription-text-field{
     padding-top: 1px;
   }
 
@@ -105,9 +112,10 @@
 
   &__button-wrapper {
     margin-bottom: 30px;
+    margin-left: 1px;
 
-    &_margin-left-1 {
-      margin-left: -1px;
+    &_margin-left-0 {
+      margin-left: 0;
     }
   }
 
@@ -123,16 +131,17 @@
         margin-bottom: 20px;
       }
     }
-    &_margin-255 {
-      margin-bottom: 246px;
+    &_margin-233 {
+      margin-bottom: 233px;
       @media (max-width: 870px) {
         margin-bottom: 20px;
       }
     }
   }
 
-  &__expandable-checkbox-list {
-    margin-top: -13px;
+  &__rich-checkbox-buttons,
+  &__bullet-list{
+    margin-top: 13px;
   }
 
   .checkbox-button:last-child {

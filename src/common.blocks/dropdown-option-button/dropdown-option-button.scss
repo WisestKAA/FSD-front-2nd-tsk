@@ -7,7 +7,7 @@
   text-transform: uppercase;
   width: auto;
   max-width: 318px;
-  height: 38px;
+  min-height: 46px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,8 +38,8 @@
   
   &__drop,
   &__apply {
+    padding-top: 6px;
     appearance: button;
-    -webkit-writing-mode: horizontal-tb !important;
     text-rendering: unset;
     word-spacing: unset;
     text-transform: unset;

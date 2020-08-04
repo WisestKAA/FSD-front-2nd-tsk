@@ -6,19 +6,18 @@
 
   &__header {
     display: flex;
-    height: 44px;
+    min-height: 40px;
     width: 100%;
     justify-content: left;
     align-items: center;
     cursor: default;
     user-select: none;
-    margin-top: -2px;
   }
 
   &__checkboxes {
     display: none;
     position: relative;
-    margin-top: 4px;
+    margin-top: 6px;
 
     &_display {
       display: block;
