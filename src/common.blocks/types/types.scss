@@ -4,7 +4,7 @@
   margin-bottom: 50px;
 
   &__tag {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     color: $dark25;
@@ -36,11 +36,11 @@
 
   &__text {
     &_font-Quicksand {
-      font-family: 'Quicksand';
+      font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
     }
 
     &_font-Montserrat {
-      font-family: 'Montserrat';
+      font-family: 'Montserrat', Arial, sans-serif;
     }
 
     &_font-weight-normal {
