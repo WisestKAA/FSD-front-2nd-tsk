@@ -11,7 +11,8 @@
   &__select {
     box-sizing: border-box;
     position: relative;
-    height: 44px;
+    min-height: 44px;
+    height: min-content;
     padding: 8px 14px;
     border: 1px solid $dark25;
     border-radius: 4px;
@@ -41,8 +42,10 @@
   &__arrow {
     display: flex;
     position: absolute;
-    width: 44px;
-    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    width: min-content;
+    height: min-content;
     right: 0;
     vertical-align: middle;
     justify-content: center;

@@ -8,8 +8,10 @@
   margin-inline-end: unset;
 
   &__ico {
-    width: 24px;
-    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    width: 100%;
+    height: 100%;
 
     &-twitter {
       margin-top: 5px;

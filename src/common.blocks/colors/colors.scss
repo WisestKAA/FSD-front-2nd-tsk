@@ -4,8 +4,10 @@
   margin-bottom: 20px;
 
   &__color {
-    width: 70px;
-    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    width: min-content;
+    height: min-content;
     border-radius: 6px;
     margin-right: 40px;
 

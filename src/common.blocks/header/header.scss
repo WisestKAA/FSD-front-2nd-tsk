@@ -1,6 +1,7 @@
 .header {
   width: 100%;
-  height: 70px;
+  min-height: 70px;
+  height: min-content;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -104,7 +105,8 @@
   &__unlogged {
     display: flex;
     justify-content: space-between;
-    height: 34px;
+    max-height: 34px;
+    height: 100%;
   }
 
   &__sign-up-button {
@@ -124,7 +126,8 @@
     font-size: 14px;
     line-height: 17px;
     color: $dark50;
-    height: 30px;
+    max-height: 30px;
+    height: 100%;
     border-left: 1px solid $dark10;
     padding-left: 30px;
     display: flex;

@@ -9,8 +9,10 @@
   &__arrow {
     display: flex;
     position: absolute;
-    width: 44px;
-    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    width: min-content;
+    height: min-content;
     right: 0;
     vertical-align: middle;
     justify-content: center;

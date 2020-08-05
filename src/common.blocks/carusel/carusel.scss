@@ -1,6 +1,8 @@
 .carusel {
-  width: 270px;
-  height: 151px;
+  min-width: 270px;
+  min-height: 151px;
+  width: min-content;
+  height: min-content;
   display: unset;
   margin-block-start: unset;
   margin-block-end: unset;
@@ -8,7 +10,8 @@
   margin-inline-start: unset;
 
   &__wrapper {
-    height: 151px;
+    min-height: 151px;
+    height: min-content;
   }
 
   &__img {
@@ -19,8 +22,10 @@
     &-prev,
     &-next {
       display: block;
-      width: 44px;
-      height: 151px;
+      min-width: 44px;
+      min-height: 151px;
+      height: min-content;
+      width: min-content;
       outline: none;
       position: absolute;
       top: 0;
@@ -41,8 +46,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 44px;
-      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      height: min-content;
+      width: min-content;
     }
 
     &-prev {
@@ -83,8 +90,10 @@
       position: absolute;
       right: 15px;
       bottom: 15px;
-      width: 41.25px !important;
-      height: 7.5px !important;
+      min-width: 41.25px;
+      min-height: 7.5px;
+      height: min-content;
+      width: min-content;
       z-index: 2;
       display: flex;
       justify-content: space-between;
@@ -96,8 +105,10 @@
   }
   
   button.owl-dot {
-    width: 7.5px;
-    height: 7.5px;
+    min-width: 7.5px;
+    min-height: 7.5px;
+    height: min-content;
+    width: min-content;
     border: 1px solid #FFFFFF;
     border-radius: 50%;
     box-sizing: border-box;

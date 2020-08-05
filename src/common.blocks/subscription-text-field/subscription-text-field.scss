@@ -14,8 +14,10 @@
   &__button-arrow {
     display: flex;
     position: absolute;
-    width: 44px;
-    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    width: min-content;
+    height: min-content;
     right: 0;
     vertical-align: middle;
     justify-content: center;
@@ -31,6 +33,9 @@
     z-index: -1;
     opacity: 0;
     width: 100%;
-    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    width: min-content;
+    height: min-content;
   }
 }

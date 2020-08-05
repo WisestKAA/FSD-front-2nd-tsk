@@ -67,8 +67,8 @@ block template
                                 {_text: "Мужчина", _value: "men", _isChecked: true},
                                 {_text: "Женщина", _value: "women", _isChecked: false},
                             ]})
-                        .form-elements__item_margin-bottom-40
-                            +label({_text: "Toggle", _marginBottom: "16"})
+                        .form-elements__item_margin-bottom-41
+                            +label({_text: "Toggle", _marginBottom: "15"})
                             +toggle({_name: "togen", _text: "Получать спецпредложения", _isChecked: true})
                             +toggle({_name: "togdis", _text: "Получать спецпредложения", _isChecked: false})
                         .form-elements__item_margin-bottom-40.form-elements__like-button
@@ -90,7 +90,7 @@ block template
                             +label({_text: "buttons", _marginBottom: "16"})
                             .form-elements__button-wrapper
                                 +button({_type: "gradient-background", _name: "default", _value: "CLICK ME", _actionLink: "/#moke"})
-                            .form-elements__button-wrapper
+                            .form-elements__button-wrapper.form-elements__button-wrapper_margin-left-0
                                 +button({_type: "bordered", _name: "bordered", _value: "CLICK ME", _actionLink: "/#moke"})
                             .form-elements__button-wrapper
                                 +button({_type: "empty", _name: "empty", _value: "CLICK ME", _actionLink: "/#moke"})
@@ -135,7 +135,7 @@ block template
         .form-elements__main-wrapper
             .form-elements__main
                 section.form-elements__content-left
-                    .form-elements__item_margin-bottom-24.form-elements__expandable-checkbox-list
+                    .form-elements__item_margin-bottom-24.form-elements__expandable-checkbox-list.form-elements__item_margin-left-1
                         +expandable-checkbox-list({_header: "expandable checkbox list", 
                             _checkboxes :[
                                 {_text: "Завтрак", _isChecked: false},
