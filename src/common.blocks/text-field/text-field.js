@@ -1,7 +1,7 @@
 import 'inputmask/dist/jquery.inputmask';
 
 $(document).ready(() => {
-  const $textFields = $('.text-field');
+  const $textFields = $('.js-text-field');
   $textFields.each((elem, val) => {
     const isMaskedTextField = $(val).hasClass('text-field_masked');
     if (isMaskedTextField) {

@@ -21,7 +21,7 @@ class Carusel {
 }
 
 $(document).ready(() => {
-  const carusel = document.querySelectorAll('.carusel');
+  const carusel = document.querySelectorAll('.js-carusel');
   carusel.forEach(((val) =>{
     new Carusel(val);
   }));

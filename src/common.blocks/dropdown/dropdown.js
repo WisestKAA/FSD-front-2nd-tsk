@@ -6,28 +6,44 @@ class DropDown {
     this.dropdown = element;
     this.isShort = isShort;
     this.optionText = optionText;
+    this.init();
+    this.addEvents();
+  }
 
-    this.select = this.dropdown.querySelector('.dropdown__select');
+  init () {
+    this.initSelect();
+    this.initOptions();
+    this.initOptionButtons();
+    this.arrow = this.dropdown.querySelector('.js-material-icons');
+  }
+
+  addEvents () {
     this.select.addEventListener('click', this.handleSelectClick.bind(this));
+    this.options.addEventListener('DOMSubtreeModified', this.handleOptionsModifed.bind(this));
+  }
 
-    this.selectText = this.select.querySelector('.dropdown__text');
-    if (isShort) {
-      this.defaultSelectText = `0 ${optionText.bedroom.third} 0 ${optionText.bed.third} 0 ${optionText.bathroom.third}`;
+  initSelect () {
+    this.select = this.dropdown.querySelector('.js-dropdown__select');
+    this.selectText = this.select.querySelector('.js-dropdown__text');
+    if (this.isShort) {
+      this.defaultSelectText = `0 ${this.optionText.bedroom.third} 0 ${this.optionText.bed.third} 0 ${this.optionText.bathroom.third}`;
       this.selectText.textContent = this.defaultSelectText;
     } else {
       this.defaultSelectText = this.selectText.textContent;
     }
-        
-    this.options = this.dropdown.querySelector('.dropdown__options');
-        
-    this.optionsList = this.options.querySelectorAll('.dropdown-option');
+  }
+
+  initOptions () {
+    this.options = this.dropdown.querySelector('.js-dropdown__options');
+    this.optionsList = this.options.querySelectorAll('.js-dropdown-option');
     this.optionsListObj = [];
     this.optionsList.forEach(((val) => {
       this.optionsListObj.push(new DropdownOption(val));
     }));
-    this.options.addEventListener('DOMSubtreeModified', this.handleOptionsModifed.bind(this));
+  }
 
-    this.optionButton = this.options.querySelector('.dropdown-option-button');
+  initOptionButtons () {
+    this.optionButton = this.options.querySelector('.js-dropdown-option-button');
     if (this.optionButton !== null) {
       this.optionButtons = new DropdownOptionButton(
         this.optionButton,
@@ -35,8 +51,6 @@ class DropDown {
         this.optionsListObj
       );
     }
-
-    this.arrow = element.querySelector('.material-icons');
   }
 
   handleSelectClick () {
@@ -70,8 +84,8 @@ class DropDown {
     this.sum = 0;
     let babys = 0;
     this.optionsList.forEach((val)=>{
-      const num = val.querySelector('.dropdown-option__number');
-      if (val.querySelector('.dropdown-option__text').textContent === 'младенцы') {
+      const num = val.querySelector('.js-dropdown-option__number');
+      if (val.querySelector('.js-dropdown-option__text').textContent === 'младенцы') {
         babys = num.textContent;
       } else {
         this.sum += parseInt(num.textContent, 10);
@@ -125,7 +139,7 @@ class DropDown {
   getRightTextShort (optionText) {
     const nums = [];
     this.optionsList.forEach((val)=>{
-      const num = val.querySelector('.dropdown-option__number');
+      const num = val.querySelector('.js-dropdown-option__number');
       nums.push(parseInt(num.textContent, 10));
     });
         
@@ -174,9 +188,9 @@ $(document).ready(() => {
     },
   };
 
-  const dropdowns = document.querySelectorAll('.dropdown');
+  const dropdowns = document.querySelectorAll('.js-dropdown');
   dropdowns.forEach(((val) =>{
-    if (val.classList.contains('dropdown_width-short')) {
+    if (val.classList.contains('js-dropdown_width-short')) {
       new DropDown(val, optionText, true);
     } else {
       new DropDown(val, optionText);

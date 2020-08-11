@@ -1,5 +1,5 @@
 mixin carusel({ _imgLinks=[], }={}) 
-    figure.carusel
+    figure.carusel.js-carusel
         .carusel__wrapper.owl-carousel
             each item in _imgLinks
                 - const {src, alt} = item          

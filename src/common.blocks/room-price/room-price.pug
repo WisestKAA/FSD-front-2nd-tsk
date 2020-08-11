@@ -12,7 +12,7 @@ mixin room-price({ _actionLink="/moke", _number, _isLuxe=false, _pricePerDay=0, 
     if(_discountForService)
         - service += ` скидка ${_discountForService}₽`
         - servicePrice = _servicePrice - _discountForService
-    .room-price
+    .room-price.js-room-price
         form(action=_actionLink).room-price__form 
             .room-price__header
                 .room-price__room-number
@@ -20,7 +20,7 @@ mixin room-price({ _actionLink="/moke", _number, _isLuxe=false, _pricePerDay=0, 
                     .room-price__room-number-text=`${_number}`
                     .room-price__room-number-luxe(class = luxe)="люкс"
                 .room-price__price
-                    .room-price__price-sum=`${_pricePerDay}₽`
+                    .room-price__price-sum.js-room-price__price-sum=`${_pricePerDay}₽`
                     .room-price__price-sum-per-day=" в сутки"
             .room-price__date
                 +date-dropdown({_isFiltred: false,  _startText: "прибытие", _finishText: "выезд"})
@@ -31,23 +31,23 @@ mixin room-price({ _actionLink="/moke", _number, _isLuxe=false, _pricePerDay=0, 
                     {_text: "дети", _number: 0},
                     {_text: "младенцы", _number: 0},
                 ]})
-            .room-price__calculate.body
+            .room-price__calculate.js-room-price__calculate.body
                 .room-price__for-room
-                    .room-price__for-room-discription=`${_pricePerDay}₽ x 0 суток`
-                    .room-price__for-room-price=`0₽`
+                    .room-price__for-room-discription.js-room-price__for-room-discription=`${_pricePerDay}₽ x 0 суток`
+                    .room-price__for-room-price.js-room-price__for-room-price=`0₽`
                 .room-price__for-services
                     .room-price__for-services-left-wrapper
                         .room-price__for-services-discription=service
                         .room-price__for-services-info="i"
-                    .room-price__for-services-price=`${servicePrice}₽`
+                    .room-price__for-services-price.js-room-price__for-services-price=`${servicePrice}₽`
                 .room-price__for-addservices
                     .room-price__for-addservices-left-wrapper
                         .room-price__for-addservices-discription="Сбор за дополнительные услуги"
                         .room-price__for-addservices-info="i"
-                    .room-price__for-addservices-price=`${_addServicePrice}₽`
+                    .room-price__for-addservices-price.js-room-price__for-addservices-price=`${_addServicePrice}₽`
             .room-price__total
                 .room-price__total-text="Итого"
                 .room-price__total-separator
-                .room-price__total-price=`0₽`
+                .room-price__total-price.js-room-price__total-price=`0₽`
             .room-price__book-a-room
                 +button({_type: "rich", _name: "bookARoom", _value: "забронировать",})

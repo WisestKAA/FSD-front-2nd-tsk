@@ -3,8 +3,8 @@ import 'ion-rangeslider/js/ion.rangeSlider';
 class RangeSlider {
   constructor (elem) {
     this.$sliderContainer = $(elem);
-    this.$slider = this.$sliderContainer.find('.range-slider__slider');
-    this.$price = this.$sliderContainer.find('.range-slider__price');
+    this.$slider = this.$sliderContainer.find('.js-range-slider__slider');
+    this.$price = this.$sliderContainer.find('.js-range-slider__price');
     this.initSlider();
   }
 
@@ -28,7 +28,7 @@ class RangeSlider {
 }
 
 $(() => {
-  const $sliders = $('.range-slider');
+  const $sliders = $('.js-range-slider');
   
   $sliders.each((iterator, val) => {
     new RangeSlider(val);

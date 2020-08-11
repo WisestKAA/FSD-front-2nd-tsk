@@ -3,14 +3,19 @@ class DropdownOptionButton {
     this.buttons = element;
     this.selectText = selectText;
     this.optionsList = optionsList;
+    this.init();
+    this.addEvents();
+    if (isHide) this.hideDrop();
+  }
 
-    this.drop = this.buttons.querySelector('.dropdown-option-button__drop');
-    this.apply = this.buttons.querySelector('.dropdown-option-button__apply');
+  init(){
+    this.drop = this.buttons.querySelector('.js-dropdown-option-button__drop');
+    this.apply = this.buttons.querySelector('.js-dropdown-option-button__apply');
+  }
 
+  addEvents(){
     this.drop.addEventListener('click', this.handleDropClick.bind(this));
     this.apply.addEventListener('click', this.handleApplyClick.bind(this));
-
-    if (isHide) this.hideDrop();
   }
 
   handleDropClick () {
@@ -21,6 +26,7 @@ class DropdownOptionButton {
   }
 
   handleApplyClick () {
+    this.hideDrop();
     //todo action
   }
 

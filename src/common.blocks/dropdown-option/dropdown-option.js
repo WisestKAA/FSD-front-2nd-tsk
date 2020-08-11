@@ -1,8 +1,23 @@
 class DropdownOption {
   constructor (element) {
     this.option = element;
-        
-    const buttons = this.option.querySelectorAll('.dropdown-option__circle');
+    this.init();
+    this.addEvents();
+  }
+
+  addEvents(){
+    this.minusButton.addEventListener('click', this.handleMinusClick.bind(this));
+    this.plusButton.addEventListener('click', this.handlePlusClick.bind(this));
+    this.number.addEventListener('DOMSubtreeModified', this.handleValueModifed.bind(this));
+  }
+
+  init(){
+    this.initButtons();
+    this.initNumber();
+  }
+
+  initButtons(){
+    const buttons = this.option.querySelectorAll('.js-dropdown-option__circle');
     buttons.forEach((val) => {
       if (val.textContent === '-') {
         this.minusButton = val;
@@ -11,15 +26,13 @@ class DropdownOption {
         this.plusButton = val;
       }
     });
+  }
 
-    this.minusButton.addEventListener('click', this.handleMinusClick.bind(this));
-    this.plusButton.addEventListener('click', this.handlePlusClick.bind(this));
-
-    this.number = this.option.querySelector('.dropdown-option__number');
+  initNumber(){
+    this.number = this.option.querySelector('.js-dropdown-option__number');
     this.value = parseInt(this.number.textContent, 10);
     if (this.value === '') this.value = 0;
     if (this.value === 0) this.disableMinus();
-    this.number.addEventListener('DOMSubtreeModified', this.handleValueModifed.bind(this));
   }
 
   handleMinusClick () {

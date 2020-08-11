@@ -9,7 +9,7 @@ mixin text-field({_placeholder, _id, _isMasked = false, _isPaddingRightMode = fa
     if _isPaddingRightMode
         - addPadding = " text-field_addPaddingRight"    
     
-    input(
+    input.js-text-field(
         type=_type 
         placeholder=_placeholder 
         id=_id 

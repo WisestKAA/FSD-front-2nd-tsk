@@ -1,31 +1,45 @@
 class RoomPrice {
   constructor (value) {
     this.roomPrice = value;
-    this.pricePerDay = this.getPrice(value);
+    this.init();
+    this.addEvents();
+  }
 
-    this.calculateContainer = this.roomPrice.querySelector('.room-price__calculate');
+  init(){
+    this.pricePerDay = this.getPrice(this.roomPrice);
+    this.calculateContainer = this.roomPrice.querySelector('.js-room-price__calculate');
+
+    this.initPrices();
+    this.initDatePicker();
+    this.initButtons();
+  }
+
+  addEvents(){
     this.calculateContainer.addEventListener('DOMSubtreeModified', this.handleCalculateModifed.bind(this));
-        
-    this.priceForRoomDiscriptionContainer = this.roomPrice.querySelector('.room-price__for-room-discription');
-    this.priceForRoomPriceContainer = this.roomPrice.querySelector('.room-price__for-room-price');
-    this.priceForServiceContainer = this.roomPrice.querySelector('.room-price__for-services-price');
-    this.priceForAddServiceContainer = this.roomPrice.querySelector('.room-price__for-addservices-price');
-    this.totalPriceContainer = this.roomPrice.querySelector('.room-price__total-price');
-
-    this.totalContainer = this.roomPrice.querySelector('.room-price__total-price');
-        
-    this.datePickerContainer = this.roomPrice.querySelector('.date-dropdown');
-    this.$datePikerObj = $(this.roomPrice.querySelector('.date-dropdown__input')).data('datepicker');
-        
-    this.dateApplayButton = this.$datePikerObj.$datepicker.find('.date-dropdown__apply-button')[0];
     this.dateApplayButton.addEventListener('click', this.handleDatesModifed.bind(this));
-
-    this.dateClearButton = this.$datePikerObj.$datepicker.find('.datepicker--button')[0];
     this.dateClearButton.addEventListener('click', this.handleDatesClear.bind(this));
   }
 
+  initPrices(){
+    this.priceForRoomDiscriptionContainer = this.roomPrice.querySelector('.js-room-price__for-room-discription');
+    this.priceForRoomPriceContainer = this.roomPrice.querySelector('.js-room-price__for-room-price');
+    this.priceForServiceContainer = this.roomPrice.querySelector('.js-room-price__for-services-price');
+    this.priceForAddServiceContainer = this.roomPrice.querySelector('.js-room-price__for-addservices-price');
+    this.totalContainer = this.roomPrice.querySelector('.js-room-price__total-price');
+  }
+
+  initDatePicker(){
+    this.datePickerContainer = this.roomPrice.querySelector('.js-date-dropdown');
+    this.$datePikerObj = $(this.roomPrice.querySelector('.js-date-dropdown__input')).data('datepicker');
+  }
+
+  initButtons(){
+    this.dateApplayButton = this.$datePikerObj.$datepicker.find('.date-dropdown__apply-button')[0];
+    this.dateClearButton = this.$datePikerObj.$datepicker.find('.datepicker--button')[0];
+  }
+
   getPrice (roomPrice) {
-    const priceText  = roomPrice.querySelector('.room-price__price-sum').textContent;
+    const priceText  = roomPrice.querySelector('.js-room-price__price-sum').textContent;
     return this.convertToNum(priceText);
   }
 
@@ -61,7 +75,7 @@ class RoomPrice {
 
 
 $(document).ready(() => {
-  const roomPrice = document.querySelectorAll('.room-price');
+  const roomPrice = document.querySelectorAll('.js-room-price');
   roomPrice.forEach(((val) =>{
     new RoomPrice(val);
   }));

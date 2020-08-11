@@ -131,7 +131,7 @@ $(document).ready(() => {
     'good': 520,
   };
     
-  const donutChart = document.querySelectorAll('.donut-chart');
+  const donutChart = document.querySelectorAll('.js-donut-chart');
   donutChart.forEach(((val) =>{
     new DonutChart(val, width, height, rating);
   }));

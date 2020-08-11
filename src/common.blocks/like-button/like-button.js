@@ -1,9 +1,17 @@
 class LikeButton {
   constructor (elem) {
     this.likeButton = elem;
+    this.init();
+    this.addEvents();
+  }
+
+  init(){
+    this.icon = this.likeButton.querySelector('.material-icons');
+    this.num = this.likeButton.querySelector('.like-button__number');
+  }
+
+  addEvents(){
     this.likeButton.addEventListener('click', this.handleLikeButtonClick.bind(this));
-    this.icon = elem.querySelector('.material-icons');
-    this.num = elem.querySelector('.like-button__number');
   }
 
   handleLikeButtonClick () {
@@ -23,7 +31,7 @@ class LikeButton {
 }
 
 $(document).ready(() => {
-  const likeButtons = document.querySelectorAll('.like-button');
+  const likeButtons = document.querySelectorAll('.js-like-button');
   likeButtons.forEach(((val) =>{
     new LikeButton(val);
   }));

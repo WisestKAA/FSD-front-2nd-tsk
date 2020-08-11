@@ -1,22 +1,35 @@
-
 import 'air-datepicker/dist/js/datepicker';
 
 class DateDropdown {
   constructor (elem) {
-    this.dateDropdown = elem;
-    this.datePiker = elem.querySelector('.date-dropdown__input');
+    this.init(elem);
+    this.addEvents();
+  }
 
-    this.isFiltred = !!this.datePiker.classList.contains('date-dropdown__input-filtred');
+  init (elem) {
+    this.dateDropdown = elem;
+    this.datePiker = elem.querySelector('.js-date-dropdown__input');
+
+    this.isFiltred = !!this.datePiker.classList.contains('js-date-dropdown__input-filtred');
     if (this.isFiltred) {
       this.dateDropdown.style.width = '266px';
       this.datePikerInit(this.datePiker, this.dateDropdown);
     } else {
       this.dateDropdown.style.maxWidth = '320px';
-      this.inputFrom = elem.querySelector('.date-dropdown__input-from');
-      this.inputTo = elem.querySelector('.date-dropdown__input-to');
-      this.inputTo.addEventListener('click', this.handleShowDatePiker.bind(this));
+      this.inputFrom = elem.querySelector('.js-date-dropdown__input-from');
+      this.inputTo = elem.querySelector('.js-date-dropdown__input-to');
       this.datePikerInit(this.datePiker, this.dateDropdown, true, this.inputFrom, this.inputTo);
     }
+  }
+
+  addEvents () {
+    if (!this.isFiltred) {
+      this.inputTo.addEventListener('click', this.handleShowDatePiker.bind(this));
+    }
+
+    this.$applyButton[0].addEventListener('click', this.handleApplyButtonClick.bind(this));
+
+    this.$clearButton[0].addEventListener('click', this.handleClearButtonClick.bind(this));
   }
 
   datePikerInit (datePiker, dateDropdown, isFiltred = false, inputFrom, inputTo) {
@@ -74,15 +87,13 @@ class DateDropdown {
 
     this.$buttonsContainer = $(this.datePiker).datepicker()
       .data('datepicker').$datepicker.find('.datepicker--buttons');
-    this.applyButton = $('<span>', {
+    this.$applyButton = $('<span>', {
       'text': 'применить',
       'class': 'date-dropdown__apply-button',
     }).appendTo(this.$buttonsContainer);
-    this.applyButton[0].addEventListener('click', this.handleApplyButtonClick.bind(this));
 
-    this.clearButton = $(this.datePiker).datepicker()
+    this.$clearButton = $(this.datePiker).datepicker()
       .data('datepicker').$datepicker.find('.datepicker--button');
-    this.clearButton[0].addEventListener('click', this.handleClearButtonClick.bind(this));
   }
 
   handleApplyButtonClick () {
@@ -98,12 +109,14 @@ class DateDropdown {
   }
 
   handleClearButtonClick () {
-    this.inputTo.value = '';
+    if (!this.isFiltred) {
+      this.inputTo.value = '';
+    }
   }
 }
 
 $(document).ready(() => {
-  const dateDropdowns = document.querySelectorAll('.date-dropdown');
+  const dateDropdowns = document.querySelectorAll('.js-date-dropdown');
   dateDropdowns.forEach(((val) =>{
     new DateDropdown(val);
   }));
