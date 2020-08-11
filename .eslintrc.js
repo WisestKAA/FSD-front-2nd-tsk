@@ -6,6 +6,7 @@ module.exports = {
   'extends': [
       'eslint:recommended',
       'plugin:import/errors',
+      'plugin:fsd/all'
   ],
   'globals': {
       'Atomics': 'readonly',
@@ -16,6 +17,7 @@ module.exports = {
     'sourceType': 'module'
   },
   'plugins': [
+    'fsd',
   ],
   'settings': {      
   },
