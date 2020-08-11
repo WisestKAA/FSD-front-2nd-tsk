@@ -1,3 +1,4 @@
+import 'inputmask/dist/jquery.inputmask';
 
 $(document).ready(() => {
     const $textFields = $(".text-field");

@@ -1,4 +1,4 @@
-import "../../library.blocks/ion.rangeSlider-2.3.1/js/ion.rangeSlider"
+import 'ion-rangeslider/js/ion.rangeSlider';
 
 class RangeSlider{
     constructor(elem){
