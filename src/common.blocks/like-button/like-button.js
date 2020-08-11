@@ -5,12 +5,12 @@ class LikeButton {
     this.addEvents();
   }
 
-  init(){
+  init () {
     this.icon = this.likeButton.querySelector('.material-icons');
     this.num = this.likeButton.querySelector('.like-button__number');
   }
 
-  addEvents(){
+  addEvents () {
     this.likeButton.addEventListener('click', this.handleLikeButtonClick.bind(this));
   }
 

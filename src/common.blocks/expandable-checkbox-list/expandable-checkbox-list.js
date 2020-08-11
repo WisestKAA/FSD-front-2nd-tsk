@@ -5,12 +5,12 @@ class ExpandableCheckboxLst {
     this.addEvents();
   }
 
-  init(){
+  init () {
     this.header = this.elem.querySelector('.js-expandable-checkbox-list__header');
     this.checkboxes = this.elem.querySelector('.js-expandable-checkbox-list__checkboxes');
   }
 
-  addEvents(){
+  addEvents () {
     this.header.addEventListener('click', this.handleEclClick.bind(this));
   }
 

@@ -8,12 +8,12 @@ class DropdownOptionButton {
     if (isHide) this.hideDrop();
   }
 
-  init(){
+  init () {
     this.drop = this.buttons.querySelector('.js-dropdown-option-button__drop');
     this.apply = this.buttons.querySelector('.js-dropdown-option-button__apply');
   }
 
-  addEvents(){
+  addEvents () {
     this.drop.addEventListener('click', this.handleDropClick.bind(this));
     this.apply.addEventListener('click', this.handleApplyClick.bind(this));
   }

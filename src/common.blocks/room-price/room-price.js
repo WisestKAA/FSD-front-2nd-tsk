@@ -5,7 +5,7 @@ class RoomPrice {
     this.addEvents();
   }
 
-  init(){
+  init () {
     this.pricePerDay = this.getPrice(this.roomPrice);
     this.calculateContainer = this.roomPrice.querySelector('.js-room-price__calculate');
 
@@ -14,13 +14,13 @@ class RoomPrice {
     this.initButtons();
   }
 
-  addEvents(){
+  addEvents () {
     this.calculateContainer.addEventListener('DOMSubtreeModified', this.handleCalculateModifed.bind(this));
     this.dateApplayButton.addEventListener('click', this.handleDatesModifed.bind(this));
     this.dateClearButton.addEventListener('click', this.handleDatesClear.bind(this));
   }
 
-  initPrices(){
+  initPrices () {
     this.priceForRoomDiscriptionContainer = this.roomPrice.querySelector('.js-room-price__for-room-discription');
     this.priceForRoomPriceContainer = this.roomPrice.querySelector('.js-room-price__for-room-price');
     this.priceForServiceContainer = this.roomPrice.querySelector('.js-room-price__for-services-price');
@@ -28,12 +28,12 @@ class RoomPrice {
     this.totalContainer = this.roomPrice.querySelector('.js-room-price__total-price');
   }
 
-  initDatePicker(){
+  initDatePicker () {
     this.datePickerContainer = this.roomPrice.querySelector('.js-date-dropdown');
     this.$datePikerObj = $(this.roomPrice.querySelector('.js-date-dropdown__input')).data('datepicker');
   }
 
-  initButtons(){
+  initButtons () {
     this.dateApplayButton = this.$datePikerObj.$datepicker.find('.date-dropdown__apply-button')[0];
     this.dateClearButton = this.$datePikerObj.$datepicker.find('.datepicker--button')[0];
   }

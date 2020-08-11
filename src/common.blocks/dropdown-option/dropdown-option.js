@@ -5,18 +5,18 @@ class DropdownOption {
     this.addEvents();
   }
 
-  addEvents(){
+  addEvents () {
     this.minusButton.addEventListener('click', this.handleMinusClick.bind(this));
     this.plusButton.addEventListener('click', this.handlePlusClick.bind(this));
     this.number.addEventListener('DOMSubtreeModified', this.handleValueModifed.bind(this));
   }
 
-  init(){
+  init () {
     this.initButtons();
     this.initNumber();
   }
 
-  initButtons(){
+  initButtons () {
     const buttons = this.option.querySelectorAll('.js-dropdown-option__circle');
     buttons.forEach((val) => {
       if (val.textContent === '-') {
@@ -28,7 +28,7 @@ class DropdownOption {
     });
   }
 
-  initNumber(){
+  initNumber () {
     this.number = this.option.querySelector('.js-dropdown-option__number');
     this.value = parseInt(this.number.textContent, 10);
     if (this.value === '') this.value = 0;
