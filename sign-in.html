@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   <link href="https://wisestkaa.github.io/FSD-front-2nd-tsk/style.css" rel="stylesheet"></head>
   <body bgcolor="#FFFFFF" style="margin: 0; box-sizing: border-box;">
         <header class="header">
           <div class="header__wrapper">
-            <div class="header__logo"><img class="logo-site" src="./img/Logosite.svg">
-            </div>
-            <div class="header__navigation-wrapper">
+            <figure class="header__logo"><img class="logo-site" src="./img/Logosite.svg" alt="logo">
+            </figure>
+            <nav class="header__navigation-wrapper">
               <div class="header__navigation">                   <a class="header__navigation-link_short header__navigation-link" href="/about-us">О нас</a>
                     <div class="dropdown-nemu">
                       <div class="dropdown-nemu__text">Услуги</div>
-                      <div class="dropdown-nemu__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                      <div class="dropdown-nemu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                       </div>
                       <div class="dropdown-nemu__links">           <a class="dropdown-nemu__link" href="/service/1">Service1</a><a class="dropdown-nemu__link" href="/service/2">Service2</a><a class="dropdown-nemu__link" href="/service/3">Service3</a>
                       </div>
                     </div><a class="header__navigation-link_short header__navigation-link" href="/vacancies">Вакансии</a><a class="header__navigation-link_short header__navigation-link" href="/news">Новости</a>
                     <div class="dropdown-nemu">
                       <div class="dropdown-nemu__text">Соглашения</div>
-                      <div class="dropdown-nemu__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                      <div class="dropdown-nemu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                       </div>
                       <div class="dropdown-nemu__links">           <a class="dropdown-nemu__link" href="/agreements/1">agreements1</a><a class="dropdown-nemu__link" href="/agreements/2">agreements2</a><a class="dropdown-nemu__link" href="/agreements/3">agreements3</a>
                       </div>
@@ -29,12 +38,12 @@
                 <div class="header__unlogged">
                   <div class="header__login-button">
                         <div class="button">
-                          <div class="button__wraper-short"><a class="button__wraper-short_bordered" href="/moke">войти</a></div>
+                          <button class="button__wraper-short"><a class="button__wraper-short_bordered" href="/moke">войти</a></button>
                         </div>
                   </div>
                   <div class="header__sign-up-button">
                         <div class="button">
-                          <div class="button__wraper-short"><a class="button__wraper-short_gradient-background" href="/moke">зарегистрироваться</a></div>
+                          <button class="button__wraper-short"><a class="button__wraper-short_gradient-background" href="/moke">зарегистрироваться</a></button>
                         </div>
                   </div>
                 </div>
@@ -42,24 +51,24 @@
                   <div class="header__username"></div>
                 </div>
               </div>
-            </div>
+            </nav>
           </div>
         </header>
     <div class="sign-in" style="background-image: url(./img/sign.png);">
       <div class="sign-in__form">
             <div class="sign-in-form">
-              <form class="sign-in-form__form" action="/#moke">
-                <div class="sign-in-form__header h1">Войти</div>
+              <form class="sign-in-form__form" action="/moke">
+                <h1 class="sign-in-form__header h1">Войти</h1>
                 <div class="sign-in-form__email">               
-                      <input class="text-field" type="text" placeholder="Email" id="signInEmail">
+                      <input class="js-text-field text-field" type="text" placeholder="Email" id="signInEmail">
                 </div>
                 <div class="sign-in-form__password">
-                      <input class="text-field" type="password" placeholder="Пароль" id="signInPassword">
+                      <input class="js-text-field text-field" type="password" placeholder="Пароль" id="signInPassword">
                 </div>
                 <div class="sign-in-form__button">               
                       <div class="button">
                         <div class="button__wraper-rich">
-                          <div class="button__arrow"><i class="material-icons">arrow_forward</i>
+                          <div class="button__arrow"><i class="material-icons js-material-icons">arrow_forward</i>
                           </div>
                           <div class="button__text">войти</div>
                           <input class="button__wraper-rich_rich" type="submit" name="singIn" value="войти">
@@ -70,7 +79,7 @@
                   <div class="sign-in-form__sign-up-text body">Нет аккаунта на Toxin?</div>
                   <div class="sign-in-form__sign-up-button">
                         <div class="button">
-                          <div class="button__wraper">           <a class="button__wraper_bordered" href="/#moke">создать</a></div>
+                          <button class="button__wraper">           <a class="button__wraper_bordered" href="/moke">создать</a></button>
                         </div>
                   </div>
                 </div>
@@ -82,34 +91,34 @@
           <div class="footer-with-copyright__wrapper-shadow-top">
             <div class="footer-with-copyright__wrapper-main">
               <div class="footer-with-copyright__logo-and-description">
-                <div class="footer-with-copyright__logo"><img class="logo-site" src="./img/Logosite.svg">
-                </div>
+                <figure class="footer-with-copyright__logo"><img class="logo-site" src="./img/Logosite.svg" alt="logo">
+                </figure>
                 <div class="footer-with-copyright__description body">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
               </div>
               <div class="footer-with-copyright__wrapper-right">
                 <div class="footer-with-copyright__menu">                   
                   <div class="footer-with-copyright__menu-item">
-                    <div class="footer-with-copyright__menu-item-header h3">навигация</div><a class="footer-with-copyright__menu-item-option body" href="/about-us">О нас</a><a class="footer-with-copyright__menu-item-option body" href="/news">Новости</a><a class="footer-with-copyright__menu-item-option body" href="/support-service">Служба поддержки</a><a class="footer-with-copyright__menu-item-option body" href="/services">Услуги</a>
+                    <h3 class="footer-with-copyright__menu-item-header h3">навигация</h3><a class="footer-with-copyright__menu-item-option body" href="/about-us">О нас</a><a class="footer-with-copyright__menu-item-option body" href="/news">Новости</a><a class="footer-with-copyright__menu-item-option body" href="/support-service">Служба поддержки</a><a class="footer-with-copyright__menu-item-option body" href="/services">Услуги</a>
                   </div>
                   <div class="footer-with-copyright__menu-item">
-                    <div class="footer-with-copyright__menu-item-header h3">о нас</div><a class="footer-with-copyright__menu-item-option body" href="/about-us/about-service">О сервисе</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/our-team">Наша команда</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/vacancies">Вакансии</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/investors">Инвесторы</a>
+                    <h3 class="footer-with-copyright__menu-item-header h3">о нас</h3><a class="footer-with-copyright__menu-item-option body" href="/about-us/about-service">О сервисе</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/our-team">Наша команда</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/vacancies">Вакансии</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/investors">Инвесторы</a>
                   </div>
                   <div class="footer-with-copyright__menu-item">
-                    <div class="footer-with-copyright__menu-item-header h3">Служба поддержки</div><a class="footer-with-copyright__menu-item-option body" href="/support-service/agreements">Соглашения</a><a class="footer-with-copyright__menu-item-option body" href="/support-service/socials">Сообщества</a><a class="footer-with-copyright__menu-item-option body" href="/support-service/contact">Связь с нами</a>
+                    <h3 class="footer-with-copyright__menu-item-header h3">Служба поддержки</h3><a class="footer-with-copyright__menu-item-option body" href="/support-service/agreements">Соглашения</a><a class="footer-with-copyright__menu-item-option body" href="/support-service/socials">Сообщества</a><a class="footer-with-copyright__menu-item-option body" href="/support-service/contact">Связь с нами</a>
                   </div>
                 </div>
                 <div class="footer-with-copyright__subscribe">
-                  <div class="footer-with-copyright__subscribe-header h3">Подписка</div>
+                  <h3 class="footer-with-copyright__subscribe-header h3">Подписка</h3>
                   <div class="footer-with-copyright__subscribe-description body">Получайте специальные предложения и новости сервиса</div>
                   <div class="footer-with-copyright__subscribe-field">
                         <div class="subscription-text-field">
                           <div class="subscription-text-field__button-wrapper">
-                            <div class="subscription-text-field__button-arrow"><i class="material-icons">arrow_forward</i>
+                            <div class="subscription-text-field__button-arrow"><i class="material-icons js-material-icons">arrow_forward</i>
                             </div>
                             <input class="subscription-text-field__button" type="button" name="footerSubscribe" value="footerSubscribe">
                           </div>
                           <div class="subscription-text-field__text-field">
-                                <input class="text-field text-field_addPaddingRight" type="text" placeholder="Email">
+                                <input class="js-text-field text-field text-field_addPaddingRight" type="email" placeholder="Email">
                           </div>
                         </div>
                   </div>
@@ -121,7 +130,7 @@
             <div class="footer-with-copyright__wrapper-bottom">
               <div class="footer-with-copyright__copyright body">Copyright © 2018 Toxin отель. Все права зачищены.</div>
               <div class="footer-with-copyright__social">
-                    <div class="social-icons"><a class="social-icons__ico-twitter" href="https://twitter.com/"><img class="social-icons__img" src="./img/twitter.png"></a><a class="social-icons__ico-facebook" href="https://www.facebook.com/"><img class="social-icons__img" src="./img/facebook.png"></a><a class="social-icons__ico-instagram" href="https://www.instagram.com/"><img class="social-icons__img" src="./img/instagram.png"></a></div>
+                    <figure class="social-icons"><a class="social-icons__ico-twitter" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/twitter.png" alt="Twitter"></a><a class="social-icons__ico-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/facebook.png" alt="Facebook"></a><a class="social-icons__ico-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/instagram.png" alt="Instagram"></a></figure>
               </div>
             </div>
           </div>

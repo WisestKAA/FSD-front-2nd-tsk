@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search room</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   <link href="https://wisestkaa.github.io/FSD-front-2nd-tsk/style.css" rel="stylesheet"></head>
   <body bgcolor="#FFFFFF" style="margin: 0; box-sizing: border-box;">
         <header class="header">
           <div class="header__wrapper">
-            <div class="header__logo"><img class="logo-site" src="./img/Logosite.svg">
-            </div>
-            <div class="header__navigation-wrapper">
+            <figure class="header__logo"><img class="logo-site" src="./img/Logosite.svg" alt="logo">
+            </figure>
+            <nav class="header__navigation-wrapper">
               <div class="header__navigation">                   <a class="header__navigation-link_short header__navigation-link" href="/about-us">О нас</a>
                     <div class="dropdown-nemu">
                       <div class="dropdown-nemu__text">Услуги</div>
-                      <div class="dropdown-nemu__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                      <div class="dropdown-nemu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                       </div>
                       <div class="dropdown-nemu__links">           <a class="dropdown-nemu__link" href="/service/1">Service1</a><a class="dropdown-nemu__link" href="/service/2">Service2</a><a class="dropdown-nemu__link" href="/service/3">Service3</a>
                       </div>
                     </div><a class="header__navigation-link_short header__navigation-link" href="/vacancies">Вакансии</a><a class="header__navigation-link_short header__navigation-link" href="/news">Новости</a>
                     <div class="dropdown-nemu">
                       <div class="dropdown-nemu__text">Соглашения</div>
-                      <div class="dropdown-nemu__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                      <div class="dropdown-nemu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                       </div>
                       <div class="dropdown-nemu__links">           <a class="dropdown-nemu__link" href="/agreements/1">agreements1</a><a class="dropdown-nemu__link" href="/agreements/2">agreements2</a><a class="dropdown-nemu__link" href="/agreements/3">agreements3</a>
                       </div>
@@ -29,12 +38,12 @@
                 <div class="header__unlogged">
                   <div class="header__login-button">
                         <div class="button">
-                          <div class="button__wraper-short"><a class="button__wraper-short_bordered" href="/moke">войти</a></div>
+                          <button class="button__wraper-short"><a class="button__wraper-short_bordered" href="/moke">войти</a></button>
                         </div>
                   </div>
                   <div class="header__sign-up-button">
                         <div class="button">
-                          <div class="button__wraper-short"><a class="button__wraper-short_gradient-background" href="/moke">зарегистрироваться</a></div>
+                          <button class="button__wraper-short"><a class="button__wraper-short_gradient-background" href="/moke">зарегистрироваться</a></button>
                         </div>
                   </div>
                 </div>
@@ -42,82 +51,82 @@
                   <div class="header__username"></div>
                 </div>
               </div>
-            </div>
+            </nav>
           </div>
         </header>
     <div class="search-room">
-      <div class="search-room__main">
+      <main class="search-room__main">
         <div class="search-room__wrapper">
           <div class="search-room__wrapper-left">
             <div class="search-room__dates">
                   <div class="label label_margin-bottom-5">
-                    <div class="label__text h3">даты пребывания в отеле</div>
+                    <h3 class="label__text h3">даты пребывания в отеле</h3>
                     <div class="label__caption"></div>
                   </div>
-                  <div class="date-dropdown">
-                    <div class="date-dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                  <section class="date-dropdown js-date-dropdown">
+                    <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                     </div>
-                    <input class="date-dropdown__input date-dropdown__input-filtred" type="text" readonly="true" placeholder="ДД.МММ - ДД.МММ">
-                  </div>
+                    <input class="date-dropdown__input date-dropdown__input-filtred js-date-dropdown__input js-date-dropdown__input-filtred" type="text" readonly="true" placeholder="ДД.МММ - ДД.МММ">
+                  </section>
             </div>
             <div class="search-room__guests">
                   <div class="label label_margin-bottom-5">
-                    <div class="label__text h3">гости</div>
+                    <h3 class="label__text h3">гости</h3>
                     <div class="label__caption"></div>
                   </div>
-                  <div class="dropdown">
+                  <section class="dropdown js-dropdown">
                     <div class="dropdown__wrapper">
-                      <div class="dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                      <div class="dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                       </div>
-                      <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span></div>
-                      <div class="dropdown__options">
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">взрослые</div>
+                      <div class="dropdown__select js-dropdown__select"><span class="dropdown__text js-dropdown__text">Сколько гостей</span></div>
+                      <div class="dropdown__options js-dropdown__options">
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">взрослые</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">дети</div>
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">дети</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">младенцы</div>
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">младенцы</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <div class="dropdown-option-button">
-                              <div class="dropdown-option-button__drop">очистить</div>
-                              <div class="dropdown-option-button__apply">применить</div>
+                            <div class="dropdown-option-button js-dropdown-option-button">
+                              <button class="dropdown-option-button__drop js-dropdown-option-button__drop">очистить</button>
+                              <button class="dropdown-option-button__apply js-dropdown-option-button__apply">применить</button>
                             </div>
                       </div>
                     </div>
-                  </div>
+                  </section>
             </div>
             <div class="search-room__price-range">
-                  <div class="range-slider">
+                  <section class="range-slider js-range-slider">
                     <div class="range-slider__header">
-                      <div class="range-slider__label h3">диапазон цены</div>
-                      <input class="range-slider__price" type="text" readonly>
+                      <h3 class="range-slider__label h3">диапазон цены</h3>
+                      <input class="range-slider__price js-range-slider__price" type="text" readonly>
                     </div>
                     <div class="range-slider__slider-wraper">
-                      <input class="range-slider__slider" data-type="double" data-min="765" data-max="14800" data-step="1" data-from="5000" data-to="10000" data-hide-min-max="true" data-hide-from-to="true">
+                      <input class="range-slider__slider js-range-slider__slider" data-type="double" data-min="765" data-max="14800" data-step="1" data-from="5000" data-to="10000" data-hide-min-max="true" data-hide-from-to="true">
                     </div>
-                  </div>
+                  </section>
               <div class="search-room__price-caption">Стоимость за сутки пребывания в номере</div>
             </div>
             <div class="search-room__checkbox-buttons">
                   <div class="label label_margin-bottom-17">
-                    <div class="label__text h3">Checkbox Buttons</div>
+                    <h3 class="label__text h3">Checkbox Buttons</h3>
                     <div class="label__caption"></div>
                   </div>
                   <section class="checkbox-button">
@@ -150,7 +159,7 @@
             </div>
             <div class="search-room__availability">
                   <div class="label label_margin-bottom-16">
-                    <div class="label__text h3">доступность</div>
+                    <h3 class="label__text h3">доступность</h3>
                     <div class="label__caption"></div>
                   </div>
                   <section class="checkbox-button checkbox-button_rich">
@@ -174,49 +183,49 @@
             </div>
             <div class="search-room__amenities">
                   <div class="label label_margin-bottom-5">
-                    <div class="label__text h3">удобства номера</div>
+                    <h3 class="label__text h3">удобства номера</h3>
                     <div class="label__caption"></div>
                   </div>
-                  <div class="dropdown dropdown_width-short">
+                  <section class="dropdown js-dropdown dropdown_width-short js-dropdown_width-short">
                     <div class="dropdown__wrapper">
-                      <div class="dropdown__arrow dropdown__arrow_dark"><i class="material-icons">keyboard_arrow_down</i>
+                      <div class="dropdown__arrow dropdown__arrow_dark"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                       </div>
-                      <div class="dropdown__select"><span class="dropdown__text"></span></div>
-                      <div class="dropdown__options">
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">спальни</div>
+                      <div class="dropdown__select js-dropdown__select"><span class="dropdown__text js-dropdown__text"></span></div>
+                      <div class="dropdown__options js-dropdown__options">
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">спальни</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">кровати</div>
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">кровати</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">ванные комнаты</div>
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">ванные комнаты</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
                       </div>
                     </div>
-                  </div>
+                  </section>
             </div>
             <div class="search-room__add-amenities">
-                  <section class="expandable-checkbox-list">
-                    <div class="expandable-checkbox-list__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                  <section class="expandable-checkbox-list js-expandable-checkbox-list">
+                    <div class="expandable-checkbox-list__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                     </div>
-                    <div class="expandable-checkbox-list__header h3">дополнительные удобства</div>
-                    <div class="expandable-checkbox-list__checkboxes">
+                    <h3 class="expandable-checkbox-list__header js-expandable-checkbox-list__header h3">дополнительные удобства</h3>
+                    <div class="expandable-checkbox-list__checkboxes js-expandable-checkbox-list__checkboxes">
                           <section class="checkbox-button">
                             <label class="checkbox-button__label">
                               <input class="checkbox-button__input" type="checkbox">
@@ -294,14 +303,14 @@
             </div>
           </div>
           <div class="search-room__wrapper-right">
-            <div class="search-room__preview-header h1">Номера, которые мы для вас подобрали</div>
+            <h1 class="search-room__preview-header h1">Номера, которые мы для вас подобрали</h1>
             <div class="search-room__wrapper-preview">
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room888.png"><img class="carusel__img" src="./img/room888.png"><img class="carusel__img" src="./img/room888.png"><img class="carusel__img" src="./img/room888.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room888.png" alt="room #888"><img class="carusel__img" src="./img/room888.png" alt="room #888"><img class="carusel__img" src="./img/room888.png" alt="room #888"><img class="carusel__img" src="./img/room888.png" alt="room #888">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -318,18 +327,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">145</div>
@@ -340,10 +349,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room840.png"><img class="carusel__img" src="./img/room840.png"><img class="carusel__img" src="./img/room840.png"><img class="carusel__img" src="./img/room840.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room840.png" alt="room #840"><img class="carusel__img" src="./img/room840.png" alt="room #840"><img class="carusel__img" src="./img/room840.png" alt="room #840"><img class="carusel__img" src="./img/room840.png" alt="room #840">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -360,18 +369,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">65</div>
@@ -382,10 +391,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room980.png"><img class="carusel__img" src="./img/room980.png"><img class="carusel__img" src="./img/room980.png"><img class="carusel__img" src="./img/room980.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room980.png" alt="room #980"><img class="carusel__img" src="./img/room980.png" alt="room #980"><img class="carusel__img" src="./img/room980.png" alt="room #980"><img class="carusel__img" src="./img/room980.png" alt="room #980">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -402,18 +411,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">35</div>
@@ -424,10 +433,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room856.png"><img class="carusel__img" src="./img/room856.png"><img class="carusel__img" src="./img/room856.png"><img class="carusel__img" src="./img/room856.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room856.png" alt="room #856"><img class="carusel__img" src="./img/room856.png" alt="room #856"><img class="carusel__img" src="./img/room856.png" alt="room #856"><img class="carusel__img" src="./img/room856.png" alt="room #856">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -444,18 +453,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">195</div>
@@ -466,10 +475,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room740.png"><img class="carusel__img" src="./img/room740.png"><img class="carusel__img" src="./img/room740.png"><img class="carusel__img" src="./img/room740.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room740.png" alt="room #740"><img class="carusel__img" src="./img/room740.png" alt="room #740"><img class="carusel__img" src="./img/room740.png" alt="room #740"><img class="carusel__img" src="./img/room740.png" alt="room #740">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -486,18 +495,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">44</div>
@@ -508,10 +517,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room982.png"><img class="carusel__img" src="./img/room982.png"><img class="carusel__img" src="./img/room982.png"><img class="carusel__img" src="./img/room982.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room982.png" alt="room #982"><img class="carusel__img" src="./img/room982.png" alt="room #982"><img class="carusel__img" src="./img/room982.png" alt="room #982"><img class="carusel__img" src="./img/room982.png" alt="room #982">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -528,18 +537,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">56</div>
@@ -550,10 +559,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room678.png"><img class="carusel__img" src="./img/room678.png"><img class="carusel__img" src="./img/room678.png"><img class="carusel__img" src="./img/room678.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room678.png" alt="room #678"><img class="carusel__img" src="./img/room678.png" alt="room #678"><img class="carusel__img" src="./img/room678.png" alt="room #678"><img class="carusel__img" src="./img/room678.png" alt="room #678">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -570,18 +579,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">45</div>
@@ -592,10 +601,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room450.png"><img class="carusel__img" src="./img/room450.png"><img class="carusel__img" src="./img/room450.png"><img class="carusel__img" src="./img/room450.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room450.png" alt="room #450"><img class="carusel__img" src="./img/room450.png" alt="room #450"><img class="carusel__img" src="./img/room450.png" alt="room #450"><img class="carusel__img" src="./img/room450.png" alt="room #450">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -612,18 +621,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">39</div>
@@ -634,10 +643,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room350.png"><img class="carusel__img" src="./img/room350.png"><img class="carusel__img" src="./img/room350.png"><img class="carusel__img" src="./img/room350.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room350.png" alt="room #350"><img class="carusel__img" src="./img/room350.png" alt="room #350"><img class="carusel__img" src="./img/room350.png" alt="room #350"><img class="carusel__img" src="./img/room350.png" alt="room #350">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -654,18 +663,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">77</div>
@@ -676,10 +685,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room666.png"><img class="carusel__img" src="./img/room666.png"><img class="carusel__img" src="./img/room666.png"><img class="carusel__img" src="./img/room666.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room666.png" alt="room #666"><img class="carusel__img" src="./img/room666.png" alt="room #666"><img class="carusel__img" src="./img/room666.png" alt="room #666"><img class="carusel__img" src="./img/room666.png" alt="room #666">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -696,18 +705,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">25</div>
@@ -718,10 +727,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room444.png"><img class="carusel__img" src="./img/room444.png"><img class="carusel__img" src="./img/room444.png"><img class="carusel__img" src="./img/room444.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room444.png" alt="room #444"><img class="carusel__img" src="./img/room444.png" alt="room #444"><img class="carusel__img" src="./img/room444.png" alt="room #444"><img class="carusel__img" src="./img/room444.png" alt="room #444">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -738,18 +747,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">15</div>
@@ -760,10 +769,10 @@
                   </div>
                   <div class="room-preview room-preview_with-margin">
                     <div class="room-preview__carusel">
-                          <div class="carusel">
-                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room352.png"><img class="carusel__img" src="./img/room352.png"><img class="carusel__img" src="./img/room352.png"><img class="carusel__img" src="./img/room352.png">
+                          <figure class="carusel js-carusel">
+                            <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room352.png" alt="room #352"><img class="carusel__img" src="./img/room352.png" alt="room #352"><img class="carusel__img" src="./img/room352.png" alt="room #352"><img class="carusel__img" src="./img/room352.png" alt="room #352">
                             </div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="room-preview__discripton-wrapper">
                       <div class="room-preview__discripton-top">
@@ -780,18 +789,18 @@
                       <div class="room-preview__separator"></div>
                       <div class="room-preview__discripton-bot">
                         <div class="room-preview__discripton-bot-rate">
-                              <div class="rate-button">
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                              <figure class="rate-button">
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star"><i class="material-icons">star</i>
+                                <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                                <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                                <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                                 </div>
-                              </div>
+                              </figure>
                         </div>
                         <div class="room-preview__discripton-bot-wrapper-comment">
                           <div class="room-preview__discripton-bot-comment-num">55</div>
@@ -811,47 +820,47 @@
                         <div class="pagination__ellipsis">...</div>
                       </li>
                       <li class="pagination__item"><a class="pagination__link" href="/page15">15</a></li>
-                      <li class="pagination__next"><a class="pagination__link_next" href="/to-do"><i class="material-icons">arrow_forward</i></a></li>
+                      <li class="pagination__next"><a class="pagination__link_next" href="/to-do"><i class="material-icons js-material-icons">arrow_forward</i></a></li>
                     </ul>
                     <div class="pagination__caption">1 – 12 из 100+ вариантов аренды</div>
                   </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
         <footer class="footer-with-copyright">
           <div class="footer-with-copyright__wrapper-shadow-top">
             <div class="footer-with-copyright__wrapper-main">
               <div class="footer-with-copyright__logo-and-description">
-                <div class="footer-with-copyright__logo"><img class="logo-site" src="./img/Logosite.svg">
-                </div>
+                <figure class="footer-with-copyright__logo"><img class="logo-site" src="./img/Logosite.svg" alt="logo">
+                </figure>
                 <div class="footer-with-copyright__description body">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
               </div>
               <div class="footer-with-copyright__wrapper-right">
                 <div class="footer-with-copyright__menu">                   
                   <div class="footer-with-copyright__menu-item">
-                    <div class="footer-with-copyright__menu-item-header h3">навигация</div><a class="footer-with-copyright__menu-item-option body" href="/about-us">О нас</a><a class="footer-with-copyright__menu-item-option body" href="/news">Новости</a><a class="footer-with-copyright__menu-item-option body" href="/support-service">Служба поддержки</a><a class="footer-with-copyright__menu-item-option body" href="/services">Услуги</a>
+                    <h3 class="footer-with-copyright__menu-item-header h3">навигация</h3><a class="footer-with-copyright__menu-item-option body" href="/about-us">О нас</a><a class="footer-with-copyright__menu-item-option body" href="/news">Новости</a><a class="footer-with-copyright__menu-item-option body" href="/support-service">Служба поддержки</a><a class="footer-with-copyright__menu-item-option body" href="/services">Услуги</a>
                   </div>
                   <div class="footer-with-copyright__menu-item">
-                    <div class="footer-with-copyright__menu-item-header h3">о нас</div><a class="footer-with-copyright__menu-item-option body" href="/about-us/about-service">О сервисе</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/our-team">Наша команда</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/vacancies">Вакансии</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/investors">Инвесторы</a>
+                    <h3 class="footer-with-copyright__menu-item-header h3">о нас</h3><a class="footer-with-copyright__menu-item-option body" href="/about-us/about-service">О сервисе</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/our-team">Наша команда</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/vacancies">Вакансии</a><a class="footer-with-copyright__menu-item-option body" href="/about-us/investors">Инвесторы</a>
                   </div>
                   <div class="footer-with-copyright__menu-item">
-                    <div class="footer-with-copyright__menu-item-header h3">Служба поддержки</div><a class="footer-with-copyright__menu-item-option body" href="/support-service/agreements">Соглашения</a><a class="footer-with-copyright__menu-item-option body" href="/support-service/socials">Сообщества</a><a class="footer-with-copyright__menu-item-option body" href="/support-service/contact">Связь с нами</a>
+                    <h3 class="footer-with-copyright__menu-item-header h3">Служба поддержки</h3><a class="footer-with-copyright__menu-item-option body" href="/support-service/agreements">Соглашения</a><a class="footer-with-copyright__menu-item-option body" href="/support-service/socials">Сообщества</a><a class="footer-with-copyright__menu-item-option body" href="/support-service/contact">Связь с нами</a>
                   </div>
                 </div>
                 <div class="footer-with-copyright__subscribe">
-                  <div class="footer-with-copyright__subscribe-header h3">Подписка</div>
+                  <h3 class="footer-with-copyright__subscribe-header h3">Подписка</h3>
                   <div class="footer-with-copyright__subscribe-description body">Получайте специальные предложения и новости сервиса</div>
                   <div class="footer-with-copyright__subscribe-field">
                         <div class="subscription-text-field">
                           <div class="subscription-text-field__button-wrapper">
-                            <div class="subscription-text-field__button-arrow"><i class="material-icons">arrow_forward</i>
+                            <div class="subscription-text-field__button-arrow"><i class="material-icons js-material-icons">arrow_forward</i>
                             </div>
                             <input class="subscription-text-field__button" type="button" name="footerSubscribe" value="footerSubscribe">
                           </div>
                           <div class="subscription-text-field__text-field">
-                                <input class="text-field text-field_addPaddingRight" type="text" placeholder="Email">
+                                <input class="js-text-field text-field text-field_addPaddingRight" type="email" placeholder="Email">
                           </div>
                         </div>
                   </div>
@@ -863,7 +872,7 @@
             <div class="footer-with-copyright__wrapper-bottom">
               <div class="footer-with-copyright__copyright body">Copyright © 2018 Toxin отель. Все права зачищены.</div>
               <div class="footer-with-copyright__social">
-                    <div class="social-icons"><a class="social-icons__ico-twitter" href="https://twitter.com/"><img class="social-icons__img" src="./img/twitter.png"></a><a class="social-icons__ico-facebook" href="https://www.facebook.com/"><img class="social-icons__img" src="./img/facebook.png"></a><a class="social-icons__ico-instagram" href="https://www.instagram.com/"><img class="social-icons__img" src="./img/instagram.png"></a></div>
+                    <figure class="social-icons"><a class="social-icons__ico-twitter" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/twitter.png" alt="Twitter"></a><a class="social-icons__ico-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/facebook.png" alt="Facebook"></a><a class="social-icons__ico-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/instagram.png" alt="Instagram"></a></figure>
               </div>
             </div>
           </div>

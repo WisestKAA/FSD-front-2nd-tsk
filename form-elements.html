@@ -1,127 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form elements</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   <link href="https://wisestkaa.github.io/FSD-front-2nd-tsk/style.css" rel="stylesheet"></head>
   <body bgcolor="#FFFFFF" style="margin: 0; box-sizing: border-box;">
     <div class="ui-kit-template">
-      <div class="ui-kit-template__logo"><img class="logo-ui-kit" src="./img/logouikit.svg">
-      </div>
+      <figure class="ui-kit-template__logo"><img class="logo-ui-kit" src="./img/logouikit.svg" alt="logo">
+      </figure>
     </div>
-    <div class="form-elements">
+    <main class="form-elements">
       <div class="form-elements__main-wrapper">
         <div class="form-elements__main">
-          <section class="form-elements__content-left">
+          <section class="form-elements__content-left form-elements__content-left_margin-left-1">
             <div class="form-elements__item_margin-bottom-20">
                   <div class="label label_margin-bottom-5">
-                    <div class="label__text h3">Text Field</div>
+                    <h3 class="label__text h3">Text Field</h3>
                     <div class="label__caption label__caption_margin-top-3">Default</div>
                   </div>
-                  <input class="text-field" type="text" placeholder="Email">
+                  <input class="js-text-field text-field" type="text" placeholder="Email">
             </div>
             <div class="form-elements__item_margin-bottom-20">
                   <div class="label label_margin-bottom-5">
-                    <div class="label__text h3">Text Field</div>
+                    <h3 class="label__text h3">Text Field</h3>
                     <div class="label__caption">Hover / Focus</div>
                   </div>
-                  <input class="text-field" type="text" placeholder="Email" value="This is pretty awesome">
+                  <input class="js-text-field text-field" type="text" placeholder="Email" value="This is pretty awesome">
             </div>
             <div class="form-elements__item_margin-bottom-20">
                   <div class="label label_margin-bottom-5">
-                    <div class="label__text h3">Dropdown</div>
+                    <h3 class="label__text h3">Dropdown</h3>
                     <div class="label__caption">Default</div>
                   </div>
-                  <div class="dropdown">
+                  <section class="dropdown js-dropdown">
                     <div class="dropdown__wrapper">
-                      <div class="dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                      <div class="dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                       </div>
-                      <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span></div>
-                      <div class="dropdown__options">
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">взрослые</div>
+                      <div class="dropdown__select js-dropdown__select"><span class="dropdown__text js-dropdown__text">Сколько гостей</span></div>
+                      <div class="dropdown__options js-dropdown__options">
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">взрослые</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">дети</div>
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">дети</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">младенцы</div>
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">младенцы</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <div class="dropdown-option-button">
-                              <div class="dropdown-option-button__drop">очистить</div>
-                              <div class="dropdown-option-button__apply">применить</div>
+                            <div class="dropdown-option-button js-dropdown-option-button">
+                              <button class="dropdown-option-button__drop js-dropdown-option-button__drop">очистить</button>
+                              <button class="dropdown-option-button__apply js-dropdown-option-button__apply">применить</button>
                             </div>
                       </div>
                     </div>
-                  </div>
+                  </section>
             </div>
             <div class="form-elements__item_margin-bottom-38 form-elements__masked-text-field">
                   <div class="label label_margin-bottom-5">
-                    <div class="label__text h3">masked text field</div>
+                    <h3 class="label__text h3">masked text field</h3>
                     <div class="label__caption label__caption_margin-top-3">Default</div>
                   </div>
-                  <input class="text-field text-field_masked" type="text" placeholder="ДД.ММ.ГГГГ">
+                  <input class="js-text-field text-field text-field_masked" type="text" placeholder="ДД.ММ.ГГГГ">
             </div>
             <div class="form-elements__item_margin-bottom-40">
-                  <div class="date-dropdown">
+                  <section class="date-dropdown js-date-dropdown">
                     <div class="date-dropdown__wrapper-filtred">
                       <div class="date-dropdown__wrapper-from">
-                        <div class="date-dropdown__start-text h3">date Dropdown</div>
+                        <h3 class="date-dropdown__start-text h3">date Dropdown</h3>
                         <div class="date-dropdown__input-wrapper">
-                          <div class="date-dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                          <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                           </div>
-                          <input class="date-dropdown__input date-dropdown__input-from" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ">
+                          <input class="date-dropdown__input js-date-dropdown__input date-dropdown__input-from js-date-dropdown__input-from" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ">
                         </div>
                       </div>
                       <div class="date-dropdown__wrapper-to">
-                        <div class="date-dropdown__finish-text h3">date Dropdown</div>
+                        <h3 class="date-dropdown__finish-text h3">date Dropdown</h3>
                         <div class="date-dropdown__input-wrapper">
-                          <div class="date-dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                          <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                           </div>
-                          <input class="date-dropdown__input-to" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ" value="19.08.2019">
+                          <input class="date-dropdown__input-to js-date-dropdown__input-to" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ" value="19.08.2019">
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </section>
             </div>
             <div class="form-elements__item form-elements__item_margin-bottom-40">
                   <div class="label label_margin-bottom-5">
-                    <div class="label__text h3">filter date dropdown</div>
+                    <h3 class="label__text h3">filter date dropdown</h3>
                     <div class="label__caption"></div>
                   </div>
-                  <div class="date-dropdown">
-                    <div class="date-dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                  <section class="date-dropdown js-date-dropdown">
+                    <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                     </div>
-                    <input class="date-dropdown__input date-dropdown__input-filtred" type="text" readonly="true" placeholder="ДД.МММ - ДД.МММ">
-                  </div>
+                    <input class="date-dropdown__input date-dropdown__input-filtred js-date-dropdown__input js-date-dropdown__input-filtred" type="text" readonly="true" placeholder="ДД.МММ - ДД.МММ">
+                  </section>
             </div>
             <div class="form-elements__subscription-text-field">
                   <div class="label label_margin-bottom-5">
-                    <div class="label__text h3">subscription text field</div>
+                    <h3 class="label__text h3">subscription text field</h3>
                     <div class="label__caption"></div>
                   </div>
                   <div class="subscription-text-field">
                     <div class="subscription-text-field__button-wrapper">
-                      <div class="subscription-text-field__button-arrow"><i class="material-icons">arrow_forward</i>
+                      <div class="subscription-text-field__button-arrow"><i class="material-icons js-material-icons">arrow_forward</i>
                       </div>
                       <input class="subscription-text-field__button" type="button" name="subscribe" value="Email">
                     </div>
                     <div class="subscription-text-field__text-field">
-                          <input class="text-field text-field_addPaddingRight" type="text" placeholder="E-mail">
+                          <input class="js-text-field text-field text-field_addPaddingRight" type="email" placeholder="E-mail">
                     </div>
                   </div>
             </div>
@@ -130,7 +139,7 @@
             <section class="form-elements__content-center">
               <div class="form-elements__item_margin-bottom-40">
                     <div class="label label_margin-bottom-17">
-                      <div class="label__text h3">Checkbox Buttons</div>
+                      <h3 class="label__text h3">Checkbox Buttons</h3>
                       <div class="label__caption"></div>
                     </div>
                     <section class="checkbox-button">
@@ -161,12 +170,12 @@
                       </label>
                     </section>
               </div>
-              <div class="form-elements__item_margin-bottom-40 form-elements__radio-buttons">
+              <div class="form-elements__item_margin-bottom-43 form-elements__radio-buttons">
                     <div class="label label_margin-bottom-16">
-                      <div class="label__text h3">Radio Buttons</div>
+                      <h3 class="label__text h3">Radio Buttons</h3>
                       <div class="label__caption"></div>
                     </div>
-                    <div class="radio-buttons">       
+                    <section class="radio-buttons">       
                       <label class="radio-buttons__label">
                         <input class="radio-buttons__input" type="radio" name="radioButtons" value="men" checked>
                         <div class="radio-buttons__text">
@@ -179,11 +188,11 @@
                           <div class="radio-buttons__content">Женщина</div>
                         </div>
                       </label>
-                    </div>
+                    </section>
               </div>
-              <div class="form-elements__item_margin-bottom-40">
-                    <div class="label label_margin-bottom-16">
-                      <div class="label__text h3">Toggle</div>
+              <div class="form-elements__item_margin-bottom-41">
+                    <div class="label label_margin-bottom-15">
+                      <h3 class="label__text h3">Toggle</h3>
                       <div class="label__caption"></div>
                     </div>
                     <div class="toggle">
@@ -205,91 +214,91 @@
               </div>
               <div class="form-elements__item_margin-bottom-40 form-elements__like-button">
                     <div class="label label_margin-bottom-16">
-                      <div class="label__text h3">like button</div>
+                      <h3 class="label__text h3">like button</h3>
                       <div class="label__caption"></div>
                     </div>
                 <div class="form-elements__like-buttons">
-                      <div class="like-button">
-                        <div class="like-button__icon"><i class="material-icons material-icons_font-size-10">favorite_border</i>
+                      <figure class="like-button js-like-button">
+                        <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite_border</i>
                         </div>
                         <div class="like-button__number">2</div>
-                      </div>
-                      <div class="like-button like-button_active">
-                        <div class="like-button__icon"><i class="material-icons material-icons_font-size-10">favorite</i>
+                      </figure>
+                      <figure class="like-button js-like-button like-button_active">
+                        <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite</i>
                         </div>
                         <div class="like-button__number">12</div>
-                      </div>
+                      </figure>
                 </div>
               </div>
               <div class="form-elements__item_margin-bottom-40">
                     <div class="label label_margin-bottom-16">
-                      <div class="label__text h3">rate button</div>
+                      <h3 class="label__text h3">rate button</h3>
                       <div class="label__caption"></div>
                     </div>
                 <div class="form-elements__rate-buttons">
-                      <div class="rate-button">
-                        <div class="rate-button__star"><i class="material-icons">star</i>
+                      <figure class="rate-button">
+                        <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                         </div>
-                        <div class="rate-button__star"><i class="material-icons">star</i>
+                        <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                         </div>
-                        <div class="rate-button__star"><i class="material-icons">star</i>
+                        <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                         </div>
-                        <div class="rate-button__star"><i class="material-icons">star</i>
+                        <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                         </div>
-                        <div class="rate-button__star-border"><i class="material-icons">star_border</i>
+                        <div class="rate-button__star-border"><i class="material-icons js-material-icons">star_border</i>
                         </div>
-                      </div>
-                      <div class="rate-button">
-                        <div class="rate-button__star"><i class="material-icons">star</i>
+                      </figure>
+                      <figure class="rate-button">
+                        <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                         </div>
-                        <div class="rate-button__star"><i class="material-icons">star</i>
+                        <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                         </div>
-                        <div class="rate-button__star"><i class="material-icons">star</i>
+                        <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                         </div>
-                        <div class="rate-button__star"><i class="material-icons">star</i>
+                        <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                         </div>
-                        <div class="rate-button__star"><i class="material-icons">star</i>
+                        <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                         </div>
-                      </div>
+                      </figure>
                 </div>
               </div>
             </section>
             <section class="form-elements__content-right">
               <div class="form-elements__item_margin-bottom-40 form-elements__range-slider">
-                    <div class="range-slider">
+                    <section class="range-slider js-range-slider">
                       <div class="range-slider__header">
-                        <div class="range-slider__label h3">Range Slider</div>
-                        <input class="range-slider__price" type="text" readonly>
+                        <h3 class="range-slider__label h3">Range Slider</h3>
+                        <input class="range-slider__price js-range-slider__price" type="text" readonly>
                       </div>
                       <div class="range-slider__slider-wraper">
-                        <input class="range-slider__slider" data-type="double" data-min="765" data-max="14800" data-step="1" data-from="5000" data-to="10000" data-hide-min-max="true" data-hide-from-to="true">
+                        <input class="range-slider__slider js-range-slider__slider" data-type="double" data-min="765" data-max="14800" data-step="1" data-from="5000" data-to="10000" data-hide-min-max="true" data-hide-from-to="true">
                       </div>
-                    </div>
+                    </section>
               </div>
               <div class="form-elements__item_margin-bottom-40">
                     <div class="label label_margin-bottom-16">
-                      <div class="label__text h3">buttons</div>
+                      <h3 class="label__text h3">buttons</h3>
                       <div class="label__caption"></div>
                     </div>
                 <div class="form-elements__button-wrapper">
                       <div class="button">
-                        <div class="button__wraper">           <a class="button__wraper_gradient-background" href="/#moke">CLICK ME</a></div>
+                        <button class="button__wraper">           <a class="button__wraper_gradient-background" href="/#moke">CLICK ME</a></button>
                       </div>
                 </div>
-                <div class="form-elements__button-wrapper form-elements__button-wrapper_margin-left-1">
+                <div class="form-elements__button-wrapper form-elements__button-wrapper_margin-left-0">
                       <div class="button">
-                        <div class="button__wraper">           <a class="button__wraper_bordered" href="/#moke">CLICK ME</a></div>
+                        <button class="button__wraper">           <a class="button__wraper_bordered" href="/#moke">CLICK ME</a></button>
                       </div>
                 </div>
                 <div class="form-elements__button-wrapper">
                       <div class="button">
-                        <div class="button__wraper-empty"><a class="button__wraper-empty_empty" href="/#moke">CLICK ME</a></div>
+                        <button class="button__wraper-empty"><a class="button__wraper-empty_empty" href="/#moke">CLICK ME</a></button>
                       </div>
                 </div>
-                <div class="form-elements__button-wrapper_margin-left-1">
+                <div class="form-elements__button-wrapper_margin-left-0">
                       <div class="button">
                         <div class="button__wraper-rich">
-                          <div class="button__arrow"><i class="material-icons">arrow_forward</i>
+                          <div class="button__arrow"><i class="material-icons js-material-icons">arrow_forward</i>
                           </div>
                           <div class="button__text">перейти к оплате</div>
                           <input class="button__wraper-rich_rich" type="submit" name="default" value="перейти к оплате">
@@ -297,9 +306,9 @@
                       </div>
                 </div>
               </div>
-              <div class="form-elements__item_margin-bottom-40">
+              <div class="form-elements__item_margin-bottom-40 form-elements__item_margin-left-1">
                     <div class="label label_margin-bottom-16">
-                      <div class="label__text h3">pagination</div>
+                      <h3 class="label__text h3">pagination</h3>
                       <div class="label__caption"></div>
                     </div>
                     <div class="pagination">
@@ -311,7 +320,7 @@
                           <div class="pagination__ellipsis">...</div>
                         </li>
                         <li class="pagination__item"><a class="pagination__link" href="/page15">15</a></li>
-                        <li class="pagination__next"><a class="pagination__link_next" href="/to-do"><i class="material-icons">arrow_forward</i></a></li>
+                        <li class="pagination__next"><a class="pagination__link_next" href="/to-do"><i class="material-icons js-material-icons">arrow_forward</i></a></li>
                       </ul>
                       <div class="pagination__caption">1 – 12 из 100+ вариантов аренды</div>
                     </div>
@@ -323,103 +332,103 @@
       <div class="form-elements__separator_margin-100"></div>
       <div class="form-elements__main-wrapper">
         <div class="form-elements__main">
-          <section class="form-elements__content-left form-elements__content-left_margin-left-1">
+          <section class="form-elements__content-left">
                 <div class="label label_margin-bottom-5 label_short">
-                  <div class="label__text h3">Dropdown</div>
+                  <h3 class="label__text h3">Dropdown</h3>
                   <div class="label__caption">Default</div>
                 </div>
-                <div class="dropdown dropdown_width-short">
+                <section class="dropdown js-dropdown dropdown_width-short js-dropdown_width-short">
                   <div class="dropdown__wrapper">
-                    <div class="dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                    <div class="dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                     </div>
-                    <div class="dropdown__select"><span class="dropdown__text"></span></div>
-                    <div class="dropdown__options">
-                          <section class="dropdown-option">
-                            <div class="dropdown-option__text h3">спальни</div>
+                    <div class="dropdown__select js-dropdown__select"><span class="dropdown__text js-dropdown__text"></span></div>
+                    <div class="dropdown__options js-dropdown__options">
+                          <section class="dropdown-option js-dropdown-option">
+                            <h3 class="dropdown-option__text js-dropdown-option__text h3">спальни</h3>
                             <div class="dropdown-option__button-block">
-                              <div class="dropdown-option__circle">-</div>
-                              <div class="dropdown-option__number h3">0</div>
-                              <div class="dropdown-option__circle">+</div>
+                              <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                              <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                              <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                             </div>
                           </section>
-                          <section class="dropdown-option">
-                            <div class="dropdown-option__text h3">кровати</div>
+                          <section class="dropdown-option js-dropdown-option">
+                            <h3 class="dropdown-option__text js-dropdown-option__text h3">кровати</h3>
                             <div class="dropdown-option__button-block">
-                              <div class="dropdown-option__circle">-</div>
-                              <div class="dropdown-option__number h3">0</div>
-                              <div class="dropdown-option__circle">+</div>
+                              <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                              <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                              <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                             </div>
                           </section>
-                          <section class="dropdown-option">
-                            <div class="dropdown-option__text h3">ванные комнаты</div>
+                          <section class="dropdown-option js-dropdown-option">
+                            <h3 class="dropdown-option__text js-dropdown-option__text h3">ванные комнаты</h3>
                             <div class="dropdown-option__button-block">
-                              <div class="dropdown-option__circle">-</div>
-                              <div class="dropdown-option__number h3">0</div>
-                              <div class="dropdown-option__circle">+</div>
+                              <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                              <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                              <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                             </div>
                           </section>
                     </div>
                   </div>
-                </div>
+                </section>
           </section>
           <div class="form-elements__content-right-wrapper">
             <section class="form-elements__content-center">
                   <div class="label label_margin-bottom-5">
-                    <div class="label__text h3">Dropdown</div>
+                    <h3 class="label__text h3">Dropdown</h3>
                     <div class="label__caption"></div>
                   </div>
-                  <div class="dropdown">
+                  <section class="dropdown js-dropdown">
                     <div class="dropdown__wrapper">
-                      <div class="dropdown__arrow"><i class="material-icons">keyboard_arrow_down</i>
+                      <div class="dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                       </div>
-                      <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span></div>
-                      <div class="dropdown__options">
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">взрослые</div>
+                      <div class="dropdown__select js-dropdown__select"><span class="dropdown__text js-dropdown__text">Сколько гостей</span></div>
+                      <div class="dropdown__options js-dropdown__options">
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">взрослые</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">дети</div>
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">дети</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <section class="dropdown-option">
-                              <div class="dropdown-option__text h3">младенцы</div>
+                            <section class="dropdown-option js-dropdown-option">
+                              <h3 class="dropdown-option__text js-dropdown-option__text h3">младенцы</h3>
                               <div class="dropdown-option__button-block">
-                                <div class="dropdown-option__circle">-</div>
-                                <div class="dropdown-option__number h3">0</div>
-                                <div class="dropdown-option__circle">+</div>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                               </div>
                             </section>
-                            <div class="dropdown-option-button">
-                              <div class="dropdown-option-button__drop">очистить</div>
-                              <div class="dropdown-option-button__apply">применить</div>
+                            <div class="dropdown-option-button js-dropdown-option-button">
+                              <button class="dropdown-option-button__drop js-dropdown-option-button__drop">очистить</button>
+                              <button class="dropdown-option-button__apply js-dropdown-option-button__apply">применить</button>
                             </div>
                       </div>
                     </div>
-                  </div>
+                  </section>
             </section>
             <section class="form-elements__content-right"></section>
           </div>
         </div>
       </div>
-      <div class="form-elements__separator_margin-255"></div>
+      <div class="form-elements__separator_margin-233"></div>
       <div class="form-elements__main-wrapper">
         <div class="form-elements__main">
           <section class="form-elements__content-left">
-            <div class="form-elements__item_margin-bottom-18 form-elements__expandable-checkbox-list">
-                  <section class="expandable-checkbox-list">
-                    <div class="expandable-checkbox-list__arrow"><i class="material-icons">keyboard_arrow_down</i>
+            <div class="form-elements__item_margin-bottom-24 form-elements__expandable-checkbox-list form-elements__item_margin-left-1">
+                  <section class="expandable-checkbox-list js-expandable-checkbox-list">
+                    <div class="expandable-checkbox-list__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                     </div>
-                    <div class="expandable-checkbox-list__header h3">expandable checkbox list</div>
-                    <div class="expandable-checkbox-list__checkboxes">
+                    <h3 class="expandable-checkbox-list__header js-expandable-checkbox-list__header h3">expandable checkbox list</h3>
+                    <div class="expandable-checkbox-list__checkboxes js-expandable-checkbox-list__checkboxes">
                           <section class="checkbox-button">
                             <label class="checkbox-button__label">
                               <input class="checkbox-button__input" type="checkbox">
@@ -495,12 +504,12 @@
                     </div>
                   </section>
             </div>
-            <div class="form-elements__content-left_margin-left-1">
-                  <section class="expandable-checkbox-list">
-                    <div class="expandable-checkbox-list__arrow"><i class="material-icons">keyboard_arrow_down</i>
+            <div class="form-elements__expandable-checkbox-list">
+                  <section class="expandable-checkbox-list js-expandable-checkbox-list">
+                    <div class="expandable-checkbox-list__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                     </div>
-                    <div class="expandable-checkbox-list__header h3">expandable checkbox list</div>
-                    <div class="expandable-checkbox-list__checkboxes expandable-checkbox-list__checkboxes_display">
+                    <h3 class="expandable-checkbox-list__header js-expandable-checkbox-list__header h3">expandable checkbox list</h3>
+                    <div class="expandable-checkbox-list__checkboxes js-expandable-checkbox-list__checkboxes expandable-checkbox-list__checkboxes_display">
                           <section class="checkbox-button">
                             <label class="checkbox-button__label">
                               <input class="checkbox-button__input" type="checkbox">
@@ -578,9 +587,9 @@
             </div>
           </section>
           <div class="form-elements__content-right-wrapper">
-            <section class="form-elements__content-center">
+            <section class="form-elements__content-center form-elements__rich-checkbox-buttons">
                   <div class="label label_margin-bottom-16">
-                    <div class="label__text h3">Rich Checkbox Buttons</div>
+                    <h3 class="label__text h3">Rich Checkbox Buttons</h3>
                     <div class="label__caption"></div>
                   </div>
                   <section class="checkbox-button checkbox-button_rich">
@@ -602,25 +611,25 @@
                     </label>
                   </section>
             </section>
-            <section class="form-elements__content-right">
+            <section class="form-elements__content-right form-elements__bullet-list">
                   <div class="label label_margin-bottom-13">
-                    <div class="label__text h3">bullet list</div>
+                    <h3 class="label__text h3">bullet list</h3>
                     <div class="label__caption"></div>
                   </div>
-                  <div class="bullet-list">
-                    <div class="bullet-list__wraper">
+                  <ul class="bullet-list">
+                    <li class="bullet-list__wraper">                   
                       <div class="bullet-list__li"></div>
                       <div class="bullet-list__text">Нельзя с питомцами</div>
-                    </div>
-                    <div class="bullet-list__wraper">
+                    </li>
+                    <li class="bullet-list__wraper">                   
                       <div class="bullet-list__li"></div>
                       <div class="bullet-list__text">Без вечеринок и мероприятий</div>
-                    </div>
-                    <div class="bullet-list__wraper">
+                    </li>
+                    <li class="bullet-list__wraper">                   
                       <div class="bullet-list__li"></div>
                       <div class="bullet-list__text">Время прибытия — после 13:00, а выезд до 12:00</div>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
             </section>
           </div>
         </div>
@@ -628,10 +637,10 @@
       <div class="form-elements__separator_margin-40"></div>
       <div class="form-elements__main-wrapper">
         <div class="form-elements__main">
-          <section class="form-elements__content-left form-elements__content-left_margin-left-1">
-                <div class="icon-text-list">
+          <section class="form-elements__content-left">
+                <figure class="icon-text-list">
                   <div class="icon-text-list__wraper">
-                    <div class="icon-text-list__icon"><i class="material-icons material-icons_font-size-48">insert_emoticon</i>
+                    <div class="icon-text-list__icon"><i class="material-icons js-material-icons material-icons_font-size-48">insert_emoticon</i>
                     </div>
                     <div class="icon-text-list__content">
                       <div class="icon-text-list__header">Комфорт</div>
@@ -639,17 +648,17 @@
                     </div>
                   </div>
                   <div class="icon-text-list__wraper">
-                    <div class="icon-text-list__icon"><i class="material-icons material-icons_font-size-48">location_city</i>
+                    <div class="icon-text-list__icon"><i class="material-icons js-material-icons material-icons_font-size-48">location_city</i>
                     </div>
                     <div class="icon-text-list__content">
                       <div class="icon-text-list__header">Удобство</div>
                       <div class="icon-text-list__text">Окно в каждой из спален</div>
                     </div>
                   </div>
-                </div>
+                </figure>
           </section>
           <section class="form-elements__content-right_big">
-                <div class="comment">
+                <article class="comment">
                   <div class="comment__head">
                     <div class="comment__avatar"><img class="comment__avatar" src="./img/avatar1.png" alt="Мурад Сарафанов"></div>
                     <div class="comment__avatar-text body">
@@ -659,18 +668,18 @@
                   </div>
                   <div class="comment__body">
                     <div class="comment__like">
-                          <div class="like-button">
-                            <div class="like-button__icon"><i class="material-icons material-icons_font-size-10">favorite_border</i>
+                          <figure class="like-button js-like-button">
+                            <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite_border</i>
                             </div>
                             <div class="like-button__number">11</div>
-                          </div>
+                          </figure>
                     </div>
                     <div class="comment__content body">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей</div>
                   </div>
-                </div>
+                </article>
           </section>
         </div>
       </div>
-    </div>
+    </main>
   <script type="text/javascript" src="https://wisestkaa.github.io/FSD-front-2nd-tsk/main.js"></script></body>
 </html>
