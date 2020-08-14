@@ -3,16 +3,16 @@ include ../button/button.pug
 
 
 mixin sign-in-form({ _actionLink="/moke", _header }={})
-    .sign-in-form
-        form(action=_actionLink).sign-in-form__form
-            h1.sign-in-form__header.h1=_header
-            .sign-in-form__email                
-                +text-field({_placeholder:"Email", _id: "signInEmail"})
-            .sign-in-form__password
-                +text-field({_placeholder:"Пароль", _type: "password", _id: "signInPassword"})
-            .sign-in-form__button                
-                +button({_type: "rich", _name: "singIn", _value: "войти"})
-            .sign-in-form__sign-up
-                .sign-in-form__sign-up-text.body="Нет аккаунта на Toxin?"
-                .sign-in-form__sign-up-button
-                    +button({_type: "bordered", _name: "singIn", _value: "создать", _actionLink: "/moke"})
+  .sign-in-form
+    form(action=_actionLink).sign-in-form__form
+      h1.sign-in-form__header.h1=_header
+      .sign-in-form__email                
+        +text-field({_placeholder:"Email", _id: "signInEmail"})
+      .sign-in-form__password
+        +text-field({_placeholder:"Пароль", _type: "password", _id: "signInPassword"})
+      .sign-in-form__button                
+        +button({_type: "rich", _name: "singIn", _value: "войти"})
+      .sign-in-form__sign-up
+        .sign-in-form__sign-up-text.body="Нет аккаунта на Toxin?"
+        .sign-in-form__sign-up-button
+          +button({_type: "bordered", _name: "singIn", _value: "создать", _actionLink: "/moke"})

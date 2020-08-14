@@ -5,32 +5,32 @@ include ../button/button.pug
 include ../toggle/toggle.pug
 
 mixin sign-up({_header, _actionLink="/moke"}={})
-    .sign-up
-        h1.sign-up__header.h1=_header
-        form(action=_actionLink).sign-up__form
-            .sign-up__name
-                +text-field({_placeholder:"Имя", _id: "signUpName"})
-            .sign-up__surname
-                +text-field({_placeholder:"Фамилия", _id: "signUpSurname"})
-            .sign-up__sex
-                +radio-buttons({_name: "radioButtons", _radioButtons:[
-                    {_text: "Мужчина", _value: "men", _isChecked: true},
-                    {_text: "Женщина", _value: "women", _isChecked: false},
-                ]})
-            .sign-up__birthday
-                +label({_text: "дата рождения", _marginBottom: "5"})
-                +text-field({_isMasked: true, _id: "birthday"})
-            .sign-up__authorization-data
-                +label({_text: "данные для входа в сервис", _marginBottom: "5"})
-                .sign-up__e-mail
-                    +text-field({_placeholder:"Email", _id: "singEmail"})
-                .sign-up__password
-                    +text-field({_placeholder:"Пароль", _type: "password", _id: "signPassword"})
-            .sign-up__mailing
-                +toggle({_name: "mailing", _text: "Получать спецпредложения", _isChecked: false})
-            .sign-up__go-to-payment
-                +button({_type: "rich", _name: "goToPayment", _value: "перейти к оплате"})
-            .sign-up__go-to-sign-in
-                .sign-up__sign-in-text.body="Уже есть аккаунт на Toxin"
-                .sign-up__sign-in-button
-                    +button({_type: "bordered", _name: "singIn", _value: "войти", _actionLink: "/moke"})
+  .sign-up
+    h1.sign-up__header.h1=_header
+    form(action=_actionLink).sign-up__form
+      .sign-up__name
+        +text-field({_placeholder:"Имя", _id: "signUpName"})
+      .sign-up__surname
+        +text-field({_placeholder:"Фамилия", _id: "signUpSurname"})
+      .sign-up__sex
+        +radio-buttons({_name: "radioButtons", _radioButtons:[
+          {_text: "Мужчина", _value: "men", _isChecked: true},
+          {_text: "Женщина", _value: "women", _isChecked: false},
+        ]})
+      .sign-up__birthday
+        +label({_text: "дата рождения", _marginBottom: "5"})
+        +text-field({_isMasked: true, _id: "birthday"})
+      .sign-up__authorization-data
+        +label({_text: "данные для входа в сервис", _marginBottom: "5"})
+        .sign-up__e-mail
+          +text-field({_placeholder:"Email", _id: "singEmail"})
+        .sign-up__password
+          +text-field({_placeholder:"Пароль", _type: "password", _id: "signPassword"})
+      .sign-up__mailing
+        +toggle({_name: "mailing", _text: "Получать спецпредложения", _isChecked: false})
+      .sign-up__go-to-payment
+        +button({_type: "rich", _name: "goToPayment", _value: "перейти к оплате"})
+      .sign-up__go-to-sign-in
+        .sign-up__sign-in-text.body="Уже есть аккаунт на Toxin"
+        .sign-up__sign-in-button
+          +button({_type: "bordered", _name: "singIn", _value: "войти", _actionLink: "/moke"})

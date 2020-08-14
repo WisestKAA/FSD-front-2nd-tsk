@@ -1,88 +1,93 @@
 extends ../template
 
 block variables
-    - var _bgcolor="#FFFFFF"
-    - let title="Room details"
+  - var _bgcolor="#FFFFFF"
+  - let title="Room details"
 
 block template
-    include ../../../common.blocks/icon-text-list/icon-text-list.pug
-    include ../../../common.blocks/comment/comment.pug
-    include ../../../common.blocks/bullet-list/bullet-list.pug
-    include ../../../common.blocks/room-price/room-price.pug 
-    include ../../../common.blocks/donut-chart/donut-chart.pug
+  include ../../../common.blocks/icon-text-list/icon-text-list.pug
+  include ../../../common.blocks/comment/comment.pug
+  include ../../../common.blocks/bullet-list/bullet-list.pug
+  include ../../../common.blocks/room-price/room-price.pug 
+  include ../../../common.blocks/donut-chart/donut-chart.pug
 
-    main.room-details
-        figure.room-details__wrapper-pic
-            .room-details__pic-main
-                img(src="./img/mainpic.png" alt="room view").room-details__pic-main-img
-                .room-details__pic-right
-                    img(src="./img/rtop.png" alt="room view").room-details__pic-right-img
-                    img(src="./img/rbot.png" alt="room view").room-details__pic-right-img
-        .room-details__wrapper-main
-            .room-details__main
-                .room-details__datails
-                    .room-details__wrapper-info
-                        article.room-details__info
-                            h2.room-details__info-header.h2="Сведения о номере"
-                            +icon-text-list({_items: [
-                                {_icon: "insert_emoticon", _header: "Комфорт", _content: "Шумопоглощающие стены"},
-                                {_icon: "location_city", _header: "Удобство", _content: "Окно в каждой из спален"},
-                                {_icon: "whatshot", _header: "Уют", _content: "Номер оснащён камином"},
-                            ],
-                            _isLustHaveBorder: false,
-                            })
-                        article.room-details__feeling
-                            h2.room-details__feeling-header.h2="Впечатления от номера"
-                            .room-details__wrapper-feeling
-                                .room-details__feeling-chart
-                                    +donut-chart()
-                                .room-details__feeling-descriptions  
-                                    +bullet-list({_isColored: true,
-                                    _list:[
-                                        {text: "Великолепно", color: "orange"},
-                                        {text: "Хорошо", color: "green"},
-                                        {text: "Удовлетворительно", color: "purple"},
-                                        {text: "Разочарован", color: "dark"},
-                                    ]})
-                    article.room-details__wrapper-comments
-                        .room-details__wrapper-comments-header
-                            h2.room-details__comments-header.h2="Отзывы посетителей номера"
-                            .room-details__comments-total="2 отзыва"
-                        .room-details__comments
-                            +comment({
-                                _avatarSrc: "./img/avatar1.png",
-                                _avatarName: "Мурад Сарафанов", 
-                                _avatarDate: "5 дней назад", 
-                                _likeNumber: 12,
-                                _isLiked: true, 
-                                _text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"
-                            })
-                        .room-details__comments
-                            +comment({
-                                _avatarSrc: "./img/avatar2.png",
-                                _avatarName: "Патрисия Стёклышкова", 
-                                _avatarDate: "Неделю назад", 
-                                _likeNumber: 2, 
-                                _text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
-                            })
-                    .room-details__wrapper-rulles
-                        article.room-details__rulles
-                            h2.room-details__rulles-header.h2="Правила"
-                            +bullet-list({_list:[
-                                "Нельзя с питомцами",
-                                "Без вечеринок и мероприятий",
-                                "Время прибытия — после 13:00, а выезд до 12:00",
-                            ]})
-                        article.room-details__cancel
-                            h2.room-details__cancel-header.h2="Отмена"
-                            .room-details__cancel-text.body="Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
-                .room-details__price
-                    +room-price({_number: "888", 
-                        _isLuxe: true,
-                        _pricePerDay: "9 990", 
-                        _servicePrice: "2179", 
-                        _discountForService: "2179",
-                        _serviceInfo: "", 
-                        _addServicePrice: "300", 
-                        _addServiceInfo: ""
-                    })
+  main.room-details
+    figure.room-details__wrapper-pic
+      .room-details__pic-main
+        img(src="./img/mainpic.png" alt="room view").room-details__pic-main-img
+        .room-details__pic-right
+          img(src="./img/rtop.png" alt="room view").room-details__pic-right-img
+          img(src="./img/rbot.png" alt="room view").room-details__pic-right-img
+    .room-details__wrapper-main
+      .room-details__main
+        .room-details__datails
+            .room-details__wrapper-info
+              article.room-details__info
+                h2.room-details__info-header.h2="Сведения о номере"
+                +icon-text-list({
+                  _items: [
+                    {_icon: "insert_emoticon", _header: "Комфорт", _content: "Шумопоглощающие стены"},
+                    {_icon: "location_city", _header: "Удобство", _content: "Окно в каждой из спален"},
+                    {_icon: "whatshot", _header: "Уют", _content: "Номер оснащён камином"},
+                  ],
+                  _isLustHaveBorder: false,
+                })
+              article.room-details__feeling
+                h2.room-details__feeling-header.h2="Впечатления от номера"
+                .room-details__wrapper-feeling
+                  .room-details__feeling-chart
+                    +donut-chart()
+                  .room-details__feeling-descriptions  
+                    +bullet-list({
+                      _isColored: true,
+                      _list:[
+                        {text: "Великолепно", color: "orange"},
+                        {text: "Хорошо", color: "green"},
+                        {text: "Удовлетворительно", color: "purple"},
+                        {text: "Разочарован", color: "dark"},
+                    ]})
+            article.room-details__wrapper-comments
+              .room-details__wrapper-comments-header
+                h2.room-details__comments-header.h2="Отзывы посетителей номера"
+                .room-details__comments-total="2 отзыва"
+              .room-details__comments
+                +comment({
+                    _avatarSrc: "./img/avatar1.png",
+                    _avatarName: "Мурад Сарафанов", 
+                    _avatarDate: "5 дней назад", 
+                    _likeNumber: 12,
+                    _isLiked: true, 
+                    _text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"
+                })
+              .room-details__comments
+                +comment({
+                  _avatarSrc: "./img/avatar2.png",
+                  _avatarName: "Патрисия Стёклышкова", 
+                  _avatarDate: "Неделю назад", 
+                  _likeNumber: 2, 
+                  _text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+                })
+            .room-details__wrapper-rulles
+              article.room-details__rulles
+                h2.room-details__rulles-header.h2="Правила"
+                +bullet-list({
+                  _list:[
+                    "Нельзя с питомцами",
+                    "Без вечеринок и мероприятий",
+                    "Время прибытия — после 13:00, а выезд до 12:00",
+                  ],
+                })
+              article.room-details__cancel
+                h2.room-details__cancel-header.h2="Отмена"
+                .room-details__cancel-text.body="Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
+        .room-details__price
+          +room-price({
+            _number: "888", 
+            _isLuxe: true,
+            _pricePerDay: "9 990", 
+            _servicePrice: "2179", 
+            _discountForService: "2179",
+            _serviceInfo: "", 
+            _addServicePrice: "300", 
+            _addServiceInfo: ""
+          })

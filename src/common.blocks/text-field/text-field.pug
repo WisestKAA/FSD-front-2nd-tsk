@@ -1,18 +1,18 @@
 mixin text-field({_placeholder, _id, _isMasked = false, _isPaddingRightMode = false, _text, _type="text"}={})
 
-    - var maskedMod = "";
-    if _isMasked  
-        - maskedMod = " text-field_masked"
-        - _placeholder = "ДД.ММ.ГГГГ"
-    
-    - var addPadding = "";
-    if _isPaddingRightMode
-        - addPadding = " text-field_addPaddingRight"    
-    
-    input.js-text-field(
-        type=_type 
-        placeholder=_placeholder 
-        id=_id 
-        class=`text-field${maskedMod}${addPadding}`
-        value=_text
-    )
+  - var maskedMod = "";
+  if _isMasked  
+    - maskedMod = " text-field_masked"
+    - _placeholder = "ДД.ММ.ГГГГ"
+  
+  - var addPadding = "";
+  if _isPaddingRightMode
+    - addPadding = " text-field_addPaddingRight"    
+  
+  input.js-text-field(
+    type=_type 
+    placeholder=_placeholder 
+    id=_id 
+    class=`text-field${maskedMod}${addPadding}`
+    value=_text
+  )

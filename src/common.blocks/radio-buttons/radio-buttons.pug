@@ -1,9 +1,9 @@
 
 mixin radio-buttons({_name, _radioButtons=[]}={})
-    section.radio-buttons        
-        each rb in _radioButtons
-            label.radio-buttons__label
-                - const {_text, _value, _isChecked=false} = rb
-                input(type="radio", name=_name, value=_value, checked=_isChecked).radio-buttons__input
-                .radio-buttons__text
-                    .radio-buttons__content=_text
+  section.radio-buttons        
+    each rb in _radioButtons
+      label.radio-buttons__label
+        - const {_text, _value, _isChecked=false} = rb
+        input(type="radio", name=_name, value=_value, checked=_isChecked).radio-buttons__input
+        .radio-buttons__text
+          .radio-buttons__content=_text
