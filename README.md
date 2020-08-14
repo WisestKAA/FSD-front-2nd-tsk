@@ -1,16 +1,35 @@
 # FSD-front-2nd-tsk
 ### Выполнено для Fullstack Development Frontend 2nd task
 ---
+## Установка
+
+Для установки и развертывания проекта необходимо установить [Node.js](https://nodejs.org/).
+
+1. Загрузите исходные файлы удобнгым способом:
+
+  * [Скачайте архив](https://github.com/WisestKAA/FSD-front-2nd-tsk/archive/master.zip) и распакуйте его в удобном месте
+  * Колинруйте репазиторий с помощью git:
+  > $ git clone https://github.com/WisestKAA/FSD-front-2nd-tsk.git
+ 
+ 2. Установите необходимые node_module's:
+  > npm i
+
 ## Развертывание
 
-Установка
->npm i
+Сборка проекта
+>npm run webpack
 
 Запуск сервера webpack
 >npm start
 
 Собрать проект для production
 >npm run build
+
+Загрузить сборку на GitHub Pages
+>npm run deploy
+
+Проверить проект eslint'ом
+>npm run eslint
 ---
 ## Использованные библиотеки
 [jQuery](https://github.com/jquery/jquery)
@@ -29,7 +48,7 @@
 [Form Elements](https://wisestkaa.github.io/FSD-front-2nd-tsk/form-elements.html)
 
 [Cards](https://wisestkaa.github.io/FSD-front-2nd-tsk/cards.html)
-
+  
 [Headers and Footers](https://wisestkaa.github.io/FSD-front-2nd-tsk/headers-and-footers.html)
 
 ## Website pages
