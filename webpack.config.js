@@ -43,7 +43,7 @@ module.exports = (env, options) => {
           }
         },
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.(sa|sc|c)ss$/,
           use: [
             {
               loader: MiniCssExtractPlugin.loader, 
@@ -51,9 +51,10 @@ module.exports = (env, options) => {
                   publicPath: './out/',
               }
             },
-            'css-loader', 
-            'sass-loader'
-          ]                
+            { loader: 'css-loader', options: { sourceMap: true } },
+            { loader: 'postcss-loader', options: { sourceMap: true } },
+            { loader: 'sass-loader', options: { sourceMap: true } },
+          ],            
         },
         {
           test: /\.(ttf|eot|woff|svg|woff2)$/,
