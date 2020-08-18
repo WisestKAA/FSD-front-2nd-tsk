@@ -1,3 +1,9 @@
+@import '../../../common.blocks/room-filter/room-filter.scss';
+@import '../../../common.blocks/room-price/room-price.scss';
+@import '../../../common.blocks/sign-in-form/sign-in-form.scss';
+@import '../../../common.blocks/sign-up/sign-up.scss';
+@import '../../../common.blocks/room-preview/room-preview.scss';
+
 .cards {
   &__main-wrapper {
     display: flex;

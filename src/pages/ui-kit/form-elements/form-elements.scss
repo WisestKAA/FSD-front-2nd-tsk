@@ -1,3 +1,22 @@
+@import '../../../common.blocks/label/label.scss';
+@import '../../../common.blocks/text-field/text-field.scss';
+@import '../../../common.blocks/dropdown/dropdown.scss';
+@import '../../../common.blocks/date-dropdown/date-dropdown.scss';
+@import '../../../common.blocks/subscription-text-field/subscription-text-field.scss';
+@import '../../../common.blocks/checkbox-button/checkbox-button.scss';
+@import '../../../common.blocks/radio-buttons/radio-buttons.scss';
+@import '../../../common.blocks/toggle/toggle.scss';
+@import '../../../common.blocks/like-button/like-button.scss';
+@import '../../../common.blocks/rate-button/rate-button.scss';
+@import '../../../common.blocks/range-slider/range-slider.scss';
+@import '../../../common.blocks/button/button.scss';
+@import '../../../common.blocks/pagination/pagination.scss';
+@import '../../../common.blocks/dropdown/dropdown.scss';
+@import '../../../common.blocks/expandable-checkbox-list/expandable-checkbox-list.scss';
+@import '../../../common.blocks/bullet-list/bullet-list.scss';
+@import '../../../common.blocks/icon-text-list/icon-text-list.scss';
+@import '../../../common.blocks/comment/comment.scss';
+
 .form-elements {
   margin-top: 56px;
 
