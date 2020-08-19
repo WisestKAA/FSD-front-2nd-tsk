@@ -1,4 +1,3 @@
-
 import 'owl.carousel/dist/owl.carousel';
 
 class Carusel {
@@ -31,3 +30,5 @@ $(document).ready(() => {
     new Carusel(val);
   }));
 });
+
+export default Carusel;

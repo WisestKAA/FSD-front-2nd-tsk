@@ -1,7 +1,18 @@
+@import '../../../scss/colors.scss';
+@import '../../../scss/main.scss';
+
+@import '../../../fonts/montserrat/montserrat.css';
+@import '../../../fonts/quicksand/quicksand.css';
+@import '../../../fonts/materialicons/material-icons.css';
+@import '../../../fonts/opensans/OpenSans.css';
+
+@import '../website-pages-template.scss';
+
 @import '../../../common.blocks/donut-chart/donut-chart.scss';
 @import '../../../common.blocks/bullet-list/bullet-list.scss';
 @import '../../../common.blocks/comment/comment.scss';
 @import '../../../common.blocks/room-price/room-price.scss';
+@import '../../../common.blocks/icon-text-list/icon-text-list.scss';
 
 .room-details {
   justify-content: center;

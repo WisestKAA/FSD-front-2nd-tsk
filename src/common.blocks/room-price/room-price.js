@@ -1,3 +1,6 @@
+import '../date-dropdown/date-dropdown';
+import '../dropdown/dropdown';
+
 class RoomPrice {
   constructor (value) {
     this.roomPrice = value;
@@ -80,3 +83,5 @@ $(document).ready(() => {
     new RoomPrice(val);
   }));
 });
+
+export default RoomPrice;

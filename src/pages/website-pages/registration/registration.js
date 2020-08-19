@@ -1,0 +1,1 @@
+import '../../../common.blocks/sign-up/sign-up';

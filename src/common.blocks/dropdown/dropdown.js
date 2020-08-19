@@ -197,3 +197,5 @@ $(document).ready(() => {
     }
   }));
 });
+
+export default DropDown;

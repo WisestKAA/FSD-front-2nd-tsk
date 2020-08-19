@@ -1,5 +1,14 @@
+@import '../../../scss/colors.scss';
+@import '../../../scss/main.scss';
+@import '../ui-kit-template.scss';
+@import '../../../fonts/montserrat/montserrat.css';
+@import '../../../fonts/quicksand/quicksand.css';
+@import '../../../fonts/materialicons/material-icons.css';
+@import '../../../fonts/opensans/OpenSans.css';
+
 @import '../../../common.blocks/colors/colors.scss';
 @import '../../../common.blocks/types/types.scss';
+
 
 .colors-and-type {
   &__colors {

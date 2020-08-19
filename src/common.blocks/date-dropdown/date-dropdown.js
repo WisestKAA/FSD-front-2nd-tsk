@@ -121,3 +121,5 @@ $(document).ready(() => {
     new DateDropdown(val);
   }));
 });
+
+export default DateDropdown;

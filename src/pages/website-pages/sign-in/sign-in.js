@@ -1,0 +1,1 @@
+import '../../../common.blocks/sign-in-form/sign-in-form';

@@ -1,0 +1,1 @@
+import '../../../common.blocks/subscription-text-field/subscription-text-field';
