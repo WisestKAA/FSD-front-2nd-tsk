@@ -4,9 +4,9 @@
   "description": "",
   "main": "",
   "scripts": {
-    "webpack": "webpack -w --mode development",
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
+    "webpack": "webpack -w --config ./configs/webpack.dev.js",
+    "start": "webpack-dev-server --config ./configs/webpack.dev.js",
+    "build": "webpack --config ./configs/webpack.prod.js",
     "deploy": "gh-pages -d out",
     "eslint": "eslint ./src/**/*.js --fix"
   },
@@ -37,7 +37,8 @@
     "style-loader": "^1.2.1",
     "webpack": "4.41.5",
     "webpack-cli": "3.3.10",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.2"
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
