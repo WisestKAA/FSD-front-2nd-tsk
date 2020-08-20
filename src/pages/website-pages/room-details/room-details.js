@@ -1,3 +1,3 @@
-import '../../../common.blocks/comment/comment';
-import '../../../common.blocks/room-price/room-price';
-import '../../../common.blocks/donut-chart/donut-chart';
+import '../../../blocks/comment/comment';
+import '../../../blocks/room-price/room-price';
+import '../../../blocks/donut-chart/donut-chart';

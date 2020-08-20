@@ -51,7 +51,7 @@ module.exports = {
       },
       {
         test: /\.(svg|png|ico|xml|json|webmanifest)$/,
-        exclude: [/common.blocks/, /img/, /node_modules/, /pages/, /fonts/],
+        exclude: [/blocks/, /img/, /node_modules/, /pages/, /fonts/],
         use: [{
           loader: 'file-loader',
           options: {

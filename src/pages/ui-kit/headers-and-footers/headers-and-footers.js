@@ -1,1 +1,1 @@
-import '../../../common.blocks/subscription-text-field/subscription-text-field';
+import '../../../blocks/subscription-text-field/subscription-text-field';

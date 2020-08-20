@@ -1,1 +1,1 @@
-import '../../../common.blocks/sign-in-form/sign-in-form';
+import '../../../blocks/sign-in-form/sign-in-form';
