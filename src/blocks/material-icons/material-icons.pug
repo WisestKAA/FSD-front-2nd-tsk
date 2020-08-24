@@ -1,7 +1,7 @@
 
-mixin material-icons ({_type, _fontSize = 24} = {})
-  - var fontSize = ""
+mixin material-icons ({ type, fontSize = 24} = {})
+  - var fontSizeStyle = ''
   
-  if(_fontSize != 24)
-    - fontSize = "material-icons_font-size-" + _fontSize  
-  i.material-icons.js-material-icons(class = fontSize)=_type
+  if (fontSize !== 24)
+    - fontSizeStyle = "material-icons_font-size-" + fontSize  
+  i.material-icons.js-material-icons(class=fontSizeStyle)=type

@@ -1,8 +1,8 @@
 extends ../ui-kit-template
 
 block variables
-  - var _bgcolor="#F4F4F6"
-  - let title="Headers and footers"
+  - var bgcolor = '#F4F4F6'
+  - let title = 'Headers and footers'
 
 block template
   include ../../../blocks/header/header.pug
@@ -11,63 +11,87 @@ block template
 
   .headers-and-footers
     .headers-and-footers__header
-      +header({ _navOptions:[
-        {_text: "Home", _link: "/", _isCurrent: true, _sublinks: ""},
-        {_text: "About Us", _link: "/about-us", _isCurrent: false, _sublinks: ""},
-        {_text: "Services", _link: "/services", _isCurrent: false, _sublinks: [
-          {_textLink: "Service1", _link: "/Service1"},
-          {_textLink: "Service2", _link: "/Service2"},
-          {_textLink: "Service3", _link: "/Service3"},
-        ]},
-        {_text: "Careers", _link: "/careers", _isCurrent: false, _sublinks: ""},
-        {_text: "News", _link: "/news", _isCurrent: false, _sublinks: ""},
-        {_text: "Documentation", _link: "/documentation", _isCurrent: false, _sublinks: ""},
-      ],  
-      _isLogged: false, 
-      _username: "", 
-      _loginButtonText: "Login", 
-      _signupButtonText: "REGISTER"})
+      +header({ 
+        navOptions:[
+          { text: 'Home', link: '/', isCurrent: true, sublinks: '' },
+          { text: 'About Us', link: '/about-us', isCurrent: false, sublinks: '' },
+          {
+            text: 'Services', 
+            link: '/services', 
+            isCurrent: false, 
+            sublinks: [
+              { textLink: 'Service1', link: '/Service1' },
+              { textLink: 'Service2', link: '/Service2' },
+              { textLink: 'Service3', link: '/Service3' },
+          ]},
+          { text: 'Careers', link: '/careers', isCurrent: false, sublinks: '' },
+          { text: 'News', link: '/news', isCurrent: false, sublinks: '' },
+          { text: 'Documentation', link: '/documentation', isCurrent: false, sublinks: '' },
+        ],  
+        isLogged: false, 
+        username: '', 
+        loginButtonText: 'Login', 
+        signupButtonText: 'REGISTER'
+      })
     .headers-and-footers__header
-      +header({ _navOptions:[
-        {_text: "Home", _link: "/", _isCurrent: true, _sublinks: ""},
-        {_text: "About Us", _link: "/about-us", _isCurrent: false, _sublinks: ""},
-        {_text: "Services", _link: "/services", _isCurrent: false, _sublinks: [
-          {_textLink: "Service1", _link: "/Service1"},
-          {_textLink: "Service2", _link: "/Service2"},
-          {_textLink: "Service3", _link: "/Service3"},
-        ]},
-        {_text: "Careers", _link: "/careers", _isCurrent: false, _sublinks: ""},
-        {_text: "News", _link: "/news", _isCurrent: false, _sublinks: ""},
-        {_text: "Documentation", _link: "/documentation", _isCurrent: false, _sublinks: ""},
-      ],  
-      _isLogged: true, 
-      _username: "Cosmin Negoita", 
-      _loginButtonText: "Login", 
-      _signupButtonText: "REGISTER"})
+      +header({ 
+        navOptions:[
+          { text: 'Home', link: '/', isCurrent: true, sublinks: '' },
+          { text: 'About Us', link: '/about-us', isCurrent: false, sublinks: '' },
+          {
+            text: 'Services', 
+            link: '/services', 
+            isCurrent: false, 
+            sublinks: [
+              { textLink: 'Service1', link: '/Service1' },
+              { textLink: 'Service2', link: '/Service2' },
+              { textLink: 'Service3', link: '/Service3' },
+            ]
+          },
+          { text: 'Careers', link: '/careers', isCurrent: false, sublinks: '' },
+          { text: 'News', link: '/news', isCurrent: false, sublinks: '' },
+          { text: 'Documentation', link: '/documentation', isCurrent: false, sublinks: '' },
+        ],  
+        isLogged: true, 
+        username: 'Cosmin Negoita', 
+        loginButtonText: 'Login', 
+        signupButtonText: 'REGISTER'
+      })
     .headers-and-footers__footer-with-copyright
-      +footer-with-copyright({ _descriptionText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.", 
-      _menuItems: [
-        { _header: "Navigation", _options: [
-          { _text: "About Us", _link: "/about-us" },
-          { _text: "News", _link: "/news" },
-          { _text: "Support", _link: "/support" },
-          { _text: "Products", _link: "/products" },
-        ]},
-        { _header: "ABOUT US", _options: [
-          { _text: "Who we are", _link: "/about-us/who-we-are" },
-          { _text: "Our team", _link: "/about-us/our-team" },
-          { _text: "Careers", _link: "/about-us/careers" },
-          { _text: "Investors", _link: "/about-us/investors" },
-        ]},
-        { _header: "Support", _options: [
-          { _text: "Documentation", _link: "/support/documentation" },
-          { _text: "Community", _link: "/support/community" },
-          { _text: "Get in Touch", _link: "/support/get-in-touch" },
-        ]},
-      ],
-      _subscribeHeader: "Subscribe to our newsletter", 
-      _subscribeDescription: "Receive our latest news and promotions in your inbox!", 
-      _sybscribePlaceholder: "Your email address", 
-      _copyrightText: "Copyright © 2018 Toxin UI Kit. All rights reserved.", })
+      +footer-with-copyright({ 
+        descriptionText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.', 
+        menuItems: [
+          { 
+            header: 'Navigation', 
+            options: [
+              { text: 'About Us', link: '/about-us' },
+              { text: 'News', link: '/news' },
+              { text: 'Support', link: '/support' },
+              { text: 'Products', link: '/products' },
+            ]
+          },
+          { 
+            header: 'ABOUT US', 
+            options: [
+              { text: 'Who we are', link: '/about-us/who-we-are' },
+              { text: 'Our team', link: '/about-us/our-team' },
+              { text: 'Careers', link: '/about-us/careers' },
+              { text: 'Investors', link: '/about-us/investors' },
+            ]
+          },
+          { 
+            header: 'Support', 
+            options: [
+              { text: 'Documentation', link: '/support/documentation' },
+              { text: 'Community', link: '/support/community' },
+              { text: 'Get in Touch', link: '/support/get-in-touch' },
+            ]
+          },
+        ],
+        subscribeHeader: 'Subscribe to our newsletter', 
+        subscribeDescription: 'Receive our latest news and promotions in your inbox!', 
+        sybscribePlaceholder: 'Your email address', 
+        copyrightText: 'Copyright © 2018 Toxin UI Kit. All rights reserved.', 
+      })
     .headers-and-footers__footer  
-      +footer({ _descriptionText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis." })  
+      +footer({ descriptionText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.' })  

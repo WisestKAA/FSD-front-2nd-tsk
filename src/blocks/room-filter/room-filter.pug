@@ -3,18 +3,21 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 include ../label/label.pug 
 
-mixin room-filter({ _header, _actionLink="/moke" }={}) 
+mixin room-filter({ header, actionLink = '/moke' }={}) 
   .room-filter
-    h1.room-filter__header.h1=_header
-    form(action=_actionLink).room-filter__form
+    h1.room-filter__header.h1=header
+    form(action=actionLink).room-filter__form
       .room-filter__date
-        +date-dropdown({_isFiltred: false,  _startText: "прибытие", _finishText: "выезд"})
+        +date-dropdown({ isFiltred: false,  startText: 'прибытие', finishText: 'выезд'})
       .room-filter__guests
-        +label({_text: "гости", _marginBottom: "6"})
-        +dropdown({_text: "Сколько гостей", _options: [
-          {_text: "взрослые", _number: 0},
-          {_text: "дети", _number: 0},
-          {_text: "младенцы", _number: 0},
-        ]})
+        +label({ text: 'гости', marginBottom: '6'})
+        +dropdown({ 
+          text: 'Сколько гостей', 
+          options: [
+            { text: 'взрослые', number: 0 },
+            { text: 'дети', number: 0 },
+            { text: 'младенцы', number: 0 },
+          ]
+        })
       .room-filter__search-button
-        +button({_type: "rich", _name: "findRoom", _value: "подобрать номер", _actionLink: _actionLink})
+        +button({ type: 'rich', name: 'findRoom', value: 'подобрать номер', actionLink: actionLink})

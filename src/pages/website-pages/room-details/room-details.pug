@@ -1,8 +1,8 @@
 extends ../website-pages-template
 
 block variables
-  - var _bgcolor="#FFFFFF"
-  - let title="Room details"
+  - var bgcolor='#FFFFFF'
+  - let title='Room details'
 
 block template
   include ../../../blocks/icon-text-list/icon-text-list.pug
@@ -25,12 +25,12 @@ block template
               article.room-details__info
                 h2.room-details__info-header.h2="Сведения о номере"
                 +icon-text-list({
-                  _items: [
-                    {_icon: "insert_emoticon", _header: "Комфорт", _content: "Шумопоглощающие стены"},
-                    {_icon: "location_city", _header: "Удобство", _content: "Окно в каждой из спален"},
-                    {_icon: "whatshot", _header: "Уют", _content: "Номер оснащён камином"},
+                  items: [
+                    { icon: 'insert_emoticon', header: 'Комфорт', content: 'Шумопоглощающие стены' },
+                    { icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален' },
+                    { icon: 'whatshot', header: 'Уют', content: 'Номер оснащён камином' },
                   ],
-                  _isLustHaveBorder: false,
+                  isLustHaveBorder: false,
                 })
               article.room-details__feeling
                 h2.room-details__feeling-header.h2="Впечатления от номера"
@@ -39,12 +39,12 @@ block template
                     +donut-chart()
                   .room-details__feeling-descriptions  
                     +bullet-list({
-                      _isColored: true,
-                      _list:[
-                        {text: "Великолепно", color: "orange"},
-                        {text: "Хорошо", color: "green"},
-                        {text: "Удовлетворительно", color: "purple"},
-                        {text: "Разочарован", color: "dark"},
+                      isColored: true,
+                      list:[
+                        {text: 'Великолепно', color: 'orange'},
+                        {text: 'Хорошо', color: 'green'},
+                        {text: 'Удовлетворительно', color: 'purple'},
+                        {text: 'Разочарован', color: 'dark'},
                     ]})
             article.room-details__wrapper-comments
               .room-details__wrapper-comments-header
@@ -52,29 +52,29 @@ block template
                 .room-details__comments-total="2 отзыва"
               .room-details__comments
                 +comment({
-                    _avatarSrc: "./img/avatar1.png",
-                    _avatarName: "Мурад Сарафанов", 
-                    _avatarDate: "5 дней назад", 
-                    _likeNumber: 12,
-                    _isLiked: true, 
-                    _text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"
+                    avatarSrc: './img/avatar1.png',
+                    avatarName: 'Мурад Сарафанов', 
+                    avatarDate: '5 дней назад', 
+                    likeNumber: 12,
+                    isLiked: true, 
+                    text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей'
                 })
               .room-details__comments
                 +comment({
-                  _avatarSrc: "./img/avatar2.png",
-                  _avatarName: "Патрисия Стёклышкова", 
-                  _avatarDate: "Неделю назад", 
-                  _likeNumber: 2, 
-                  _text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+                  avatarSrc: './img/avatar2.png',
+                  avatarName: 'Патрисия Стёклышкова', 
+                  avatarDate: 'Неделю назад', 
+                  likeNumber: 2, 
+                  text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
                 })
             .room-details__wrapper-rulles
               article.room-details__rulles
                 h2.room-details__rulles-header.h2="Правила"
                 +bullet-list({
-                  _list:[
-                    "Нельзя с питомцами",
-                    "Без вечеринок и мероприятий",
-                    "Время прибытия — после 13:00, а выезд до 12:00",
+                  list:[
+                    'Нельзя с питомцами',
+                    'Без вечеринок и мероприятий',
+                    'Время прибытия — после 13:00, а выезд до 12:00',
                   ],
                 })
               article.room-details__cancel
@@ -82,12 +82,12 @@ block template
                 .room-details__cancel-text.body="Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
         .room-details__price
           +room-price({
-            _number: "888", 
-            _isLuxe: true,
-            _pricePerDay: "9 990", 
-            _servicePrice: "2179", 
-            _discountForService: "2179",
-            _serviceInfo: "", 
-            _addServicePrice: "300", 
-            _addServiceInfo: ""
+            number: '888', 
+            isLuxe: true,
+            pricePerDay: '9 990', 
+            servicePrice: '2179', 
+            discountForService: '2179',
+            serviceInfo: '', 
+            addServicePrice: '300', 
+            addServiceInfo: ''
           })

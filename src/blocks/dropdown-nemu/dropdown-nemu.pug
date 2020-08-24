@@ -1,11 +1,11 @@
 include ../material-icons/material-icons.pug
 
-mixin dropdown-nemu({ _text, _navOptions=[] }) 
+mixin dropdown-nemu({ text, navOptions=[] }) 
   .dropdown-nemu
-    .dropdown-nemu__text=_text
+    .dropdown-nemu__text=text
     .dropdown-nemu__arrow
-      +material-icons({_type: "keyboard_arrow_down"})
+      +material-icons({type: 'keyboard_arrow_down'})
     .dropdown-nemu__links            
-      each option in _navOptions
-        - const {_textLink, _link} = option
-        a(href=_link).dropdown-nemu__link=_textLink
+      each option in navOptions
+        - const {textLink, link} = option
+        a(href=link).dropdown-nemu__link=textLink

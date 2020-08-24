@@ -1,11 +1,15 @@
 include ../logo-site/logo-site.pug
 include ../social-icons/social-icons.pug
 
-mixin footer({ _descriptionText })
+mixin footer({ descriptionText })
   footer.footer
     .footer__wrapper
       figure.footer__icon
         +logo-site()
-      .footer__description.body=_descriptionText
+      .footer__description.body=descriptionText
       .footer__social
-        +social-icons({ _twitter: "https://twitter.com/",  _facebook: "https://www.facebook.com/", _instagram: "https://www.instagram.com/" })
+        +social-icons({ 
+          twitter: 'https://twitter.com/',  
+          facebook: 'https://www.facebook.com/', 
+          instagram: 'https://www.instagram.com/',
+        })

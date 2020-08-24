@@ -1,7 +1,7 @@
 
-mixin toggle({_name, _text, _isChecked=false}={})
+mixin toggle({ name, text, isChecked=false }={})
   .toggle
     label.toggle__label
-      input(type="checkbox", name=_name, checked=_isChecked).toggle__input
+      input(type="checkbox", name=name, checked=isChecked).toggle__input
       .toggle__text
-        .toggle__content=_text
+        .toggle__content=text

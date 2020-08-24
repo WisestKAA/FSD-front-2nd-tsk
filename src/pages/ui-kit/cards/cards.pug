@@ -15,48 +15,49 @@ block template
     .cards__main-wrapper
       main.cards__main
         .cards__content-left
-          +room-filter({_header: "Найдём номера под ваши пожелания"})
+          +room-filter({ header: 'Найдём номера под ваши пожелания' })
           .cards__separator
-          +sign-up({_header: "Регистрация аккаунта",})
+          +sign-up({ header: 'Регистрация аккаунта' })
         .cards__content-center
-          +room-price({_number: "888", 
-            _isLuxe: true,
-            _pricePerDay: "9 990", 
-            _servicePrice: "2179", 
-            _discountForService: "2179",
-            _serviceInfo: "", 
-            _addServicePrice: "300", 
-            _addServiceInfo: ""
+          +room-price({
+            number: '888', 
+            isLuxe: true,
+            pricePerDay: '9 990', 
+            servicePrice: '2179', 
+            discountForService: '2179',
+            serviceInfo: '', 
+            addServicePrice: '300', 
+            addServiceInfo: ''
           })
           .cards__separator
-          +sign-in-form({_header: "Войти"})
+          +sign-in-form({ header: 'Войти' })
         .cards__content-right
           .cards__calendar-moke
           .cards__separator
           +room-preview({
-            _imgLinks:[
-              {src:"./img/room888.png", alt:"room #888"},
-              {src:"./img/room888.png", alt:"room #888"},
-              {src:"./img/room888.png", alt:"room #888"},
-              {src:"./img/room888.png", alt:"room #888"}
+            imgLinks:[
+              {src:'./img/room888.png', alt:'room #888'},
+              {src:'./img/room888.png', alt:'room #888'},
+              {src:'./img/room888.png', alt:'room #888'},
+              {src:'./img/room888.png', alt:'room #888'}
             ], 
-            _number: 888, 
-            _isLuxe: true, 
-            _price: "9 990", 
-            _rate: 5, 
-            _comments: 145
+            number: 888, 
+            isLuxe: true, 
+            price: '9 990', 
+            rate: 5, 
+            comments: 145
           })
           .cards__separator_margin-bottom-38
           +room-preview({
-            _imgLinks:[
-              {src:"./img/room840.png", alt:"room #840"},
-              {src:"./img/room840.png", alt:"room #840"},
-              {src:"./img/room840.png", alt:"room #840"},
-              {src:"./img/room840.png", alt:"room #840"}
+            imgLinks:[
+              {src:'./img/room840.png', alt:'room #840'},
+              {src:'./img/room840.png', alt:'room #840'},
+              {src:'./img/room840.png', alt:'room #840'},
+              {src:'./img/room840.png', alt:'room #840'}
               ], 
-            _number: 840, 
-            _isLuxe: true, 
-            _price: "9 990", 
-            _rate: 4, 
-            _comments: 65
+            number: 840, 
+            isLuxe: true, 
+            price: '9 990', 
+            rate: 4, 
+            comments: 65
           })

@@ -2,30 +2,30 @@ include ../logo-site/logo-site.pug
 include ../subscription-text-field/subscription-text-field.pug
 include ../social-icons/social-icons.pug
 
-mixin footer-with-copyright({ _descriptionText, _menuItems=[], _subscribeHeader, _subscribeDescription, _sybscribePlaceholder, _copyrightText} = {})
+mixin footer-with-copyright({ descriptionText, menuItems=[], subscribeHeader, subscribeDescription, sybscribePlaceholder, copyrightText } = {})
   footer.footer-with-copyright
     .footer-with-copyright__wrapper-shadow-top
       .footer-with-copyright__wrapper-main
         .footer-with-copyright__logo-and-description
           figure.footer-with-copyright__logo
             +logo-site()
-          .footer-with-copyright__description.body=_descriptionText
+          .footer-with-copyright__description.body=descriptionText
         .footer-with-copyright__wrapper-right
           .footer-with-copyright__menu                    
-            each item in _menuItems
+            each item in menuItems
               .footer-with-copyright__menu-item
-                - const { _header, _options } = item
-                h3.footer-with-copyright__menu-item-header.h3=_header
-                each option in _options
-                  - const { _text, _link } = option 
-                  a(href=_link).footer-with-copyright__menu-item-option.body=_text
+                - const { header, options } = item
+                h3.footer-with-copyright__menu-item-header.h3=header
+                each option in options
+                  - const { text, link } = option 
+                  a(href=link).footer-with-copyright__menu-item-option.body=text
           .footer-with-copyright__subscribe
-            h3.footer-with-copyright__subscribe-header.h3=_subscribeHeader
-            .footer-with-copyright__subscribe-description.body=_subscribeDescription
+            h3.footer-with-copyright__subscribe-header.h3=subscribeHeader
+            .footer-with-copyright__subscribe-description.body=subscribeDescription
             .footer-with-copyright__subscribe-field
-              +subscription-text-field({ _name: "footerSubscribe", _value: "footerSubscribe", _placeholder: _sybscribePlaceholder })
+              +subscription-text-field({ name: 'footerSubscribe', value: 'footerSubscribe', placeholder: sybscribePlaceholder })
     .footer-with-copyright__wrapper-shadow-bottom
       .footer-with-copyright__wrapper-bottom
-        .footer-with-copyright__copyright.body=_copyrightText
+        .footer-with-copyright__copyright.body=copyrightText
         .footer-with-copyright__social
-          +social-icons({ _twitter: "https://twitter.com/",  _facebook: "https://www.facebook.com/", _instagram: "https://www.instagram.com/" })
+          +social-icons({ twitter: 'https://twitter.com/',  facebook: 'https://www.facebook.com/', instagram: 'https://www.instagram.com/' })

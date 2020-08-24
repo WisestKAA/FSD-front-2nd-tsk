@@ -2,24 +2,24 @@ include ../material-icons/material-icons.pug
 include ../dropdown-option/dropdown-option.pug
 include ../dropdown-option-button/dropdown-option-button.pug
 
-mixin dropdown({ _text, _options=[], _isShort=false, _isDarkArrow=false } = {})
-  - var short=""
-  if _isShort == true
-    - short="dropdown_width-short js-dropdown_width-short"
+mixin dropdown({ text, options=[], isShort=false, isDarkArrow=false } = {})
+  - var short=''
+  if isShort === true
+    - short = 'dropdown_width-short js-dropdown_width-short'
 
-  - var darkArrow = ""
-  if (_isDarkArrow)
-    - darkArrow = "dropdown__arrow_dark"
+  - var darkArrow = ''
+  if (isDarkArrow)
+    - darkArrow = 'dropdown__arrow_dark'
 
   section.dropdown.js-dropdown(class=short)
     .dropdown__wrapper
       .dropdown__arrow(class=darkArrow)
-        +material-icons({_type: "keyboard_arrow_down"})
+        +material-icons({type: 'keyboard_arrow_down'})
       .dropdown__select.js-dropdown__select
-        span.dropdown__text.js-dropdown__text=_text
+        span.dropdown__text.js-dropdown__text=text
       .dropdown__options.js-dropdown__options
-        each option in _options
-          - const {_text, _number} = option
-          +dropdown-option({_text, _number})
-        if(!_isShort)
-          +dropdown-option-button({_drop_text: "очистить", _apply_text: "применить"})
+        each option in options
+          - const {text, number} = option
+          +dropdown-option({text, number})
+        if (!isShort)
+          +dropdown-option-button({ dropText: 'очистить', applyText: 'применить' })

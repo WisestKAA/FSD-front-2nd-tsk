@@ -1,14 +1,14 @@
 include ../like-button/like-button.pug 
 
-mixin comment({ _avatarSrc, _avatarName, _avatarDate, _likeNumber, _isLiked=false, _text }={})
+mixin comment({ avatarSrc, avatarName, avatarDate, likeNumber, isLiked=false, text }={})
   article.comment
     .comment__head
       .comment__avatar
-        img(src= _avatarSrc, alt=_avatarName).comment__avatar
+        img(src=avatarSrc, alt=avatarName).comment__avatar
       .comment__avatar-text.body
-        .comment__avatar-name=_avatarName
-        .comment__avatar-date=_avatarDate
+        .comment__avatar-name=avatarName
+        .comment__avatar-date=avatarDate
     .comment__body
       .comment__like
-        +like-button({_number: _likeNumber, _isClicked: _isLiked})
-      .comment__content.body=_text
+        +like-button({number: likeNumber, isClicked: isLiked})
+      .comment__content.body=text

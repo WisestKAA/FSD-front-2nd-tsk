@@ -3,21 +3,21 @@ include ../logo-site/logo-site.pug
 include ../button/button.pug
 include ../dropdown-nemu/dropdown-nemu.pug
 
-mixin header({ _navOptions=[], _isShortMenu=false,  _isLogged, _username, _loginButtonText, _signupButtonText}={}) 
-  - var unlogged =  ""
-  - var logged = ""
-  - var navlogged = ""
-  if(_isLogged)
-    - unlogged = "header__unlogged_hide"
-    - navlogged = "header__navigation_margin-bottom-1"
+mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButtonText, signupButtonText}={}) 
+  - var unlogged =  ''
+  - var logged = ''
+  - var navlogged = ''
+  if (isLogged)
+    - unlogged = 'header__unlogged_hide'
+    - navlogged = 'header__navigation_margin-bottom-1'
   else
-    - logged = "header__logged_hide"
+    - logged = 'header__logged_hide'
   
-  -var current = "header__navigation-link_font-weight-bold"
+  - var current = 'header__navigation-link_font-weight-bold'
   
-  - var shrtmenu = ""
-  if(_isShortMenu)
-    - var shrtmenu = "header__navigation-link_short"
+  - var shrtmenu = ''
+  if (isShortMenu)
+    - var shrtmenu = 'header__navigation-link_short'
   
   header.header
     .header__wrapper
@@ -25,21 +25,21 @@ mixin header({ _navOptions=[], _isShortMenu=false,  _isLogged, _username, _login
         +logo-site()
       nav.header__navigation-wrapper
         .header__navigation(class=navlogged)                    
-          each navoption in _navOptions
-            - const {_text, _link, _isCurrent, _sublinks} = navoption
-            if (_sublinks)
-              +dropdown-nemu({ _text: _text, _navOptions: _sublinks })
+          each navoption in navOptions
+            - const {text, link, isCurrent, sublinks} = navoption
+            if (sublinks)
+              +dropdown-nemu({ text: text, navOptions: sublinks })
             else
-              if (_isCurrent)
-                a(href=_link, class=`${current} ${shrtmenu}`).header__navigation-link=_text
+              if (isCurrent)
+                a(href=link, class=`${current} ${shrtmenu}`).header__navigation-link=text
               else
-                a(href=_link class=shrtmenu).header__navigation-link=_text
+                a(href=link class=shrtmenu).header__navigation-link=text
         .header__sign
           .header__unlogged(class=unlogged)
             .header__login-button
-              +button({ _type: "short-bordered", _name: "headerLogin", _value: _loginButtonText, _actionLink: "/moke" })
+              +button({ type: 'short-bordered', name: 'headerLogin', value: loginButtonText, actionLink: '/moke' })
             .header__sign-up-button
-              +button({ _type: "short-gradient-background", _name: "headerSignUp", _value: _signupButtonText, _actionLink: "/moke" })
+              +button({ type: 'short-gradient-background', name: 'headerSignUp', value: signupButtonText, actionLink: '/moke' })
           .header__logged(class=logged)
-            .header__username=_username
+            .header__username=username
                 

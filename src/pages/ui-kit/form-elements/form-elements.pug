@@ -1,8 +1,8 @@
 extends ../ui-kit-template
 
 block variables
-  - var _bgcolor="#FFFFFF"
-  - let title="Form elements"
+  - let bgcolor = '#FFFFFF'
+  - let title = 'Form elements'
 
 block template
   include ../../../blocks/text-field/text-field.pug
@@ -28,84 +28,87 @@ block template
       .form-elements__main
           section.form-elements__content-left.form-elements__content-left_margin-left-1
             .form-elements__item_margin-bottom-21
-              +label({_text: "Text Field", _marginBottom: "5", _caption: "Default", _marginCaption: "3"})
-              +text-field({_placeholder: "Email"})
+              +label({ text: 'Text Field', marginBottom: '5', caption: 'Default', marginCaption: '3' })
+              +text-field({_placeholder: 'Email'})
             .form-elements__item_margin-bottom-21
-              +label({_text: "Text Field", _marginBottom: "5", _caption: "Hover / Focus"})
-              +text-field({_placeholder: "Email", _text: "This is pretty awesome"})
+              +label({ text: 'Text Field', marginBottom: '5', caption: 'Hover / Focus' })
+              +text-field({ placeholder: 'Email', text: 'This is pretty awesome' })
             .form-elements__item_margin-bottom-20
-              +label({_text: "Dropdown", _marginBottom: "5", _caption: "Default"})
+              +label({ text: 'Dropdown', marginBottom: '5', caption: 'Default' })
               +dropdown({
-              _text: "Сколько гостей",
-                _options: [
-                  {_text: "взрослые", _number: 0},
-                  {_text: "дети", _number: 0},
-                  {_text: "младенцы", _number: 0},
+                text: 'Сколько гостей',
+                options: [
+                  { text: 'взрослые', number: 0 },
+                  { text: 'дети', number: 0 },
+                  { text: 'младенцы', number: 0 },
                 ],
               })
             .form-elements__item_margin-bottom-41.form-elements__masked-text-field
-              +label({_text: "masked text field", _marginBottom: "5", _caption: "Default", _marginCaption: "3"})
-              +text-field({_isMasked: true})
+              +label({ text: 'masked text field', marginBottom: '5', caption: 'Default', marginCaption: '3' })
+              +text-field({ isMasked: true })
             .form-elements__item_margin-bottom-41
-              +date-dropdown ({ _isFiltred: false, _demoText: "19.08.2019", _startText: "date Dropdown", _finishText: "date Dropdown" })
+              +date-dropdown({ isFiltred: false, demoText: '19.08.2019', startText: 'date Dropdown', finishText: 'date Dropdown' })
             .form-elements__item.form-elements__item_margin-bottom-41
-              +label({_text: "filter date dropdown", _marginBottom: "5"})
-              +date-dropdown ({_isFiltred: true})
+              +label({ text: 'filter date dropdown', marginBottom: '5' })
+              +date-dropdown({ isFiltred: true })
             .form-elements__subscription-text-field
-              +label({_text: "subscription text field", _marginBottom: "5"})
-              +subscription-text-field({_value: "Email"})
+              +label({ text: 'subscription text field', marginBottom: '5' })
+              +subscription-text-field({ value: 'Email' })
                   
           .form-elements__content-right-wrapper
             section.form-elements__content-center
               .form-elements__item_margin-bottom-43
-                +label({_text: "Checkbox Buttons", _marginBottom: "17"})
-                +checkbox-button({_text: "Можно курить", _name: "smoking"})
-                +checkbox-button({_text: "Можно с питомцами", _name: "pets", _isChecked: true})
-                +checkbox-button({_text: "Можно пригласить гостей (до 10 человек)", _name: "guests", _isChecked: true})
+                +label({ text: 'Checkbox Buttons', marginBottom: '17' })
+                +checkbox-button({ text: 'Можно курить', name: 'smoking' })
+                +checkbox-button({ text: 'Можно с питомцами', name: 'pets', isChecked: true })
+                +checkbox-button({ text: 'Можно пригласить гостей (до 10 человек)', name: 'guests', isChecked: true })
               .form-elements__item_margin-bottom-45.form-elements__radio-buttons
-                +label({_text: "Radio Buttons", _marginBottom: "16"})
-                +radio-buttons({_name: "radioButtons", _radioButtons:[
-                    {_text: "Мужчина", _value: "men", _isChecked: true},
-                    {_text: "Женщина", _value: "women", _isChecked: false},
-                ]})
+                +label({ text: 'Radio Buttons', marginBottom: '16' })
+                +radio-buttons({ 
+                  name: 'radioButtons', 
+                  radioButtons:[
+                    { text: 'Мужчина', value: 'men', isChecked: true },
+                    { text: 'Женщина', value: 'women', isChecked: false },
+                  ]
+                })
               .form-elements__item_margin-bottom-45
-                +label({_text: "Toggle", _marginBottom: "15"})
-                +toggle({_name: "togen", _text: "Получать спецпредложения", _isChecked: true})
-                +toggle({_name: "togdis", _text: "Получать спецпредложения", _isChecked: false})
+                +label({ text: 'Toggle', marginBottom: '15' })
+                +toggle({ name: 'togen', text: 'Получать спецпредложения', isChecked: true })
+                +toggle({ name: 'togdis', text: 'Получать спецпредложения', isChecked: false })
               .form-elements__item_margin-bottom-41.form-elements__like-button
-                +label({_text: "like button", _marginBottom: "16"})
+                +label({ text: 'like button', marginBottom: '16' })
                 .form-elements__like-buttons
-                  +like-button({_number: "2", _isClicked: false})
-                  +like-button({_number: "12", _isClicked: true})
+                  +like-button({ number: '2', isClicked: false })
+                  +like-button({ number: '12', isClicked: true })
               .form-elements__item_margin-bottom-40
-                +label({_text: "rate button", _marginBottom: "16"})
+                +label({ text: 'rate button', marginBottom: '16' })
                 .form-elements__rate-buttons
-                  +rate-button({_rate: "4"})
-                  +rate-button({_rate: "5"})
+                  +rate-button({ rate: '4' })
+                  +rate-button({ rate: '5' })
 
               
             section.form-elements__content-right
               .form-elements__item_margin-bottom-40.form-elements__range-slider
                 +range-slider({})
               .form-elements__item_margin-bottom-41
-                +label({_text: "buttons", _marginBottom: "16"})
+                +label({ text: 'buttons', marginBottom: '16' })
                 .form-elements__button-wrapper
-                  +button({_type: "gradient-background", _name: "default", _value: "CLICK ME", _actionLink: "/#moke"})
+                  +button({ type: 'gradient-background', name: 'default', value: 'CLICK ME', actionLink: '/#moke' })
                 .form-elements__button-wrapper.form-elements__button-wrapper_margin-left-0
-                  +button({_type: "bordered", _name: "bordered", _value: "CLICK ME", _actionLink: "/#moke"})
+                  +button({ type: 'bordered', name: 'bordered', value: 'CLICK ME', actionLink: '/#moke' })
                 .form-elements__button-wrapper.form-elements__button-wrapper_margin-bottom-31
-                  +button({_type: "empty", _name: "empty", _value: "CLICK ME", _actionLink: "/#moke"})
+                  +button({ type: 'empty', name: 'empty', value: 'CLICK ME', actionLink: '/#moke'})
                 .form-elements__button-wrapper_margin-left-0
-                  +button({_type: "rich", _name: "default", _value: "перейти к оплате", _actionLink: "/#moke"})
+                  +button({ type: 'rich', name: 'default', value: 'перейти к оплате', actionLink: '/#moke' })
               .form-elements__item_margin-bottom-40.form-elements__item_margin-left-1
-                +label({_text: "pagination", _marginBottom: "16"})
+                +label({ text: 'pagination', marginBottom: '16' })
                 +pagination({
-                  _links : [
-                    {href: "/page1", isActive: true, number: 1,},
-                    {href: "/page2", isActive: false,  number: 2,},
-                    {href: "/page3", isActive: false,  number: 3,},
-                    {href: "", isActive: false, number: 0,},
-                    {href: "/page15", isActive: false,  number: 15,},
+                  links : [
+                    { href: '/page1', isActive: true, number: 1, },
+                    { href: '/page2', isActive: false,  number: 2, },
+                    { href: '/page3', isActive: false,  number: 3, },
+                    { href: '', isActive: false, number: 0, },
+                    { href: '/page15', isActive: false,  number: 15, },
                   ],
                 })
     .form-elements__separator_margin-91
@@ -113,25 +116,25 @@ block template
     .form-elements__main-wrapper
       .form-elements__main
         section.form-elements__content-left
-          +label({_text: "Dropdown", _marginBottom: "5", _caption: "Default", _isShort: true})
+          +label({ text: 'Dropdown', marginBottom: '5', caption: 'Default', isShort: true })
           +dropdown({
-            _text: "",
-            _options: [
-                {_text: "спальни", _number: 0},
-                {_text: "кровати", _number: 0},
-                {_text: "ванные комнаты", _number: 0},
+            text: '',
+            options: [
+                { text: 'спальни', number: 0} ,
+                { text: 'кровати', number: 0 },
+                { text: 'ванные комнаты', number: 0 },
             ],
-            _isShort: true
+            isShort: true
           })
         .form-elements__content-right-wrapper
           section.form-elements__content-center
-            +label({_text: "Dropdown", _marginBottom: "5",})
+            +label({ text: 'Dropdown', marginBottom: '5', })
             +dropdown({
-              _text: "Сколько гостей",
-              _options: [
-                {_text: "взрослые", _number: 0},
-                {_text: "дети", _number: 0},
-                {_text: "младенцы", _number: 0},
+              text: 'Сколько гостей',
+              options: [
+                { text: 'взрослые', number: 0 },
+                { text: 'дети', number: 0 },
+                { text: 'младенцы', number: 0 },
               ],
             })
           section.form-elements__content-right
@@ -142,58 +145,60 @@ block template
           section.form-elements__content-left
             .form-elements__item_margin-bottom-24.form-elements__expandable-checkbox-list.form-elements__item_margin-left-1
               +expandable-checkbox-list({
-                _header: "expandable checkbox list", 
-                _checkboxes :[
-                  {_text: "Завтрак", _isChecked: false},
-                  {_text: "Письменный стол", _isChecked: true},
-                  {_text: "Стул для кормления", _isChecked: true},
-                  {_text: "Кроватка", _isChecked: true},
-                  {_text: "Телевизор", _isChecked: false},
-                  {_text: "Шампунь", _isChecked: false},
-                  {_text: "Телевизор", _isChecked: false},
-                  {_text: "Шампунь", _isChecked: false},
+                header: 'expandable checkbox list', 
+                checkboxes :[
+                  { text: 'Завтрак', isChecked: false },
+                  { text: 'Письменный стол', isChecked: true },
+                  { text: 'Стул для кормления', isChecked: true },
+                  { text: 'Кроватка', isChecked: true },
+                  { text: 'Телевизор', isChecked: false },
+                  { text: 'Шампунь', isChecked: false },
+                  { text: 'Телевизор', isChecked: false },
+                  { text: 'Шампунь', isChecked: false },
                 ],
               })
             .form-elements__expandable-checkbox-list
               +expandable-checkbox-list({
-                _header: "expandable checkbox list", 
-                _checkboxes :[
-                  {_text: "Завтрак", _isChecked: false},
-                  {_text: "Письменный стол", _isChecked: true},
-                  {_text: "Стул для кормления", _isChecked: true},
-                  {_text: "Кроватка", _isChecked: true},
-                  {_text: "Телевизор", _isChecked: false},
-                  {_text: "Шампунь", _isChecked: false},
-                  {_text: "Телевизор", _isChecked: false},
-                  {_text: "Шампунь", _isChecked: false},
+                header: 'expandable checkbox list', 
+                checkboxes :[
+                  { text: 'Завтрак', isChecked: false },
+                  { text: 'Письменный стол', isChecked: true },
+                  { text: 'Стул для кормления', isChecked: true },
+                  { text: 'Кроватка', isChecked: true },
+                  { text: 'Телевизор', isChecked: false} ,
+                  { text: 'Шампунь', isChecked: false },
+                  { text: 'Телевизор', isChecked: false },
+                  { text: 'Шампунь', isChecked: false },
                 ],
-                _isExpanded: true,
+                isExpanded: true,
               })
           .form-elements__content-right-wrapper
             section.form-elements__content-center.form-elements__rich-checkbox-buttons
-              +label({_text: "Rich Checkbox Buttons", _marginBottom: "16"})
-              +checkbox-button({_text: "Ширина коридоров в номере не менее 91 см.", _name: "width", _header: "Широкий коридор"})
-              +checkbox-button({_text: "На 1 этаже вас встретит специалист и проводит до номера.", _name: "help", _header: "Помощник для инвалидов"})
+              +label({ text: 'Rich Checkbox Buttons', marginBottom: '16' })
+              +checkbox-button({ text: 'Ширина коридоров в номере не менее 91 см.', name: 'width', header: 'Широкий коридор' })
+              +checkbox-button({ text: 'На 1 этаже вас встретит специалист и проводит до номера.', name: 'help', header: 'Помощник для инвалидов' })
             section.form-elements__content-right.form-elements__bullet-list
-              +label({_text: "bullet list", _marginBottom: "13"})
-              +bullet-list({_list:[
-                "Нельзя с питомцами",
-                "Без вечеринок и мероприятий",
-                "Время прибытия — после 13:00, а выезд до 12:00",
+              +label({ text: 'bullet list', marginBottom: '13' })
+              +bullet-list({
+                list:[
+                  'Нельзя с питомцами',
+                  'Без вечеринок и мероприятий',
+                  'Время прибытия — после 13:00, а выезд до 12:00',
               ]})
     .form-elements__separator_margin-19
     .form-elements__main-wrapper
       .form-elements__main
           section.form-elements__content-left
-            +icon-text-list({_items: [
-              {_icon: "insert_emoticon", _header: "Комфорт", _content: "Шумопоглощающие стены"},
-              {_icon: "location_city", _header: "Удобство", _content: "Окно в каждой из спален"},
+            +icon-text-list({
+              items: [
+                { icon: 'insert_emoticon', header: 'Комфорт', content: 'Шумопоглощающие стены' },
+                { icon: 'location_city', header: 'Удобство', content: 'Окно в каждой из спален' },
             ]})
           section.form-elements__content-right_big
             +comment({
-              _avatarSrc: "./img/avatar1.png",
-              _avatarName: "Мурад Сарафанов", 
-              _avatarDate: "5 дней назад", 
-              _likeNumber: 11, 
-              _text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"
+              avatarSrc: './img/avatar1.png',
+              avatarName: 'Мурад Сарафанов', 
+              avatarDate: '5 дней назад', 
+              likeNumber: 11, 
+              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей'
             })

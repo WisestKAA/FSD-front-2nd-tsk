@@ -1,16 +1,16 @@
 include ../material-icons/material-icons.pug
 
-mixin icon-text-list ({_items=[], _isLustHaveBorder=true}={})
-  - var lustBorder=""
-  if(!_isLustHaveBorder)
-    - var lustBorder="icon-text-list__wraper_without-lust-border"
+mixin icon-text-list ({ items=[], isLustHaveBorder=true }={})
+  - var lustBorder = ''
+  if (!isLustHaveBorder)
+    - var lustBorder = 'icon-text-list__wraper_without-lust-border'
 
   figure.icon-text-list
-    each item in _items
-      - const {_icon, _header, _content} = item
+    each item in items
+      - const {icon, header, content} = item
       .icon-text-list__wraper(class=lustBorder)
         .icon-text-list__icon
-          +material-icons({_type: _icon, _fontSize: 48})
+          +material-icons({ type: icon, fontSize: 48})
         .icon-text-list__content
-          .icon-text-list__header=_header
-          .icon-text-list__text=_content
+          .icon-text-list__header=header
+          .icon-text-list__text=content

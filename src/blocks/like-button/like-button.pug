@@ -1,14 +1,14 @@
 include ../material-icons/material-icons.pug
 
-mixin like-button({_number, _isClicked=false}={})
-  -var active = ""
-  if _isClicked
-    - active = "like-button_active"
+mixin like-button({ number, isClicked=false }={})
+  - var active = ''
+  if (isClicked)
+    - active = 'like-button_active'
   
   figure.like-button.js-like-button(class=active)
     .like-button__icon
-      if _isClicked    
-        +material-icons({_type: "favorite", _fontSize: 10})
+      if (isClicked)  
+        +material-icons({ type: 'favorite', fontSize: 10 })
       else
-        +material-icons({_type: "favorite_border",  _fontSize: 10})
-    .like-button__number=_number
+        +material-icons({ type: 'favorite_border',  fontSize: 10 })
+    .like-button__number=number
