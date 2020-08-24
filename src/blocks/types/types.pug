@@ -1,5 +1,8 @@
 
-mixin types({_tag, _text, _font, _fontSize, _color, _fontWeight, }={})
-  .types
+mixin types({_tag, _text, _font, _fontSize, _color, _fontWeight, _marginBottom=0}={})
+  - let marginBot = ''
+  if (_marginBottom !== 0)
+    - marginBot = `types__margin-bottom-${_marginBottom}`
+  .types(class = marginBot)
     .types__tag(class=`types__tag_font-size-${_fontSize}`)=_tag
     .types__text(class=`types__text_font-${_font} types__text_font-weight-${_fontWeight} types__text_font-size-${_fontSize} types__text_color-${_color}`)=_text

@@ -1,9 +1,13 @@
+html {  
+  font-size: 14px;
+}
+
 .body {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.7143rem;
   color: $dark75;
 }
 
@@ -11,8 +15,8 @@
   font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.7143rem;
+  line-height: 2.1429rem;
   color: $dark100;
   margin-block-start: unset;
   margin-block-end: unset;
@@ -24,8 +28,8 @@
   font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 19px;
-  line-height: 24px;
+  font-size: 1.3571rem;
+  line-height: 1.7143rem;
   color: $dark100;
   margin-block-start: unset;
   margin-block-end: unset;
@@ -37,8 +41,8 @@
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.8571rem;
+  line-height: 1.0714rem;
   text-transform: uppercase;
   color: $dark100;
   margin-block-start: unset;

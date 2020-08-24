@@ -22,19 +22,19 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 1.8571rem;
 
   &__main {
     display: flex;
     justify-content: center;
     width: 100%;
-    border-bottom: 1px solid $dark25;
+    border-bottom: 0.0714rem solid $dark25;
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 1170px;
+    max-width: 83.5714rem;
     width: 100%;
 
     @media (max-width: 560px) {
@@ -45,26 +45,26 @@
     &-left {
       display: flex;
       flex-direction: column;
-      max-width: 266px;
-      padding: 5px;
+      max-width: 19rem;
+      padding: 0.3571rem;
     }
 
     &-right {
       display: flex;
       flex-direction: column;
-      max-width: 845px;
+      max-width: 60.3571rem;
       width: 100%;
     }
 
     &-preview {
       display: flex;
-      max-width: 844px;
+      max-width: 60.2857rem;
       width: 100%;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      margin-left: 1px;
+      margin-left: 0.0714rem;
 
       @media (max-width: 1116px) {
         justify-content: space-around;
@@ -72,37 +72,43 @@
     }
   }
 
-  &__dates,
-  &__checkbox-buttons,
+  &__dates{
+    margin-bottom: 1.5rem;
+  }
+
+  &__checkbox-buttons{
+    margin-bottom: 1.5714rem;
+  }
+
   &__availability {
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
   }
 
   &__guests {
-    margin-bottom: 30px;
+    margin-bottom: 2.1429rem;
   }
 
   &__price-range {
-    margin-bottom: 29px;
+    margin-bottom: 2.1429rem;
   }
 
   &__price-caption {
-    margin-top: 5px;
+    margin-top: 0.3571rem;
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.8571rem;
+    line-height: 1rem;
     color: $dark50
   }
 
   &__amenities {
-    margin-bottom: 17px;
+    margin-bottom: 1.2857rem;
   }
 
   &__preview-header {
-    margin-bottom: 11px;
-    padding: 5px;
+    margin-bottom: 0.7857rem;
+    padding: 0.2857rem 0.3571rem;
 
     @media (max-width: 1116px) {
       text-align: center;
@@ -112,18 +118,18 @@
   &__preview {
     display: flex;
     justify-content: space-between;
-    max-width: 844px;
+    max-width: 60.2857rem;
     width: 100%;
-    margin-bottom: 21px;
+    margin-bottom: 1.5rem;
   }
   
   &__pagination {
-    margin-top: 24px;
-    margin-bottom: 72px;
+    margin-top: 1.7143rem;
+    margin-bottom: 5.1429rem;
     width: 98%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: 2px;
+    margin-left: 0.1429rem;
   }
 }

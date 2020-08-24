@@ -3,7 +3,7 @@
 
 .date-dropdown {
   position: relative;
-  max-width: 320px;
+  max-width: 22.8571rem;
   width: 100%;
   box-sizing: border-box;
   display: inline-block;
@@ -12,8 +12,8 @@
   &__arrow {
     display: flex;
     position: absolute;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 3.1429rem;
+    min-height: 3.1429rem;
     width: min-content;
     height: min-content;
     right: 0;
@@ -21,32 +21,32 @@
     justify-content: center;
     align-items: center;
     color: $dark50;
-    margin-top: 1px;
+    margin-top: 0.0714rem;
   }
 
   &__wrapper {
     &-filtred {
       display: flex;
       justify-content: space-between;
-      max-width: 320px;
+      max-width: 22.8571rem;
       width: 100%;
     }
 
     &-from,
     &to {
-      max-width: 150px;
+      max-width: 10.7143rem;
     }
   }
 
   &__start-text,
   &__finish-text {
-    max-width: 150px;
-    margin-bottom: 6px;
+    max-width: 10.7143rem;
+    margin-bottom: 0.4286rem;
   }
 
   &__input {
     &-wrapper {
-      max-width: 150px;
+      max-width: 10.7143rem;
       position: relative;
       display: inline-block;
       box-sizing: border-box;
@@ -59,25 +59,25 @@
     &-filtred {
       width: 100%;
       background: #FFFFFF;
-      border: 1px solid $dark25;
+      border: 0.0714rem solid $dark25;
       box-sizing: border-box;
-      border-radius: 4px;
+      border-radius: 0.2857rem;
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
+      font-size: 1rem;
+      line-height: 1.7143rem;
       color: $dark75;
       outline: none;
-      height: 44px;
-      padding-left: 14px;
-      padding-right: 44px;
+      height: 3.1429rem;
+      padding-left: 1rem;
+      padding-right: 3.1429rem;
       cursor: pointer;
     }
 
     &-from,
     &-to {
-      padding-bottom: 5px;
+      padding-bottom: 0.3571rem;
     }
   }
 
@@ -85,8 +85,8 @@
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 20px;
+    font-size: 1.7143rem;
+    line-height: 1.4286rem;
     color: $purple;
   }
 
@@ -96,11 +96,11 @@
     text-transform: uppercase;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
     color: $purple;
-    padding: 20px;
-    height: 55px;
+    padding: 1.4286rem;
+    height: 3.9286rem;
     width: 50%;
     text-align: right;
     box-sizing: border-box;
@@ -108,12 +108,12 @@
 }
 
 .datepicker {
-  width: 320px;
+  width: 22.8571rem;
   background: #FFFFFF;
-  border: 1px solid $dark25;
+  border: 0.0714rem solid $dark25;
   box-sizing: border-box;
-  box-shadow: 0px 10px 20px $dark05;
-  border-radius: 4px;
+  box-shadow: 0 0.7143rem 1.4286rem $dark05;
+  border-radius: 0.2857rem;
   font-family: 'Montserrat', Arial, sans-serif;
 
   &--pointer {
@@ -121,13 +121,13 @@
   }
 
   &--nav {
-    height: 64px;
+    height: 4.5714rem;
     border-bottom: none;
     box-sizing: border-box;
     padding: 0;
 
     &-action {
-      max-width: 64px;
+      max-width: 4.5714rem;
       width: 100%;
     }
 
@@ -136,25 +136,25 @@
       font-family: 'Quicksand', 'Open Sans', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 19px;
-      line-height: 24px;
+      font-size: 1.3571rem;
+      line-height: 1.7143rem;
       text-align: center;
       color: $dark100;
     }
   }
 
   &--days {
-    margin-top: 10px;
+    margin-top: 0.7143rem;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 280px;
+    max-width: 20rem;
     width: 100%;
     margin: 0 auto;
 
     &-names {
-      height: 40px;
+      height: 2.8571rem;
       box-sizing: border-box;
       margin: 0;
     }
@@ -164,8 +164,8 @@
     &-name {
       font-style: normal;
       font-weight: bold;
-      font-size: 12px;
-      line-height: 15px;
+      font-size: 0.8571rem;
+      line-height: 1.0714rem;
       color: $purple;
     }
   }
@@ -176,7 +176,7 @@
   }
 
   &--cells-days {
-    max-width: 280px;
+    max-width: 20rem;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
@@ -189,15 +189,15 @@
     }
 
     &-day {
-      max-width: 40px;
-      max-height: 40px;
+      max-width: 2.8571rem;
+      max-height: 2.8571rem;
       height: auto;
       box-sizing: border-box;
       font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 12px;
-      line-height: 15px;
+      font-size: 0.8571rem;
+      line-height: 1.0714rem;
       text-align: center;
       color: $dark50;
     }
@@ -290,7 +290,7 @@
 
   &--buttons {
     border: none;
-    padding: 0px;
+    padding: 0;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
@@ -303,11 +303,11 @@
     text-transform: uppercase;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
     color: $dark50;
-    padding: 20px;
-    height: 55px;
+    padding: 1.4286rem;
+    height: 3.9286rem;
     width: 50%;
     box-sizing: border-box;
   }

@@ -12,4 +12,5 @@ mixin expandable-checkbox-list ({ _header, _checkboxes =[], _isExpanded=false } 
     .expandable-checkbox-list__checkboxes.js-expandable-checkbox-list__checkboxes(class = `${expanded}`)
       each checkbox in _checkboxes
         - const {_text, _isChecked} = checkbox
-        +checkbox-button({_text, _isChecked})
+        .expandable-checkbox-list__item
+          +checkbox-button({_text, _isChecked})

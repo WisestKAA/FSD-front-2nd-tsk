@@ -1,32 +1,32 @@
 .text-field {
   width: 100%;
-  max-width: 320px;
-  min-height: 44px;
+  max-width: 22.8571rem;
+  min-height: 3.1429rem;
   height: min-content;
   background: #FFFFFF;
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 0.2857rem;
   outline: none;
-  border: 1px solid $dark25;
+  border: 0.0714rem solid $dark25;
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  padding: 0 14px;
+  font-size: 1rem;
+  line-height: 1.7143rem;
+  padding: 0 1rem;
 
   &_addPaddingRight {
-    padding-right: 44px;
+    padding-right: 3.1429rem;
   }
 
   &::placeholder {
     color: $dark25;
-    line-height: 18px;
+    line-height: 1.2857rem;
   }
 
   &:focus,
   &:hover {
-    border: 1px solid $dark50;
+    border: 0.0714rem solid $dark50;
     
     &::placeholder {
       color: $dark75;

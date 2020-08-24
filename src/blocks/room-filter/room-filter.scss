@@ -4,24 +4,24 @@
 @import '../button/button.scss';
 
 .room-filter {
-  max-width: 380px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  max-width: 27.1429rem;
+  border: 0.0714rem solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 39px 29px 29px 29px;
+  box-shadow: 0 0 1.7857rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.2857rem;
+  padding: 2.7857rem 2.0714rem 2.0714rem 2.0714rem;
   background-color: white;
 
   &__date {
-    margin-bottom: 20px;
+    margin-bottom: 1.4286rem;
   }
 
   &__header {
-    margin-bottom: 18px;
+    margin-bottom: 1.4286rem;
     display: inherit;
   }
   
   &__guests {
-    margin-bottom: 31px;
+    margin-bottom: 2.2143rem;
   }
 }

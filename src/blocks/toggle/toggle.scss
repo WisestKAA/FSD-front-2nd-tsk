@@ -1,9 +1,10 @@
 .toggle {
   display: inline-block;
   width: 100%;
-  max-width: 260px;
-  margin-bottom: 13px;
+  max-width: 18.5714rem;
+  margin-bottom: 0.9286rem;
   box-sizing: border-box;
+  user-select: none;
 
   &__label {
     display: inline-block;
@@ -25,45 +26,45 @@
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.3571rem;
     color: $dark75;
-    padding-left: 50px;
-    padding-bottom: 3px;
+    padding-left: 3.5714rem;
+    padding-bottom: 0.2143rem;
   }
 
   &__text::before {
     content: '';
-    min-width: 40px;
-    min-height: 20px;
+    min-width: 2.8571rem;
+    min-height: 1.4286rem;
     width: min-content;
     height: min-content;
-    border: 1px solid $dark25;
+    border: 0.0714rem solid $dark25;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 0.7143rem;
     position: absolute;
     left: 0;
   }
   
   &__text::after {
     content: '';
-    min-width: 12px;
-    min-height: 12px;
+    min-width: 0.8571rem;
+    min-height: 0.8571rem;
     width: min-content;
     height: min-content;
     background: $dark25;
-    border-radius: 10px;
+    border-radius: 0.7143rem;
     position: absolute;
-    left: 4px;
-    top: 4px;
+    left: 0.2857rem;
+    top: 0.2857rem;
   }
 }
 
 .toggle .toggle__input:checked+.toggle__text::before {
-  border: 1px solid $purple;
+  border: 0.0714rem solid $purple;
 }
 
 .toggle .toggle__input:checked+.toggle__text::after {
-  left: 24px;
+  left: 1.7143rem;
   background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
 }

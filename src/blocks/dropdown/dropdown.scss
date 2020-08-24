@@ -5,7 +5,7 @@
 .dropdown {
   display: inline-block;
   width: 100%;
-  max-width: 320px;
+  max-width: 22.8571rem;
   box-sizing: border-box;
 
   &__wrapper {
@@ -15,15 +15,15 @@
   &__select {
     box-sizing: border-box;
     position: relative;
-    min-height: 44px;
+    min-height: 3.1429rem;
     height: min-content;
-    padding: 8px 14px;
-    border: 1px solid $dark25;
-    border-radius: 4px;
+    padding: 0.5714rem 1rem;
+    border: 0.0714rem solid $dark25;
+    border-radius: 0.2857rem;
 
     &_active {
-      border: 1px solid $dark50;
-      border-radius: 4px 4px 0 0;
+      border: 0.0714rem solid $dark50;
+      border-radius: 0.2857rem 0.2857rem 0 0;
       outline: none;
     }
   }
@@ -37,8 +37,8 @@
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.7143rem;
     color: $dark75;
     outline: none;
   }
@@ -46,18 +46,18 @@
   &__arrow {
     display: flex;
     position: absolute;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 3.1429rem;
+    min-height: 3.1429rem;
     width: min-content;
     height: min-content;
     right: 0;
     vertical-align: middle;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.7143rem;
+    line-height: 1.7143rem;
     color: $dark50;
-    margin-top: 1px;
+    margin-top: 0.0714rem;
 
     &_dark {
       color: $dark75;
@@ -70,10 +70,10 @@
     z-index: 10000;
     background-color: white;
     width: 100%;
-    max-width: 320px;
+    max-width: 22.8571rem;
     box-sizing: inherit;
-    border: 1px solid $dark50;
-    border-radius: 0 0 4px 4px;
+    border: 0.0714rem solid $dark50;
+    border-radius: 0 0 0.2857rem 0.2857rem;
     border-top: none;
     box-sizing: border-box;
 
@@ -84,6 +84,6 @@
   }
   
   &_width-short {
-    max-width: 266px;
+    max-width: 19rem;
   }
 }

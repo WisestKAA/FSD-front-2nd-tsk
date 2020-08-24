@@ -5,8 +5,8 @@
   justify-content: center;
   width: 100%;
   background-color: white;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  min-height: 367px;
+  box-shadow: 0 0.7143rem 1.4286rem rgba(31, 32, 65, 0.05);
+  min-height: 26.2143rem;
   height: min-content;
   align-items: center;
 
@@ -21,20 +21,19 @@
     margin-block-end: unset;
     margin-inline-start: unset;
     margin-inline-end: unset;
-    margin-bottom: 17px;
-    margin-top: 2px;
+    margin-bottom: 1.2143rem;
     display: inherit;
   }
 
   &__description {
-    margin-bottom: 25px;
-    max-width: 560px;
+    margin-bottom: 2rem;
+    max-width: 40rem;
     width: 100%;
     display: inline-block;
     text-align: center;
   }
   
   &__social {
-    margin-bottom: 10px;
+    margin-bottom: 0.7143rem;
   }
 }

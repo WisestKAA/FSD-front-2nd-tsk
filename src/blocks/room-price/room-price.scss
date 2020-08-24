@@ -4,20 +4,20 @@
 @import '../button/button.scss';
 
 .room-price {
-  max-width: 380px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  max-width: 27.1429rem;
+  border: 0.0714rem solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 39px 29px 29px 29px;
+  box-shadow: 0 0 1.7857rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.2143rem;
+  padding: 2.7857rem 2.0714rem 2.0714rem 2.0714rem;
   background-color: white;
 
   &__header {
-    max-width: 320px;
+    max-width: 22.8571rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 18px;
+    margin-bottom: 1.4286rem;
   }
 
   &__room-number {
@@ -35,32 +35,32 @@
       font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 14px;
-      line-height: 17px;
+      font-size: 1rem;
+      line-height: 1.2143rem;
       color: $dark100;
-      margin-right: 4px;
-      padding-bottom: 2px;
+      margin-right: 0.2857rem;
+      padding-bottom: 0.1429rem;
     }
 
     &-text {
       font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 24px;
-      line-height: 30px;
+      font-size: 1.7143rem;
+      line-height: 2.1429rem;
       color: $dark100;
     }
 
     &-luxe {
-      margin-left: 5px;
+      margin-left: 0.3571rem;
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 12px;
-      line-height: 15px;
+      font-size: 0.8571rem;
+      line-height: 1.0714rem;
       text-transform: uppercase;
       color: $purple;
-      padding-bottom: 3px;
+      padding-bottom: 0.2143rem;
 
       &_hide {
         display: none;
@@ -76,7 +76,7 @@
     &-sum-per-day {
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
-      line-height: 18px;
+      line-height: 1.2857rem;
       color: $dark50;
       display: flex;
       align-items: flex-end;
@@ -84,30 +84,30 @@
 
     &-sum {
       font-weight: bold;
-      font-size: 14px;
-      padding-bottom: 2px;
+      font-size: 1rem;
+      padding-bottom: 0.1429rem;
 
       &-per-day {
         font-weight: normal;
-        font-size: 12px;
-        margin-left: 4px;
-        padding-bottom: 1px;
+        font-size: 0.8571rem;
+        margin-left: 0.2857rem;
+        padding-bottom: 0.0714rem;
       }
     }
   }
 
   &__date {
-    margin-bottom: 19px;
+    margin-bottom: 1.4286rem;
   }
   &__guests {
-    margin-bottom: 18px;
+    margin-bottom: 1.2857rem;
   }
 
   &__calculate {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
-    margin-left: 1px;
+    margin-bottom: 2.1429rem;
+    margin-left: 0.0714rem;
   }
 
   &__for-room,
@@ -124,13 +124,13 @@
   &__for-services,
   &__for-addservices {
     &-info {
-      margin-left: 5px;
-      min-width: 20px;
-      min-height: 20px;
-      max-height: 20px;
+      margin-left: 0.3571rem;
+      min-width: 1.4286rem;
+      min-height: 1.4286rem;
+      max-height: 1.4286rem;
       width: min-content;
       height: min-content;
-      border: 1px solid $dark25;
+      border: 0.0714rem solid $dark25;
       border-radius: 50%;
       box-sizing: border-box;
       display: flex;
@@ -139,7 +139,7 @@
     }
 
     &-discription {
-      width: 215px;
+      width: 15.3571rem;
     }
 
     &-left-wrapper {
@@ -150,20 +150,20 @@
   }
 
   &__for-room {
-    margin-bottom: 10px;
+    margin-bottom: 0.7143rem;
   }
 
   &__for-services {
-    margin-bottom: 13px;
+    margin-bottom: 0.9286rem;
   }
 
   &__for-addservices {
-    line-height: 18px;
+    line-height: 1.3571rem;
   }
 
   &__total {
-    margin-bottom: 20px;
-    max-width: 320px;
+    margin-bottom: 1.4286rem;
+    max-width: 22.8571rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -171,7 +171,7 @@
     flex-wrap: nowrap;
 
     &-text {
-      margin-left: 1px;
+      margin-left: 0.0714rem;
     }
 
     &-price {
@@ -184,17 +184,17 @@
       font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 19px;
-      line-height: 24px;
+      font-size: 1.3571rem;
+      line-height: 1.7143rem;
       color: $dark100;
     }
     
     &-separator {
-      max-width: 300px;
+      max-width: 21.4286rem;
       width: 100%;
-      margin: 0px 5px;
-      border-bottom: 1px dashed $dark25;
-      margin-bottom: 5px;
+      margin: 0 0.3571rem;
+      border-bottom: 0.0714rem dashed $dark25;
+      margin-bottom: 0.3571rem;
     }
   }
 }

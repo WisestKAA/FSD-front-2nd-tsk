@@ -1,50 +1,51 @@
 .dropdown-option {
   width: auto;
-  max-width: 318px;
-  min-height: 30px;
-  margin-bottom: 2px;
+  max-width: 22.7143rem;
+  min-height: 2.1429rem;
+  margin-bottom: 0.1429rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 
   &__text {
     display: inline-block;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 14px;
-    padding-top: 3px;
+    padding-left: 1rem;
+    padding-top: 0.2143rem;
   }
 
   &__button-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 92px;
+    max-width: 6.5714rem;
     width: 100%;
-    padding-right: 6px;
-    margin-top: 5px;
+    padding-right: 0.4286rem;
+    margin-top: 0.3571rem;
   }
 
   &__circle {
     display: flex;
-    border: 1px solid $dark50;
+    border: 0.0714rem solid $dark50;
     box-sizing: border-box;
-    min-width: 30px;
-    min-height: 30px;
+    min-width: 2.1429rem;
+    min-height: 2.1429rem;
     width: min-content;
     height: min-content;
-    border-radius: 15px;
+    border-radius: 1.0714rem;
     font-weight: normal;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.2857rem;
     color: $dark50;
     font-family: 'Montserrat', Arial, sans-serif;
     user-select: none;
 
     &_disable {
-      border: 1px solid $dark25;
+      border: 0.0714rem solid $dark25;
       color: $dark25;
       cursor: default;
     }
@@ -56,6 +57,6 @@
     vertical-align: middle;
     justify-content: center;
     align-items: center; 
-    padding-bottom: 2px;
+    padding-bottom: 0.1429rem;
   }
 }

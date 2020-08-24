@@ -2,7 +2,7 @@
 
 .icon-text-list {
   display: inline-block;
-  max-width: 280px;
+  max-width: 20rem;
   width: 100%;
   box-sizing: content-box;
   margin-block-start: unset;
@@ -12,15 +12,15 @@
 
   &__wraper {
     display: inline-block;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid $dark10;
+    padding-bottom: 1.4286rem;
+    margin-bottom: 1.4286rem;
+    border-bottom: 0.0714rem solid $dark10;
     position: relative;
     width: 100%;
     
     &:last-child{ 
-        margin-bottom: 0px;
-        padding-bottom: 0px;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     &_without-lust-border {
@@ -36,25 +36,26 @@
     align-items: center;
     position: absolute;
     left: 0;
-    max-width: 48px;
-    max-height: 48px;
+    max-width: 3.4286rem;
+    max-height: 3.4286rem;
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    padding-top: 0.0714rem;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    max-width: 232px;
-    margin-left: 58px;
+    max-width: 16.5714rem;
+    margin-left: 4.1429rem;
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.7143rem;
     color: $dark75;
   }
 

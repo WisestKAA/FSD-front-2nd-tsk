@@ -27,10 +27,10 @@ block template
     .form-elements__main-wrapper
       .form-elements__main
           section.form-elements__content-left.form-elements__content-left_margin-left-1
-            .form-elements__item_margin-bottom-20
+            .form-elements__item_margin-bottom-21
               +label({_text: "Text Field", _marginBottom: "5", _caption: "Default", _marginCaption: "3"})
               +text-field({_placeholder: "Email"})
-            .form-elements__item_margin-bottom-20
+            .form-elements__item_margin-bottom-21
               +label({_text: "Text Field", _marginBottom: "5", _caption: "Hover / Focus"})
               +text-field({_placeholder: "Email", _text: "This is pretty awesome"})
             .form-elements__item_margin-bottom-20
@@ -43,12 +43,12 @@ block template
                   {_text: "младенцы", _number: 0},
                 ],
               })
-            .form-elements__item_margin-bottom-38.form-elements__masked-text-field
+            .form-elements__item_margin-bottom-41.form-elements__masked-text-field
               +label({_text: "masked text field", _marginBottom: "5", _caption: "Default", _marginCaption: "3"})
               +text-field({_isMasked: true})
-            .form-elements__item_margin-bottom-40
-              +date-dropdown ({_isFiltred: false, _demoText: "19.08.2019", _startText: "date Dropdown", _finishText: "date Dropdown"})
-            .form-elements__item.form-elements__item_margin-bottom-40
+            .form-elements__item_margin-bottom-41
+              +date-dropdown ({ _isFiltred: false, _demoText: "19.08.2019", _startText: "date Dropdown", _finishText: "date Dropdown" })
+            .form-elements__item.form-elements__item_margin-bottom-41
               +label({_text: "filter date dropdown", _marginBottom: "5"})
               +date-dropdown ({_isFiltred: true})
             .form-elements__subscription-text-field
@@ -57,22 +57,22 @@ block template
                   
           .form-elements__content-right-wrapper
             section.form-elements__content-center
-              .form-elements__item_margin-bottom-40
+              .form-elements__item_margin-bottom-43
                 +label({_text: "Checkbox Buttons", _marginBottom: "17"})
                 +checkbox-button({_text: "Можно курить", _name: "smoking"})
                 +checkbox-button({_text: "Можно с питомцами", _name: "pets", _isChecked: true})
                 +checkbox-button({_text: "Можно пригласить гостей (до 10 человек)", _name: "guests", _isChecked: true})
-              .form-elements__item_margin-bottom-43.form-elements__radio-buttons
+              .form-elements__item_margin-bottom-45.form-elements__radio-buttons
                 +label({_text: "Radio Buttons", _marginBottom: "16"})
                 +radio-buttons({_name: "radioButtons", _radioButtons:[
                     {_text: "Мужчина", _value: "men", _isChecked: true},
                     {_text: "Женщина", _value: "women", _isChecked: false},
                 ]})
-              .form-elements__item_margin-bottom-41
+              .form-elements__item_margin-bottom-45
                 +label({_text: "Toggle", _marginBottom: "15"})
                 +toggle({_name: "togen", _text: "Получать спецпредложения", _isChecked: true})
                 +toggle({_name: "togdis", _text: "Получать спецпредложения", _isChecked: false})
-              .form-elements__item_margin-bottom-40.form-elements__like-button
+              .form-elements__item_margin-bottom-41.form-elements__like-button
                 +label({_text: "like button", _marginBottom: "16"})
                 .form-elements__like-buttons
                   +like-button({_number: "2", _isClicked: false})
@@ -87,13 +87,13 @@ block template
             section.form-elements__content-right
               .form-elements__item_margin-bottom-40.form-elements__range-slider
                 +range-slider({})
-              .form-elements__item_margin-bottom-40
+              .form-elements__item_margin-bottom-41
                 +label({_text: "buttons", _marginBottom: "16"})
                 .form-elements__button-wrapper
                   +button({_type: "gradient-background", _name: "default", _value: "CLICK ME", _actionLink: "/#moke"})
                 .form-elements__button-wrapper.form-elements__button-wrapper_margin-left-0
                   +button({_type: "bordered", _name: "bordered", _value: "CLICK ME", _actionLink: "/#moke"})
-                .form-elements__button-wrapper
+                .form-elements__button-wrapper.form-elements__button-wrapper_margin-bottom-31
                   +button({_type: "empty", _name: "empty", _value: "CLICK ME", _actionLink: "/#moke"})
                 .form-elements__button-wrapper_margin-left-0
                   +button({_type: "rich", _name: "default", _value: "перейти к оплате", _actionLink: "/#moke"})
@@ -108,7 +108,7 @@ block template
                     {href: "/page15", isActive: false,  number: 15,},
                   ],
                 })
-    .form-elements__separator_margin-100
+    .form-elements__separator_margin-91
 
     .form-elements__main-wrapper
       .form-elements__main
@@ -136,7 +136,7 @@ block template
             })
           section.form-elements__content-right
 
-    .form-elements__separator_margin-233
+    .form-elements__separator_margin-234
     .form-elements__main-wrapper
       .form-elements__main
           section.form-elements__content-left
@@ -181,7 +181,7 @@ block template
                 "Без вечеринок и мероприятий",
                 "Время прибытия — после 13:00, а выезд до 12:00",
               ]})
-    .form-elements__separator_margin-40
+    .form-elements__separator_margin-19
     .form-elements__main-wrapper
       .form-elements__main
           section.form-elements__content-left

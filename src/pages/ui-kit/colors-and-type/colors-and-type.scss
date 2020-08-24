@@ -12,9 +12,9 @@
 
 .colors-and-type {
   &__colors {
-    max-width: 280px;
+    max-width: 20rem;
     width: 100%;
-    padding: 5px;
+    padding: 0.3571rem;
     box-sizing: border-box;
   }
 
@@ -24,8 +24,8 @@
   }
 
   &__content {
-    margin-top: 58px;
-    max-width: 1150px;
+    margin-top: 4.1429rem;
+    max-width: 82.1429rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -33,19 +33,19 @@
     @media (max-width: 740px) {
       display: flex;
       flex-direction: column;
-      margin-top: 30px;
+      margin-top: 2.1429rem;
     }
   }
 
   &__types {
-    max-width: 454px;
+    max-width: 32.4286rem;
     width: 100%;
     box-sizing: border-box;
-    padding: 5px 45px 5px 5px;
+    padding: 0.3571rem 3.2143rem 0.3571rem 0.3571rem;
     
     .types:last-child {
-      padding-right: 20px;
-      margin-top: -3px;
+      padding-right: 1.4286rem;
+      margin-top: -0.2143rem;
     }
   }
 }

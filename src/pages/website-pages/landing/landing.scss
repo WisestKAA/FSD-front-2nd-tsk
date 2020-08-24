@@ -17,13 +17,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: bottom;
-    min-height: 830px;
+    min-height: 59.2857rem;
     box-sizing: border-box;
-    padding: 65px 0 16px 0;
+    padding: 4.6429rem 0 1.1429rem 0;
   }
 
   &__wrapper {
-    max-width: 1182px;
+    max-width: 84.4286rem;
     width: 100%;
     height: auto;
     display: flex;
@@ -31,7 +31,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     background-position: 50% 50%;
-    padding: 5px;
+    padding: 0.3571rem;
 
     &-discription {
       display: flex;
@@ -41,16 +41,16 @@
   }
 
   &__room-filter {
-    padding-left: 6px;
+    padding-left: 0.4286rem;
   }
   
   &__discription {
-    max-width: 300px;
+    max-width: 21.4286rem;
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.7143rem;
     text-align: right;
     color: $dark75;
   }

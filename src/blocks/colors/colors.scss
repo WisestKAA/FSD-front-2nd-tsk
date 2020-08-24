@@ -1,22 +1,22 @@
 .colors {
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
+  margin-bottom: 1.4286rem;
 
   &__color {
-    min-width: 70px;
-    min-height: 70px;
+    min-width: 5rem;
+    min-height: 5rem;
     width: min-content;
     height: min-content;
-    border-radius: 6px;
-    margin-right: 40px;
+    border-radius: 0.4286rem;
+    margin-right: 2.8571rem;
 
     &_dark100 {
       background: $dark100;
     }
 
     &_dark75 {
-      background: $dark100;
+      background: $dark75;
     }
 
     &_dark50 {
@@ -46,9 +46,9 @@
   }
 
   &__text {
-    margin-top: 7px;
+    margin-top: 0.5rem;
     &_margin-top-6 {
-      margin-top: 6px;
+      margin-top: 0.4286rem;
     }
   }
 
@@ -62,11 +62,11 @@
     font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 19px;
-    line-height: 29px;
+    font-size: 1.3571rem;
+    line-height: 2.0714rem;
   }
   
   &__text {
-    margin-top: 7px;
+    margin-top: 0.5rem;
   }
 }

@@ -27,7 +27,7 @@
 @import '../../../blocks/comment/comment.scss';
 
 .form-elements {
-  margin-top: 56px;
+  margin-top: 4.0714rem;
 
   &__main-wrapper {
     display: flex;
@@ -35,7 +35,7 @@
   }
 
   &__main {
-    max-width: 1170px;
+    max-width: 83.5714rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -50,24 +50,24 @@
   &__content-left,
   &__content-center,
   &__content-right {
-    max-width: 321px;
+    max-width: 22.9286rem;
     width: 100%;
-    padding: 5px;
+    padding: 0.3571rem;
   }
 
   &__content-right_big {
-    max-width: 714px;
-    padding: 13px 6px 5px 5px;
+    max-width: 51rem;
+    padding: 0.9286rem 0.4286rem 0.3571rem 0.3571rem;
   }
 
   &__content-left_margin-left-1 {
-    margin-left: 1px;
+    margin-left: 0.0714rem;
   }
 
   &__content-right-wrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 723px;
+    max-width: 51.6429rem;
     width: 100%;
 
     @media (max-width: 870px) {
@@ -78,55 +78,59 @@
   }
 
   &__item {
-    &_margin-bottom-24 {
-      margin-bottom: 24px;
-    }
-
     &_margin-bottom-20 {
-      margin-bottom: 20px;
+      margin-bottom: 1.4286rem;
     }
 
+    &_margin-bottom-21 {
+      margin-bottom: 1.5rem;
+    }
+    
+    &_margin-bottom-24 {
+      margin-bottom: 1.7143rem;
+    }
+    
     &_margin-bottom-38 {
-      margin-bottom: 38px;
+      margin-bottom: 2.7143rem;
     }
 
     &_margin-bottom-40 {
-      margin-bottom: 40px;
+      margin-bottom: 2.8571rem;
     }
 
     &_margin-bottom-41 {
-      margin-bottom: 41px;
+      margin-bottom: 2.9286rem;
+    }
+
+    &_margin-bottom-42 {
+      margin-bottom: 3rem;
     }
 
     &_margin-bottom-43 {
-      margin-bottom: 43px;
+      margin-bottom: 3.0714rem;
+    }
+
+    &_margin-bottom-45 {
+      margin-bottom: 3.2143rem;
     }
 
     &_margin-left-1{
-      margin-left: 1px;
+      margin-left: 0.0714rem;
     }
   }
 
   &__masked-text-field {
-    padding-top: 3px;
+    padding-top: 0.2143rem;
   }
 
   &__subscription-text-field{
-    padding-top: 1px;
-  }
-
-  &__radio-buttons {
-    padding-top: 2px;
-  }
-
-  &__like-button {
-    padding-top: 3px;
+    padding-top: 0.0714rem;
   }
 
   &__like-buttons {
     display: flex;
     justify-content: space-between;
-    max-width: 90px;
+    max-width: 6.4286rem;
     width: 100%;
     flex-direction: row;
   }
@@ -134,53 +138,57 @@
   &__rate-buttons {
     display: flex;
     justify-content: space-between;
-    max-width: 260px;
+    max-width: 18.5714rem;
     width: 100%;
   }
 
   &__range-slider {
-    margin-bottom: 34px;
+    margin-bottom: 2.4286rem;
   }
 
   &__button-wrapper {
-    margin-bottom: 30px;
-    margin-left: 1px;
+    margin-bottom: 2.1429rem;
+    margin-left: 0.0714rem;
 
     &_margin-left-0 {
       margin-left: 0;
     }
+
+    &_margin-bottom-31{
+      margin-bottom: 2.2143rem;
+    }
   }
 
   &__separator {
-    &_margin-40 {
-      margin-bottom: 32px;
+    &_margin-19 {
+      margin-bottom: 1.3571rem;;
     }
 
-    &_margin-100 {
-      margin-bottom: 90px;
+    &_margin-91 {
+      margin-bottom: 6.5rem;
 
       @media (max-width: 870px) {
-        margin-bottom: 20px;
+        margin-bottom: 1.4286rem;
       }
     }
-    &_margin-233 {
-      margin-bottom: 233px;
+    &_margin-234 {
+      margin-bottom: 16.7143rem;
       @media (max-width: 870px) {
-        margin-bottom: 20px;
+        margin-bottom: 1.4286rem;
       }
     }
   }
 
   &__rich-checkbox-buttons,
   &__bullet-list{
-    margin-top: 13px;
+    margin-top: 0.9286rem;
   }
 
   .checkbox-button:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   
   .toggle:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }

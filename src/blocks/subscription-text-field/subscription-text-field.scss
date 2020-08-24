@@ -3,12 +3,12 @@
 
 .subscription-text-field {
   position: relative;
-  max-width: 267px;
+  max-width: 19.0714rem;
   box-sizing: content-box;
 
   &__button-wrapper {
-    width: 44px;
-    height: 44px;
+    width: 3.1429rem;
+    height: 3.1429rem;
     position: absolute;
     right: 0;
     cursor: pointer;
@@ -17,8 +17,8 @@
   &__button-arrow {
     display: flex;
     position: absolute;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 3.1429rem;
+    min-height: 3.1429rem;
     width: min-content;
     height: min-content;
     right: 0;
@@ -36,8 +36,8 @@
     z-index: -1;
     opacity: 0;
     width: 100%;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 3.1429rem;
+    min-height: 3.1429rem;
     width: min-content;
     height: min-content;
   }

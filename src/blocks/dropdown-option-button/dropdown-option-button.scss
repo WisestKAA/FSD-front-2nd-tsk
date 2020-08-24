@@ -2,12 +2,12 @@
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.8571rem;
+  line-height: 1.0714rem;
   text-transform: uppercase;
   width: auto;
-  max-width: 318px;
-  min-height: 46px;
+  max-width: 22.7143rem;
+  min-height: 3.2857rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +16,7 @@
   &__drop {
     display: inline-block;
     color: $dark50;
-    padding-left: 14px;
+    padding-left: 1rem;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -32,13 +32,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 7px;
+    padding-right: 0.5rem;
     cursor: pointer;
   }
   
   &__drop,
   &__apply {
-    padding-top: 6px;
+    padding-top: 0.4286rem;
     appearance: button;
     text-rendering: unset;
     word-spacing: unset;

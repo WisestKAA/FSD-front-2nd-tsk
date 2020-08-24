@@ -12,10 +12,10 @@ class DateDropdown {
 
     this.isFiltred = !!this.datePiker.classList.contains('js-date-dropdown__input-filtred');
     if (this.isFiltred) {
-      this.dateDropdown.style.width = '266px';
+      this.dateDropdown.style.width = '19rem';
       this.datePikerInit(this.datePiker, this.dateDropdown);
     } else {
-      this.dateDropdown.style.maxWidth = '320px';
+      this.dateDropdown.style.maxWidth = '22.8571rem';
       this.inputFrom = elem.querySelector('.js-date-dropdown__input-from');
       this.inputTo = elem.querySelector('.js-date-dropdown__input-to');
       this.datePikerInit(this.datePiker, this.dateDropdown, true, this.inputFrom, this.inputTo);

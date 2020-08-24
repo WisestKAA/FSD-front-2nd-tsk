@@ -1,7 +1,7 @@
 @import '../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css';
 
 .range-slider {
-  max-width: 266px;
+  max-width: 19rem;
 
   &__header {
     display: flex;
@@ -10,6 +10,7 @@
 
   &__label {
     display: flex;
+    line-height: 1.0714rem;
   }
   
   &__price {
@@ -19,8 +20,8 @@
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.8571rem;
+    line-height: 1rem;
     text-align: right;
     text-transform: uppercase;
     color: $dark50;
@@ -33,26 +34,27 @@
   }
 
   span.irs.irs--flat {
-    top: -2px;
-    min-height: 38px;
+    top: -0.1429rem;
+    min-height: 2.7143rem;
     height: min-content;
 
     .irs-line {
-      height: 6px;
+      height: 0.4286rem;
       background: #FFFFFF;
-      border: 1px solid $dark25;
+      border: 0.0714rem solid $dark25;
       box-sizing: border-box;
-      border-radius: 3px;
+      border-radius: 0.2143rem;
       box-sizing: border-box;
+      top: 1.7143rem;
     }
 
     .irs-handle {
-      width: 16px;
-      height: 16px;
-      top: 20px;
+      width: 1.1429rem;
+      height: 1.1429rem;
+      top: 1.4286rem;
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-      border: 2px solid #FFFFFF;
-      border-radius: 10px;
+      border: 0.1429rem solid #FFFFFF;
+      border-radius: 0.7143rem;
       box-sizing: border-box;
     }
 
@@ -61,10 +63,11 @@
     }
     
     .irs-bar {
-      height: 6px;
+      height: 0.4286rem;
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-      border-radius: 3px;
+      border-radius: 0.2143rem;
       box-sizing: border-box;
+      top: 1.7143rem;
     }
   }
 }

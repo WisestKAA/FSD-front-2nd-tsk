@@ -1,13 +1,19 @@
 .checkbox-button {
   display: inline-block;
   white-space: nowrap;
+  min-height: 1.4286rem;
   width: 100%;
-  max-width: 260px;
-  margin-bottom: 12px;
+  max-width: 18.5714rem;
+  margin-bottom: 0.7857rem;
   box-sizing: border-box;
 
   &_rich {
-    margin-bottom: 9px;
+    margin-bottom: 0.6429rem;
+  }
+
+  &_rich &__text::before,
+  &_rich &__text::after{
+    top: 0;
   }
 
   &__input {
@@ -18,7 +24,7 @@
 
   &__text {
     position: relative;
-    padding-left: 30px;
+    padding-left: 2.1429rem;
     cursor: pointer;
   }
 
@@ -26,8 +32,8 @@
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.4286rem;
     color: $dark75;
   }
 
@@ -36,15 +42,15 @@
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.2857rem;
     color: $dark50;
-    max-width: 192px;
+    max-width: 13.7143rem;
     &_rich {
-      font-size: 12px;
-      line-height: 14px;
-      max-width: 230px;
-      margin-top: 5px;
+      font-size: 0.8571rem;
+      line-height: 1rem;
+      max-width: 16.4286rem;
+      margin-top: 0.3571rem;
     }
   }
 
@@ -52,21 +58,22 @@
     content: '';
     position: absolute;
     left: 0;
-    min-width: 20px;
-    min-height: 20px;
+    top: -0.0714rem;
+    min-width: 1.4286rem;
+    min-height: 1.4286rem;
     width: min-content;
     height: min-content;
-    border: 1px solid $dark25;
+    border: 0.0714rem solid $dark25;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 0.2857rem;
   }
   
   &__text::after {
     content: 'done';
     display: none;
     font-family: 'Material Icons';
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 1.2857rem;
+    line-height: 1.2857rem;
     text-transform: none;
     letter-spacing: normal;
     word-wrap: normal;
@@ -80,15 +87,17 @@
     background-clip: text;
     position: absolute;
     left: 0;
-    top: 0;
-    min-width: 20px;
-    min-height: 20px;
+    top: -0.0714rem;
+    min-width: 1.4286rem;
+    min-height: 1.4286rem;
     width: min-content;
     height: min-content;    
-    border: 1px solid $purple;
+    border: 0.0714rem solid $purple;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 0.2857rem;
   }
+
+
 }
 
 .checkbox-button .checkbox-button__input:checked+.checkbox-button__text::before {

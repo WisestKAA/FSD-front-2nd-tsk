@@ -3,25 +3,25 @@
 
 .header {
   width: 100%;
-  min-height: 70px;
+  min-height: 5rem;
   height: min-content;
   background-color: white;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 10px 20px $dark05;
+  box-shadow: 0 0.7143rem 1.4286rem $dark05;
 
   @media (max-width: 870px) {
     height: auto;
-    padding: 10px 0;
+    padding: 0.7143rem 0;
   }
 
   &__wrapper {
-    max-width: 1160px;
+    max-width: 82.8571rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5px;
+    padding: 0 0.3571rem;
 
     @media (max-width: 880px) {
       display: flex;
@@ -32,7 +32,7 @@
   }
 
   &__logo {
-    margin-top: 3px;
+    margin-top: 0.2143rem;
     display: inherit;
     margin-block-start: unset;
     margin-block-end: unset;
@@ -58,7 +58,7 @@
     align-items: center;
 
     @media (max-width: 780px) {
-      margin-bottom: 10px;
+      margin-bottom: 0.7143rem;
     }
 
     @media (max-width: 580px) {
@@ -66,7 +66,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 10px;
+      margin: 0.7143rem;
     }
 
     &-link,
@@ -74,10 +74,10 @@
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 14px;
-      line-height: 17px;
+      font-size: 1rem;
+      line-height: 1.2143rem;
       color: $dark50;
-      margin-right: 30px;
+      margin-right: 2.1429rem;
       text-decoration: none;
       letter-spacing: -0.0135em;
 
@@ -87,7 +87,7 @@
       }
 
       &_short {
-        margin-right: 20px;
+        margin-right: 1.6429rem;
       }
 
       @media (max-width: 580px) {
@@ -96,7 +96,7 @@
     }
 
     &_margin-bottom-1 {
-      margin-bottom: 1px;
+      margin-bottom: 0.0714rem;
     }
   }
 
@@ -108,38 +108,38 @@
   &__unlogged {
     display: flex;
     justify-content: space-between;
-    max-height: 34px;
+    max-height: 2.4286rem;
     height: 100%;
   }
 
   &__sign-up-button {
-    margin-left: 20px;
+    margin-left: 1.4286rem;
   }
 
   &__logged {
     display: flex;
     justify-content: flex-end;
-    margin-right: 1px;
+    margin-right: 0.0714rem;
   }
 
   &__username {
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 1rem;
+    line-height: 1.2143rem;
     color: $dark50;
-    max-height: 30px;
+    max-height: 2.1429rem;
     height: 100%;
-    border-left: 1px solid $dark10;
-    padding-left: 30px;
+    border-left: 0.0714rem solid $dark10;
+    padding-left: 2.1429rem;
     display: flex;
     align-items: center;
 
     @media (max-width: 760px) {
       padding-left: 0;
       border-left: none;
-      border-top: 1px solid $dark10;
+      border-top: 0.0714rem solid $dark10;
     }
   }
   

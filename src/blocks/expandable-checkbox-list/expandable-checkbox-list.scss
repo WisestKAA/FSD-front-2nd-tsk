@@ -5,11 +5,11 @@
   display: inline-block;
   position: relative;
   width: 100%;
-  max-width: 266px;
+  max-width: 19rem;
 
   &__header {
     display: flex;
-    min-height: 40px;
+    min-height: 2.8571rem;
     width: 100%;
     justify-content: left;
     align-items: center;
@@ -20,7 +20,7 @@
   &__checkboxes {
     display: none;
     position: relative;
-    margin-top: 6px;
+    margin-top: 0.4286rem;
 
     &_display {
       display: block;
@@ -31,8 +31,8 @@
   &__arrow {
     display: flex;
     position: absolute;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 3.1429rem;
+    min-height: 3.1429rem;
     width: min-content;
     height: min-content;
     right: 0;
@@ -40,8 +40,12 @@
     justify-content: center;
     align-items: center;
     z-index: -1;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.7143rem;
+    line-height: 1.7143rem;
     color: $dark50;
+  }
+
+  &__item{
+    margin-bottom: 0.7143rem;
   }
 }
