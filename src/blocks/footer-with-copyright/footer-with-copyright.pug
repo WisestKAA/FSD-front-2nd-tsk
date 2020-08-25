@@ -28,4 +28,10 @@ mixin footer-with-copyright({ descriptionText, menuItems=[], subscribeHeader, su
       .footer-with-copyright__wrapper-bottom
         .footer-with-copyright__copyright.body=copyrightText
         .footer-with-copyright__social
-          +social-icons({ twitter: 'https://twitter.com/',  facebook: 'https://www.facebook.com/', instagram: 'https://www.instagram.com/' })
+          +social-icons({
+            icons: [
+              { link: 'https://twitter.com/', img: './img/twitter.png', alt: 'Twitter' },
+              { link: 'https://www.facebook.com/', img: '/img/facebook.png', alt: 'Facebook' },
+              { link: 'https://www.instagram.com/', img: './img/instagram.png', alt: 'Instagram' },
+            ]
+          })

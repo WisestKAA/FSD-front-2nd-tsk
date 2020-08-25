@@ -1,8 +1,6 @@
-mixin social-icons({ twitter,  facebook, instagram}={}) 
+mixin social-icons({ icons }={}) 
   figure.social-icons
-    a(href=twitter target="_blank" rel="noopener noreferrer").social-icons__ico
-      img(src="./img/twitter.png" alt="Twitter").social-icons__img
-    a(href=facebook target="_blank" rel="noopener noreferrer").social-icons__ico
-      img(src="./img/facebook.png" alt="Facebook").social-icons__img
-    a(href=instagram target="_blank" rel="noopener noreferrer").social-icons__ico
-      img(src="./img/instagram.png" alt="Instagram").social-icons__img
+    each icon in icons
+      - const {link, img, alt} = icon
+      a(href=link target="_blank" rel="noopener noreferrer").social-icons__ico
+        img(src=img alt=alt).social-icons__img

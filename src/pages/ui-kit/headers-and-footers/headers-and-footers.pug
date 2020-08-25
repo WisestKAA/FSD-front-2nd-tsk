@@ -9,89 +9,14 @@ block template
   include ../../../blocks/footer-with-copyright/footer-with-copyright.pug
   include ../../../blocks/footer/footer.pug
 
+  - const { unloggedHeaderData, loggedHeaderData, footerWithCopyrightData, footerData } = require('@pages/ui-kit/headers-and-footers/headers-and-footers-data.json')
+
   .headers-and-footers
     .headers-and-footers__header
-      +header({ 
-        navOptions:[
-          { text: 'Home', link: '/', isCurrent: true, sublinks: '' },
-          { text: 'About Us', link: '/about-us', isCurrent: false, sublinks: '' },
-          {
-            text: 'Services', 
-            link: '/services', 
-            isCurrent: false, 
-            sublinks: [
-              { textLink: 'Service1', link: '/Service1' },
-              { textLink: 'Service2', link: '/Service2' },
-              { textLink: 'Service3', link: '/Service3' },
-          ]},
-          { text: 'Careers', link: '/careers', isCurrent: false, sublinks: '' },
-          { text: 'News', link: '/news', isCurrent: false, sublinks: '' },
-          { text: 'Documentation', link: '/documentation', isCurrent: false, sublinks: '' },
-        ],  
-        isLogged: false, 
-        username: '', 
-        loginButtonText: 'Login', 
-        signupButtonText: 'REGISTER'
-      })
+      +header(unloggedHeaderData)
     .headers-and-footers__header
-      +header({ 
-        navOptions:[
-          { text: 'Home', link: '/', isCurrent: true, sublinks: '' },
-          { text: 'About Us', link: '/about-us', isCurrent: false, sublinks: '' },
-          {
-            text: 'Services', 
-            link: '/services', 
-            isCurrent: false, 
-            sublinks: [
-              { textLink: 'Service1', link: '/Service1' },
-              { textLink: 'Service2', link: '/Service2' },
-              { textLink: 'Service3', link: '/Service3' },
-            ]
-          },
-          { text: 'Careers', link: '/careers', isCurrent: false, sublinks: '' },
-          { text: 'News', link: '/news', isCurrent: false, sublinks: '' },
-          { text: 'Documentation', link: '/documentation', isCurrent: false, sublinks: '' },
-        ],  
-        isLogged: true, 
-        username: 'Cosmin Negoita', 
-        loginButtonText: 'Login', 
-        signupButtonText: 'REGISTER'
-      })
+      +header(loggedHeaderData)
     .headers-and-footers__footer-with-copyright
-      +footer-with-copyright({ 
-        descriptionText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.', 
-        menuItems: [
-          { 
-            header: 'Navigation', 
-            options: [
-              { text: 'About Us', link: '/about-us' },
-              { text: 'News', link: '/news' },
-              { text: 'Support', link: '/support' },
-              { text: 'Products', link: '/products' },
-            ]
-          },
-          { 
-            header: 'ABOUT US', 
-            options: [
-              { text: 'Who we are', link: '/about-us/who-we-are' },
-              { text: 'Our team', link: '/about-us/our-team' },
-              { text: 'Careers', link: '/about-us/careers' },
-              { text: 'Investors', link: '/about-us/investors' },
-            ]
-          },
-          { 
-            header: 'Support', 
-            options: [
-              { text: 'Documentation', link: '/support/documentation' },
-              { text: 'Community', link: '/support/community' },
-              { text: 'Get in Touch', link: '/support/get-in-touch' },
-            ]
-          },
-        ],
-        subscribeHeader: 'Subscribe to our newsletter', 
-        subscribeDescription: 'Receive our latest news and promotions in your inbox!', 
-        sybscribePlaceholder: 'Your email address', 
-        copyrightText: 'Copyright © 2018 Toxin UI Kit. All rights reserved.', 
-      })
+      +footer-with-copyright(footerWithCopyrightData)
     .headers-and-footers__footer  
-      +footer({ descriptionText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.' })  
+      +footer(footerData)  

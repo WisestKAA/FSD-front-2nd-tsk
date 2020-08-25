@@ -14,240 +14,40 @@ block template
   include ../../../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
   include ../../../blocks/room-preview/room-preview.pug
   include ../../../blocks/pagination/pagination.pug
-  include ../../../blocks/footer-with-copyright/footer-with-copyright.pug   
+  include ../../../blocks/footer-with-copyright/footer-with-copyright.pug
+
+  - const { searchRoomData } = require('@pages/website-pages/search-room/search-room-data.json')
 
   .search-room
     main.search-room__main
       .search-room__wrapper
         .search-room__wrapper-left
           .search-room__dates
-            +label({ text: 'даты пребывания в отеле', marginBottom: '5' })
-            +date-dropdown ({ isFiltred: true })
+            +label(searchRoomData.dates.label)
+            +date-dropdown(searchRoomData.dates.item)
           .search-room__guests
-            +label({ text: 'гости', marginBottom: '5' })
-            +dropdown({
-              text: 'Сколько гостей',
-              options: [
-                  { text: 'взрослые', number: 0 },
-                  { text: 'дети', number: 0 },
-                  { text: 'младенцы', number: 0 },
-              ],
-            })
+            +label(searchRoomData.guests.label)
+            +dropdown(searchRoomData.guests.item)
           .search-room__price-range
-            +range-slider({ label: 'диапазон цены' })
+            +range-slider(searchRoomData.priceRange)
             .search-room__price-caption="Стоимость за сутки пребывания в номере"
           .search-room__checkbox-buttons
-            +label({ text: 'Checkbox Buttons', marginBottom: '17' })
-            +checkbox-button({ text: 'Можно курить', name: 'smoking' })
-            +checkbox-button({ text: 'Можно с питомцами', name: 'pets', isChecked: true })
-            +checkbox-button({ text: 'Можно пригласить гостей (до 10 человек)', name: 'guests', isChecked: true })
+            +label(searchRoomData.checkboxButtons.label)
+            each checkboxBatton in searchRoomData.checkboxButtons.items
+              +checkbox-button(checkboxBatton)
           .search-room__availability
-            +label({ text: 'доступность', marginBottom: '16' })
-            +checkbox-button({ text: 'Ширина коридоров в номере не менее 91 см.', name: 'width', header: 'Широкий коридор' })
-            +checkbox-button({ text: 'На 1 этаже вас встретит специалист и проводит до номера.', name: 'help', header: 'Помощник для инвалидов' })
+            +label(searchRoomData.availability.label)
+            each availability in searchRoomData.availability.items
+              +checkbox-button(availability)            
           .search-room__amenities
-            +label({ text: 'удобства номера', marginBottom: '5' })
-            +dropdown({
-              text: '',
-              options: [
-                  { text: 'спальни', number: 0 },
-                  { text: 'кровати', number: 0 },
-                  { text: 'ванные комнаты', number: 0 },
-              ],
-              isShort: true,
-              isDarkArrow: true,
-            })
+            +label(searchRoomData.amenities.label)
+            +dropdown(searchRoomData.amenities.item)
           .search-room__add-amenities
-            +expandable-checkbox-list({
-              header: 'дополнительные удобства', 
-              checkboxes :[
-                  { text: 'Завтрак', isChecked: false },
-                  { text: 'Письменный стол', isChecked: true },
-                  { text: 'Стул для кормления', isChecked: true },
-                  { text: 'Кроватка', isChecked: true },
-                  { text: 'Телевизор', isChecked: false },
-                  { text: 'Шампунь', isChecked: false },
-                  { text: 'Телевизор', isChecked: false },
-                  { text: 'Шампунь', isChecked: false },
-              ],
-            })
+            +expandable-checkbox-list(searchRoomData.addAmenities)
         .search-room__wrapper-right
           h1.search-room__preview-header.h1="Номера, которые мы для вас подобрали"
           .search-room__wrapper-preview
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room888.png', alt:'room #888' },
-                { src:'./img/room888.png', alt:'room #888' },
-                { src:'./img/room888.png', alt:'room #888' },
-                { src:'./img/room888.png', alt:'room #888' }
-              ], 
-              number: 888, 
-              isLuxe: true, 
-              price: '9 990', 
-              rate: 5, 
-              comments: 145,
-              isWhithMargin: true,
-            })
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room840.png', alt:'room #840' },
-                { src:'./img/room840.png', alt:'room #840' },
-                { src:'./img/room840.png', alt:'room #840' },
-                { src:'./img/room840.png', alt:'room #840' }
-              ], 
-              number: 840, 
-              isLuxe: false, 
-              price: '9 990', 
-              rate: 4, 
-              comments: 65,
-              isWhithMargin: true,
-            })
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room980.png', alt:'room #980' },
-                { src:'./img/room980.png', alt:'room #980' },
-                { src:'./img/room980.png', alt:'room #980' },
-                { src:'./img/room980.png', alt:'room #980' }
-              ], 
-              number: 980, 
-              isLuxe: true, 
-              price: '8 500', 
-              rate: 3, 
-              comments: 35,
-              isWhithMargin: true,
-            })   
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room856.png', alt:'room #856' },
-                { src:'./img/room856.png', alt:'room #856' },
-                { src:'./img/room856.png', alt:'room #856' },
-                { src:'./img/room856.png', alt:'room #856' }
-              ], 
-              number: 856, 
-              isLuxe: false, 
-              price: '7 300', 
-              rate: 5, 
-              comments: 195,
-              isWhithMargin: true,
-            })
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room740.png', alt:'room #740' },
-                { src:'./img/room740.png', alt:'room #740' },
-                { src:'./img/room740.png', alt:'room #740' },
-                { src:'./img/room740.png', alt:'room #740' }
-              ], 
-              number: 740, 
-              isLuxe: false, 
-              price: '6 000', 
-              rate: 4, 
-              comments: 44,
-              isWhithMargin: true,
-            })
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room982.png', alt:'room #982' },
-                { src:'./img/room982.png', alt:'room #982' },
-                { src:'./img/room982.png', alt:'room #982' },
-                { src:'./img/room982.png', alt:'room #982' }
-              ], 
-              number: 982, 
-              isLuxe: false, 
-              price: '5 800', 
-              rate: 3, 
-              comments: 56,
-              isWhithMargin: true,
-            })
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room678.png', alt:'room #678' },
-                { src:'./img/room678.png', alt:'room #678' },
-                { src:'./img/room678.png', alt:'room #678' },
-                { src:'./img/room678.png', alt:'room #678' }
-              ], 
-              number: 678, 
-              isLuxe: false, 
-              price: '5 500', 
-              rate: 5, 
-              comments: 45,
-              isWhithMargin: true,
-            })
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room450.png', alt:'room #450' },
-                { src:'./img/room450.png', alt:'room #450' },
-                { src:'./img/room450.png', alt:'room #450' },
-                { src:'./img/room450.png', alt:'room #450' }
-              ], 
-              number: 450, 
-              isLuxe: false, 
-              price: '5 300', 
-              rate: 4, 
-              comments: 39,
-              isWhithMargin: true,
-            })
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room350.png', alt:'room #350' },
-                { src:'./img/room350.png', alt:'room #350' },
-                { src:'./img/room350.png', alt:'room #350' },
-                { src:'./img/room350.png', alt:'room #350' }
-              ], 
-              number: 350, 
-              isLuxe: false, 
-              price: '5 000', 
-              rate: 3, 
-              comments: 77,
-              isWhithMargin: true,
-            })
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room666.png', alt:'room #666' },
-                { src:'./img/room666.png', alt:'room #666' },
-                { src:'./img/room666.png', alt:'room #666' },
-                { src:'./img/room666.png', alt:'room #666' }
-              ], 
-              number: 666, 
-              isLuxe: false, 
-              price: '5 000', 
-              rate: 5, 
-              comments: 25,
-              isWhithMargin: true,
-            })
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room444.png', alt:'room #444' },
-                { src:'./img/room444.png', alt:'room #444' },
-                { src:'./img/room444.png', alt:'room #444' },
-                { src:'./img/room444.png', alt:'room #444' }
-              ], 
-              number: 444, 
-              isLuxe: false, 
-              price: '5 000', 
-              rate: 3, 
-              comments: 15,
-              isWhithMargin: true,
-            })
-            +room-preview({
-              imgLinks:[
-                { src:'./img/room352.png', alt:'room #352' },
-                { src:'./img/room352.png', alt:'room #352' },
-                { src:'./img/room352.png', alt:'room #352' },
-                { src:'./img/room352.png', alt:'room #352' }
-              ], 
-              number: 352, 
-              isLuxe: false, 
-              price: '5 000', 
-              rate: 3, 
-              comments: 55,
-              isWhithMargin: true,
-            })
+            each roomPreview in searchRoomData.roomPreviews
+              +room-preview(roomPreview)            
           .search-room__pagination
-            +pagination({
-              links: [
-                { href: '/page1', isActive: true, number: 1, },
-                { href: '/page2', isActive: false,  number: 2, },
-                { href: '/page3', isActive: false,  number: 3, },
-                { href: '', isActive: false, number: 0, },
-                { href: '/page15', isActive: false,  number: 15, },
-            ]})
+            +pagination(searchRoomData.pagination)

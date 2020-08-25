@@ -8,48 +8,14 @@ block template
   include ../../../blocks/colors/colors.pug
   include ../../../blocks/types/types.pug
 
+  - const { colors, types } = require('@pages/ui-kit/colors-and-type/colors-and-type-data.json');
+
   main.colors-and-type
     .colors-and-type__content-wrapper
       .colors-and-type__content
         section.colors-and-type__colors
-          +colors({ color: 'dark100', text: 'Dark Shade 100%', code: '#1F2041'})
-          +colors({ color: 'dark75', text: 'Dark Shade 75%', code: '#1F2041'})
-          +colors({ color: 'dark50', text: 'Dark Shade 50%', code: '#1F2041'})
-          +colors({ color: 'dark25', text: 'Dark Shade 25%', code: '#1F2041'})
-          +colors({ color: 'dark5', text: 'Dark Shade 5%', code: '#1F2041', marginTopText: '6'})
-          +colors({ color: 'purple', text: 'Purple', code: '#BC9CFF', marginTopText: '6'})
-          +colors({ color: 'green', text: 'Green', code: '#6FCF97'})
+          each color in colors
+            +colors(color)
         section.colors-and-type__types
-          +types({
-            tag: 'H1',
-            text: 'This one is the sub-section or widget title', 
-            font: 'Quicksand', 
-            fontSize: '24', 
-            color: 'dark100', 
-            fontWeight: 'bold',
-          })
-          +types({
-            tag: 'H2',
-            text: 'Next one is the item title inside widgets', 
-            font: 'Quicksand', 
-            fontSize: '19', 
-            color: 'dark100', 
-            fontWeight: 'bold',
-          })
-          +types({
-            tag: 'H3',
-            text: 'This is a label or CTA text', 
-            font: 'Montserrat', 
-            fontSize: '12', 
-            color: 'dark100', 
-            fontWeight: 'bold',
-            marginBottom: 51,
-          })
-          +types({
-            tag: 'Body',
-            text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', 
-            font: 'Montserrat', 
-            fontSize: '14', 
-            color: 'dark75', 
-            fontWeight: 'normal',
-          })
+          each typ in types
+            +types(typ)          

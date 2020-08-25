@@ -63,7 +63,7 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: './out'
+    //contentBase: './out'
   },
   plugins: [
     new webpack.ProvidePlugin({
@@ -72,4 +72,9 @@ module.exports = {
       'window.jQuery': 'jquery'
     }),      
   ].concat(pagesData.HTMLPlugins),
+  resolve: {
+    alias: {
+      '@pages': path.join(__dirname, '../src/pages'),
+    },
+  },
 }

@@ -11,53 +11,22 @@ block template
   include ../../../blocks/sign-up/sign-up.pug
   include ../../../blocks/room-preview/room-preview.pug
 
+  - const { cardsData } = require('@pages/ui-kit/cards/cards-data.json')
+
   .cards
     .cards__main-wrapper
       main.cards__main
         .cards__content-left
-          +room-filter({ header: 'Найдём номера под ваши пожелания' })
+          +room-filter(cardsData.roomFilter)
           .cards__separator
-          +sign-up({ header: 'Регистрация аккаунта' })
+          +sign-up(cardsData.signUp)
         .cards__content-center
-          +room-price({
-            number: '888', 
-            isLuxe: true,
-            pricePerDay: '9 990', 
-            servicePrice: '2179', 
-            discountForService: '2179',
-            serviceInfo: '', 
-            addServicePrice: '300', 
-            addServiceInfo: ''
-          })
+          +room-price(cardsData.roomPrice)
           .cards__separator
-          +sign-in-form({ header: 'Войти' })
+          +sign-in-form(cardsData.signInForm)
         .cards__content-right
           .cards__calendar-moke
           .cards__separator
-          +room-preview({
-            imgLinks:[
-              {src:'./img/room888.png', alt:'room #888'},
-              {src:'./img/room888.png', alt:'room #888'},
-              {src:'./img/room888.png', alt:'room #888'},
-              {src:'./img/room888.png', alt:'room #888'}
-            ], 
-            number: 888, 
-            isLuxe: true, 
-            price: '9 990', 
-            rate: 5, 
-            comments: 145
-          })
+          +room-preview(cardsData.roomPreviewFirst)
           .cards__separator_margin-bottom-38
-          +room-preview({
-            imgLinks:[
-              {src:'./img/room840.png', alt:'room #840'},
-              {src:'./img/room840.png', alt:'room #840'},
-              {src:'./img/room840.png', alt:'room #840'},
-              {src:'./img/room840.png', alt:'room #840'}
-              ], 
-            number: 840, 
-            isLuxe: true, 
-            price: '9 990', 
-            rate: 4, 
-            comments: 65
-          })
+          +room-preview(cardsData.roomPreviewSecond)

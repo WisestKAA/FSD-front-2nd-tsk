@@ -1,0 +1,256 @@
+{
+  "searchRoomData": {
+    "dates": {
+      "label": { "text": "даты пребывания в отеле", "marginBottom": "5" },
+      "item": { "isFiltred": true }
+    },
+    "guests": {
+      "label": { "text": "гости", "marginBottom": "5" },
+      "item": {
+        "text": "Сколько гостей",
+        "options": [
+            { "text": "взрослые", "number": 0 },
+            { "text": "дети", "number": 0 },
+            { "text": "младенцы", "number": 0 }
+        ]
+      }
+    },
+    "priceRange": { "label": "диапазон цены" },
+    "checkboxButtons": {
+      "label": { "text": "Checkbox Buttons", "marginBottom": "17" },
+      "items": [
+        { "text": "Можно курить", "name": "smoking" },
+        { 
+          "text": "Можно с питомцами", 
+          "name": "pets", 
+          "isChecked": true 
+        },
+        { 
+          "text": "Можно пригласить гостей (до 10 человек)", 
+          "name": "guests", 
+          "isChecked": true 
+        }
+      ]
+    },
+    "availability": {
+      "label": { "text": "доступность", "marginBottom": "16" },
+      "items": [
+        { 
+          "text": "Ширина коридоров в номере не менее 91 см.", 
+          "name": "width", 
+          "header": "Широкий коридор" 
+        },
+        { 
+          "text": "На 1 этаже вас встретит специалист и проводит до номера.", 
+          "name": "help", 
+          "header": "Помощник для инвалидов" 
+        }
+      ]
+    },
+    "amenities": {
+      "label": { "text": "удобства номера", "marginBottom": "5" },
+      "item": {
+        "text": "",
+        "options": [
+          { "text": "спальни", "number": 0 },
+          { "text": "кровати", "number": 0 },
+          { "text": "ванные комнаты", "number": 0 }
+        ],
+        "isShort": true,
+        "isDarkArrow": true
+      }
+    },
+    "addAmenities": {
+      "header": "дополнительные удобства", 
+      "checkboxes": [
+          { "text": "Завтрак", "isChecked": false },
+          { "text": "Письменный стол", "isChecked": true },
+          { "text": "Стул для кормления", "isChecked": true },
+          { "text": "Кроватка", "isChecked": true },
+          { "text": "Телевизор", "isChecked": false },
+          { "text": "Шампунь", "isChecked": false },
+          { "text": "Телевизор", "isChecked": false },
+          { "text": "Шампунь", "isChecked": false }
+      ]
+    },
+    "roomPreviews": [
+      {
+        "imgLinks": [
+          { "src":"./img/room888.png", "alt":"room #888" },
+          { "src":"./img/room888.png", "alt":"room #888" },
+          { "src":"./img/room888.png", "alt":"room #888" },
+          { "src":"./img/room888.png", "alt":"room #888" }
+        ], 
+        "number": 888, 
+        "isLuxe": true, 
+        "price": "9 990", 
+        "rate": 5, 
+        "comments": 145,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks": [
+          { "src":"./img/room840.png", "alt":"room #840" },
+          { "src":"./img/room840.png", "alt":"room #840" },
+          { "src":"./img/room840.png", "alt":"room #840" },
+          { "src":"./img/room840.png", "alt":"room #840" }
+        ], 
+        "number": 840, 
+        "isLuxe": false, 
+        "price": "9 990", 
+        "rate": 4, 
+        "comments": 65,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks": [
+          { "src":"./img/room980.png", "alt":"room #980" },
+          { "src":"./img/room980.png", "alt":"room #980" },
+          { "src":"./img/room980.png", "alt":"room #980" },
+          { "src":"./img/room980.png", "alt":"room #980" }
+        ], 
+        "number": 980, 
+        "isLuxe": true, 
+        "price": "8 500", 
+        "rate": 3, 
+        "comments": 35,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks": [
+          { "src":"./img/room856.png", "alt":"room #856" },
+          { "src":"./img/room856.png", "alt":"room #856" },
+          { "src":"./img/room856.png", "alt":"room #856" },
+          { "src":"./img/room856.png", "alt":"room #856" }
+        ], 
+        "number": 856, 
+        "isLuxe": false, 
+        "price": "7 300", 
+        "rate": 5, 
+        "comments": 195,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks": [
+          { "src":"./img/room740.png", "alt":"room #740" },
+          { "src":"./img/room740.png", "alt":"room #740" },
+          { "src":"./img/room740.png", "alt":"room #740" },
+          { "src":"./img/room740.png", "alt":"room #740" }
+        ], 
+        "number": 740, 
+        "isLuxe": false, 
+        "price": "6 000", 
+        "rate": 4, 
+        "comments": 44,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks": [
+          { "src":"./img/room982.png", "alt":"room #982" },
+          { "src":"./img/room982.png", "alt":"room #982" },
+          { "src":"./img/room982.png", "alt":"room #982" },
+          { "src":"./img/room982.png", "alt":"room #982" }
+        ], 
+        "number": 982, 
+        "isLuxe": false, 
+        "price": "5 800", 
+        "rate": 3, 
+        "comments": 56,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks": [
+          { "src":"./img/room678.png", "alt":"room #678" },
+          { "src":"./img/room678.png", "alt":"room #678" },
+          { "src":"./img/room678.png", "alt":"room #678" },
+          { "src":"./img/room678.png", "alt":"room #678" }
+        ], 
+        "number": 678, 
+        "isLuxe": false, 
+        "price": "5 500", 
+        "rate": 5, 
+        "comments": 45,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks": [
+          { "src":"./img/room450.png", "alt":"room #450" },
+          { "src":"./img/room450.png", "alt":"room #450" },
+          { "src":"./img/room450.png", "alt":"room #450" },
+          { "src":"./img/room450.png", "alt":"room #450" }
+        ], 
+        "number": 450, 
+        "isLuxe": false, 
+        "price": "5 300", 
+        "rate": 4, 
+        "comments": 39,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks": [
+          { "src":"./img/room350.png", "alt":"room #350" },
+          { "src":"./img/room350.png", "alt":"room #350" },
+          { "src":"./img/room350.png", "alt":"room #350" },
+          { "src":"./img/room350.png", "alt":"room #350" }
+        ], 
+        "number": 350, 
+        "isLuxe": false, 
+        "price": "5 000", 
+        "rate": 3, 
+        "comments": 77,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks": [
+          { "src":"./img/room666.png", "alt":"room #666" },
+          { "src":"./img/room666.png", "alt":"room #666" },
+          { "src":"./img/room666.png", "alt":"room #666" },
+          { "src":"./img/room666.png", "alt":"room #666" }
+        ], 
+        "number": 666, 
+        "isLuxe": false, 
+        "price": "5 000", 
+        "rate": 5, 
+        "comments": 25,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks":[
+          { "src":"./img/room444.png", "alt":"room #444" },
+          { "src":"./img/room444.png", "alt":"room #444" },
+          { "src":"./img/room444.png", "alt":"room #444" },
+          { "src":"./img/room444.png", "alt":"room #444" }
+        ], 
+        "number": 444, 
+        "isLuxe": false, 
+        "price": "5 000", 
+        "rate": 3, 
+        "comments": 15,
+        "isWhithMargin": true
+      },
+      {
+        "imgLinks":[
+          { "src":"./img/room352.png", "alt":"room #352" },
+          { "src":"./img/room352.png", "alt":"room #352" },
+          { "src":"./img/room352.png", "alt":"room #352" },
+          { "src":"./img/room352.png", "alt":"room #352" }
+        ], 
+        "number": 352, 
+        "isLuxe": false, 
+        "price": "5 000", 
+        "rate": 3, 
+        "comments": 55,
+        "isWhithMargin": true
+      }
+    ],
+    "pagination": {
+      "links": [
+        { "href": "/page1", "isActive": true, "number": 1 },
+        { "href": "/page2", "isActive": false,  "number": 2 },
+        { "href": "/page3", "isActive": false,  "number": 3 },
+        { "href": "", "isActive": false, "number": 0 },
+        { "href": "/page15", "isActive": false,  "number": 15 }
+      ]
+    }
+  }
+}
