@@ -7,8 +7,7 @@ class Carusel {
   }
 
   init() {
-    this.initCarusel();
-    this.initCarusel(this.elem.querySelector('.owl-carousel'));
+    Carusel.initCarusel(this.elem.querySelector('.owl-carousel'));
     this.elem.querySelector('.owl-prev').getElementsByTagName('span')[0].textContent = 'keyboard_arrow_left';
     this.elem.querySelector('.owl-next').getElementsByTagName('span')[0].textContent = 'keyboard_arrow_right';
   }
