@@ -4,11 +4,11 @@ include ../button/button.pug
 include ../label/label.pug
 
 mixin room-price({ actionLink='/moke', number, isLuxe=false, pricePerDay=0, servicePrice=0, discountForService="", serviceInfo, addServicePrice=0, addServiceInfo }={})
-  - var luxe = ''
+  - let luxe = ''
   if (!isLuxe)
     - luxe = 'room-price__room-number-luxe_hide'
-  - var service = 'Сбор за услуги:'
-  - var servicePriceCalc = 0
+  - let service = 'Сбор за услуги:'
+  - let servicePriceCalc = 0
   if (discountForService)
     - service += ` скидка ${discountForService}₽`
     - servicePriceCalc = servicePrice - discountForService

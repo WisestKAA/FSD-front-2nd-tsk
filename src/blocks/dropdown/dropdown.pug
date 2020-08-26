@@ -3,11 +3,11 @@ include ../dropdown-option/dropdown-option.pug
 include ../dropdown-option-button/dropdown-option-button.pug
 
 mixin dropdown({ text, options=[], isShort=false, isDarkArrow=false } = {})
-  - var short=''
+  - let short=''
   if isShort === true
     - short = 'dropdown_width-short js-dropdown_width-short'
 
-  - var darkArrow = ''
+  - let darkArrow = ''
   if (isDarkArrow)
     - darkArrow = 'dropdown__arrow_dark'
 

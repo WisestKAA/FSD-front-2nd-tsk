@@ -1,29 +1,29 @@
 include ../material-icons/material-icons.pug
 
 mixin button({ type, name, value, actionLink }={})    
-
+  - let typeClass
   .button
     case type
       when 'rich'
-        - var type = 'button__wraper-rich_' + type           
+        - typeClass = 'button__wraper-rich_' + type           
         .button__wraper-rich
           .button__arrow
             +material-icons({type: "arrow_forward"})
           .button__text=value             
-          input(type="submit", name=name, value=value, class=type)
+          input(type="submit", name=name, value=value, class=typeClass)
       when 'empty'
-        - var type = 'button__wraper-empty_' + type
+        - typeClass = 'button__wraper-empty_' + type
         button.button__wraper-empty
-          a(href=actionLink, class=type)=value
+          a(href=actionLink, class=typeClass)=value
       when 'short-gradient-background'
-        - var type = 'button__wraper-short_gradient-background'
+        - typeClass = 'button__wraper-short_gradient-background'
         button.button__wraper-short
-          a(href=actionLink, class=type)=value
+          a(href=actionLink, class=typeClass)=value
       when 'short-bordered'
-        -var type = 'button__wraper-short_bordered'
+        - typeClass = 'button__wraper-short_bordered'
         button.button__wraper-short
-          a(href=actionLink, class=type)=value  
+          a(href=actionLink, class=typeClass)=value  
       default
-        - var type = 'button__wraper_' + type
+        - typeClass = 'button__wraper_' + type
         button.button__wraper            
-          a(href=actionLink, class=type)=value
+          a(href=actionLink, class=typeClass)=value

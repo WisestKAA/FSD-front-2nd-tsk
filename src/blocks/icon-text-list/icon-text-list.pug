@@ -1,9 +1,9 @@
 include ../material-icons/material-icons.pug
 
 mixin icon-text-list ({ items=[], isLustHaveBorder=true }={})
-  - var lustBorder = ''
+  - let lustBorder = ''
   if (!isLustHaveBorder)
-    - var lustBorder = 'icon-text-list__wraper_without-lust-border'
+    - lustBorder = 'icon-text-list__wraper_without-lust-border'
 
   figure.icon-text-list
     each item in items

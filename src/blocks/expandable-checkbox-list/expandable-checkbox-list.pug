@@ -1,7 +1,7 @@
 include ../checkbox-button/checkbox-button.pug
 
 mixin expandable-checkbox-list({ header, checkboxes =[], isExpanded=false } = {})
-  - var expanded = ''
+  - let expanded = ''
   if (isExpanded)
     - expanded = 'expandable-checkbox-list__checkboxes_display'
   

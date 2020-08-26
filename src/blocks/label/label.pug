@@ -1,10 +1,10 @@
 
 mixin label({ text, marginBottom, caption, marginCaption, isShort=false }={})
-  - var margtop = ''
+  - let margtop = ''
   if (marginCaption === 3) 
     - margtop = 'label__caption_margin-top-3'
   
-  - var short = ''
+  - let short = ''
   if (isShort)
     - short = ' label_short'
 

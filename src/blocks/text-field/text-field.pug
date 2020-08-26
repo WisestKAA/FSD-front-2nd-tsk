@@ -1,11 +1,11 @@
 mixin text-field({ placeholder, name, isMasked = false, isPaddingRightMode = false, text, type = 'text'}={})
 
-  - var maskedMod = '';
+  - let maskedMod = '';
   if (isMasked)  
     - maskedMod = ' text-field_masked'
     - placeholder = 'ДД.ММ.ГГГГ'
   
-  - var addPadding = '';
+  - let addPadding = '';
   if (isPaddingRightMode)
     - addPadding = ' text-field_addPaddingRight'    
   
