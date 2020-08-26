@@ -1,22 +1,22 @@
 class DropdownOption {
-  constructor (element) {
+  constructor(element) {
     this.option = element;
     this.init();
     this.addEvents();
   }
 
-  addEvents () {
+  addEvents() {
     this.minusButton.addEventListener('click', this.handleMinusClick.bind(this));
     this.plusButton.addEventListener('click', this.handlePlusClick.bind(this));
     this.number.addEventListener('DOMSubtreeModified', this.handleValueModifed.bind(this));
   }
 
-  init () {
+  init() {
     this.initButtons();
     this.initNumber();
   }
 
-  initButtons () {
+  initButtons() {
     const buttons = this.option.querySelectorAll('.js-dropdown-option__circle');
     buttons.forEach((val) => {
       if (val.textContent === '-') {
@@ -28,21 +28,21 @@ class DropdownOption {
     });
   }
 
-  initNumber () {
+  initNumber() {
     this.number = this.option.querySelector('.js-dropdown-option__number');
     this.value = parseInt(this.number.textContent, 10);
     if (this.value === '') this.value = 0;
     if (this.value === 0) this.disableMinus();
   }
 
-  handleMinusClick () {
+  handleMinusClick() {
     if (this.value > 0) {
       this.value -= 1;
     }
     this.number.textContent = this.value;
   }
 
-  handlePlusClick () {
+  handlePlusClick() {
     this.value += 1;
     this.number.textContent = this.value;
     if (this.minusButton.classList.contains('dropdown-option__circle_disable')) {
@@ -50,21 +50,21 @@ class DropdownOption {
     }
   }
 
-  enableMinus () {
+  enableMinus() {
     this.minusButton.classList.remove('dropdown-option__circle_disable');
   }
 
-  disableMinus () {
+  disableMinus() {
     this.minusButton.classList.add('dropdown-option__circle_disable');
   }
 
-  handleValueModifed () {
+  handleValueModifed() {
     if (this.value === 0) {
       this.disableMinus();
     }
   }
 
-  clearValue () {
+  clearValue() {
     this.number.textContent = 0;
     this.value = 0;
     this.disableMinus();

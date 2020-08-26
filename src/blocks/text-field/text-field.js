@@ -6,9 +6,9 @@ $(document).ready(() => {
     const isMaskedTextField = $(val).hasClass('text-field_masked');
     if (isMaskedTextField) {
       $(val).inputmask({
-        'alias': 'datetime',
-        'inputFormat': 'dd.mm.yyyy',
-        'placeholder': 'ДД.ММ.ГГГГ',
+        alias: 'datetime',
+        inputFormat: 'dd.mm.yyyy',
+        placeholder: 'ДД.ММ.ГГГГ'
       });
     }
   });

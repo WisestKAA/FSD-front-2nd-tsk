@@ -1,36 +1,36 @@
 import 'ion-rangeslider/js/ion.rangeSlider';
 
 class RangeSlider {
-  constructor (elem) {
+  constructor(elem) {
     this.$sliderContainer = $(elem);
     this.$slider = this.$sliderContainer.find('.js-range-slider__slider');
     this.$price = this.$sliderContainer.find('.js-range-slider__price');
     this.initSlider();
   }
 
-  initSlider () {
+  initSlider() {
     const { $price } = this;
     this.$slider.ionRangeSlider({
-      onStart (data) {
+      onStart(data) {
         const { from, to } = data;
         const fromVal = from.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, ' $1');
         const toVal = to.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, ' $1');
         $price.val(`${fromVal}₽ - ${toVal}₽`);
       },
-      onChange (data) {
+      onChange(data) {
         const { from, to } = data;
         const fromVal = from.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, ' $1');
         const toVal = to.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, ' $1');
         $price.val(`${fromVal}₽ - ${toVal}₽`);
-      },
+      }
     });
   }
 }
 
 $(() => {
   const $sliders = $('.js-range-slider');
-  
+  const items = [];
   $sliders.each((iterator, val) => {
-    new RangeSlider(val);
+    items.push(new RangeSlider(val));
   });
 });

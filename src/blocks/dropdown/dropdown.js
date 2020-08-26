@@ -2,7 +2,7 @@ import DropdownOption from '../dropdown-option/dropdown-option';
 import DropdownOptionButton from '../dropdown-option-button/dropdown-option-button';
 
 class DropDown {
-  constructor (element, optionText, isShort = false) {
+  constructor(element, optionText, isShort = false) {
     this.dropdown = element;
     this.isShort = isShort;
     this.optionText = optionText;
@@ -10,19 +10,19 @@ class DropDown {
     this.addEvents();
   }
 
-  init () {
+  init() {
     this.initSelect();
     this.initOptions();
     this.initOptionButtons();
     this.arrow = this.dropdown.querySelector('.js-material-icons');
   }
 
-  addEvents () {
+  addEvents() {
     this.select.addEventListener('click', this.handleSelectClick.bind(this));
     this.options.addEventListener('DOMSubtreeModified', this.handleOptionsModifed.bind(this));
   }
 
-  initSelect () {
+  initSelect() {
     this.select = this.dropdown.querySelector('.js-dropdown__select');
     this.selectText = this.select.querySelector('.js-dropdown__text');
     if (this.isShort) {
@@ -33,7 +33,7 @@ class DropDown {
     }
   }
 
-  initOptions () {
+  initOptions() {
     this.options = this.dropdown.querySelector('.js-dropdown__options');
     this.optionsList = this.options.querySelectorAll('.js-dropdown-option');
     this.optionsListObj = [];
@@ -42,7 +42,7 @@ class DropDown {
     }));
   }
 
-  initOptionButtons () {
+  initOptionButtons() {
     this.optionButton = this.options.querySelector('.js-dropdown-option-button');
     if (this.optionButton !== null) {
       this.optionButtons = new DropdownOptionButton(
@@ -53,7 +53,7 @@ class DropDown {
     }
   }
 
-  handleSelectClick () {
+  handleSelectClick() {
     if (this.select.classList.contains('dropdown__select_active')) {
       this.hideDropdown();
     } else {
@@ -61,17 +61,17 @@ class DropDown {
     }
   }
 
-  showDropdown () {
+  showDropdown() {
     this.select.classList.add('dropdown__select_active');
     this.options.classList.add('dropdown__options_active');
-        
+
     this.handleDocumentClick = this.handleDocumentClick.bind(this);
     document.addEventListener('click', this.handleDocumentClick);
 
     this.arrow.textContent = 'keyboard_arrow_up';
   }
 
-  hideDropdown () {
+  hideDropdown() {
     this.select.classList.remove('dropdown__select_active');
     this.options.classList.remove('dropdown__options_active');
 
@@ -80,7 +80,7 @@ class DropDown {
     this.arrow.textContent = 'keyboard_arrow_down';
   }
 
-  handleOptionsModifed () {
+  handleOptionsModifed() {
     this.sum = 0;
     let babys = 0;
     this.optionsList.forEach((val)=>{
@@ -91,29 +91,27 @@ class DropDown {
         this.sum += parseInt(num.textContent, 10);
       }
     });
-        
+
     if (this.sum === 0) {
       this.selectText.textContent = this.defaultSelectText;
       if (this.optionButtons) {
         this.optionButtons.hideDrop();
       }
       return;
-    } else {
-      if (this.optionButtons) {
-        this.optionButtons.checkHiden();
-      }
+    } if (this.optionButtons) {
+      this.optionButtons.checkHiden();
     }
-        
+
     if (this.isShort) {
       this.selectText.textContent = this.getRightTextShort(this.optionText);
     } else {
-      this.selectText.textContent = babys === 0 ?
-        this.getRightText(this.optionText.guest, this.sum) :
-        `${this.getRightText(this.optionText.guest, this.sum)}, ${this.getRightText(this.optionText.baby, babys)}` ;
+      this.selectText.textContent = babys === 0
+        ? this.getRightText(this.optionText.guest, this.sum)
+        : `${this.getRightText(this.optionText.guest, this.sum)}, ${this.getRightText(this.optionText.baby, babys)}`;
     }
   }
 
-  getRightText (optionText, sum) {
+  getRightText(optionText, sum) {
     const newval = sum % 100;
     if (newval === 1) {
       return sum + optionText.ferst;
@@ -136,13 +134,13 @@ class DropDown {
     return sum + optionText.third;
   }
 
-  getRightTextShort (optionText) {
+  getRightTextShort(optionText) {
     const nums = [];
     this.optionsList.forEach((val)=>{
       const num = val.querySelector('.js-dropdown-option__number');
       nums.push(parseInt(num.textContent, 10));
     });
-        
+
     let finalText = '';
     finalText += `${this.getRightText(optionText.bedroom, nums[0])} `;
     finalText += `${this.getRightText(optionText.bed, nums[1])} `;
@@ -150,7 +148,7 @@ class DropDown {
     return finalText;
   }
 
-  handleDocumentClick (event) {
+  handleDocumentClick(event) {
     const { target } = event;
     const itsDropdown = target === this.dropdown || this.dropdown.contains(target);
     if (!itsDropdown) {
@@ -161,39 +159,40 @@ class DropDown {
 
 $(document).ready(() => {
   const optionText = {
-    'guest': {
-      'ferst': ' гость',
-      'second': ' гостя',
-      'third': ' гостей',
+    guest: {
+      ferst: ' гость',
+      second: ' гостя',
+      third: ' гостей'
     },
-    'bedroom': {
-      'ferst': ' спальня',
-      'second': ' спальни',
-      'third': ' спален',
+    bedroom: {
+      ferst: ' спальня',
+      second: ' спальни',
+      third: ' спален'
     },
-    'bed': {
-      'ferst': ' кровать',
-      'second': ' кровати',
-      'third': ' кроватей',
+    bed: {
+      ferst: ' кровать',
+      second: ' кровати',
+      third: ' кроватей'
     },
-    'bathroom': {
-      'ferst': ' ванная комната',
-      'second': ' ванные комнаты',
-      'third': ' ванных комнат',
+    bathroom: {
+      ferst: ' ванная комната',
+      second: ' ванные комнаты',
+      third: ' ванных комнат'
     },
-    'baby': {
-      'ferst': ' младенец',
-      'second': ' младенца',
-      'third': ' младенцев',
-    },
+    baby: {
+      ferst: ' младенец',
+      second: ' младенца',
+      third: ' младенцев'
+    }
   };
 
   const dropdowns = document.querySelectorAll('.js-dropdown');
+  const items = [];
   dropdowns.forEach(((val) =>{
     if (val.classList.contains('js-dropdown_width-short')) {
-      new DropDown(val, optionText, true);
+      items.push(new DropDown(val, optionText, true));
     } else {
-      new DropDown(val, optionText);
+      items.push(new DropDown(val, optionText));
     }
   }));
 });

@@ -20,6 +20,7 @@
     "css-loader": "^3.6.0",
     "cssnano": "^4.1.10",
     "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-fsd": "^1.0.1",
     "eslint-plugin-import": "^2.22.0",
     "extract-text-webpack-plugin": "^3.0.2",

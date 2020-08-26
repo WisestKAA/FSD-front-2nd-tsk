@@ -1,1 +1,1 @@
-import '../../../blocks/room-filter/room-filter'
+import '../../../blocks/room-filter/room-filter';

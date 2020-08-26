@@ -1,12 +1,12 @@
 import 'air-datepicker/dist/js/datepicker';
 
 class DateDropdown {
-  constructor (elem) {
+  constructor(elem) {
     this.init(elem);
     this.addEvents();
   }
 
-  init (elem) {
+  init(elem) {
     this.dateDropdown = elem;
     this.datePiker = elem.querySelector('.js-date-dropdown__input');
 
@@ -22,7 +22,7 @@ class DateDropdown {
     }
   }
 
-  addEvents () {
+  addEvents() {
     if (!this.isFiltred) {
       this.inputTo.addEventListener('click', this.handleShowDatePiker.bind(this));
     }
@@ -32,33 +32,35 @@ class DateDropdown {
     this.$clearButton[0].addEventListener('click', this.handleClearButtonClick.bind(this));
   }
 
-  datePikerInit (datePiker, dateDropdown, isFiltred = false, inputFrom, inputTo) {
-    const dateForm = isFiltred ? 'dd.mm.yyyy' : 'dd M' ;
+  datePikerInit(datePiker, dateDropdown, isFiltred = false, inptFrom, inptTo) {
+    const dateForm = isFiltred ? 'dd.mm.yyyy' : 'dd M';
+    let inputFrom = inptFrom;
+    let inputTo = inptTo;
 
     $(datePiker).datepicker({
-      'minDate': new Date(),
-      'range': true,
-      'multipleDatesSeparator': ' - ',
-      'dateFormat': dateForm,
-      'clearButton': true,
-      'language': {
-        'days': ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-        'daysShort': ['вос', 'пон', 'вто', 'сре', 'чет', 'пят', 'суб'],
-        'daysMin': ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-        'months': ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-        'monthsShort': ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
-        'today': 'Сегодня',
-        'clear': 'Очистить',
-        'dateFormat': 'dd.mm.yyyy',
-        'timeFormat': 'hh:ii',
-        'firstDay': 1,
+      minDate: new Date(),
+      range: true,
+      multipleDatesSeparator: ' - ',
+      dateFormat: dateForm,
+      clearButton: true,
+      language: {
+        days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+        daysShort: ['вос', 'пон', 'вто', 'сре', 'чет', 'пят', 'суб'],
+        daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+        months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        monthsShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
+        today: 'Сегодня',
+        clear: 'Очистить',
+        dateFormat: 'dd.mm.yyyy',
+        timeFormat: 'hh:ii',
+        firstDay: 1
       },
-      'navTitles': {
-        'days': 'MM <i>yyyy</i>',
+      navTitles: {
+        days: 'MM <i>yyyy</i>'
       },
-      'prevHtml': '<i class=\'date-dropdown__navigation\'>arrow_back</i>',
-      'nextHtml': '<i class=\'date-dropdown__navigation\'>arrow_forward</i>',
-      'onShow' (instMock, animationCompletedMock) {
+      prevHtml: '<i class="date-dropdown__navigation">arrow_back</i>',
+      nextHtml: '<i class="date-dropdown__navigation">arrow_forward</i>',
+      'onShow'(instMock, animationCompletedMock) {
         const datePikerWidth = dateDropdown.clientWidth;
         const $datepikerContainer = $(datePiker).datepicker()
           .data('datepicker').$datepicker;
@@ -67,7 +69,7 @@ class DateDropdown {
           inputFrom.value = inputFrom.value.substring(0, 10);
         }
       },
-      'onSelect' (formattedDate) {
+      'onSelect'(formattedDate) {
         if (isFiltred) {
           if (formattedDate.toString().length === 10) {
             inputTo.value = '';
@@ -78,37 +80,37 @@ class DateDropdown {
           }
         }
       },
-      'onHide' () {
+      'onHide'() {
         if (isFiltred) {
           inputFrom.value = inputFrom.value.substring(0, 10);
         }
-      },
+      }
     });
 
     this.$buttonsContainer = $(this.datePiker).datepicker()
       .data('datepicker').$datepicker.find('.datepicker--buttons');
     this.$applyButton = $('<span>', {
-      'text': 'применить',
-      'class': 'date-dropdown__apply-button',
+      text: 'применить',
+      class: 'date-dropdown__apply-button'
     }).appendTo(this.$buttonsContainer);
 
     this.$clearButton = $(this.datePiker).datepicker()
       .data('datepicker').$datepicker.find('.datepicker--button');
   }
 
-  handleApplyButtonClick () {
+  handleApplyButtonClick() {
     $(this.datePiker).datepicker()
       .data('datepicker')
       .hide();
   }
 
-  handleShowDatePiker () {
+  handleShowDatePiker() {
     $(this.datePiker).datepicker()
       .data('datepicker')
       .show();
   }
 
-  handleClearButtonClick () {
+  handleClearButtonClick() {
     if (!this.isFiltred) {
       this.inputTo.value = '';
     }
@@ -117,8 +119,9 @@ class DateDropdown {
 
 $(document).ready(() => {
   const dateDropdowns = document.querySelectorAll('.js-date-dropdown');
+  const items = [];
   dateDropdowns.forEach(((val) =>{
-    new DateDropdown(val);
+    items.push(new DateDropdown(val));
   }));
 });
 

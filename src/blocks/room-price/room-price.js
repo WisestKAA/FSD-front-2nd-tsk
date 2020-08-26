@@ -2,13 +2,13 @@ import '../date-dropdown/date-dropdown';
 import '../dropdown/dropdown';
 
 class RoomPrice {
-  constructor (value) {
+  constructor(value) {
     this.roomPrice = value;
     this.init();
     this.addEvents();
   }
 
-  init () {
+  init() {
     this.pricePerDay = this.getPrice(this.roomPrice);
     this.calculateContainer = this.roomPrice.querySelector('.js-room-price__calculate');
 
@@ -17,13 +17,13 @@ class RoomPrice {
     this.initButtons();
   }
 
-  addEvents () {
+  addEvents() {
     this.calculateContainer.addEventListener('DOMSubtreeModified', this.handleCalculateModifed.bind(this));
     this.dateApplayButton.addEventListener('click', this.handleDatesModifed.bind(this));
     this.dateClearButton.addEventListener('click', this.handleDatesClear.bind(this));
   }
 
-  initPrices () {
+  initPrices() {
     this.priceForRoomDiscriptionContainer = this.roomPrice.querySelector('.js-room-price__for-room-discription');
     this.priceForRoomPriceContainer = this.roomPrice.querySelector('.js-room-price__for-room-price');
     this.priceForServiceContainer = this.roomPrice.querySelector('.js-room-price__for-services-price');
@@ -31,43 +31,43 @@ class RoomPrice {
     this.totalContainer = this.roomPrice.querySelector('.js-room-price__total-price');
   }
 
-  initDatePicker () {
+  initDatePicker() {
     this.datePickerContainer = this.roomPrice.querySelector('.js-date-dropdown');
     this.$datePikerObj = $(this.roomPrice.querySelector('.js-date-dropdown__input')).data('datepicker');
   }
 
-  initButtons () {
+  initButtons() {
     this.dateApplayButton = this.$datePikerObj.$datepicker.find('.date-dropdown__apply-button')[0];
     this.dateClearButton = this.$datePikerObj.$datepicker.find('.datepicker--button')[0];
   }
 
-  getPrice (roomPrice) {
-    const priceText  = roomPrice.querySelector('.js-room-price__price-sum').textContent;
+  getPrice(roomPrice) {
+    const priceText = roomPrice.querySelector('.js-room-price__price-sum').textContent;
     return this.convertToNum(priceText);
   }
 
-  convertToNum (val) {
+  static convertToNum(val) {
     return Number(val.substring(0, val.length - 1).replace(/\s+/g, ''));
   }
 
-  handleDatesModifed () {
-    const days = (this.$datePikerObj.selectedDates[1] -
-      this.$datePikerObj.selectedDates[0]) / 86400000;
+  handleDatesModifed() {
+    const days = (this.$datePikerObj.selectedDates[1]
+      - this.$datePikerObj.selectedDates[0]) / 86400000;
     this.priceForRoomDiscriptionContainer.textContent = `${this.getNumWithSpace(this.pricePerDay)}₽ x ${days} суток`;
     const sum = this.pricePerDay * days;
     this.priceForRoomPriceContainer.textContent = `${this.getNumWithSpace(sum)}₽`;
   }
 
-  handleDatesClear () {
+  handleDatesClear() {
     this.priceForRoomDiscriptionContainer.textContent = `${this.getNumWithSpace(this.pricePerDay)}₽ x 0 суток`;
     this.priceForRoomPriceContainer.textContent = '0₽';
   }
 
-  getNumWithSpace (val) {
+  static getNumWithSpace(val) {
     return val.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, ' $1');
   }
 
-  handleCalculateModifed () {
+  handleCalculateModifed() {
     const roomPrice = this.convertToNum(this.priceForRoomPriceContainer.textContent);
     const servicePrice = this.convertToNum(this.priceForServiceContainer.textContent);
     const addServicePrice = this.convertToNum(this.priceForAddServiceContainer.textContent);
@@ -76,11 +76,11 @@ class RoomPrice {
   }
 }
 
-
 $(document).ready(() => {
   const roomPrice = document.querySelectorAll('.js-room-price');
+  const items = [];
   roomPrice.forEach(((val) =>{
-    new RoomPrice(val);
+    items.push(new RoomPrice(val));
   }));
 });
 
