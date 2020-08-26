@@ -1,0 +1,15 @@
+{
+  "uiKitData": [
+    { "href": "./colors-and-type.html", "name": "Colors and type" },
+    { "href": "./form-elements.html", "name": "Form Elements" },
+    { "href": "./cards.html", "name": "Cards" },
+    { "href": "./headers-and-footers.html", "name": "Headers and Footers" }
+  ],
+  "websiteData": [
+    { "href": "./landing.html", "name": "Landing page" },
+    { "href": "./search-room.html", "name": "Search room/Filter" },
+    { "href": "./room-details.html", "name": "Room details" },
+    { "href": "./registration.html", "name": "Registration" },
+    { "href": "./sign-in.html", "name": "Sign in" }
+  ]
+}

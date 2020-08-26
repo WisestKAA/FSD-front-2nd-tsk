@@ -1,3 +1,5 @@
+- const { uiKitData, websiteData } = require('@src/index-data.json');
+
 doctype html
 html
   head
@@ -13,32 +15,13 @@ html
   body.body
     h1.h1 Ui kit
     ul
-      li 
-        h3
-          a.h3(href="./colors-and-type.html") Colors and type
-      li
-        h3
-          a.h3(href="./form-elements.html") Form Elements
-      li
-        h3
-          a.h3(href="./cards.html") Cards
-      li
-        h3
-          a.h3(href="./headers-and-footers.html") Headers and Footers
-    h1.h1 Websute pages
+      each uiKit in uiKitData
+        li 
+          h3
+            a.h3(href=uiKit.href)=uiKit.name      
+    h1.h1 Website pages
     ul
-      li
-        h3
-          a.h3(href="./landing.html") Landing page
-      li
-        h3
-          a.h3(href="./search-room.html") Search room/Filter
-      li
-        h3
-          a.h3(href="./room-details.html") Room details
-      li
-        h3
-          a.h3(href="./registration.html") Registration
-      li
-        h3
-          a.h3(href="./sign-in.html") Sign in
+      each website in websiteData
+        li 
+          h3
+            a.h3(href=website.href)=website.name

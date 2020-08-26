@@ -1,13 +1,13 @@
-const pagesData = require ('./pages-data');
+const pagesData = require('./pages-data');
 const path = require('path');
-const webpack = require ('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   entry: pagesData.entry,
   output: {
     filename: 'scripts/[name].js',
-    path:  path.join(__dirname, '../out'),            
-    publicPath: './',
+    path: path.join(__dirname, '../out'),
+    publicPath: './'
   },
   module: {
     rules: [
@@ -15,7 +15,7 @@ module.exports = {
         test: /\.pug$/,
         loader: 'pug-loader',
         options: {
-            pretty: true
+          pretty: true
         }
       },
       {
@@ -24,57 +24,55 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-              presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env']
           }
         }
-      },      
+      },
       {
         test: /\.(ttf|eot|woff|svg|woff2)$/,
-        exclude: [/favicons/,],
+        exclude: [/favicons/],
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            name: `fonts/[name].[ext]`,
-            publicPath: '../',
+            name: 'fonts/[name].[ext]',
+            publicPath: '../'
           }
         }
       },
       {
         test: /\.(png|jpg|gif|svg|)$/,
-        exclude: [/fonts/,],
+        exclude: [/fonts/],
         use: {
           loader: 'file-loader',
           options: {
-            name: `./img/[name].[ext]`,
-          },
+            name: './img/[name].[ext]'
+          }
         }
       },
       {
         test: /\.(svg|png|ico|xml|json|webmanifest)$/,
-        exclude: [/blocks/, /img/, /node_modules/, /pages/, /fonts/],
+        exclude: [/blocks/, /img/, /node_modules/, /pages/, /fonts/, /index-data.json/],
         use: [{
           loader: 'file-loader',
           options: {
             name: './favicons/[name].[ext]',
-            publicPath: '../',
-          },
-        }],
-      },
+            publicPath: '../'
+          }
+        }]
+      }
     ]
-  },
-  devServer: {
-    //contentBase: './out'
   },
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
-    }),      
+    })
   ].concat(pagesData.HTMLPlugins),
   resolve: {
     alias: {
       '@pages': path.join(__dirname, '../src/pages'),
-    },
-  },
-}
+      '@src': path.join(__dirname, '../src')
+    }
+  }
+};
