@@ -5,14 +5,14 @@ mixin button({ type, name, value, actionLink }={})
   .button
     case type
       when 'rich'
-        - typeClass = 'button__wraper-rich_' + type           
+        - typeClass = `button__wraper-rich_${type}`          
         .button__wraper-rich
           .button__arrow
             +material-icons({type: "arrow_forward"})
           .button__text=value             
           input(type="submit", name=name, value=value, class=typeClass)
       when 'empty'
-        - typeClass = 'button__wraper-empty_' + type
+        - typeClass = `button__wraper-empty_${type}`
         button.button__wraper-empty
           a(href=actionLink, class=typeClass)=value
       when 'short-gradient-background'
@@ -24,6 +24,6 @@ mixin button({ type, name, value, actionLink }={})
         button.button__wraper-short
           a(href=actionLink, class=typeClass)=value  
       default
-        - typeClass = 'button__wraper_' + type
+        - typeClass = `button__wraper_${type}`
         button.button__wraper            
           a(href=actionLink, class=typeClass)=value
