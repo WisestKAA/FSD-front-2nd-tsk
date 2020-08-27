@@ -8,9 +8,10 @@ mixin room-price({ actionLink='/moke', number, isLuxe=false, pricePerDay=0, serv
     const luxe = !isLuxe && 'room-price__room-number-luxe_hide'
     let service = 'Сбор за услуги:'
     let servicePriceCalc = 0
-    if (discountForService)
+    if(discountForService) {
       service += ` скидка ${discountForService}₽`
       servicePriceCalc = servicePrice - discountForService
+    }
 
   .room-price.js-room-price
     form(action=actionLink).room-price__form 

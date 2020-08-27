@@ -4,13 +4,21 @@ mixin checkbox-button ({ text, name, isChecked=false, header }={})
   -
     let richContent = ''
     let richButton = ''
-  if(header)
-    - richContent = 'checkbox-button__content_rich'
-    - richButton = 'checkbox-button_rich'
+    if(header){
+      richContent = 'checkbox-button__content_rich'
+      richButton = 'checkbox-button_rich'
+    }
       
   section.checkbox-button(class=richButton)
     label.checkbox-button__label
-      input(type="checkbox", name=name, checked=isChecked).checkbox-button__input
+      -
+        const inputAttr ={
+          type: 'checkbox',
+          name: name,
+          checked: isChecked,
+          class: 'checkbox-button__input',
+        }
+      input&attributes(inputAttr)
       .checkbox-button__text
         .checkbox-button__header=header
         .checkbox-button__content(class=richContent)=text

@@ -1,16 +1,17 @@
 mixin text-field({ placeholder, name, isMasked = false, isPaddingRightMode = false, text, type = 'text' } = {})
   -
     let maskedMod = ''
-    if (isMasked)  
+    if (isMasked){ 
       maskedMod = ' text-field_masked'
       placeholder = 'ДД.ММ.ГГГГ'
-    
+    }     
     const addPadding = isPaddingRightMode? ' text-field_addPaddingRight' : ''
+    const inputAttr = {
+      type: type,
+      placeholder: placeholder,
+      name: name,
+      value: text,
+      class: `text-field${maskedMod}${addPadding}`,
+    }
 
-  input.js-text-field(
-    type=type 
-    placeholder=placeholder 
-    name=name 
-    class=`text-field${maskedMod}${addPadding}`
-    value=text
-  )
+  input&attributes(inputAttr)

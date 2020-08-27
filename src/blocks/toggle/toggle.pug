@@ -2,6 +2,13 @@
 mixin toggle({ name, text, isChecked=false }={})
   .toggle
     label.toggle__label
-      input(type="checkbox", name=name, checked=isChecked).toggle__input
+      -
+        const imputAttr = {
+          type: "checkbox", 
+          name: name, 
+          checked: isChecked, 
+          class: 'toggle__input'
+        }
+      input&attributes(imputAttr)
       .toggle__text
         .toggle__content=text

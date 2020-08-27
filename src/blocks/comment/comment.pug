@@ -4,7 +4,12 @@ mixin comment({ avatarSrc, avatarName, avatarDate, likeNumber, isLiked=false, te
   article.comment
     .comment__head
       .comment__avatar
-        img(src=avatarSrc, alt=avatarName).comment__avatar
+        -
+          const attr = {}
+          attr.src = avatarSrc
+          attr.alt = avatarName
+          attr.class = 'comment__avatar'
+        img&attributes(attr)
       .comment__avatar-text.body
         .comment__avatar-name=avatarName
         .comment__avatar-date=avatarDate

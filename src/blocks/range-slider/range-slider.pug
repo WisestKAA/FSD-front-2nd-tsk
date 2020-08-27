@@ -5,13 +5,16 @@ mixin range-slider({ label = 'Range Slider', type = 'double', min = 765, max = 1
       h3.range-slider__label.h3=label
       input(type="text" readonly).range-slider__price.js-range-slider__price
     .range-slider__slider-wraper
-      input(
-        data-type=type 
-        data-min=min 
-        data-max=max 
-        data-step=step 
-        data-from=from
-        data-to=to
-        data-hide-min-max=isMinMaxHidden
-        data-hide-from-to=isFromToHidden
-      ).range-slider__slider.js-range-slider__slider
+      -
+        const attr = {
+          'data-type': type,
+          'data-min': min,
+          'data-max': max,
+          'data-step': step,
+          'data-from': from,
+          'data-to': to,
+          'data-hide-min-max': String(isMinMaxHidden),
+          'data-hide-from-to': String(isFromToHidden),
+          class: 'range-slider__slider js-range-slider__slider'
+        }        
+      input&attributes(attr)
