@@ -1,8 +1,6 @@
 
 mixin colors({ color, text, code, marginTopText='' })
-  - let marginTop = ''
-  if (marginTopText !== '')
-    - marginTop = `colors__text_margin-top-${marginTopText}`
+  - const marginTop = marginTopText === '' ? '' : `colors__text_margin-top-${marginTopText}`
 
   .colors
     .colors__color(class="colors__color_"+color)

@@ -1,8 +1,9 @@
 extends ../website-pages-template
 
 block variables
-  - const bgcolor = '#FFFFFF'
-  - const title = 'Room details'
+  -
+    const bgcolor = '#FFFFFF'
+    const title = 'Room details'
 
 block template
   include ../../../blocks/icon-text-list/icon-text-list.pug
@@ -11,7 +12,14 @@ block template
   include ../../../blocks/room-price/room-price.pug 
   include ../../../blocks/donut-chart/donut-chart.pug
 
-  - const { infoData, feelingDescriptionsData, commentsData, rules, priceData } = require('@pages/website-pages/room-details/room-details-data.json');
+  -
+    const { 
+      infoData, 
+      feelingDescriptionsData, 
+      commentsData, 
+      rules, 
+      priceData 
+    } = require('@pages/website-pages/room-details/room-details-data.json')
 
   main.room-details
     figure.room-details__wrapper-pic

@@ -1,15 +1,22 @@
 extends ../ui-kit-template
 
 block variables
-  - const bgcolor = '#F4F4F6'
-  - const title = 'Headers and footers'
+  -
+    const bgcolor = '#F4F4F6'
+    const title = 'Headers and footers'
 
 block template
   include ../../../blocks/header/header.pug
   include ../../../blocks/footer-with-copyright/footer-with-copyright.pug
   include ../../../blocks/footer/footer.pug
 
-  - const { unloggedHeaderData, loggedHeaderData, footerWithCopyrightData, footerData } = require('@pages/ui-kit/headers-and-footers/headers-and-footers-data.json')
+  -
+    const { 
+      unloggedHeaderData, 
+      loggedHeaderData, 
+      footerWithCopyrightData, 
+      footerData 
+    } = require('@pages/ui-kit/headers-and-footers/headers-and-footers-data.json')
 
   .headers-and-footers
     .headers-and-footers__header
