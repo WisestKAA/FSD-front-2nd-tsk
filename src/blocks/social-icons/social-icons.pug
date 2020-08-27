@@ -1,6 +1,6 @@
 mixin social-icons({ icons }={}) 
   figure.social-icons
     each icon in icons
-      - const {link, img, alt} = icon
+      - const { link, img, alt } = icon
       a(href=link target="_blank" rel="noopener noreferrer").social-icons__ico
         img(src=img alt=alt).social-icons__img

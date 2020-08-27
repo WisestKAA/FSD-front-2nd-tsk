@@ -1,5 +1,5 @@
 
 mixin material-icons({ type, fontSize = 24} = {})
-  - const fontSizeStyle = fontSize === 24 && "material-icons_font-size-" + fontSize
+  - const fontSizeStyle = fontSize !== 24 && "material-icons_font-size-" + fontSize
    
   i.material-icons.js-material-icons(class=fontSizeStyle)=type
