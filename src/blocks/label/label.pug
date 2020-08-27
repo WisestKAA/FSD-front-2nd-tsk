@@ -1,13 +1,8 @@
 
 mixin label({ text, marginBottom, caption, marginCaption, isShort=false }={})
-  - let margtop = ''
-  if (marginCaption === 3) 
-    - margtop = 'label__caption_margin-top-3'
+  - const margtop = marginCaption === 3 ? 'label__caption_margin-top-3' : ''  
+  - const short = isShort ? ' label_short' : ''
   
-  - let short = ''
-  if (isShort)
-    - short = ' label_short'
-
   .label(class=`label_margin-bottom-${marginBottom}${short}`)
     h3.label__text.h3=text
-    .label__caption(class=`${margtop}`)=caption
+    .label__caption(class=margtop)=caption

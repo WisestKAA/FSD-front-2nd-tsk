@@ -4,20 +4,11 @@ include ../button/button.pug
 include ../dropdown-nemu/dropdown-nemu.pug
 
 mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButtonText, signupButtonText}={}) 
-  - let unlogged =  ''
-  - let logged = ''
-  - let navlogged = ''
-  if (isLogged)
-    - unlogged = 'header__unlogged_hide'
-    - navlogged = 'header__navigation_margin-bottom-1'
-  else
-    - logged = 'header__logged_hide'
-  
+  - const unlogged = isLogged && 'header__unlogged_hide'
+  - const logged = !isLogged && 'header__logged_hide'
+  - const navlogged = isLogged && 'header__navigation_margin-bottom-1'  
+  - const shrtmenu = isShortMenu && 'header__navigation-link_short'
   - const current = 'header__navigation-link_font-weight-bold'
-  
-  - let shrtmenu = ''
-  if (isShortMenu)
-    - shrtmenu = 'header__navigation-link_short'
   
   header.header
     .header__wrapper

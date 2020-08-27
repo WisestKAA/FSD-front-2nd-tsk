@@ -3,14 +3,9 @@ include ../dropdown-option/dropdown-option.pug
 include ../dropdown-option-button/dropdown-option-button.pug
 
 mixin dropdown({ text, options=[], isShort=false, isDarkArrow=false } = {})
-  - let short=''
-  if isShort === true
-    - short = 'dropdown_width-short js-dropdown_width-short'
-
-  - let darkArrow = ''
-  if (isDarkArrow)
-    - darkArrow = 'dropdown__arrow_dark'
-
+  - const short = isShort && 'dropdown_width-short js-dropdown_width-short'  
+  - const darkArrow = isDarkArrow && 'dropdown__arrow_dark'
+  
   section.dropdown.js-dropdown(class=short)
     .dropdown__wrapper
       .dropdown__arrow(class=darkArrow)

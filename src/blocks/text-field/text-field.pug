@@ -1,14 +1,12 @@
-mixin text-field({ placeholder, name, isMasked = false, isPaddingRightMode = false, text, type = 'text'}={})
+mixin text-field({ placeholder, name, isMasked = false, isPaddingRightMode = false, text, type = 'text' } = {})
 
-  - let maskedMod = '';
+  - let maskedMod = ''
   if (isMasked)  
     - maskedMod = ' text-field_masked'
     - placeholder = 'ДД.ММ.ГГГГ'
   
-  - let addPadding = '';
-  if (isPaddingRightMode)
-    - addPadding = ' text-field_addPaddingRight'    
-  
+  - const addPadding = isPaddingRightMode? ' text-field_addPaddingRight' : ''
+
   input.js-text-field(
     type=type 
     placeholder=placeholder 

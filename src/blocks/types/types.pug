@@ -1,8 +1,7 @@
 
 mixin types({ tag, text, font, fontSize, color, fontWeight, marginBottom=0}={})
-  - let marginBot = ''
-  if (marginBottom !== 0)
-    - marginBot = `types__margin-bottom-${marginBottom}`
+  - const marginBot = marginBottom === 0 ? '' : `types__margin-bottom-${marginBottom}`
+ 
   .types(class = marginBot)
     .types__tag(class=`types__tag_font-size-${fontSize}`)=tag
     .types__text(class=`types__text_font-${font} types__text_font-weight-${fontWeight} types__text_font-size-${fontSize} types__text_color-${color}`)=text
