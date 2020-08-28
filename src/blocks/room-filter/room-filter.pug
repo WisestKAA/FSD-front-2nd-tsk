@@ -8,7 +8,7 @@ mixin room-filter({ header, actionLink = '/moke' }={})
     h1.room-filter__header.h1=header
     form(action=actionLink).room-filter__form
       .room-filter__date
-        +date-dropdown({ isFiltred: false,  startText: 'прибытие', finishText: 'выезд'})
+        +date-dropdown({ isFiltered: false,  startText: 'прибытие', finishText: 'выезд'})
       .room-filter__guests
         +label({ text: 'гости', marginBottom: '6'})
         +dropdown({ 

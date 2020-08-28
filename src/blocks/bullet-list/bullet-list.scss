@@ -10,7 +10,7 @@
   margin-inline-end: unset;
   padding-inline-start: unset;
 
-  &__wraper{
+  &__wrapper{
     position: relative;
     white-space: nowrap;
     margin-bottom: 0.7143rem;
@@ -33,7 +33,7 @@
     border-radius: 0.3571rem;
     background-color: $dark25;
 
-  &_bgcolor{
+  &_bg-color{
     &-orange{
       background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
     }

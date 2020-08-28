@@ -24,7 +24,7 @@ mixin room-price({ actionLink='/moke', number, isLuxe=false, pricePerDay=0, serv
           .room-price__price-sum.js-room-price__price-sum=`${pricePerDay}₽`
           .room-price__price-sum-per-day=" в сутки"
       .room-price__date
-        +date-dropdown({ isFiltred: false,  startText: 'прибытие', finishText: 'выезд' })
+        +date-dropdown({ isFiltered: false,  startText: 'прибытие', finishText: 'выезд' })
       .room-price__guests
         +label({ text: 'гости', marginBottom: '5' })
         +dropdown({
@@ -37,16 +37,16 @@ mixin room-price({ actionLink='/moke', number, isLuxe=false, pricePerDay=0, serv
         })
       .room-price__calculate.js-room-price__calculate.body
         .room-price__for-room
-          .room-price__for-room-discription.js-room-price__for-room-discription=`${pricePerDay}₽ x 0 суток`
+          .room-price__for-room-description.js-room-price__for-room-description=`${pricePerDay}₽ x 0 суток`
           .room-price__for-room-price.js-room-price__for-room-price=`0₽`
         .room-price__for-services
           .room-price__for-services-left-wrapper
-            .room-price__for-services-discription=service
+            .room-price__for-services-description=service
             .room-price__for-services-info="i"
           .room-price__for-services-price.js-room-price__for-services-price=`${servicePriceCalc}₽`
         .room-price__for-addservices
           .room-price__for-addservices-left-wrapper
-            .room-price__for-addservices-discription="Сбор за дополнительные услуги"
+            .room-price__for-addservices-description="Сбор за дополнительные услуги"
             .room-price__for-addservices-info="i"
           .room-price__for-addservices-price.js-room-price__for-addservices-price=`${addServicePrice}₽`
       .room-price__total

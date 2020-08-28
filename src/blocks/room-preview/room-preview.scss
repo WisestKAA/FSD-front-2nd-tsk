@@ -1,4 +1,4 @@
-@import '../carusel/carusel.scss';
+@import '../carousel/carousel.scss';
 @import '../rate-button/rate-button.scss';
 
 .room-preview {
@@ -13,11 +13,11 @@
     margin: 0.3571rem 0.3571rem 1.0714rem 0.3571rem;
   }
 
-  &__discripton-wrapper {
+  &__description-wrapper {
     padding: 1.4286rem 1.2857rem 1.0714rem 1.4286rem;
   }
 
-  &__discripton-top {
+  &__description-top {
     display: flex;
     justify-content: space-between;
 
@@ -101,7 +101,7 @@
     margin: 0.7143rem 0 0.6429rem 0;
   }
 
-  &__discripton-bot {
+  &__description-bot {
     display: flex;
     justify-content: space-between;
 

@@ -124,7 +124,7 @@ $(document).ready(() => {
   const height = 120;
   const rating = {
     bad: 0,
-    satisfact: 260,
+    satisfactory: 260,
     normal: 260,
     good: 520
   };

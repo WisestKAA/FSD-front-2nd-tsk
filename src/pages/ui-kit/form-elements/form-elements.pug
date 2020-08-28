@@ -45,18 +45,18 @@ block template
             .form-elements__item_margin-bottom-41
               +date-dropdown(formElementsData.dateDropDowns.commonDateDropDown)
             .form-elements__item.form-elements__item_margin-bottom-41
-              +label(formElementsData.dateDropDowns.filtredLabel)
-              +date-dropdown(formElementsData.dateDropDowns.filtredDateDropDown)
+              +label(formElementsData.dateDropDowns.filteredLabel)
+              +date-dropdown(formElementsData.dateDropDowns.filteredDateDropDown)
             .form-elements__subscription-text-field
-              +label(formElementsData.subscriptionTextDield.label)
-              +subscription-text-field(formElementsData.subscriptionTextDield.item)
+              +label(formElementsData.subscriptionTextField.label)
+              +subscription-text-field(formElementsData.subscriptionTextField.item)
                   
           .form-elements__content-right-wrapper
             section.form-elements__content-center
               .form-elements__item_margin-bottom-43
                 +label(formElementsData.checkboxButtons.label)
-                each checbox in formElementsData.checkboxButtons.items
-                  +checkbox-button(checbox)                
+                each checkbox in formElementsData.checkboxButtons.items
+                  +checkbox-button(checkbox)                
               .form-elements__item_margin-bottom-45.form-elements__radio-buttons
                 +label(formElementsData.radioButtons.label)
                 +radio-buttons(formElementsData.radioButtons.item)
@@ -72,8 +72,8 @@ block template
               .form-elements__item_margin-bottom-40
                 +label(formElementsData.rateButtons.label)
                 .form-elements__rate-buttons
-                  each reateButton in formElementsData.rateButtons.items 
-                    +rate-button(reateButton)
+                  each rateButton in formElementsData.rateButtons.items 
+                    +rate-button(rateButton)
               
             section.form-elements__content-right
               .form-elements__item_margin-bottom-40.form-elements__range-slider

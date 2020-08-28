@@ -1,14 +1,14 @@
 
 include ../logo-site/logo-site.pug
 include ../button/button.pug
-include ../dropdown-nemu/dropdown-nemu.pug
+include ../dropdown-menu/dropdown-menu.pug
 
 mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButtonText, signupButtonText}={}) 
   -
     const unlogged = isLogged && 'header__unlogged_hide'
     const logged = !isLogged && 'header__logged_hide'
-    const navlogged = isLogged && 'header__navigation_margin-bottom-1'  
-    const shrtmenu = isShortMenu && 'header__navigation-link_short'
+    const navigationLogged = isLogged && 'header__navigation_margin-bottom-1'  
+    const shortMenu = isShortMenu && 'header__navigation-link_short'
     const current = 'header__navigation-link_font-weight-bold'
   
   header.header
@@ -16,16 +16,16 @@ mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButto
       figure.header__logo
         +logo-site()
       nav.header__navigation-wrapper
-        .header__navigation(class=navlogged)                    
-          each navoption in navOptions
-            - const {text, link, isCurrent, sublinks} = navoption
+        .header__navigation(class=navigationLogged)                    
+          each navigationOption in navOptions
+            - const {text, link, isCurrent, sublinks} = navigationOption
             if (sublinks)
-              +dropdown-nemu({ text: text, navOptions: sublinks })
+              +dropdown-menu({ text: text, navOptions: sublinks })
             else
               if (isCurrent)
-                a(href=link, class=`${current} ${shrtmenu}`).header__navigation-link=text
+                a(href=link, class=`${current} ${shortMenu}`).header__navigation-link=text
               else
-                a(href=link class=shrtmenu).header__navigation-link=text
+                a(href=link class=shortMenu).header__navigation-link=text
         .header__sign
           .header__unlogged(class=unlogged)
             .header__login-button

@@ -19,7 +19,7 @@ class DropDown {
 
   addEvents() {
     this.select.addEventListener('click', this.handleSelectClick.bind(this));
-    this.options.addEventListener('DOMSubtreeModified', this.handleOptionsModifed.bind(this));
+    this.options.addEventListener('DOMSubtreeModified', this.handleOptionsModified.bind(this));
   }
 
   initSelect() {
@@ -80,13 +80,13 @@ class DropDown {
     this.arrow.textContent = 'keyboard_arrow_down';
   }
 
-  handleOptionsModifed() {
+  handleOptionsModified() {
     this.sum = 0;
-    let babys = 0;
+    let babies = 0;
     this.optionsList.forEach((val)=>{
       const num = val.querySelector('.js-dropdown-option__number');
       if (val.querySelector('.js-dropdown-option__text').textContent === 'младенцы') {
-        babys = num.textContent;
+        babies = num.textContent;
       } else {
         this.sum += parseInt(num.textContent, 10);
       }
@@ -99,33 +99,33 @@ class DropDown {
       }
       return;
     } if (this.optionButtons) {
-      this.optionButtons.checkHiden();
+      this.optionButtons.checkHidden();
     }
 
     if (this.isShort) {
       this.selectText.textContent = this.getRightTextShort(this.optionText);
     } else {
-      this.selectText.textContent = babys === 0
+      this.selectText.textContent = babies === 0
         ? this.getRightText(this.optionText.guest, this.sum)
-        : `${this.getRightText(this.optionText.guest, this.sum)}, ${this.getRightText(this.optionText.baby, babys)}`;
+        : `${this.getRightText(this.optionText.guest, this.sum)}, ${this.getRightText(this.optionText.baby, babies)}`;
     }
   }
 
   getRightText(optionText, sum) {
-    const newval = sum % 100;
-    if (newval === 1) {
-      return sum + optionText.ferst;
+    const newValue = sum % 100;
+    if (newValue === 1) {
+      return sum + optionText.first;
     }
-    if (newval > 1 && newval <= 4) {
+    if (newValue > 1 && newValue <= 4) {
       return sum + optionText.second;
     }
-    if (newval > 4 && newval <= 20) {
+    if (newValue > 4 && newValue <= 20) {
       return sum + optionText.third;
     }
-    if (newval > 20) {
+    if (newValue > 20) {
       const val = this.sum % 10;
       if (val === 1) {
-        return sum + optionText.ferst;
+        return sum + optionText.first;
       }
       if (val > 1 && val <= 4) {
         return sum + optionText.second;
@@ -135,16 +135,16 @@ class DropDown {
   }
 
   getRightTextShort(optionText) {
-    const nums = [];
+    const numbers = [];
     this.optionsList.forEach((val)=>{
       const num = val.querySelector('.js-dropdown-option__number');
-      nums.push(parseInt(num.textContent, 10));
+      numbers.push(parseInt(num.textContent, 10));
     });
 
     let finalText = '';
-    finalText += `${this.getRightText(optionText.bedroom, nums[0])} `;
-    finalText += `${this.getRightText(optionText.bed, nums[1])} `;
-    finalText += this.getRightText(optionText.bathroom, nums[2]);
+    finalText += `${this.getRightText(optionText.bedroom, numbers[0])} `;
+    finalText += `${this.getRightText(optionText.bed, numbers[1])} `;
+    finalText += this.getRightText(optionText.bathroom, numbers[2]);
     return finalText;
   }
 
@@ -160,27 +160,27 @@ class DropDown {
 $(document).ready(() => {
   const optionText = {
     guest: {
-      ferst: ' гость',
+      first: ' гость',
       second: ' гостя',
       third: ' гостей'
     },
     bedroom: {
-      ferst: ' спальня',
+      first: ' спальня',
       second: ' спальни',
       third: ' спален'
     },
     bed: {
-      ferst: ' кровать',
+      first: ' кровать',
       second: ' кровати',
       third: ' кроватей'
     },
     bathroom: {
-      ferst: ' ванная комната',
+      first: ' ванная комната',
       second: ' ванные комнаты',
       third: ' ванных комнат'
     },
     baby: {
-      ferst: ' младенец',
+      first: ' младенец',
       second: ' младенца',
       third: ' младенцев'
     }

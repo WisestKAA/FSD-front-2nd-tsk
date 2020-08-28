@@ -7,12 +7,12 @@ mixin subscription-text-field ({ name = 'subscribe', value = 'subscribe', placeh
       .subscription-text-field__button-arrow
         +material-icons({ type: 'arrow_forward' })
       -
-        const imputAttr = {
+        const inputAttr = {
           type: 'button',
           name: name,
           value: value,
           class: 'subscription-text-field__button',
         }
-      input&attributes(imputAttr)
+      input&attributes(inputAttr)
     .subscription-text-field__text-field
       +text-field({ placeholder: placeholder, isPaddingRightMode: true, type: 'email', name: name })

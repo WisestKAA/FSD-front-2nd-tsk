@@ -126,7 +126,7 @@
     ],
     "subscribeHeader": "Subscribe to our newsletter", 
     "subscribeDescription": "Receive our latest news and promotions in your inbox!", 
-    "sybscribePlaceholder": "Your email address", 
+    "subscribePlaceholder": "Your email address", 
     "copyrightText": "Copyright © 2018 Toxin UI Kit. All rights reserved."  
   },
   "footerData": { "descriptionText": "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis." }

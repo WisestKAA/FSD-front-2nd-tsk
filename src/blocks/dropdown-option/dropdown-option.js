@@ -8,7 +8,7 @@ class DropdownOption {
   addEvents() {
     this.minusButton.addEventListener('click', this.handleMinusClick.bind(this));
     this.plusButton.addEventListener('click', this.handlePlusClick.bind(this));
-    this.number.addEventListener('DOMSubtreeModified', this.handleValueModifed.bind(this));
+    this.number.addEventListener('DOMSubtreeModified', this.handleValueChanged.bind(this));
   }
 
   init() {
@@ -58,7 +58,7 @@ class DropdownOption {
     this.minusButton.classList.add('dropdown-option__circle_disable');
   }
 
-  handleValueModifed() {
+  handleValueChanged() {
     if (this.value === 0) {
       this.disableMinus();
     }

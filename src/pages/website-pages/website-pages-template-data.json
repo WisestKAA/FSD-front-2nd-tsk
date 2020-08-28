@@ -67,7 +67,7 @@
     ],
     "subscribeHeader": "Подписка", 
     "subscribeDescription": "Получайте специальные предложения и новости сервиса", 
-    "sybscribePlaceholder": "Email", 
+    "subscribePlaceholder": "Email", 
     "copyrightText": "Copyright © 2018 Toxin отель. Все права зачищены."
   }
 }

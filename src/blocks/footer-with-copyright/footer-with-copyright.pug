@@ -2,7 +2,7 @@ include ../logo-site/logo-site.pug
 include ../subscription-text-field/subscription-text-field.pug
 include ../social-icons/social-icons.pug
 
-mixin footer-with-copyright({ descriptionText, menuItems=[], subscribeHeader, subscribeDescription, sybscribePlaceholder, copyrightText } = {})
+mixin footer-with-copyright({ descriptionText, menuItems=[], subscribeHeader, subscribeDescription, subscribePlaceholder, copyrightText } = {})
   footer.footer-with-copyright
     .footer-with-copyright__wrapper-shadow-top
       .footer-with-copyright__wrapper-main
@@ -23,7 +23,7 @@ mixin footer-with-copyright({ descriptionText, menuItems=[], subscribeHeader, su
             h3.footer-with-copyright__subscribe-header.h3=subscribeHeader
             .footer-with-copyright__subscribe-description.body=subscribeDescription
             .footer-with-copyright__subscribe-field
-              +subscription-text-field({ name: 'footerSubscribe', value: 'footerSubscribe', placeholder: sybscribePlaceholder })
+              +subscription-text-field({ name: 'footerSubscribe', value: 'footerSubscribe', placeholder: subscribePlaceholder })
     .footer-with-copyright__wrapper-shadow-bottom
       .footer-with-copyright__wrapper-bottom
         .footer-with-copyright__copyright.body=copyrightText

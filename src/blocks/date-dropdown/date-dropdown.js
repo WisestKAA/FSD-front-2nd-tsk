@@ -10,8 +10,8 @@ class DateDropdown {
     this.dateDropdown = elem;
     this.datePiker = elem.querySelector('.js-date-dropdown__input');
 
-    this.isFiltred = !!this.datePiker.classList.contains('js-date-dropdown__input-filtred');
-    if (this.isFiltred) {
+    this.isFiltered = !!this.datePiker.classList.contains('js-date-dropdown__input-filtered');
+    if (this.isFiltered) {
       this.dateDropdown.style.width = '19rem';
       this.datePikerInit(this.datePiker, this.dateDropdown);
     } else {
@@ -23,7 +23,7 @@ class DateDropdown {
   }
 
   addEvents() {
-    if (!this.isFiltred) {
+    if (!this.isFiltered) {
       this.inputTo.addEventListener('click', this.handleShowDatePiker.bind(this));
     }
 
@@ -32,8 +32,8 @@ class DateDropdown {
     this.$clearButton[0].addEventListener('click', this.handleClearButtonClick.bind(this));
   }
 
-  datePikerInit(datePiker, dateDropdown, isFiltred = false, inptFrom, inptTo) {
-    const dateForm = isFiltred ? 'dd.mm.yyyy' : 'dd M';
+  datePikerInit(datePiker, dateDropdown, isFiltered = false, inptFrom, inptTo) {
+    const dateForm = isFiltered ? 'dd.mm.yyyy' : 'dd M';
     let inputFrom = inptFrom;
     let inputTo = inptTo;
 
@@ -62,15 +62,15 @@ class DateDropdown {
       nextHtml: '<i class="date-dropdown__navigation">arrow_forward</i>',
       'onShow'(instMock, animationCompletedMock) {
         const datePikerWidth = dateDropdown.clientWidth;
-        const $datepikerContainer = $(datePiker).datepicker()
+        const $datePikerContainer = $(datePiker).datepicker()
           .data('datepicker').$datepicker;
-        $datepikerContainer.css('width', datePikerWidth);
-        if (isFiltred) {
+        $datePikerContainer.css('width', datePikerWidth);
+        if (isFiltered) {
           inputFrom.value = inputFrom.value.substring(0, 10);
         }
       },
       'onSelect'(formattedDate) {
-        if (isFiltred) {
+        if (isFiltered) {
           if (formattedDate.toString().length === 10) {
             inputTo.value = '';
           }
@@ -81,7 +81,7 @@ class DateDropdown {
         }
       },
       'onHide'() {
-        if (isFiltred) {
+        if (isFiltered) {
           inputFrom.value = inputFrom.value.substring(0, 10);
         }
       }
@@ -111,7 +111,7 @@ class DateDropdown {
   }
 
   handleClearButtonClick() {
-    if (!this.isFiltred) {
+    if (!this.isFiltered) {
       this.inputTo.value = '';
     }
   }

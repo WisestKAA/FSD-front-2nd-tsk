@@ -1,12 +1,12 @@
 include ../material-icons/material-icons.pug
 
 mixin icon-text-list ({ items=[], isLustHaveBorder=true }={})
-  - const lustBorder = !isLustHaveBorder && 'icon-text-list__wraper_without-lust-border'
+  - const lustBorder = !isLustHaveBorder && 'icon-text-list__wrapper_without-lust-border'
   
   figure.icon-text-list
     each item in items
       - const {icon, header, content} = item
-      .icon-text-list__wraper(class=lustBorder)
+      .icon-text-list__wrapper(class=lustBorder)
         .icon-text-list__icon
           +material-icons({ type: icon, fontSize: 48})
         .icon-text-list__content

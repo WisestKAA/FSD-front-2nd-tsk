@@ -1,19 +1,19 @@
 import 'owl.carousel/dist/owl.carousel';
 
-class Carusel {
+class Carousel {
   constructor(elem) {
     this.elem = elem;
     this.init();
   }
 
   init() {
-    Carusel.initCarusel(this.elem.querySelector('.owl-carousel'));
+    Carousel.initCarousel(this.elem.querySelector('.owl-carousel'));
     this.elem.querySelector('.owl-prev').getElementsByTagName('span')[0].textContent = 'keyboard_arrow_left';
     this.elem.querySelector('.owl-next').getElementsByTagName('span')[0].textContent = 'keyboard_arrow_right';
   }
 
-  static initCarusel(owlcarusel) {
-    $(owlcarusel).owlCarousel({
+  static initCarousel(owlCarousel) {
+    $(owlCarousel).owlCarousel({
       loop: true,
       items: 1,
       mouseDrag: true,
@@ -24,11 +24,11 @@ class Carusel {
 }
 
 $(document).ready(() => {
-  const carusel = document.querySelectorAll('.js-carusel');
+  const carousel = document.querySelectorAll('.js-carousel');
   const items = [];
-  carusel.forEach(((val) =>{
-    items.push(new Carusel(val));
+  carousel.forEach(((val) =>{
+    items.push(new Carousel(val));
   }));
 });
 
-export default Carusel;
+export default Carousel;

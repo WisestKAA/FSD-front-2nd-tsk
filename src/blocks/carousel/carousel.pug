@@ -1,11 +1,11 @@
-mixin carusel({ imgLinks=[], }={}) 
-  figure.carusel.js-carusel
-    .carusel__wrapper.owl-carousel
+mixin carousel({ imgLinks=[], }={}) 
+  figure.carousel.js-carousel
+    .carousel__wrapper.owl-carousel
       each item in imgLinks
         -
           const {src, alt} = item      
           const attr = {}
           attr.src = src
           attr.alt = alt 
-          attr.class = 'carusel__img'
+          attr.class = 'carousel__img'
         img&attributes(attr)

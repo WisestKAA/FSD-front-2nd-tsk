@@ -1,1 +1,1 @@
-import '../carusel/carusel';
+import '../carousel/carousel';

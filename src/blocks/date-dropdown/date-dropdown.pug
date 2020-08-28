@@ -1,6 +1,6 @@
 include ../material-icons/material-icons.pug
 
-mixin date-dropdown ({ isFiltred=true, demoText, startText, finishText } = {})
+mixin date-dropdown ({ isFiltered=true, demoText, startText, finishText } = {})
   -
     const attrEmptyInput = {}
     attrEmptyInput.type = 'text'
@@ -14,12 +14,12 @@ mixin date-dropdown ({ isFiltred=true, demoText, startText, finishText } = {})
     attrWithDemoInput.value = demoText
   
   section.date-dropdown.js-date-dropdown
-    if (isFiltred)    
+    if (isFiltered)    
       .date-dropdown__arrow
         +material-icons({type: 'keyboard_arrow_down'})
-      input&attributes(attrEmptyInput).date-dropdown__input.date-dropdown__input-filtred.js-date-dropdown__input.js-date-dropdown__input-filtred
+      input&attributes(attrEmptyInput).date-dropdown__input.date-dropdown__input-filtered.js-date-dropdown__input.js-date-dropdown__input-filtered
     else
-      .date-dropdown__wrapper-filtred
+      .date-dropdown__wrapper-filtered
         .date-dropdown__wrapper-from
           h3.date-dropdown__start-text.h3=startText
           .date-dropdown__input-wrapper

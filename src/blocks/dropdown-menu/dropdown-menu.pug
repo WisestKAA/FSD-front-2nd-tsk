@@ -1,0 +1,11 @@
+include ../material-icons/material-icons.pug
+
+mixin dropdown-menu({ text, navOptions=[] }) 
+  .dropdown-menu
+    .dropdown-menu__text=text
+    .dropdown-menu__arrow
+      +material-icons({type: 'keyboard_arrow_down'})
+    .dropdown-menu__links            
+      each option in navOptions
+        - const {textLink, link} = option
+        a(href=link).dropdown-menu__link=textLink

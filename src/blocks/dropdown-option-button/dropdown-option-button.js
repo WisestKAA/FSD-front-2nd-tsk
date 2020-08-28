@@ -15,7 +15,7 @@ class DropdownOptionButton {
 
   addEvents() {
     this.drop.addEventListener('click', this.handleDropClick.bind(this));
-    this.apply.addEventListener('click', this.handleApplyClick.bind(this));
+    this.apply.addEventListener('click', DropdownOptionButton.handleApplyClick.bind(this));
   }
 
   handleDropClick() {
@@ -25,8 +25,7 @@ class DropdownOptionButton {
     this.hideDrop();
   }
 
-  handleApplyClick() {
-    this.hideDrop();
+  static handleApplyClick() {
     // todo action
   }
 
@@ -38,7 +37,7 @@ class DropdownOptionButton {
     this.drop.classList.remove('dropdown-option-button__drop_hide');
   }
 
-  checkHiden() {
+  checkHidden() {
     if (this.drop.classList.contains('dropdown-option-button__drop_hide')) this.showDrop();
   }
 }

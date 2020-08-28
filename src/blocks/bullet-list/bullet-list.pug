@@ -5,12 +5,12 @@ mixin bullet-list({ isColored=false, list=[] }={})
       each item in list
         -
           const {text, color} = item
-          const liMod = `bullet-list__li_bgcolor-${color}`
-        li.bullet-list__wraper(class="bullet-list__wraper_margin-bottom-0")
+          const liMod = `bullet-list__li_bg-color-${color}`
+        li.bullet-list__wrapper(class="bullet-list__wrapper_margin-bottom-0")
           .bullet-list__li(class=liMod)
           .bullet-list__text(class="bullet-list__text_padding-left-5")=text
     else
       each item in list
-        li.bullet-list__wraper                    
+        li.bullet-list__wrapper                    
           .bullet-list__li
           .bullet-list__text=item

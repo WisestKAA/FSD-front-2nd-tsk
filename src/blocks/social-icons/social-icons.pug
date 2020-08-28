@@ -3,7 +3,7 @@ mixin social-icons({ icons }={})
     each icon in icons
       -
         const { link, img, alt } = icon
-        const linkAtrr = {
+        const linkAttr = {
           href: link,
           target: '_blank',
           rel: 'noopener noreferrer',
@@ -14,5 +14,5 @@ mixin social-icons({ icons }={})
           alt: alt,
           class: 'social-icons__img',
         }
-      a&attributes(linkAtrr)
+      a&attributes(linkAttr)
         img&attributes(imgAttr)
