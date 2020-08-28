@@ -2,12 +2,8 @@ include ../material-icons/material-icons.pug
 
 mixin checkbox-button ({ text, name, isChecked=false, header }={})
   -
-    let richContent = ''
-    let richButton = ''
-    if(header){
-      richContent = 'checkbox-button__content_rich'
-      richButton = 'checkbox-button_rich'
-    }
+    const richContent = header && 'checkbox-button__content_rich'
+    const richButton = header && 'checkbox-button_rich'
       
   section.checkbox-button(class=richButton)
     label.checkbox-button__label
