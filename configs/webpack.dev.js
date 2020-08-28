@@ -3,7 +3,7 @@ const common = require('./webpack.common');
 
 const config = {
   mode: 'development',
-  devtool: false,
+  devtool: 'eval-sourcemap',
   module: {
     rules: [
       {

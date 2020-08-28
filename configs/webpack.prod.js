@@ -4,7 +4,7 @@ const { merge } = require('webpack-merge');
 
 const config = {
   mode: 'production',
-  devtool: 'eval-sourcemap',      
+  devtool: false,      
   module: {
     rules: [
       {
