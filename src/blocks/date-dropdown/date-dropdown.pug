@@ -17,7 +17,7 @@ mixin date-dropdown ({ isFiltered=true, demoText, startText, finishText } = {})
     if (isFiltered)    
       .date-dropdown__arrow
         +material-icons({type: 'keyboard_arrow_down'})
-      input&attributes(attrEmptyInput).date-dropdown__input.date-dropdown__input-filtered.js-date-dropdown__input.js-date-dropdown__input-filtered
+      input&attributes(attrEmptyInput).date-dropdown__input-filtered.js-date-dropdown__input.js-date-dropdown__input-filtered
     else
       .date-dropdown__wrapper-filtered
         .date-dropdown__wrapper-from
@@ -25,7 +25,7 @@ mixin date-dropdown ({ isFiltered=true, demoText, startText, finishText } = {})
           .date-dropdown__input-wrapper
             .date-dropdown__arrow
               +material-icons({type: 'keyboard_arrow_down'})
-            input&attributes(attrEmptyInput).date-dropdown__input.js-date-dropdown__input.date-dropdown__input-from.js-date-dropdown__input-from
+            input&attributes(attrEmptyInput).date-dropdown__input-from.js-date-dropdown__input.js-date-dropdown__input-from
         .date-dropdown__wrapper-to
           h3.date-dropdown__finish-text.h3=finishText
           .date-dropdown__input-wrapper
