@@ -9,10 +9,5 @@ mixin social-icons({ icons }={})
           rel: 'noopener noreferrer',
           class: 'social-icons__ico',
         }
-        const imgAttr = {
-          src: img,
-          alt: alt,
-          class: 'social-icons__img',
-        }
       a&attributes(linkAttr)
-        img&attributes(imgAttr)
+        img.social-icons__img&attributes({src: img, alt})

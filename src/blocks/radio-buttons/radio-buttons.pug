@@ -3,14 +3,7 @@ mixin radio-buttons({ name, radioButtons=[] }={})
   section.radio-buttons        
     each rb in radioButtons
       label.radio-buttons__label
-        -
-          const { text, value, isChecked=false } = rb
-          const attr = {}
-          attr.type = 'radio'
-          attr.name = name
-          attr.value = value
-          attr.checked = isChecked
-          attr.class = 'radio-buttons__input'
-        input&attributes(attr)
+        - const { text, value, isChecked=false } = rb
+        input.radio-buttons__input(type="radio")&attributes({name, value, checked: isChecked})
         .radio-buttons__text
           .radio-buttons__content=text

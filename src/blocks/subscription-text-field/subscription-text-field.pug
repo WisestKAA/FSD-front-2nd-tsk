@@ -6,13 +6,6 @@ mixin subscription-text-field ({ name = 'subscribe', value = 'subscribe', placeh
     .subscription-text-field__button-wrapper
       .subscription-text-field__button-arrow
         +material-icons({ type: 'arrow_forward' })
-      -
-        const inputAttr = {
-          type: 'button',
-          name: name,
-          value: value,
-          class: 'subscription-text-field__button',
-        }
-      input&attributes(inputAttr)
+      input.subscription-text-field__button(type="button")&attributes({name, value})
     .subscription-text-field__text-field
       +text-field({ placeholder: placeholder, isPaddingRightMode: true, type: 'email', name: name })

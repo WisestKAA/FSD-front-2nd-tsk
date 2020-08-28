@@ -6,15 +6,8 @@ mixin checkbox-button ({ text, name, isChecked=false, header }={})
     const richButton = header && 'checkbox-button_rich'
       
   section.checkbox-button(class=richButton)
-    label.checkbox-button__label
-      -
-        const inputAttr ={
-          type: 'checkbox',
-          name: name,
-          checked: isChecked,
-          class: 'checkbox-button__input',
-        }
-      input&attributes(inputAttr)
+    label.checkbox-button__label     
+      input.checkbox-button__input(type="checkbox")&attributes({name, checked: isChecked})
       .checkbox-button__text
         .checkbox-button__header=header
         .checkbox-button__content(class=richContent)=text
