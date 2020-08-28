@@ -1,12 +1,11 @@
 include ../material-icons/material-icons.pug
 
 mixin like-button({ number, isClicked=false }={})
-  - const active = isClicked && 'like-button_active'
+  -
+    const active = isClicked && 'like-button_active'
+    const iconType = isClicked ? 'favorite' : 'favorite_border'
   
   figure.like-button.js-like-button(class=active)
     .like-button__icon
-      if (isClicked)  
-        +material-icons({ type: 'favorite', fontSize: 10 })
-      else
-        +material-icons({ type: 'favorite_border',  fontSize: 10 })
+      +material-icons({ type: iconType, fontSize: 10 })
     .like-button__number=number
