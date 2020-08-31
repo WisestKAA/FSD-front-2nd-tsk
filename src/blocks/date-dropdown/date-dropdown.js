@@ -8,15 +8,16 @@ class DateDropdown {
 
   init(elem) {
     this.dateDropdown = elem;
-    this.datePiker = elem.querySelector('.js-date-dropdown__input');
 
-    this.isFiltered = !!this.datePiker.classList.contains('js-date-dropdown__input-filtered');
+    this.isFiltered = $(this.dateDropdown).find('.js-date-dropdown__input-filtered').length !== 0;
     if (this.isFiltered) {
+      this.datePiker = elem.querySelector('.js-date-dropdown__input-filtered');
       this.dateDropdown.style.width = '19rem';
       this.datePikerInit(this.datePiker, this.dateDropdown);
     } else {
       this.dateDropdown.style.maxWidth = '22.8571rem';
       this.inputFrom = elem.querySelector('.js-date-dropdown__input-from');
+      this.datePiker = this.inputFrom;
       this.inputTo = elem.querySelector('.js-date-dropdown__input-to');
       this.datePikerInit(this.datePiker, this.dateDropdown, true, this.inputFrom, this.inputTo);
     }
