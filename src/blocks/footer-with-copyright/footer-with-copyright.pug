@@ -10,20 +10,23 @@ mixin footer-with-copyright({ descriptionText, menuItems=[], subscribeHeader, su
           figure.footer-with-copyright__logo
             +logo-site()
           .footer-with-copyright__description=descriptionText
+
         .footer-with-copyright__wrapper-right
-          .footer-with-copyright__menu                    
+          .footer-with-copyright__menu
             each item in menuItems
               .footer-with-copyright__menu-item
                 - const { header, options } = item
                 h3.footer-with-copyright__menu-item-header=header
                 each option in options
-                  - const { text, link } = option 
+                  - const { text, link } = option
                   a(href=link).footer-with-copyright__menu-item-option=text
+
           .footer-with-copyright__subscribe
             h3.footer-with-copyright__subscribe-header=subscribeHeader
             .footer-with-copyright__subscribe-description=subscribeDescription
             .footer-with-copyright__subscribe-field
               +subscription-text-field({ name: 'footerSubscribe', value: 'footerSubscribe', placeholder: subscribePlaceholder })
+
     .footer-with-copyright__wrapper-shadow-bottom
       .footer-with-copyright__wrapper-bottom
         .footer-with-copyright__copyright=copyrightText

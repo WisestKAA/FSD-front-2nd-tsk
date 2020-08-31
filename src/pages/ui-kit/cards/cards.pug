@@ -7,7 +7,7 @@ block variables
     const description = 'Cards used on pages'
 
 block template
-  include ../../../blocks/room-filter/room-filter.pug 
+  include ../../../blocks/room-filter/room-filter.pug
   include ../../../blocks/sign-in-form/sign-in-form.pug
   include ../../../blocks/room-price/room-price.pug
   include ../../../blocks/sign-up/sign-up.pug
@@ -22,10 +22,12 @@ block template
           +room-filter(cardsData.roomFilter)
           .cards__separator
           +sign-up(cardsData.signUp)
+
         .cards__content-center
           +room-price(cardsData.roomPrice)
           .cards__separator
           +sign-in-form(cardsData.signInForm)
+
         .cards__content-right
           .cards__calendar-moke
           .cards__separator

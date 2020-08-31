@@ -40,16 +40,17 @@ block template
           .search-room__availability
             +label(searchRoomData.availability.label)
             each availability in searchRoomData.availability.items
-              +checkbox-button(availability)            
+              +checkbox-button(availability)
           .search-room__amenities
             +label(searchRoomData.amenities.label)
             +dropdown(searchRoomData.amenities.item)
           .search-room__add-amenities
             +expandable-checkbox-list(searchRoomData.addAmenities)
+
         .search-room__wrapper-right
           h1.search-room__preview-header="Номера, которые мы для вас подобрали"
           .search-room__wrapper-preview
             each roomPreview in searchRoomData.roomPreviews
-              +room-preview(roomPreview)            
+              +room-preview(roomPreview)
           .search-room__pagination
             +pagination(searchRoomData.pagination)

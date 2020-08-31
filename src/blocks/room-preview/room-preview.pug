@@ -1,11 +1,11 @@
-include ../rate-button/rate-button.pug 
+include ../rate-button/rate-button.pug
 include ../carousel/carousel.pug
 
 mixin room-preview({ imgLinks=[], number, isLuxe=false, price, rate, comments, isWithMargin=false }={})
   -
-    const luxe = !isLuxe && '.room-preview__description-top-luxe_hide'  
+    const luxe = !isLuxe && '.room-preview__description-top-luxe_hide'
     const withMarginStyle = isWithMargin  && 'room-preview_with-margin'
-  
+
   .room-preview(class=withMarginStyle)
     .room-preview__carousel
       +carousel({ imgLinks: imgLinks })
@@ -15,13 +15,16 @@ mixin room-preview({ imgLinks=[], number, isLuxe=false, price, rate, comments, i
           .room-preview__description-top-number="№"
           .room-preview__description-top-num=number
           .room-preview__description-top-luxe(class=luxe)="люкс"
+
         .room-preview__description-top-wrapper-price
           .room-preview__description-top-price=`${price}₽`
           .room-preview__description-top-price-per-day="в сутки"
+
       .room-preview__separator
       .room-preview__description-bot
         .room-preview__description-bot-rate
           +rate-button({ rate: rate })
+
         .room-preview__description-bot-wrapper-comment
           .room-preview__description-bot-comment-num=comments
           .room-preview__description-bot-comment="Отзывов"

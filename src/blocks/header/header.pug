@@ -3,20 +3,20 @@ include ../logo-site/logo-site.pug
 include ../button/button.pug
 include ../dropdown-menu/dropdown-menu.pug
 
-mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButtonText, signupButtonText}={}) 
+mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButtonText, signupButtonText}={})
   -
     const unlogged = isLogged && 'header__unlogged_hide'
     const logged = !isLogged && 'header__logged_hide'
-    const navigationLogged = isLogged && 'header__navigation_margin-bottom-1'  
+    const navigationLogged = isLogged && 'header__navigation_margin-bottom-1'
     const shortMenu = isShortMenu && 'header__navigation-link_short'
     const current = 'header__navigation-link_font-weight-bold'
-  
+
   header.header
     .header__wrapper
       figure.header__logo
         +logo-site()
       nav.header__navigation-wrapper
-        .header__navigation(class=navigationLogged)                    
+        .header__navigation(class=navigationLogged)
           each navigationOption in navOptions
             - const {text, link, isCurrent, sublinks} = navigationOption
             if (sublinks)
@@ -26,6 +26,7 @@ mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButto
                 a(href=link, class=`${current} ${shortMenu}`).header__navigation-link=text
               else
                 a(href=link class=shortMenu).header__navigation-link=text
+
         .header__sign
           .header__unlogged(class=unlogged)
             .header__login-button
@@ -34,4 +35,3 @@ mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButto
               +button({ type: 'short-gradient-background', name: 'headerSignUp', value: signupButtonText, actionLink: '/moke' })
           .header__logged(class=logged)
             .header__username=username
-                

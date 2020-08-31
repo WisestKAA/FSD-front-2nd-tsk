@@ -10,29 +10,36 @@ mixin sign-up({ header, actionLink='/moke' }={})
     form(action=actionLink).sign-up__form
       .sign-up__name
         +text-field({ placeholder: 'Имя', name: 'signUpName' })
+
       .sign-up__surname
         +text-field({ placeholder: 'Фамилия', name: 'signUpSurname' })
+
       .sign-up__sex
         +radio-buttons({
-          name: 'radioButtons', 
+          name: 'radioButtons',
           radioButtons:[
             { text: 'Мужчина', value: 'men', isChecked: true },
             { text: 'Женщина', value: 'women', isChecked: false },
           ]
         })
+
       .sign-up__birthday
         +label({ text: 'дата рождения', marginBottom: '5' })
         +text-field({ isMasked: true, name: 'birthday' })
+
       .sign-up__authorization-data
         +label({ text: 'данные для входа в сервис', marginBottom: '5' })
         .sign-up__e-mail
           +text-field({ placeholder: 'Email', name: 'singEmail' })
         .sign-up__password
           +text-field({ placeholder: 'Пароль', type: 'password', name: 'signPassword' })
+
       .sign-up__mailing
         +toggle({ name: 'mailing', text: 'Получать спецпредложения', isChecked: false })
+
       .sign-up__go-to-payment
         +button({ type: 'rich', name: 'goToPayment', value: 'перейти к оплате' })
+
       .sign-up__go-to-sign-in
         .sign-up__sign-in-text="Уже есть аккаунт на Toxin"
         .sign-up__sign-in-button

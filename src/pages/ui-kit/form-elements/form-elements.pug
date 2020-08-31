@@ -51,13 +51,13 @@ block template
             .form-elements__subscription-text-field
               +label(formElementsData.subscriptionTextField.label)
               +subscription-text-field(formElementsData.subscriptionTextField.item)
-                  
+
           .form-elements__content-right-wrapper
             section.form-elements__content-center
               .form-elements__item_margin-bottom-43
                 +label(formElementsData.checkboxButtons.label)
                 each checkbox in formElementsData.checkboxButtons.items
-                  +checkbox-button(checkbox)                
+                  +checkbox-button(checkbox)
               .form-elements__item_margin-bottom-45.form-elements__radio-buttons
                 +label(formElementsData.radioButtons.label)
                 +radio-buttons(formElementsData.radioButtons.item)
@@ -73,9 +73,9 @@ block template
               .form-elements__item_margin-bottom-40
                 +label(formElementsData.rateButtons.label)
                 .form-elements__rate-buttons
-                  each rateButton in formElementsData.rateButtons.items 
+                  each rateButton in formElementsData.rateButtons.items
                     +rate-button(rateButton)
-              
+
             section.form-elements__content-right
               .form-elements__item_margin-bottom-40.form-elements__range-slider
                 +range-slider({})
@@ -122,6 +122,7 @@ block template
               +label(formElementsData.bulletList.label)
               +bullet-list(formElementsData.bulletList.item)
     .form-elements__separator_margin-19
+
     .form-elements__main-wrapper
       .form-elements__main
           section.form-elements__content-left

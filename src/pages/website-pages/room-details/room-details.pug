@@ -10,16 +10,16 @@ block template
   include ../../../blocks/icon-text-list/icon-text-list.pug
   include ../../../blocks/comment/comment.pug
   include ../../../blocks/bullet-list/bullet-list.pug
-  include ../../../blocks/room-price/room-price.pug 
+  include ../../../blocks/room-price/room-price.pug
   include ../../../blocks/donut-chart/donut-chart.pug
 
   -
-    const { 
-      infoData, 
-      feelingDescriptionsData, 
-      commentsData, 
-      rules, 
-      priceData 
+    const {
+      infoData,
+      feelingDescriptionsData,
+      commentsData,
+      rules,
+      priceData
     } = require('@pages/website-pages/room-details/room-details-data.json')
 
   main.room-details
@@ -29,6 +29,7 @@ block template
         .room-details__pic-right
           img(src="./img/rtop.png" alt="room view").room-details__pic-right-img
           img(src="./img/rbot.png" alt="room view").room-details__pic-right-img
+
     .room-details__wrapper-main
       .room-details__main
         .room-details__datails
@@ -41,15 +42,17 @@ block template
                 .room-details__wrapper-feeling
                   .room-details__feeling-chart
                     +donut-chart()
-                  .room-details__feeling-descriptions  
+                  .room-details__feeling-descriptions
                     +bullet-list(feelingDescriptionsData)
+
             article.room-details__wrapper-comments
               .room-details__wrapper-comments-header
                 h2.room-details__comments-header="Отзывы посетителей номера"
                 .room-details__comments-total="2 отзыва"
               each comment in commentsData
                 .room-details__comments
-                  +comment(comment)              
+                  +comment(comment)
+
             .room-details__wrapper-rulles
               article.room-details__rulles
                 h2.room-details__rulles-header="Правила"
@@ -57,5 +60,6 @@ block template
               article.room-details__cancel
                 h2.room-details__cancel-header="Отмена"
                 .room-details__cancel-text="Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
+
         .room-details__price
           +room-price(priceData)
