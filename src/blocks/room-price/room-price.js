@@ -33,7 +33,7 @@ class RoomPrice {
 
   initDatePicker() {
     this.datePickerContainer = this.roomPrice.querySelector('.js-date-dropdown');
-    this.$datePikerObj = $(this.roomPrice.querySelector('.js-date-dropdown__input')).data('datepicker');
+    this.$datePikerObj = $(this.roomPrice.querySelector('.js-date-dropdown__input-from')).data('datepicker');
   }
 
   initButtons() {
