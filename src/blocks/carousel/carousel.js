@@ -7,12 +7,12 @@ class Carousel {
   }
 
   init() {
-    Carousel.initCarousel(this.elem.querySelector('.owl-carousel'));
+    this.initCarousel(this.elem.querySelector('.owl-carousel'));
     this.elem.querySelector('.owl-prev').getElementsByTagName('span')[0].textContent = 'keyboard_arrow_left';
     this.elem.querySelector('.owl-next').getElementsByTagName('span')[0].textContent = 'keyboard_arrow_right';
   }
 
-  static initCarousel(owlCarousel) {
+  initCarousel(owlCarousel) {
     $(owlCarousel).owlCarousel({
       loop: true,
       items: 1,

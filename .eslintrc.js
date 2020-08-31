@@ -22,7 +22,8 @@ module.exports = {
     'fsd'
   ],
   rules: {
-    'linebreak-style': ['error', 'windows'],
-    'no-unused-vars': ['error', { argsIgnorePattern: '^[A-Za-z]{1,20}Mock$' }]
+    // 'linebreak-style': ['error', 'windows'],
+    'no-unused-vars': ['error', { argsIgnorePattern: '^[A-Za-z]{1,20}Mock$' }],
+    'class-methods-use-this': 'off'
   }
 };

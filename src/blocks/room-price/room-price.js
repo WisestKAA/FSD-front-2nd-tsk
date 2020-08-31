@@ -9,7 +9,7 @@ class RoomPrice {
   }
 
   init() {
-    this.pricePerDay = RoomPrice.getPrice(this.roomPrice);
+    this.pricePerDay = this.getPrice(this.roomPrice);
     this.calculateContainer = this.roomPrice.querySelector('.js-room-price__calculate');
 
     this.initPrices();
@@ -41,38 +41,38 @@ class RoomPrice {
     this.dateClearButton = this.$datePikerObj.$datepicker.find('.datepicker--button')[0];
   }
 
-  static getPrice(roomPrice) {
+  getPrice(roomPrice) {
     const priceText = roomPrice.querySelector('.js-room-price__price-sum').textContent;
-    return RoomPrice.convertToNum(priceText);
+    return this.convertToNum(priceText);
   }
 
-  static convertToNum(val) {
+  convertToNum(val) {
     return Number(val.substring(0, val.length - 1).replace(/\s+/g, ''));
   }
 
   handleDatesChanged() {
     const days = (this.$datePikerObj.selectedDates[1]
       - this.$datePikerObj.selectedDates[0]) / 86400000;
-    this.priceForRoomDescriptionContainer.textContent = `${RoomPrice.getNumWithSpace(this.pricePerDay)}₽ x ${days} суток`;
+    this.priceForRoomDescriptionContainer.textContent = `${this.getNumWithSpace(this.pricePerDay)}₽ x ${days} суток`;
     const sum = this.pricePerDay * days;
-    this.priceForRoomPriceContainer.textContent = `${RoomPrice.getNumWithSpace(sum)}₽`;
+    this.priceForRoomPriceContainer.textContent = `${this.getNumWithSpace(sum)}₽`;
   }
 
   handleDatesClear() {
-    this.priceForRoomDescriptionContainer.textContent = `${RoomPrice.getNumWithSpace(this.pricePerDay)}₽ x 0 суток`;
+    this.priceForRoomDescriptionContainer.textContent = `${this.getNumWithSpace(this.pricePerDay)}₽ x 0 суток`;
     this.priceForRoomPriceContainer.textContent = '0₽';
   }
 
-  static getNumWithSpace(val) {
+  getNumWithSpace(val) {
     return val.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, ' $1');
   }
 
   handleCalculateChanged() {
-    const roomPrice = RoomPrice.convertToNum(this.priceForRoomPriceContainer.textContent);
-    const servicePrice = RoomPrice.convertToNum(this.priceForServiceContainer.textContent);
-    const addServicePrice = RoomPrice.convertToNum(this.priceForAddServiceContainer.textContent);
+    const roomPrice = this.convertToNum(this.priceForRoomPriceContainer.textContent);
+    const servicePrice = this.convertToNum(this.priceForServiceContainer.textContent);
+    const addServicePrice = this.convertToNum(this.priceForAddServiceContainer.textContent);
     const sum = roomPrice + servicePrice + addServicePrice;
-    this.totalContainer.textContent = roomPrice !== 0 ? `${RoomPrice.getNumWithSpace(sum)}₽` : '0₽';
+    this.totalContainer.textContent = roomPrice !== 0 ? `${this.getNumWithSpace(sum)}₽` : '0₽';
   }
 }
 
