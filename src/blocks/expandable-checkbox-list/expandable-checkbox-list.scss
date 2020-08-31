@@ -8,6 +8,7 @@
   max-width: 19rem;
 
   &__header {
+    @include h3;
     display: flex;
     min-height: 2.8571rem;
     width: 100%;

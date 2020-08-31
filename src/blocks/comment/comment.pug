@@ -5,10 +5,10 @@ mixin comment({ avatarSrc, avatarName, avatarDate, likeNumber, isLiked=false, te
     .comment__head
       .comment__avatar
         img.comment__avatar&attributes({src: avatarSrc, alt: avatarName})
-      .comment__avatar-text.body
+      .comment__avatar-text
         .comment__avatar-name=avatarName
         .comment__avatar-date=avatarDate
     .comment__body
       .comment__like
         +like-button({number: likeNumber, isClicked: isLiked})
-      .comment__content.body=text
+      .comment__content=text

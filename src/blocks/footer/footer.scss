@@ -26,6 +26,7 @@
   }
 
   &__description {
+    @include body;
     margin-bottom: 2rem;
     max-width: 40rem;
     width: 100%;

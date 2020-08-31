@@ -5,3 +5,15 @@
 
 @import './scss/colors.scss';
 @import './scss/main.scss';
+
+.body {
+  @include body;
+}
+
+.h1 {
+  @include h1;
+}
+
+.h3 {
+  @include h3;  
+}

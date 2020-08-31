@@ -47,7 +47,7 @@ block template
           .search-room__add-amenities
             +expandable-checkbox-list(searchRoomData.addAmenities)
         .search-room__wrapper-right
-          h1.search-room__preview-header.h1="Номера, которые мы для вас подобрали"
+          h1.search-room__preview-header="Номера, которые мы для вас подобрали"
           .search-room__wrapper-preview
             each roomPreview in searchRoomData.roomPreviews
               +room-preview(roomPreview)            

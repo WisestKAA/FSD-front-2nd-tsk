@@ -6,7 +6,7 @@ include ../toggle/toggle.pug
 
 mixin sign-up({ header, actionLink='/moke' }={})
   .sign-up
-    h1.sign-up__header.h1=header
+    h1.sign-up__header=header
     form(action=actionLink).sign-up__form
       .sign-up__name
         +text-field({ placeholder: 'Имя', name: 'signUpName' })
@@ -34,6 +34,6 @@ mixin sign-up({ header, actionLink='/moke' }={})
       .sign-up__go-to-payment
         +button({ type: 'rich', name: 'goToPayment', value: 'перейти к оплате' })
       .sign-up__go-to-sign-in
-        .sign-up__sign-in-text.body="Уже есть аккаунт на Toxin"
+        .sign-up__sign-in-text="Уже есть аккаунт на Toxin"
         .sign-up__sign-in-button
           +button({ type: 'bordered', name: 'singIn', value: 'войти', actionLink: '/moke' })

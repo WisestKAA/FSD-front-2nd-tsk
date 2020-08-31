@@ -6,7 +6,7 @@ mixin footer({ descriptionText })
     .footer__wrapper
       figure.footer__icon
         +logo-site()
-      .footer__description.body=descriptionText
+      .footer__description=descriptionText
       .footer__social
         +social-icons({
           icons: [

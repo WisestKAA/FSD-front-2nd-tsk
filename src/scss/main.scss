@@ -2,8 +2,8 @@ html {
   font-size: 14px;
 }
 
-.body {
-  font-family: 'Montserrat';
+@mixin body {
+  font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1rem;
@@ -11,7 +11,7 @@ html {
   color: $dark75;
 }
 
-.h1 {
+@mixin h1 {
   font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -24,7 +24,7 @@ html {
   margin-inline-end: unset;
 }
 
-.h2 {
+@mixin h2 {
   font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -37,7 +37,7 @@ html {
   margin-inline-end: unset;
 }
 
-.h3 {
+@mixin h3 {
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;

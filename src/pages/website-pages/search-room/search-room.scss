@@ -107,6 +107,7 @@
   }
 
   &__preview-header {
+    @include h1;
     margin-bottom: 0.7857rem;
     padding: 0.2857rem 0.3571rem;
 

@@ -34,10 +34,10 @@ block template
         .room-details__datails
             .room-details__wrapper-info
               article.room-details__info
-                h2.room-details__info-header.h2="Сведения о номере"
+                h2.room-details__info-header="Сведения о номере"
                 +icon-text-list(infoData)
               article.room-details__feeling
-                h2.room-details__feeling-header.h2="Впечатления от номера"
+                h2.room-details__feeling-header="Впечатления от номера"
                 .room-details__wrapper-feeling
                   .room-details__feeling-chart
                     +donut-chart()
@@ -45,17 +45,17 @@ block template
                     +bullet-list(feelingDescriptionsData)
             article.room-details__wrapper-comments
               .room-details__wrapper-comments-header
-                h2.room-details__comments-header.h2="Отзывы посетителей номера"
+                h2.room-details__comments-header="Отзывы посетителей номера"
                 .room-details__comments-total="2 отзыва"
               each comment in commentsData
                 .room-details__comments
                   +comment(comment)              
             .room-details__wrapper-rulles
               article.room-details__rulles
-                h2.room-details__rulles-header.h2="Правила"
+                h2.room-details__rulles-header="Правила"
                 +bullet-list(rules)
               article.room-details__cancel
-                h2.room-details__cancel-header.h2="Отмена"
-                .room-details__cancel-text.body="Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
+                h2.room-details__cancel-header="Отмена"
+                .room-details__cancel-text="Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
         .room-details__price
           +room-price(priceData)

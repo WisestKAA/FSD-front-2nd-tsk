@@ -1,13 +1,13 @@
 include ../checkbox-button/checkbox-button.pug
 
 mixin expandable-checkbox-list({ header, checkboxes =[], isExpanded=false } = {})
-  - let expanded = isExpanded && 'expandable-checkbox-list__checkboxes_display'
+  - let displayClass = isExpanded && 'expandable-checkbox-list__checkboxes_display'
   
   section.expandable-checkbox-list.js-expandable-checkbox-list
     .expandable-checkbox-list__arrow
       +material-icons({type: 'keyboard_arrow_down'})
-    h3.expandable-checkbox-list__header.js-expandable-checkbox-list__header.h3=header
-    .expandable-checkbox-list__checkboxes.js-expandable-checkbox-list__checkboxes(class=expanded)
+    h3.expandable-checkbox-list__header.js-expandable-checkbox-list__header=header
+    .expandable-checkbox-list__checkboxes.js-expandable-checkbox-list__checkboxes(class=displayClass)
       each checkbox in checkboxes
         .expandable-checkbox-list__item
           +checkbox-button(checkbox)

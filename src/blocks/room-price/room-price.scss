@@ -104,6 +104,7 @@
   }
 
   &__calculate {
+    @include body;
     display: flex;
     flex-direction: column;
     margin-bottom: 2.1429rem;

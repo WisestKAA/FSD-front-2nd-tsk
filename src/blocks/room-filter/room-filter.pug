@@ -5,7 +5,7 @@ include ../label/label.pug
 
 mixin room-filter({ header, actionLink = '/moke' }={}) 
   .room-filter
-    h1.room-filter__header.h1=header
+    h1.room-filter__header=header
     form(action=actionLink).room-filter__form
       .room-filter__date
         +date-dropdown({ isFiltered: false,  startText: 'прибытие', finishText: 'выезд'})

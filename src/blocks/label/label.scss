@@ -45,6 +45,7 @@
   }
   
   &__text {
+    @include h3;
     display: inherit;
     margin-block-start: unset;
     margin-block-end: unset;

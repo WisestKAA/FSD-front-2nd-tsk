@@ -104,6 +104,8 @@
   }
 
   &__description {
+    @include body;
+
     @media (max-width: 1060px) {
       margin-bottom: 0.7143rem;
     }
@@ -140,10 +142,12 @@
       }
 
       &-header {
+        @include h3;
         margin-bottom: 1.5714rem;
       }
 
       &-option {
+        @include body;
         margin-bottom: 1.5rem;
         text-decoration: none;
         line-height: 1.2143rem;
@@ -167,10 +171,12 @@
     }
 
     &-header {
+      @include h3;
       margin-bottom: 1.2857rem;
     }
 
     &-description {
+      @include body;
       margin-bottom: 1.6429rem;
       @media (max-width: 780px) {
         text-align: center;
@@ -179,6 +185,7 @@
   }
   
   &__copyright {
+    @include body;
     @media (max-width: 580px) {
       text-align: center;
     }

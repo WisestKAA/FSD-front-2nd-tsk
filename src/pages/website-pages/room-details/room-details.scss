@@ -173,6 +173,7 @@
   &__info,
   &__feeling {
     &-header {
+      @include h2;
       margin-bottom: 1.4286rem;
     }
   }
@@ -214,6 +215,10 @@
       align-items: flex-end;
       margin-bottom: 0.2143rem;
     }
+
+    &-header{
+      @include h2;
+    }
   }
 
   &__rulles {
@@ -224,6 +229,7 @@
     }
 
     &-header {
+      @include h2;
       padding-left: 1.5rem;
       margin-bottom: 1.2143rem;
 
@@ -235,10 +241,12 @@
   }
 
   &__cancel {
+    @include body;
     max-width: 24.2857rem;
     margin-right: 0.5714rem;
 
     &-header {
+      @include h2;
       margin-bottom: 1.2143rem;
     }
   }

@@ -9,6 +9,7 @@
   }
 
   &__label {
+    @include h3;
     display: flex;
     line-height: 1.0714rem;
   }
