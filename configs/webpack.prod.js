@@ -4,24 +4,24 @@ const { merge } = require('webpack-merge');
 
 const config = {
   mode: 'production',
-  devtool: false,      
+  devtool: false,
   module: {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader, 
+            loader: MiniCssExtractPlugin.loader,
             options: {
                 publicPath: './out',
             }
           },
-          { 
-            loader: 'css-loader', 
-            options: { 
+          {
+            loader: 'css-loader',
+            options: {
               sourceMap: false,
-              importLoaders: 1          
-            } 
+              importLoaders: 1
+            }
           },
           { loader: 'postcss-loader', options: { sourceMap: false } },
           { loader: 'resolve-url-loader', },
@@ -32,10 +32,10 @@ const config = {
   },
   devServer: {
     contentBase: './out'
-  },  
+  },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].css',
+      filename: 'styles/[name].min.css',
     }),
   ],
 }
