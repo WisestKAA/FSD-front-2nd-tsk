@@ -1,0 +1,9 @@
+{
+  "cSpell.enableFiletypes": [
+    "!java",
+    "!php",
+    "!python",
+    "!rust",
+    "sass"
+  ]
+}
