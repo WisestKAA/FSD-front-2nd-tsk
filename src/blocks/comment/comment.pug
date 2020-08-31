@@ -1,10 +1,9 @@
-include ../like-button/like-button.pug 
+include ../like-button/like-button.pug
 
 mixin comment({ avatarSrc, avatarName, avatarDate, likeNumber, isLiked=false, text }={})
   article.comment
     .comment__head
-      .comment__avatar
-        img.comment__avatar&attributes({src: avatarSrc, alt: avatarName})
+      img.comment__avatar&attributes({src: avatarSrc, alt: avatarName})
       .comment__avatar-text
         .comment__avatar-name=avatarName
         .comment__avatar-date=avatarDate
