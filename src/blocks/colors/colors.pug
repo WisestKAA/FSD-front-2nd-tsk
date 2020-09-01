@@ -1,9 +1,0 @@
-
-mixin colors({ color, text, code, marginTopText='' })
-  - const marginTop = marginTopText === '' ? '' : `colors__text_margin-top-${marginTopText}`
-
-  .colors
-    .colors__color(class=`colors__color_${color}`)
-    .colors__content
-      p.colors__text(class=marginTop)=text
-      p.colors__code=code

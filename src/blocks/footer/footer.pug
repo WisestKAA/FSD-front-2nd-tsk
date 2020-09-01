@@ -1,11 +1,11 @@
-include ../logo-site/logo-site.pug
+include ../logo/logo.pug
 include ../social-icons/social-icons.pug
 
 mixin footer({ descriptionText })
   footer.footer
     .footer__wrapper
       figure.footer__icon
-        +logo-site()
+        +logo()
       .footer__description=descriptionText
       .footer__social
         +social-icons({

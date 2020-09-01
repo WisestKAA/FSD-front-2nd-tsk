@@ -1,4 +1,4 @@
-include ../logo-site/logo-site.pug
+include ../logo/logo.pug
 include ../subscription-text-field/subscription-text-field.pug
 include ../social-icons/social-icons.pug
 
@@ -8,7 +8,7 @@ mixin footer-with-copyright({ descriptionText, menuItems=[], subscribeHeader, su
       .footer-with-copyright__wrapper-main
         .footer-with-copyright__logo-and-description
           figure.footer-with-copyright__logo
-            +logo-site()
+            +logo()
           .footer-with-copyright__description=descriptionText
 
         .footer-with-copyright__wrapper-right

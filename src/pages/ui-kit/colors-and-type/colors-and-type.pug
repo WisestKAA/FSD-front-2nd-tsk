@@ -7,8 +7,8 @@ block variables
     const description = 'Colors and type used on pages'
 
 block template
-  include ../../../blocks/colors/colors.pug
-  include ../../../blocks/types/types.pug
+  include ../../../blocks/ui-colors/ui-colors.pug
+  include ../../../blocks/ui-types/ui-types.pug
 
   - const { colors, types } = require('@pages/ui-kit/colors-and-type/colors-and-type-data.json');
 
@@ -17,7 +17,7 @@ block template
       .colors-and-type__content
         section.colors-and-type__colors
           each color in colors
-            +colors(color)
+            +ui-colors(color)
         section.colors-and-type__types
           each typ in types
-            +types(typ)
+            +ui-types(typ)

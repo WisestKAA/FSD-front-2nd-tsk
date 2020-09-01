@@ -1,0 +1,7 @@
+
+mixin ui-types({ tag, text, font, fontSize, color, fontWeight, marginBottom=0}={})
+  - const marginBot = marginBottom === 0 ? '' : `ui-types__margin-bottom-${marginBottom}`
+
+  .ui-types(class = marginBot)
+    .ui-types__tag(class=`ui-types__tag_font-size-${fontSize}`)=tag
+    .ui-types__text(class=`ui-types__text_font-${font} ui-types__text_font-weight-${fontWeight} ui-types__text_font-size-${fontSize} ui-types__text_color-${color}`)=text

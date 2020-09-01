@@ -1,5 +1,5 @@
 
-include ../logo-site/logo-site.pug
+include ../logo/logo.pug
 include ../button/button.pug
 include ../dropdown-menu/dropdown-menu.pug
 
@@ -14,7 +14,7 @@ mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButto
   header.header
     .header__wrapper
       figure.header__logo
-        +logo-site()
+        +logo()
       nav.header__navigation-wrapper
         .header__navigation(class=navigationLogged)
           each navigationOption in navOptions
