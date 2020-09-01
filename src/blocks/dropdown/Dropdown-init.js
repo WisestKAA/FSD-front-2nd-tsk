@@ -32,10 +32,8 @@ $(document).ready(() => {
   const dropdowns = document.querySelectorAll('.js-dropdown');
   const items = [];
   dropdowns.forEach(((val) =>{
-    if (val.classList.contains('js-dropdown_width-short')) {
-      items.push(new Dropdown(val, optionText, true));
-    } else {
-      items.push(new Dropdown(val, optionText));
-    }
+    val.classList.contains('js-dropdown_width-short')
+      ? items.push(new Dropdown(val, optionText, true))
+      : items.push(new Dropdown(val, optionText));
   }));
 });

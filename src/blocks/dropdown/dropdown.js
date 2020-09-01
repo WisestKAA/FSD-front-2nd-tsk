@@ -54,11 +54,7 @@ class Dropdown {
   }
 
   _handleSelectClick() {
-    if (this._select.classList.contains('dropdown__select_active')) {
-      this._hideDropdown();
-    } else {
-      this._showDropdown();
-    }
+    this._select.classList.contains('dropdown__select_active') ? this._hideDropdown() : this._showDropdown();
   }
 
   _showDropdown() {
@@ -151,9 +147,7 @@ class Dropdown {
   _handleDocumentClick(event) {
     const { target } = event;
     const itsDropdown = target === this._dropdown || this._dropdown.contains(target);
-    if (!itsDropdown) {
-      this._hideDropdown(event);
-    }
+    !itsDropdown && this._hideDropdown(event);
   }
 }
 

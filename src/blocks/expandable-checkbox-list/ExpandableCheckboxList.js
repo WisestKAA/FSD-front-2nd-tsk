@@ -15,11 +15,9 @@ class ExpandableCheckboxList {
   }
 
   _handleEclClick() {
-    if (this._checkboxes.classList.contains('expandable-checkbox-list__checkboxes_display')) {
-      this._checkboxes.classList.remove('expandable-checkbox-list__checkboxes_display');
-    } else {
-      this._checkboxes.classList.add('expandable-checkbox-list__checkboxes_display');
-    }
+    this._checkboxes.classList.contains('expandable-checkbox-list__checkboxes_display')
+      ? this._checkboxes.classList.remove('expandable-checkbox-list__checkboxes_display')
+      : this._checkboxes.classList.add('expandable-checkbox-list__checkboxes_display');
   }
 }
 

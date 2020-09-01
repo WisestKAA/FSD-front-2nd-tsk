@@ -24,6 +24,7 @@ module.exports = {
   rules: {
     'no-unused-vars': ['error', { argsIgnorePattern: '^[A-Za-z]{1,20}Mock$' }],
     'class-methods-use-this': 'off',
-    'no-underscore-dangle': 'off'
+    'no-underscore-dangle': 'off',
+    'no-unused-expressions': 'off'
   }
 };

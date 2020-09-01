@@ -33,7 +33,7 @@ class DropdownOptionButton {
   }
 
   checkHidden() {
-    if (this._drop.classList.contains('dropdown-option-button__drop_hide')) this._showDrop();
+    this._drop.classList.contains('dropdown-option-button__drop_hide') && this._showDrop();
   }
 }
 

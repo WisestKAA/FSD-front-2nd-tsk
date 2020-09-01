@@ -29,12 +29,9 @@ class DateDropdown {
   }
 
   _addEvents() {
-    if (!this._isFiltered) {
-      this._inputTo.addEventListener('click', this._handleShowDatePiker.bind(this));
-    }
+    !this._isFiltered && this._inputTo.addEventListener('click', this._handleShowDatePiker.bind(this));
 
     this._$applyButton[0].addEventListener('click', this._handleApplyButtonClick.bind(this));
-
     this._$clearButton[0].addEventListener('click', this._handleClearButtonClick.bind(this));
   }
 

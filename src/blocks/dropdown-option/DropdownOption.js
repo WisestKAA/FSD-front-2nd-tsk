@@ -45,9 +45,7 @@ class DropdownOption {
   _handlePlusClick() {
     this._value += 1;
     this._number.textContent = this._value;
-    if (this._minusButton.classList.contains('dropdown-option__circle_disable')) {
-      this._enableMinus();
-    }
+    this._minusButton.classList.contains('dropdown-option__circle_disable') && this._enableMinus();
   }
 
   _enableMinus() {
