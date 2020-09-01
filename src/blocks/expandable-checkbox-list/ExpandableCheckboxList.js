@@ -1,24 +1,24 @@
 class ExpandableCheckboxList {
   constructor(elem) {
-    this.elem = elem;
-    this.init();
-    this.addEvents();
+    this._elem = elem;
+    this._init();
+    this._addEvents();
   }
 
-  init() {
-    this.header = this.elem.querySelector('.js-expandable-checkbox-list__header');
-    this.checkboxes = this.elem.querySelector('.js-expandable-checkbox-list__checkboxes');
+  _init() {
+    this._header = this._elem.querySelector('.js-expandable-checkbox-list__header');
+    this._checkboxes = this._elem.querySelector('.js-expandable-checkbox-list__checkboxes');
   }
 
-  addEvents() {
-    this.header.addEventListener('click', this.handleEclClick.bind(this));
+  _addEvents() {
+    this._header.addEventListener('click', this._handleEclClick.bind(this));
   }
 
-  handleEclClick() {
-    if (this.checkboxes.classList.contains('expandable-checkbox-list__checkboxes_display')) {
-      this.checkboxes.classList.remove('expandable-checkbox-list__checkboxes_display');
+  _handleEclClick() {
+    if (this._checkboxes.classList.contains('expandable-checkbox-list__checkboxes_display')) {
+      this._checkboxes.classList.remove('expandable-checkbox-list__checkboxes_display');
     } else {
-      this.checkboxes.classList.add('expandable-checkbox-list__checkboxes_display');
+      this._checkboxes.classList.add('expandable-checkbox-list__checkboxes_display');
     }
   }
 }

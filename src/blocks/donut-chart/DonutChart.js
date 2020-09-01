@@ -3,46 +3,46 @@ import 'd3-selection-multi';
 
 class DonutChart {
   constructor(elem, width = 120, height = 120, rating) {
-    this.donut = elem;
+    this._donut = elem;
 
-    this.initStyleClasses();
-    this.initDonutChart(width, height, rating);
+    this._initStyleClasses();
+    this._initDonutChart(width, height, rating);
   }
 
-  initStyleClasses() {
-    this.styleClasses = {
+  _initStyleClasses() {
+    this._styleClasses = {
       value: 'donut-chart__value',
       text: 'donut-chart__text',
       path: 'donut-chart__path'
     };
   }
 
-  initDonutChart(width, height, rating) {
+  _initDonutChart(width, height, rating) {
     const radius = Math.min(width, height) / 2;
 
-    this.svg = d3.select(this.donut)
+    this._svg = d3.select(this._donut)
       .append('svg')
       .attr('width', width)
       .attr('height', height)
       .append('g')
       .attr('transform', `translate(${width / 2},${height / 2})`);
 
-    this.arcAttribute = d3.arc()
+    this._arcAttribute = d3.arc()
       .innerRadius((Math.min(width, height) / 2) * 0.90)
       .outerRadius(radius);
 
-    this.pie = d3.pie()
+    const pie = d3.pie()
       .value((d) => {
         return d.value;
       })
       .sort(null)
       .padAngle(0.02);
 
-    this.getGradients();
+    this._getGradients();
 
-    this.data = d3.entries(rating);
-    this.paths = this.svg.selectAll('path')
-      .data(this.pie(this.data))
+    const data = d3.entries(rating);
+    this._paths = this._svg.selectAll('path')
+      .data(pie(data))
       .enter()
       .append('g')
       .style('fill', (d, index) => {
@@ -50,41 +50,41 @@ class DonutChart {
       })
       .append('path')
       .attrs({
-        d: this.arcAttribute,
+        d: this._arcAttribute,
         fill: (d, index) => {
           return `url(#gradient${index})`;
         },
-        class: this.styleClasses.path
+        class: this._styleClasses.path
       })
-      .on('click', this.handlePathsClick.bind(this));
+      .on('click', this._handlePathsClick.bind(this));
 
-    this.valueTextField = this.svg.append('text')
-      .text(`${this.data[3].value}`)
+    this._valueTextField = this._svg.append('text')
+      .text(`${data[3].value}`)
       .attrs({
-        class: this.styleClasses.value,
+        class: this._styleClasses.value,
         dy: '-0.1em',
         fill: 'url(#gradient3)',
         'text-anchor': 'middle'
       });
-    this.descriptionTextField = this.svg.append('text')
+    this._descriptionTextField = this._svg.append('text')
       .text('голосов')
       .attrs({
-        class: this.styleClasses.text,
+        class: this._styleClasses.text,
         dy: '1.3em',
         fill: 'url(#gradient3)',
         'text-anchor': 'middle'
       });
   }
 
-  getGradients() {
-    this.initGradient(3, '#FFE39C', '#FFBA9C');
-    this.initGradient(2, '#6FCF97', '#66D2EA');
-    this.initGradient(1, '#BC9CFF', '#8BA4F9');
-    this.initGradient(0, '#919191', '#3D4975');
+  _getGradients() {
+    this._initGradient(3, '#FFE39C', '#FFBA9C');
+    this._initGradient(2, '#6FCF97', '#66D2EA');
+    this._initGradient(1, '#BC9CFF', '#8BA4F9');
+    this._initGradient(0, '#919191', '#3D4975');
   }
 
-  initGradient(id, startColor, endColor) {
-    const gradient = this.svg.append('svg:defs')
+  _initGradient(id, startColor, endColor) {
+    const gradient = this._svg.append('svg:defs')
       .append('svg:linearGradient')
       .attrs({
         id: `gradient${id}`,
@@ -108,14 +108,14 @@ class DonutChart {
       });
   }
 
-  handlePathsClick(dataObject, currentPath, paths) {
+  _handlePathsClick(dataObject, currentPath, paths) {
     const { data, index } = dataObject;
-    this.valueTextField.style('fill', `url(#gradient${index})`)
+    this._valueTextField.style('fill', `url(#gradient${index})`)
       .text(`${data.value}`);
-    this.descriptionTextField.style('fill', `url(#gradient${index})`)
+    this._descriptionTextField.style('fill', `url(#gradient${index})`)
       .text('голосов');
-    this.paths.attr('d', this.arcAttribute);
-    d3.select(paths[currentPath]).attr('d', this.arcAttribute);
+    this._paths.attr('d', this._arcAttribute);
+    d3.select(paths[currentPath]).attr('d', this._arcAttribute);
   }
 }
 

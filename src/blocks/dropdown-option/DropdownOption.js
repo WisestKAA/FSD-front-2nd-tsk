@@ -1,73 +1,73 @@
 class DropdownOption {
   constructor(element) {
-    this.option = element;
-    this.init();
-    this.addEvents();
+    this._option = element;
+    this._init();
+    this._addEvents();
   }
 
-  addEvents() {
-    this.minusButton.addEventListener('click', this.handleMinusClick.bind(this));
-    this.plusButton.addEventListener('click', this.handlePlusClick.bind(this));
-    this.number.addEventListener('DOMSubtreeModified', this.handleValueChanged.bind(this));
+  _addEvents() {
+    this._minusButton.addEventListener('click', this._handleMinusClick.bind(this));
+    this._plusButton.addEventListener('click', this._handlePlusClick.bind(this));
+    this._number.addEventListener('DOMSubtreeModified', this._handleValueChanged.bind(this));
   }
 
-  init() {
-    this.initButtons();
-    this.initNumber();
+  _init() {
+    this._initButtons();
+    this._initNumber();
   }
 
-  initButtons() {
-    const buttons = this.option.querySelectorAll('.js-dropdown-option__circle');
+  _initButtons() {
+    const buttons = this._option.querySelectorAll('.js-dropdown-option__circle');
     buttons.forEach((val) => {
       if (val.textContent === '-') {
-        this.minusButton = val;
+        this._minusButton = val;
       }
       if (val.textContent === '+') {
-        this.plusButton = val;
+        this._plusButton = val;
       }
     });
   }
 
-  initNumber() {
-    this.number = this.option.querySelector('.js-dropdown-option__number');
-    this.value = parseInt(this.number.textContent, 10);
-    if (this.value === '') this.value = 0;
-    if (this.value === 0) this.disableMinus();
+  _initNumber() {
+    this._number = this._option.querySelector('.js-dropdown-option__number');
+    this._value = parseInt(this._number.textContent, 10);
+    if (this._value === '') this._value = 0;
+    if (this._value === 0) this._disableMinus();
   }
 
-  handleMinusClick() {
-    if (this.value > 0) {
-      this.value -= 1;
+  _handleMinusClick() {
+    if (this._value > 0) {
+      this._value -= 1;
     }
-    this.number.textContent = this.value;
+    this._number.textContent = this._value;
   }
 
-  handlePlusClick() {
-    this.value += 1;
-    this.number.textContent = this.value;
-    if (this.minusButton.classList.contains('dropdown-option__circle_disable')) {
-      this.enableMinus();
+  _handlePlusClick() {
+    this._value += 1;
+    this._number.textContent = this._value;
+    if (this._minusButton.classList.contains('dropdown-option__circle_disable')) {
+      this._enableMinus();
     }
   }
 
-  enableMinus() {
-    this.minusButton.classList.remove('dropdown-option__circle_disable');
+  _enableMinus() {
+    this._minusButton.classList.remove('dropdown-option__circle_disable');
   }
 
-  disableMinus() {
-    this.minusButton.classList.add('dropdown-option__circle_disable');
+  _disableMinus() {
+    this._minusButton.classList.add('dropdown-option__circle_disable');
   }
 
-  handleValueChanged() {
-    if (this.value === 0) {
-      this.disableMinus();
+  _handleValueChanged() {
+    if (this._value === 0) {
+      this._disableMinus();
     }
   }
 
   clearValue() {
-    this.number.textContent = 0;
-    this.value = 0;
-    this.disableMinus();
+    this._number.textContent = 0;
+    this._value = 0;
+    this._disableMinus();
   }
 }
 

@@ -1,31 +1,31 @@
 class LikeButton {
   constructor(elem) {
-    this.likeButton = elem;
-    this.init();
-    this.addEvents();
+    this._likeButton = elem;
+    this._init();
+    this._addEvents();
   }
 
-  init() {
-    this.icon = this.likeButton.querySelector('.material-icons');
-    this.num = this.likeButton.querySelector('.like-button__number');
+  _init() {
+    this._icon = this._likeButton.querySelector('.material-icons');
+    this._num = this._likeButton.querySelector('.like-button__number');
   }
 
-  addEvents() {
-    this.likeButton.addEventListener('click', this.handleLikeButtonClick.bind(this));
+  _addEvents() {
+    this._likeButton.addEventListener('click', this._handleLikeButtonClick.bind(this));
   }
 
-  handleLikeButtonClick() {
+  _handleLikeButtonClick() {
     let num;
-    if (this.likeButton.classList.contains('like-button_active')) {
-      this.likeButton.classList.remove('like-button_active');
-      num = parseInt(this.num.textContent, 10);
-      this.num.textContent = num - 1;
-      this.icon.textContent = 'favorite_border';
+    if (this._likeButton.classList.contains('like-button_active')) {
+      this._likeButton.classList.remove('like-button_active');
+      num = parseInt(this._num.textContent, 10);
+      this._num.textContent = num - 1;
+      this._icon.textContent = 'favorite_border';
     } else {
-      this.likeButton.classList.add('like-button_active');
-      num = parseInt(this.num.textContent, 10);
-      this.num.textContent = num + 1;
-      this.icon.textContent = 'favorite';
+      this._likeButton.classList.add('like-button_active');
+      num = parseInt(this._num.textContent, 10);
+      this._num.textContent = num + 1;
+      this._icon.textContent = 'favorite';
     }
   }
 }

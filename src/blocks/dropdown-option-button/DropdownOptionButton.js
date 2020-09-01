@@ -1,44 +1,39 @@
 class DropdownOptionButton {
   constructor(element, selectText, optionsList, isHide = true) {
-    this.buttons = element;
-    this.selectText = selectText;
-    this.optionsList = optionsList;
-    this.init();
-    this.addEvents();
+    this._buttons = element;
+    this._selectText = selectText;
+    this._optionsList = optionsList;
+    this._init();
+    this._addEvents();
     if (isHide) this.hideDrop();
   }
 
-  init() {
-    this.drop = this.buttons.querySelector('.js-dropdown-option-button__drop');
-    this.apply = this.buttons.querySelector('.js-dropdown-option-button__apply');
+  _init() {
+    this._drop = this._buttons.querySelector('.js-dropdown-option-button__drop');
+    this._apply = this._buttons.querySelector('.js-dropdown-option-button__apply');
   }
 
-  addEvents() {
-    this.drop.addEventListener('click', this.handleDropClick.bind(this));
-    this.apply.addEventListener('click', this.handleApplyClick.bind(this));
+  _addEvents() {
+    this._drop.addEventListener('click', this._handleDropClick.bind(this));
   }
 
-  handleDropClick() {
-    this.optionsList.forEach((val)=>{
+  _handleDropClick() {
+    this._optionsList.forEach((val)=>{
       val.clearValue();
     });
     this.hideDrop();
   }
 
-  handleApplyClick() {
-    // todo action
-  }
-
   hideDrop() {
-    this.drop.classList.add('dropdown-option-button__drop_hide');
+    this._drop.classList.add('dropdown-option-button__drop_hide');
   }
 
-  showDrop() {
-    this.drop.classList.remove('dropdown-option-button__drop_hide');
+  _showDrop() {
+    this._drop.classList.remove('dropdown-option-button__drop_hide');
   }
 
   checkHidden() {
-    if (this.drop.classList.contains('dropdown-option-button__drop_hide')) this.showDrop();
+    if (this._drop.classList.contains('dropdown-option-button__drop_hide')) this._showDrop();
   }
 }
 
