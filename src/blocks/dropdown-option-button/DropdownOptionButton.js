@@ -1,3 +1,7 @@
+
+import { boundClass } from 'autobind-decorator';
+
+@boundClass
 class DropdownOptionButton {
   constructor(element, selectText, optionsList, isHide = true) {
     this._buttons = element;
@@ -14,7 +18,7 @@ class DropdownOptionButton {
   }
 
   _addEvents() {
-    this._drop.addEventListener('click', this._handleDropClick.bind(this));
+    this._drop.addEventListener('click', this._handleDropClick);
   }
 
   _handleDropClick() {

@@ -1,6 +1,8 @@
 import DropdownOption from '../dropdown-option/DropdownOption';
 import DropdownOptionButton from '../dropdown-option-button/DropdownOptionButton';
+import { boundClass } from 'autobind-decorator';
 
+@boundClass
 class Dropdown {
   constructor(element, optionText, isShort = false) {
     this._dropdown = element;
@@ -18,8 +20,8 @@ class Dropdown {
   }
 
   _addEvents() {
-    this._select.addEventListener('click', this._handleSelectClick.bind(this));
-    this._options.addEventListener('DOMSubtreeModified', this._handleOptionsModified.bind(this));
+    this._select.addEventListener('click', this._handleSelectClick);
+    this._options.addEventListener('DOMSubtreeModified', this._handleOptionsModified);
   }
 
   _initSelect() {
@@ -61,7 +63,6 @@ class Dropdown {
     this._select.classList.add('dropdown__select_active');
     this._options.classList.add('dropdown__options_active');
 
-    this._handleDocumentClick = this._handleDocumentClick.bind(this);
     document.addEventListener('click', this._handleDocumentClick);
 
     this._arrow.textContent = 'keyboard_arrow_up';

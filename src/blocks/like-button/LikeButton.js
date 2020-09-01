@@ -1,3 +1,7 @@
+
+import { boundClass } from 'autobind-decorator';
+
+@boundClass
 class LikeButton {
   constructor(elem) {
     this._likeButton = elem;
@@ -11,7 +15,7 @@ class LikeButton {
   }
 
   _addEvents() {
-    this._likeButton.addEventListener('click', this._handleLikeButtonClick.bind(this));
+    this._likeButton.addEventListener('click', this._handleLikeButtonClick);
   }
 
   _handleLikeButtonClick() {

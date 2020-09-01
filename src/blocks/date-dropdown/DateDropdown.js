@@ -1,5 +1,7 @@
 import 'air-datepicker';
+import { boundClass } from 'autobind-decorator';
 
+@boundClass
 class DateDropdown {
   constructor(elem) {
     this._init(elem);
@@ -29,10 +31,10 @@ class DateDropdown {
   }
 
   _addEvents() {
-    !this._isFiltered && this._inputTo.addEventListener('click', this._handleShowDatePiker.bind(this));
+    !this._isFiltered && this._inputTo.addEventListener('click', this._handleShowDatePiker);
 
-    this._$applyButton[0].addEventListener('click', this._handleApplyButtonClick.bind(this));
-    this._$clearButton[0].addEventListener('click', this._handleClearButtonClick.bind(this));
+    this._$applyButton[0].addEventListener('click', this._handleApplyButtonClick);
+    this._$clearButton[0].addEventListener('click', this._handleClearButtonClick);
   }
 
   _datePikerInit(datePiker, dateDropdown, isFiltered = false, inptFrom, inptTo) {

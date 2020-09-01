@@ -1,3 +1,7 @@
+
+import { boundClass } from 'autobind-decorator';
+
+@boundClass
 class ExpandableCheckboxList {
   constructor(elem) {
     this._elem = elem;
@@ -11,7 +15,7 @@ class ExpandableCheckboxList {
   }
 
   _addEvents() {
-    this._header.addEventListener('click', this._handleEclClick.bind(this));
+    this._header.addEventListener('click', this._handleEclClick);
   }
 
   _handleEclClick() {

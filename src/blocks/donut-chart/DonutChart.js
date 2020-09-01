@@ -1,6 +1,8 @@
 import * as d3 from 'd3';
 import 'd3-selection-multi';
+import { boundClass } from 'autobind-decorator';
 
+@boundClass
 class DonutChart {
   constructor(elem, width = 120, height = 120, rating) {
     this._donut = elem;
@@ -56,7 +58,7 @@ class DonutChart {
         },
         class: this._styleClasses.path
       })
-      .on('click', this._handlePathsClick.bind(this));
+      .on('click', this._handlePathsClick);
 
     this._valueTextField = this._svg.append('text')
       .text(`${data[3].value}`)

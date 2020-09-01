@@ -1,6 +1,8 @@
 import '../date-dropdown/DateDropdown-init';
 import '../dropdown/Dropdown-init';
+import { boundClass } from 'autobind-decorator';
 
+@boundClass
 class RoomPrice {
   constructor(value) {
     this._roomPrice = value;
@@ -18,9 +20,9 @@ class RoomPrice {
   }
 
   _addEvents() {
-    this._calculateContainer.addEventListener('DOMSubtreeModified', this._handleCalculateChanged.bind(this));
-    this._dateApplyButton.addEventListener('click', this._handleDatesChanged.bind(this));
-    this._dateClearButton.addEventListener('click', this._handleDatesClear.bind(this));
+    this._calculateContainer.addEventListener('DOMSubtreeModified', this._handleCalculateChanged);
+    this._dateApplyButton.addEventListener('click', this._handleDatesChanged);
+    this._dateClearButton.addEventListener('click', this._handleDatesClear);
   }
 
   _initPrices() {

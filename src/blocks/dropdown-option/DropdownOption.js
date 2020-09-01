@@ -1,3 +1,6 @@
+import { boundClass } from 'autobind-decorator';
+
+@boundClass
 class DropdownOption {
   constructor(element) {
     this._option = element;
@@ -6,9 +9,9 @@ class DropdownOption {
   }
 
   _addEvents() {
-    this._minusButton.addEventListener('click', this._handleMinusClick.bind(this));
-    this._plusButton.addEventListener('click', this._handlePlusClick.bind(this));
-    this._number.addEventListener('DOMSubtreeModified', this._handleValueChanged.bind(this));
+    this._minusButton.addEventListener('click', this._handleMinusClick);
+    this._plusButton.addEventListener('click', this._handlePlusClick);
+    this._number.addEventListener('DOMSubtreeModified', this._handleValueChanged);
   }
 
   _init() {
