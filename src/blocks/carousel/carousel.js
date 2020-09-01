@@ -1,4 +1,4 @@
-import 'owl.carousel/dist/owl.carousel';
+import 'owl.carousel';
 
 class Carousel {
   constructor(elem) {

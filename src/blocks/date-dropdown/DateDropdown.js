@@ -1,4 +1,4 @@
-import 'air-datepicker/dist/js/datepicker';
+import 'air-datepicker';
 
 class DateDropdown {
   constructor(elem) {
