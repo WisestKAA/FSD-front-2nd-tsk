@@ -1,4 +1,4 @@
-class ExpandableCheckboxLst {
+class ExpandableCheckboxList {
   constructor(elem) {
     this.elem = elem;
     this.init();
@@ -23,10 +23,4 @@ class ExpandableCheckboxLst {
   }
 }
 
-$(document).ready(() => {
-  const ecl = document.querySelectorAll('.js-expandable-checkbox-list');
-  const items = [];
-  ecl.forEach(((val) =>{
-    items.push(new ExpandableCheckboxLst(val));
-  }));
-});
+export default ExpandableCheckboxList;

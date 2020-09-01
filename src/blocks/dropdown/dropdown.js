@@ -1,7 +1,7 @@
-import DropdownOption from '../dropdown-option/dropdown-option';
-import DropdownOptionButton from '../dropdown-option-button/dropdown-option-button';
+import DropdownOption from '../dropdown-option/DropdownOption';
+import DropdownOptionButton from '../dropdown-option-button/DropdownOptionButton';
 
-class DropDown {
+class Dropdown {
   constructor(element, optionText, isShort = false) {
     this.dropdown = element;
     this.isShort = isShort;
@@ -157,44 +157,4 @@ class DropDown {
   }
 }
 
-$(document).ready(() => {
-  const optionText = {
-    guest: {
-      first: ' гость',
-      second: ' гостя',
-      third: ' гостей'
-    },
-    bedroom: {
-      first: ' спальня',
-      second: ' спальни',
-      third: ' спален'
-    },
-    bed: {
-      first: ' кровать',
-      second: ' кровати',
-      third: ' кроватей'
-    },
-    bathroom: {
-      first: ' ванная комната',
-      second: ' ванные комнаты',
-      third: ' ванных комнат'
-    },
-    baby: {
-      first: ' младенец',
-      second: ' младенца',
-      third: ' младенцев'
-    }
-  };
-
-  const dropdowns = document.querySelectorAll('.js-dropdown');
-  const items = [];
-  dropdowns.forEach(((val) =>{
-    if (val.classList.contains('js-dropdown_width-short')) {
-      items.push(new DropDown(val, optionText, true));
-    } else {
-      items.push(new DropDown(val, optionText));
-    }
-  }));
-});
-
-export default DropDown;
+export default Dropdown;

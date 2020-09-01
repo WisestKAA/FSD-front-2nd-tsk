@@ -1,8 +1,8 @@
 import '../../../blocks/text-field/text-field';
-import '../../../blocks/range-slider/range-slider';
-import '../../../blocks/dropdown/dropdown';
-import '../../../blocks/date-dropdown/date-dropdown';
+import '../../../blocks/range-slider/RangeSlider-init';
+import '../../../blocks/dropdown/Dropdown-init';
+import '../../../blocks/date-dropdown/DateDropdown-init';
 import '../../../blocks/subscription-text-field/subscription-text-field';
-import '../../../blocks/like-button/like-button';
-import '../../../blocks/expandable-checkbox-list/expandable-checkbox-list';
+import '../../../blocks/like-button/LikeButton-init';
+import '../../../blocks/expandable-checkbox-list/ExpandableCheckboxList-init';
 import '../../../blocks/comment/comment';

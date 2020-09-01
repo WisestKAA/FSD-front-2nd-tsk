@@ -1,5 +1,5 @@
-import '../date-dropdown/date-dropdown';
-import '../dropdown/dropdown';
+import '../date-dropdown/DateDropdown-init';
+import '../dropdown/Dropdown-init';
 
 class RoomPrice {
   constructor(value) {
@@ -75,13 +75,5 @@ class RoomPrice {
     this.totalContainer.textContent = roomPrice !== 0 ? `${this.getNumWithSpace(sum)}₽` : '0₽';
   }
 }
-
-$(document).ready(() => {
-  const roomPrice = document.querySelectorAll('.js-room-price');
-  const items = [];
-  roomPrice.forEach(((val) =>{
-    items.push(new RoomPrice(val));
-  }));
-});
 
 export default RoomPrice;

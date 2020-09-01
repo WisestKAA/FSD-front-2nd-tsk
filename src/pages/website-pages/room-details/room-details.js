@@ -1,3 +1,3 @@
 import '../../../blocks/comment/comment';
-import '../../../blocks/room-price/room-price';
-import '../../../blocks/donut-chart/donut-chart';
+import '../../../blocks/room-price/RoomPrice-init';
+import '../../../blocks/donut-chart/DonutChart-init';
