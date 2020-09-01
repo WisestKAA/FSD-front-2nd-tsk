@@ -33,7 +33,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.1429rem;
-    
+
     &-text {
       @include body;
       display: flex;
@@ -41,7 +41,7 @@
       padding-bottom: 0.1429rem;
       color: #000000;
     }
-    
+
     &-button {
       max-width: 7.0714rem;
       width: 100%;

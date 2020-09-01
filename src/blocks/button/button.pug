@@ -1,15 +1,15 @@
 include ../material-icons/material-icons.pug
 
-mixin button({ type, name, value, actionLink }={})    
+mixin button({ type, name, value, actionLink }={})
   - let typeClass
   .button
     case type
       when 'rich'
-        - typeClass = `button__wrapper-rich_${type}`          
+        - typeClass = `button__wrapper-rich_${type}`
         .button__wrapper-rich
           .button__arrow
             +material-icons({type: "arrow_forward"})
-          .button__text=value             
+          .button__text=value
           input(type="submit", name=name, value=value, class=typeClass)
       when 'empty'
         - typeClass = `button__wrapper-empty_${type}`
@@ -22,8 +22,8 @@ mixin button({ type, name, value, actionLink }={})
       when 'short-bordered'
         - typeClass = 'button__wrapper-short_bordered'
         .button__wrapper-short
-          a(href=actionLink, class=typeClass)=value  
+          a(href=actionLink, class=typeClass)=value
       default
         - typeClass = `button__wrapper_${type}`
-        .button__wrapper            
+        .button__wrapper
           a(href=actionLink, class=typeClass)=value

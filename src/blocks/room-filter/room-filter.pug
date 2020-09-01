@@ -1,9 +1,9 @@
-include ../date-dropdown/date-dropdown.pug 
+include ../date-dropdown/date-dropdown.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
-include ../label/label.pug 
+include ../label/label.pug
 
-mixin room-filter({ header, actionLink = '/moke' }={}) 
+mixin room-filter({ header, actionLink = '/moke' }={})
   .room-filter
     h1.room-filter__header=header
     form(action=actionLink).room-filter__form
@@ -11,8 +11,8 @@ mixin room-filter({ header, actionLink = '/moke' }={})
         +date-dropdown({ isFiltered: false,  startText: 'прибытие', finishText: 'выезд'})
       .room-filter__guests
         +label({ text: 'гости', marginBottom: '6'})
-        +dropdown({ 
-          text: 'Сколько гостей', 
+        +dropdown({
+          text: 'Сколько гостей',
           options: [
             { text: 'взрослые', number: 0 },
             { text: 'дети', number: 0 },

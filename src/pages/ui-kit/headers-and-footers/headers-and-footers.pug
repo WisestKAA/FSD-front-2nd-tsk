@@ -12,11 +12,11 @@ block template
   include ../../../blocks/footer/footer.pug
 
   -
-    const { 
-      unloggedHeaderData, 
-      loggedHeaderData, 
-      footerWithCopyrightData, 
-      footerData 
+    const {
+      unloggedHeaderData,
+      loggedHeaderData,
+      footerWithCopyrightData,
+      footerData
     } = require('@pages/ui-kit/headers-and-footers/headers-and-footers-data.json')
 
   .headers-and-footers
@@ -26,5 +26,5 @@ block template
       +header(loggedHeaderData)
     .headers-and-footers__footer-with-copyright
       +footer-with-copyright(footerWithCopyrightData)
-    .headers-and-footers__footer  
-      +footer(footerData)  
+    .headers-and-footers__footer
+      +footer(footerData)

@@ -19,17 +19,17 @@
   "commentsData": [
     {
       "avatarSrc": "./img/avatar1.png",
-      "avatarName": "Мурад Сарафанов", 
-      "avatarDate": "5 дней назад", 
+      "avatarName": "Мурад Сарафанов",
+      "avatarDate": "5 дней назад",
       "likeNumber": 12,
-      "isLiked": true, 
+      "isLiked": true,
       "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"
     },
     {
       "avatarSrc": "./img/avatar2.png",
-      "avatarName": "Патрисия Стёклышкова", 
-      "avatarDate": "Неделю назад", 
-      "likeNumber": 2, 
+      "avatarName": "Патрисия Стёклышкова",
+      "avatarDate": "Неделю назад",
+      "likeNumber": 2,
       "text": "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
     }
   ],
@@ -41,13 +41,13 @@
     ]
   },
   "priceData": {
-    "number": "888", 
+    "number": "888",
     "isLuxe": true,
-    "pricePerDay": "9 990", 
-    "servicePrice": "2179", 
+    "pricePerDay": "9 990",
+    "servicePrice": "2179",
     "discountForService": "2179",
-    "serviceInfo": "", 
-    "addServicePrice": "300", 
+    "serviceInfo": "",
+    "addServicePrice": "300",
     "addServiceInfo": ""
   }
 }

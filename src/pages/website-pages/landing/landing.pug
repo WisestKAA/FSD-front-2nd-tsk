@@ -7,12 +7,12 @@ block variables
     const description = 'Подобрать номера по вашим пожеланиям'
 
 block template
-  include ../../../blocks/room-filter/room-filter.pug   
+  include ../../../blocks/room-filter/room-filter.pug
 
-  main.landing        
+  main.landing
     .landing__main
       .landing__wrapper
         .landing__room-filter
           +room-filter({ header: 'Найдём номера под ваши пожелания' })
-        .landing__wrapper-description    
-          .landing__description="Лучшие номера для вашей работы, отдыха и просто вдохновения"        
+        .landing__wrapper-description
+          .landing__description="Лучшие номера для вашей работы, отдыха и просто вдохновения"

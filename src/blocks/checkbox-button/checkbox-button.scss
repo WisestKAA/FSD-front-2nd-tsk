@@ -67,7 +67,7 @@
     box-sizing: border-box;
     border-radius: 0.2857rem;
   }
-  
+
   &__text::after {
     content: 'done';
     display: none;
@@ -91,7 +91,7 @@
     min-width: 1.4286rem;
     min-height: 1.4286rem;
     width: min-content;
-    height: min-content;    
+    height: min-content;
     border: 0.0714rem solid $purple;
     box-sizing: border-box;
     border-radius: 0.2857rem;

@@ -4,7 +4,7 @@ mixin like-button({ number, isClicked=false }={})
   -
     const active = isClicked && 'like-button_active'
     const iconType = isClicked ? 'favorite' : 'favorite_border'
-  
+
   figure.like-button.js-like-button(class=active)
     .like-button__icon
       +material-icons({ type: iconType, fontSize: 10 })

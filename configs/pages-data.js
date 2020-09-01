@@ -2,12 +2,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PATHS = {
   src: './src',
-  uiKit:  './src/pages/ui-kit',
-  wsPages: './src/pages/website-pages',
-}
+  uiKit: './src/pages/ui-kit',
+  wsPages: './src/pages/website-pages'
+};
 
 class PagesData {
-  constructor(){
+  constructor() {
     this._data = [
       {
         name: 'index',
@@ -27,8 +27,8 @@ class PagesData {
       },
       {
         name: 'colors-and-type',
-        stylePath: `./src/pages/ui-kit/colors-and-type/colors-and-type.scss`,
-        template: `./src/pages/ui-kit/colors-and-type/colors-and-type.pug`,
+        stylePath: './src/pages/ui-kit/colors-and-type/colors-and-type.scss',
+        template: './src/pages/ui-kit/colors-and-type/colors-and-type.pug',
         filename: './colors-and-type.html',
         chunks: ['colors-and-type']
       },
@@ -87,28 +87,28 @@ class PagesData {
         template: `${PATHS.wsPages}/sign-in/sign-in.pug`,
         filename: './sign-in.html',
         chunks: ['sign-in']
-      },  
+      }
     ];
   }
 
-  get entry (){
+  get entry() {
     let result = {};
     this._data.forEach((val) => {
-      if(!val.jsPath){
+      if (!val.jsPath) {
         result[val.name] = val.stylePath;
       } else if (!val.stylePath) {
         result[val.name] = val.jsPath;
-      } else {      
+      } else {
         result[val.name] = [
           val.jsPath,
-          val.stylePath,
+          val.stylePath
         ];
       }
     });
     return result;
   }
 
-  get HTMLPlugins (){
+  get HTMLPlugins() {
     let plugins = [];
     this._data.forEach((val) => {
       plugins.push(
@@ -116,9 +116,9 @@ class PagesData {
           template: val.template,
           filename: val.filename,
           inject: true,
-          chunks: val.chunks,
+          chunks: val.chunks
         })
-      )
+      );
     });
     return plugins;
   }

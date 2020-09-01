@@ -10,12 +10,12 @@ const config = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           { loader: 'style-loader'},
-          { 
-            loader: 'css-loader', 
-            options: { 
+          {
+            loader: 'css-loader',
+            options: {
               sourceMap: true,
-              importLoaders: 1          
-            } 
+              importLoaders: 1
+            }
           },
           { loader: 'postcss-loader', options: { sourceMap: true } },
           { loader: 'resolve-url-loader', },
@@ -26,7 +26,7 @@ const config = {
   },
   devServer: {
     contentBase: './out'
-  },  
+  },
 }
 
 module.exports = async () => {

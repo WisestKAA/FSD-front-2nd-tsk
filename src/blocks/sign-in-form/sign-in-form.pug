@@ -6,11 +6,11 @@ mixin sign-in-form({ actionLink='/moke', header }={})
   .sign-in-form
     form(action=actionLink).sign-in-form__form
       h1.sign-in-form__header=header
-      .sign-in-form__email                
+      .sign-in-form__email
         +text-field({ placeholder: 'Email', name: 'signInEmail' })
       .sign-in-form__password
         +text-field({ placeholder: 'Пароль', type: 'password', name: 'signInPassword' })
-      .sign-in-form__button                
+      .sign-in-form__button
         +button({ type: 'rich', name: 'singIn', value: 'войти' })
       .sign-in-form__sign-up
         .sign-in-form__sign-up-text="Нет аккаунта на Toxin?"

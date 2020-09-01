@@ -1,15 +1,15 @@
 {
   "headerData": {
     "navOptions": [
-      { 
-        "text": "О нас", 
-        "link": "/about-us", 
-        "isCurrent": false 
+      {
+        "text": "О нас",
+        "link": "/about-us",
+        "isCurrent": false
       },
-      { 
-        "text": "Услуги", 
-        "link": "/services", 
-        "isCurrent": false, 
+      {
+        "text": "Услуги",
+        "link": "/services",
+        "isCurrent": false,
         "sublinks": [
           { "textLink": "Service1", "link": "/service/1" },
           { "textLink": "Service2", "link": "/service/2" },
@@ -18,10 +18,10 @@
       },
       { "text": "Вакансии", "link": "/vacancies", "isCurrent": false },
       { "text": "Новости", "link": "/news", "isCurrent": false },
-      { 
-        "text": "Соглашения", 
-        "link": "/agreements", 
-        "isCurrent": false, 
+      {
+        "text": "Соглашения",
+        "link": "/agreements",
+        "isCurrent": false,
         "sublinks": [
           { "textLink": "agreements1", "link": "/agreements/1" },
           { "textLink": "agreements2", "link": "/agreements/2" },
@@ -31,15 +31,15 @@
     ],
     "isShortMenu": true,
     "isLogged": false,
-    "username": "", 
-    "loginButtonText": "войти", 
+    "username": "",
+    "loginButtonText": "войти",
     "signupButtonText": "зарегистрироваться"
   },
   "footerData": {
-    "descriptionText": "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", 
+    "descriptionText": "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
     "menuItems": [
-      { 
-        "header": "навигация", 
+      {
+        "header": "навигация",
         "options": [
           { "text": "О нас", "link": "/about-us" },
           { "text": "Новости", "link": "/news" },
@@ -47,8 +47,8 @@
           { "text": "Услуги", "link": "/services" }
         ]
       },
-      { 
-        "header": "о нас", 
+      {
+        "header": "о нас",
         "options": [
           { "text": "О сервисе", "link": "/about-us/about-service" },
           { "text": "Наша команда", "link": "/about-us/our-team" },
@@ -56,8 +56,8 @@
           { "text": "Инвесторы", "link": "/about-us/investors" }
         ]
       },
-      { 
-        "header": "Служба поддержки", 
+      {
+        "header": "Служба поддержки",
         "options": [
           { "text": "Соглашения", "link": "/support-service/agreements" },
           { "text": "Сообщества", "link": "/support-service/socials" },
@@ -65,9 +65,9 @@
         ]
       }
     ],
-    "subscribeHeader": "Подписка", 
-    "subscribeDescription": "Получайте специальные предложения и новости сервиса", 
-    "subscribePlaceholder": "Email", 
+    "subscribeHeader": "Подписка",
+    "subscribeDescription": "Получайте специальные предложения и новости сервиса",
+    "subscribePlaceholder": "Email",
     "copyrightText": "Copyright © 2018 Toxin отель. Все права зачищены."
   }
 }

@@ -2,36 +2,36 @@
   "formElementsData": {
     "textFields": {
       "commonLabel": {
-        "text": "Text Field", 
-        "marginBottom": "5", 
-        "caption": "Default", 
+        "text": "Text Field",
+        "marginBottom": "5",
+        "caption": "Default",
         "marginCaption": "3"
       },
       "commonTextField": { "placeholder": "Email" },
       "hoverLabel": {
-        "text": "Text Field", 
-        "marginBottom": "5", 
+        "text": "Text Field",
+        "marginBottom": "5",
         "caption": "Hover / Focus"
       },
       "hoverTextField": { "placeholder": "Email", "text": "This is pretty awesome" },
       "maskedLabel": {
-        "text": "masked text field", 
-        "marginBottom": "5", 
-        "caption": "Default", 
+        "text": "masked text field",
+        "marginBottom": "5",
+        "caption": "Default",
         "marginCaption": "3"
       },
       "maskedTextField": { "isMasked": true }
     },
     "dropdowns": {
       "commonLabel": {
-        "text": "Dropdown", 
-        "marginBottom": "5", 
+        "text": "Dropdown",
+        "marginBottom": "5",
         "caption": "Default"
       },
       "shortLabel": {
-        "text": "Dropdown", 
-        "marginBottom": "5", 
-        "caption": "Default", 
+        "text": "Dropdown",
+        "marginBottom": "5",
+        "caption": "Default",
         "isShort": true
       },
       "labelWithoutCaption": { "text": "Dropdown", "marginBottom": "5" },
@@ -55,8 +55,8 @@
     },
     "dateDropDowns": {
       "commonDateDropDown": {
-        "isFiltered": false, 
-        "startText": "date Dropdown", 
+        "isFiltered": false,
+        "startText": "date Dropdown",
         "finishText": "date Dropdown"
       },
       "filteredLabel": { "text": "filter date dropdown", "marginBottom": "5" },
@@ -64,38 +64,38 @@
     },
     "subscriptionTextField": {
       "label": { "text": "subscription text field", "marginBottom": "5" },
-      "item": {  "value": "Email" } 
+      "item": {  "value": "Email" }
     },
     "checkboxButtons": {
       "label": { "text": "Checkbox Buttons", "marginBottom": "17" },
       "items": [
         { "text": "Можно курить", "name": "smoking" },
-        { 
-          "text": "Можно с питомцами", 
-          "name": "pets", 
-          "isChecked": true 
+        {
+          "text": "Можно с питомцами",
+          "name": "pets",
+          "isChecked": true
         },
-        { 
-          "text": "Можно пригласить гостей (до 10 человек)", 
-          "name": "guests", 
-          "isChecked": true 
+        {
+          "text": "Можно пригласить гостей (до 10 человек)",
+          "name": "guests",
+          "isChecked": true
         }
       ]
     },
     "radioButtons": {
       "label": { "text": "Radio Buttons", "marginBottom": "16" },
       "item": {
-        "name": "radioButtons", 
+        "name": "radioButtons",
         "radioButtons": [
-          { 
+          {
             "text": "Мужчина",
-            "value": "men", 
-            "isChecked": true 
+            "value": "men",
+            "isChecked": true
           },
-          { 
-            "text": "Женщина", 
-            "value": "women", 
-            "isChecked": false 
+          {
+            "text": "Женщина",
+            "value": "women",
+            "isChecked": false
           }
         ]
       }
@@ -103,15 +103,15 @@
     "toggles": {
       "label": {  "text": "Toggle", "marginBottom": "15" },
       "items": [
-        { 
-          "name": "togen", 
-          "text": "Получать спецпредложения", 
-          "isChecked": true 
+        {
+          "name": "togen",
+          "text": "Получать спецпредложения",
+          "isChecked": true
         },
-        { 
-          "name": "togdis", 
-          "text": "Получать спецпредложения", 
-          "isChecked": false 
+        {
+          "name": "togdis",
+          "text": "Получать спецпредложения",
+          "isChecked": false
         }
       ]
     },
@@ -130,67 +130,67 @@
       ]
     },
     "buttons": {
-      "label": { "text": "buttons", "marginBottom": "16" },     
-      "gradientButton": { 
-        "type": "gradient-background", 
-        "name": "default", 
-        "value": "CLICK ME", 
-        "actionLink": "/#moke" 
-      },
-      "borderedButton": { 
-        "type": "bordered", 
-        "name": "bordered", 
-        "value": "CLICK ME", 
-        "actionLink": "/#moke" 
-      },
-      "emptyButton": { 
-        "type": "empty", 
-        "name": "empty", 
-        "value": "CLICK ME", 
+      "label": { "text": "buttons", "marginBottom": "16" },
+      "gradientButton": {
+        "type": "gradient-background",
+        "name": "default",
+        "value": "CLICK ME",
         "actionLink": "/#moke"
       },
-      "richButton": { 
-        "type": "rich", 
-        "name": "default", 
-        "value": "перейти к оплате", 
-        "actionLink": "/#moke" 
+      "borderedButton": {
+        "type": "bordered",
+        "name": "bordered",
+        "value": "CLICK ME",
+        "actionLink": "/#moke"
+      },
+      "emptyButton": {
+        "type": "empty",
+        "name": "empty",
+        "value": "CLICK ME",
+        "actionLink": "/#moke"
+      },
+      "richButton": {
+        "type": "rich",
+        "name": "default",
+        "value": "перейти к оплате",
+        "actionLink": "/#moke"
       }
     },
     "pagination": {
       "label": { "text": "pagination", "marginBottom": "16" },
       "item": {
         "links" : [
-          { 
-            "href": "/page1", 
-            "isActive": true, 
-            "number": 1 
+          {
+            "href": "/page1",
+            "isActive": true,
+            "number": 1
           },
-          { 
-            "href": "/page2", 
-            "isActive": false,  
-            "number": 2 
+          {
+            "href": "/page2",
+            "isActive": false,
+            "number": 2
           },
-          { 
-            "href": "/page3", 
-            "isActive": false,  
-            "number": 3 
+          {
+            "href": "/page3",
+            "isActive": false,
+            "number": 3
           },
-          { 
-            "href": "", 
-            "isActive": false, 
-            "number": 0 
+          {
+            "href": "",
+            "isActive": false,
+            "number": 0
           },
-          { 
-            "href": "/page15", 
-            "isActive": false,  
-            "number": 15 
+          {
+            "href": "/page15",
+            "isActive": false,
+            "number": 15
           }
         ]
       }
     },
     "expandableCheckboxLists": {
       "closed": {
-        "header": "expandable checkbox list", 
+        "header": "expandable checkbox list",
         "checkboxes" :[
           { "text": "Завтрак", "isChecked": false },
           { "text": "Письменный стол", "isChecked": true },
@@ -203,7 +203,7 @@
         ]
       },
       "expanded": {
-        "header": "expandable checkbox list", 
+        "header": "expandable checkbox list",
         "checkboxes" :[
           { "text": "Завтрак", "isChecked": false },
           { "text": "Письменный стол", "isChecked": true },
@@ -220,15 +220,15 @@
     "richCheckboxButtons": {
       "label": { "text": "Rich Checkbox Buttons", "marginBottom": "16" },
       "items": [
-        { 
-          "text": "Ширина коридоров в номере не менее 91 см.", 
-          "name": "width", 
-          "header": "Широкий коридор" 
+        {
+          "text": "Ширина коридоров в номере не менее 91 см.",
+          "name": "width",
+          "header": "Широкий коридор"
         },
         {
-          "text": "На 1 этаже вас встретит специалист и проводит до номера.", 
-          "name": "help", 
-          "header": "Помощник для инвалидов" 
+          "text": "На 1 этаже вас встретит специалист и проводит до номера.",
+          "name": "help",
+          "header": "Помощник для инвалидов"
         }
       ]
     },
@@ -244,24 +244,24 @@
     },
     "iconTextList": {
       "items": [
-        { 
-          "icon": "insert_emoticon", 
-          "header": "Комфорт", 
-          "content": "Шумопоглощающие стены" 
+        {
+          "icon": "insert_emoticon",
+          "header": "Комфорт",
+          "content": "Шумопоглощающие стены"
         },
-        { 
-          "icon": "location_city", 
-          "header": "Удобство", 
-          "content": "Окно в каждой из спален" 
+        {
+          "icon": "location_city",
+          "header": "Удобство",
+          "content": "Окно в каждой из спален"
         }
       ]
     },
     "comment": {
       "avatarSrc": "./img/avatar1.png",
-      "avatarName": "Мурад Сарафанов", 
-      "avatarDate": "5 дней назад", 
-      "likeNumber": 11, 
-      "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"            
+      "avatarName": "Мурад Сарафанов",
+      "avatarDate": "5 дней назад",
+      "likeNumber": 11,
+      "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"
     }
   }
 }

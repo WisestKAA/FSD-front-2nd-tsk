@@ -3,13 +3,13 @@
     "roomFilter": { "header": "Найдём номера под ваши пожелания" },
     "signUp": { "header": "Регистрация аккаунта" },
     "roomPrice": {
-      "number": "888", 
+      "number": "888",
       "isLuxe": true,
-      "pricePerDay": "9 990", 
-      "servicePrice": "2179", 
+      "pricePerDay": "9 990",
+      "servicePrice": "2179",
       "discountForService": "2179",
-      "serviceInfo": "", 
-      "addServicePrice": "300", 
+      "serviceInfo": "",
+      "addServicePrice": "300",
       "addServiceInfo": ""
     },
     "signInForm": { "header": "Войти" },
@@ -19,11 +19,11 @@
         { "src": "./img/room888.png", "alt":"room #888" },
         { "src": "./img/room888.png", "alt":"room #888" },
         { "src": "./img/room888.png", "alt":"room #888" }
-      ], 
-      "number": 888, 
-      "isLuxe": true, 
-      "price": "9 990", 
-      "rate": 5, 
+      ],
+      "number": 888,
+      "isLuxe": true,
+      "price": "9 990",
+      "rate": 5,
       "comments": 145
     },
     "roomPreviewSecond": {
@@ -32,12 +32,12 @@
         { "src":"./img/room840.png", "alt":"room #840" },
         { "src":"./img/room840.png", "alt":"room #840" },
         { "src":"./img/room840.png", "alt":"room #840" }
-        ], 
-      "number": 840, 
-      "isLuxe": true, 
-      "price": "9 990", 
-      "rate": 4, 
+        ],
+      "number": 840,
+      "isLuxe": true,
+      "price": "9 990",
+      "rate": 4,
       "comments": 65
     }
-  }  
+  }
 }
