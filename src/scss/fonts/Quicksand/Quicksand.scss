@@ -1,0 +1,4 @@
+@import '../fonts.scss';
+
+@include font-face('Quicksand', 'Quicksand', 'Regular');
+@include font-face('Quicksand', 'Quicksand', 'Bold', bold);

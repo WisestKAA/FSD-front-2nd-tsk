@@ -1,0 +1,6 @@
+@import '../fonts.scss';
+
+@include font-face('Montserrat', 'Montserrat', 'Regular');
+@include font-face('Montserrat', 'Montserrat', 'Bold', bold);
+@include font-face('Montserrat', 'Montserrat', 'Italic', normal, italic);
+@include font-face('Montserrat', 'Montserrat', 'BoldItalic', bold, italic);

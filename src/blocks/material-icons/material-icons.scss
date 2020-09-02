@@ -1,3 +1,5 @@
+@import '../../scss/fonts/MaterialIcons/material-icons.scss';
+
 .material-icons {
   display: inline-block;
   font-family: 'Material Icons', Arial, sans-serif;
@@ -8,6 +10,9 @@
   white-space: nowrap;
   direction: ltr;
   user-select: none;
+  font-weight: normal;
+  font-size: 24px;  /* Preferred icon size */
+  line-height: 1;
 
   &_font-size-18 {
     font-size: 1.2857rem;
