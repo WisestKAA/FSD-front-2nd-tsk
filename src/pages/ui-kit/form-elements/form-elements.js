@@ -1,4 +1,4 @@
-import '../../../blocks/text-field/text-field';
+import '../../../blocks/text-field/TextField-init';
 import '../../../blocks/range-slider/RangeSlider-init';
 import '../../../blocks/dropdown/Dropdown-init';
 import '../../../blocks/date-dropdown/DateDropdown-init';

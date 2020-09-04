@@ -25,6 +25,7 @@ module.exports = {
     'no-unused-vars': ['error', { argsIgnorePattern: '^[A-Za-z]{1,20}Mock$' }],
     'class-methods-use-this': 'off',
     'no-underscore-dangle': 'off',
-    'no-unused-expressions': 'off'
+    'no-unused-expressions': 'off',
+    'no-new': 'off'
   }
 };
