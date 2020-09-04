@@ -1,5 +1,3 @@
-// import './style.scss';
-
 function importAll(val) {
   const value = val;
   value.keys().forEach(value);

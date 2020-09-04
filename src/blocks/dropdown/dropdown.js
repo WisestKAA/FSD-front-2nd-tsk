@@ -1,6 +1,7 @@
+import { boundClass } from 'autobind-decorator';
+
 import DropdownOption from '../dropdown-option/DropdownOption';
 import DropdownOptionButton from '../dropdown-option-button/DropdownOptionButton';
-import { boundClass } from 'autobind-decorator';
 
 @boundClass
 class Dropdown {

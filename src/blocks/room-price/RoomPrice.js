@@ -1,6 +1,7 @@
+import { boundClass } from 'autobind-decorator';
+
 import '../date-dropdown/DateDropdown-init';
 import '../dropdown/Dropdown-init';
-import { boundClass } from 'autobind-decorator';
 
 @boundClass
 class RoomPrice {
