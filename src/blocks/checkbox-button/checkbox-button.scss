@@ -99,13 +99,11 @@
     border-radius: 0.2857rem;
   }
 
+  &__input:checked + &__text::before {
+    display: none;
+  }
 
-}
-
-.checkbox-button .checkbox-button__input:checked+.checkbox-button__text::before {
-  display: none;
-}
-
-.checkbox-button .checkbox-button__input:checked+.checkbox-button__text::after {
-  display: inline-block;
+  &__input:checked + &__text::after {
+    display: inline-block;
+  }
 }
