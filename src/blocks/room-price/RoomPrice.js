@@ -1,9 +1,8 @@
-import { boundClass } from 'autobind-decorator';
+import { boundMethod } from 'autobind-decorator';
 
 import '../date-dropdown/DateDropdown-init';
 import '../dropdown/Dropdown-init';
 
-@boundClass
 class RoomPrice {
   constructor(value) {
     this._roomPrice = value;
@@ -52,6 +51,7 @@ class RoomPrice {
     return Number(val.substring(0, val.length - 1).replace(/\s+/g, ''));
   }
 
+  @boundMethod
   _handleDatesChanged() {
     const days = (this._$datePikerObj.selectedDates[1]
       - this._$datePikerObj.selectedDates[0]) / 86400000;
@@ -60,6 +60,7 @@ class RoomPrice {
     this._priceForRoomPriceContainer.textContent = `${this._getNumWithSpace(sum)}₽`;
   }
 
+  @boundMethod
   _handleDatesClear() {
     this._priceForRoomDescriptionContainer.textContent = `${this._getNumWithSpace(this._pricePerDay)}₽ x 0 суток`;
     this._priceForRoomPriceContainer.textContent = '0₽';
@@ -69,6 +70,7 @@ class RoomPrice {
     return val.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, ' $1');
   }
 
+  @boundMethod
   _handleCalculateChanged() {
     const roomPrice = this._convertToNum(this._priceForRoomPriceContainer.textContent);
     const servicePrice = this._convertToNum(this._priceForServiceContainer.textContent);

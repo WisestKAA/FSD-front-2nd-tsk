@@ -1,7 +1,6 @@
 import 'air-datepicker';
-import { boundClass } from 'autobind-decorator';
+import { boundMethod } from 'autobind-decorator';
 
-@boundClass
 class DateDropdown {
   constructor(elem) {
     this._init(elem);
@@ -103,18 +102,21 @@ class DateDropdown {
       .data('datepicker').$datepicker.find('.datepicker--button');
   }
 
+  @boundMethod
   _handleApplyButtonClick() {
     $(this._datePiker).datepicker()
       .data('datepicker')
       .hide();
   }
 
+  @boundMethod
   _handleShowDatePiker() {
     $(this._datePiker).datepicker()
       .data('datepicker')
       .show();
   }
 
+  @boundMethod
   _handleClearButtonClick() {
     if (!this._isFiltered) {
       this._inputTo.value = '';

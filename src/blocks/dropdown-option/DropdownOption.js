@@ -1,6 +1,5 @@
-import { boundClass } from 'autobind-decorator';
+import { boundMethod } from 'autobind-decorator';
 
-@boundClass
 class DropdownOption {
   constructor(element) {
     this._option = element;
@@ -38,6 +37,7 @@ class DropdownOption {
     if (this._value === 0) this._disableMinus();
   }
 
+  @boundMethod
   _handleMinusClick() {
     if (this._value > 0) {
       this._value -= 1;
@@ -45,6 +45,7 @@ class DropdownOption {
     this._number.textContent = this._value;
   }
 
+  @boundMethod
   _handlePlusClick() {
     this._value += 1;
     this._number.textContent = this._value;
@@ -59,6 +60,7 @@ class DropdownOption {
     this._minusButton.classList.add('dropdown-option__circle_disable');
   }
 
+  @boundMethod
   _handleValueChanged() {
     if (this._value === 0) {
       this._disableMinus();

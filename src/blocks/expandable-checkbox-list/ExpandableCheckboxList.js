@@ -1,7 +1,6 @@
 
-import { boundClass } from 'autobind-decorator';
+import { boundMethod } from 'autobind-decorator';
 
-@boundClass
 class ExpandableCheckboxList {
   constructor(elem) {
     this._elem = elem;
@@ -18,6 +17,7 @@ class ExpandableCheckboxList {
     this._header.addEventListener('click', this._handleEclClick);
   }
 
+  @boundMethod
   _handleEclClick() {
     this._checkboxes.classList.contains('expandable-checkbox-list__checkboxes_display')
       ? this._checkboxes.classList.remove('expandable-checkbox-list__checkboxes_display')

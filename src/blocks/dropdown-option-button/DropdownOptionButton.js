@@ -1,7 +1,6 @@
 
-import { boundClass } from 'autobind-decorator';
+import { boundMethod } from 'autobind-decorator';
 
-@boundClass
 class DropdownOptionButton {
   constructor(element, selectText, optionsList, isHide = true) {
     this._buttons = element;
@@ -21,6 +20,7 @@ class DropdownOptionButton {
     this._drop.addEventListener('click', this._handleDropClick);
   }
 
+  @boundMethod
   _handleDropClick() {
     this._optionsList.forEach((val)=>{
       val.clearValue();

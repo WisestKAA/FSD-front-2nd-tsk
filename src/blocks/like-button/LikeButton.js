@@ -1,7 +1,6 @@
 
-import { boundClass } from 'autobind-decorator';
+import { boundMethod } from 'autobind-decorator';
 
-@boundClass
 class LikeButton {
   constructor(elem) {
     this._likeButton = elem;
@@ -18,6 +17,7 @@ class LikeButton {
     this._likeButton.addEventListener('click', this._handleLikeButtonClick);
   }
 
+  @boundMethod
   _handleLikeButtonClick() {
     let num;
     if (this._likeButton.classList.contains('like-button_active')) {

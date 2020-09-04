@@ -1,9 +1,8 @@
-import { boundClass } from 'autobind-decorator';
+import { boundMethod } from 'autobind-decorator';
 
 import DropdownOption from '../dropdown-option/DropdownOption';
 import DropdownOptionButton from '../dropdown-option-button/DropdownOptionButton';
 
-@boundClass
 class Dropdown {
   constructor(element, optionText, isShort = false) {
     this._dropdown = element;
@@ -56,6 +55,7 @@ class Dropdown {
     }
   }
 
+  @boundMethod
   _handleSelectClick() {
     this._select.classList.contains('dropdown__select_active') ? this._hideDropdown() : this._showDropdown();
   }
@@ -78,6 +78,7 @@ class Dropdown {
     this._arrow.textContent = 'keyboard_arrow_down';
   }
 
+  @boundMethod
   _handleOptionsModified() {
     this._sum = 0;
     let babies = 0;
@@ -146,6 +147,7 @@ class Dropdown {
     return finalText;
   }
 
+  @boundMethod
   _handleDocumentClick(event) {
     const { target } = event;
     const itsDropdown = target === this._dropdown || this._dropdown.contains(target);

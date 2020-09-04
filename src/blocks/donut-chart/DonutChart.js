@@ -1,8 +1,7 @@
 import * as d3 from 'd3';
 import 'd3-selection-multi';
-import { boundClass } from 'autobind-decorator';
+import { boundMethod } from 'autobind-decorator';
 
-@boundClass
 class DonutChart {
   constructor(elem, width = 120, height = 120, rating) {
     this._donut = elem;
@@ -110,6 +109,7 @@ class DonutChart {
       });
   }
 
+  @boundMethod
   _handlePathsClick(dataObject, currentPath, paths) {
     const { data, index } = dataObject;
     this._valueTextField.style('fill', `url(#gradient${index})`)
