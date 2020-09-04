@@ -1,0 +1,10 @@
+@import '../fonts/Montserrat/Montserrat.scss';
+
+@mixin body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.7143rem;
+  color: $dark75;
+}

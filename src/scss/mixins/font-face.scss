@@ -1,5 +1,5 @@
 @mixin font-face($name, $folderName, $type, $weight: normal, $style: normal, $path: false) {
-  $pathToFiles: $path or './#{$folderName}';
+  $pathToFiles: $path or '../fonts/#{$folderName}';
 
   @font-face {
     font-family: $name;

@@ -1,0 +1,15 @@
+@import '../fonts/OpenSans/OpenSans.scss';
+@import '../fonts/Quicksand/Quicksand.scss';
+
+@mixin h2 {
+  font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3571rem;
+  line-height: 1.7143rem;
+  color: $dark100;
+  margin-block-start: unset;
+  margin-block-end: unset;
+  margin-inline-start: unset;
+  margin-inline-end: unset;
+}

@@ -4,6 +4,8 @@
 @import '../text-field/text-field.scss';
 @import '../toggle/toggle.scss';
 @import '../button/button.scss';
+@import '../../scss/mixins/body.scss';
+@import '../../scss/mixins/h1.scss';
 
 .sign-up {
   max-width: 27.1429rem;
