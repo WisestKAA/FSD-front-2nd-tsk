@@ -64,7 +64,7 @@ class DateDropdown {
       },
       prevHtml: '<i class="date-dropdown__navigation">arrow_back</i>',
       nextHtml: '<i class="date-dropdown__navigation">arrow_forward</i>',
-      'onShow'(instMock, animationCompletedMock) {
+      'onShow'() {
         const datePikerWidth = dateDropdown.clientWidth;
         const $datePikerContainer = $(datePiker).datepicker()
           .data('datepicker').$datepicker;

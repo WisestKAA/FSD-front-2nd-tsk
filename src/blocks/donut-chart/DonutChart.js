@@ -46,13 +46,13 @@ class DonutChart {
       .data(pie(data))
       .enter()
       .append('g')
-      .style('fill', (d, index) => {
+      .style('fill', (_, index) => {
         return `url(#gradient${index})`;
       })
       .append('path')
       .attrs({
         d: this._arcAttribute,
-        fill: (d, index) => {
+        fill: (_, index) => {
           return `url(#gradient${index})`;
         },
         class: this._styleClasses.path
