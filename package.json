@@ -6,7 +6,7 @@
   "scripts": {
     "webpack": "webpack -w --config ./configs/webpack.dev.js",
     "start": "webpack-dev-server --config ./configs/webpack.dev.js",
-    "build": "webpack --config ./configs/webpack.prod.js",
+    "build": "webpack -w --config ./configs/webpack.prod.js",
     "deploy": "gh-pages -d out",
     "eslint": "eslint ./src/**/*.js --fix"
   },

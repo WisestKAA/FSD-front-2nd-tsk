@@ -13,7 +13,7 @@ const config = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-                publicPath: './out',
+                publicPath: '../',
             }
           },
           {
