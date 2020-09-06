@@ -25,7 +25,7 @@ const config = {
           },
           { loader: 'postcss-loader', options: { sourceMap: false } },
           { loader: 'resolve-url-loader', },
-          { loader: 'sass-loader', options: { sourceMap: false } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
         ],
       },
     ]
