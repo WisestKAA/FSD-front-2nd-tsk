@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Toxin, отель, отели, гостиница, гостиницы, подобрать номера, дешёвый">
+    <meta name="description" content="Cards used on pages">
     <title>Cards</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
@@ -11,10 +13,10 @@
     <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-  <link href="./styles/cards.css" rel="stylesheet"></head>
-  <body bgcolor="#F4F4F6" style="margin: 0; box-sizing: border-box;">
+  <link href="./styles/cards.min.css" rel="stylesheet"></head>
+  <body class="pages" bgcolor="#F4F4F6">
     <div class="ui-kit-template">
-      <figure class="ui-kit-template__logo"><img class="logo-ui-kit" src="./img/logouikit.svg" alt="logo">
+      <figure class="ui-kit-template__logo"><img class="ui-logo" src="./img/logouikit.svg" alt="logo">
       </figure>
     </div>
     <div class="cards">
@@ -22,33 +24,33 @@
         <main class="cards__main">
           <div class="cards__content-left">
                 <div class="room-filter">
-                  <h1 class="room-filter__header h1">Найдём номера под ваши пожелания</h1>
+                  <h1 class="room-filter__header">Найдём номера под ваши пожелания</h1>
                   <form class="room-filter__form" action="/moke">
                     <div class="room-filter__date">
                           <section class="date-dropdown js-date-dropdown">
-                            <div class="date-dropdown__wrapper-filtred">
+                            <div class="date-dropdown__wrapper-filtered">
                               <div class="date-dropdown__wrapper-from">
-                                <h3 class="date-dropdown__start-text h3">прибытие</h3>
+                                <h3 class="date-dropdown__start-text">прибытие</h3>
                                 <div class="date-dropdown__input-wrapper">
                                   <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                                   </div>
-                                  <input class="date-dropdown__input js-date-dropdown__input date-dropdown__input-from js-date-dropdown__input-from" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ">
+                                  <input class="date-dropdown__input-from js-date-dropdown__input-from" type="text" readonly placeholder="ДД.ММ.ГГГГ">
                                 </div>
                               </div>
                               <div class="date-dropdown__wrapper-to">
-                                <h3 class="date-dropdown__finish-text h3">выезд</h3>
+                                <h3 class="date-dropdown__finish-text">выезд</h3>
                                 <div class="date-dropdown__input-wrapper">
                                   <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                                   </div>
-                                  <input class="date-dropdown__input-to js-date-dropdown__input-to" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ">
+                                  <input class="date-dropdown__input-to js-date-dropdown__input-to" type="text" readonly placeholder="ДД.ММ.ГГГГ">
                                 </div>
                               </div>
                             </div>
                           </section>
                     </div>
                     <div class="room-filter__guests">
-                          <div class="label label_margin-bottom-5">
-                            <h3 class="label__text h3">гости</h3>
+                          <div class="label label_margin-bottom-6">
+                            <h3 class="label__text">гости</h3>
                             <div class="label__caption"></div>
                           </div>
                           <section class="dropdown js-dropdown">
@@ -58,32 +60,32 @@
                               <div class="dropdown__select js-dropdown__select"><span class="dropdown__text js-dropdown__text">Сколько гостей</span></div>
                               <div class="dropdown__options js-dropdown__options">
                                     <section class="dropdown-option js-dropdown-option">
-                                      <h3 class="dropdown-option__text js-dropdown-option__text h3">взрослые</h3>
+                                      <h3 class="dropdown-option__text js-dropdown-option__text">взрослые</h3>
                                       <div class="dropdown-option__button-block">
                                         <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
-                                        <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
                                         <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                                       </div>
                                     </section>
                                     <section class="dropdown-option js-dropdown-option">
-                                      <h3 class="dropdown-option__text js-dropdown-option__text h3">дети</h3>
+                                      <h3 class="dropdown-option__text js-dropdown-option__text">дети</h3>
                                       <div class="dropdown-option__button-block">
                                         <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
-                                        <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
                                         <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                                       </div>
                                     </section>
                                     <section class="dropdown-option js-dropdown-option">
-                                      <h3 class="dropdown-option__text js-dropdown-option__text h3">младенцы</h3>
+                                      <h3 class="dropdown-option__text js-dropdown-option__text">младенцы</h3>
                                       <div class="dropdown-option__button-block">
                                         <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
-                                        <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
                                         <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                                       </div>
                                     </section>
                                     <div class="dropdown-option-button js-dropdown-option-button">
-                                      <button class="dropdown-option-button__drop js-dropdown-option-button__drop">очистить</button>
-                                      <button class="dropdown-option-button__apply js-dropdown-option-button__apply">применить</button>
+                                      <button class="dropdown-option-button__drop js-dropdown-option-button__drop" type="button">очистить</button>
+                                      <button class="dropdown-option-button__apply js-dropdown-option-button__apply" type="button">применить</button>
                                     </div>
                               </div>
                             </div>
@@ -91,11 +93,11 @@
                     </div>
                     <div class="room-filter__search-button">
                           <div class="button">
-                            <div class="button__wraper-rich">
+                            <div class="button__wrapper-rich">
                               <div class="button__arrow"><i class="material-icons js-material-icons">arrow_forward</i>
                               </div>
                               <div class="button__text">подобрать номер</div>
-                              <input class="button__wraper-rich_rich" type="submit" name="findRoom" value="подобрать номер">
+                              <input class="button__wrapper-rich_rich" type="submit" name="findRoom" value="подобрать номер">
                             </div>
                           </div>
                     </div>
@@ -103,16 +105,16 @@
                 </div>
             <div class="cards__separator"></div>
                 <div class="sign-up">
-                  <h1 class="sign-up__header h1">Регистрация аккаунта</h1>
+                  <h1 class="sign-up__header">Регистрация аккаунта</h1>
                   <form class="sign-up__form" action="/moke">
                     <div class="sign-up__name">
-                          <input class="js-text-field text-field" type="text" placeholder="Имя" id="signUpName">
+                          <input class="text-field  js-text-field" type="text" placeholder="Имя" name="signUpName">
                     </div>
                     <div class="sign-up__surname">
-                          <input class="js-text-field text-field" type="text" placeholder="Фамилия" id="signUpSurname">
+                          <input class="text-field  js-text-field" type="text" placeholder="Фамилия" name="signUpSurname">
                     </div>
                     <div class="sign-up__sex">
-                          <section class="radio-buttons">       
+                          <section class="radio-buttons">
                             <label class="radio-buttons__label">
                               <input class="radio-buttons__input" type="radio" name="radioButtons" value="men" checked>
                               <div class="radio-buttons__text">
@@ -129,21 +131,21 @@
                     </div>
                     <div class="sign-up__birthday">
                           <div class="label label_margin-bottom-5">
-                            <h3 class="label__text h3">дата рождения</h3>
+                            <h3 class="label__text">дата рождения</h3>
                             <div class="label__caption"></div>
                           </div>
-                          <input class="js-text-field text-field text-field_masked" type="text" placeholder="ДД.ММ.ГГГГ" id="birthday">
+                          <input class="text-field  js-text-field text-field_masked js-text-field_masked" type="text" placeholder="ДД.ММ.ГГГГ" name="birthday">
                     </div>
                     <div class="sign-up__authorization-data">
                           <div class="label label_margin-bottom-5">
-                            <h3 class="label__text h3">данные для входа в сервис</h3>
+                            <h3 class="label__text">данные для входа в сервис</h3>
                             <div class="label__caption"></div>
                           </div>
                       <div class="sign-up__e-mail">
-                            <input class="js-text-field text-field" type="text" placeholder="Email" id="singEmail">
+                            <input class="text-field  js-text-field" type="text" placeholder="Email" name="singEmail">
                       </div>
                       <div class="sign-up__password">
-                            <input class="js-text-field text-field" type="password" placeholder="Пароль" id="signPassword">
+                            <input class="text-field  js-text-field" type="password" placeholder="Пароль" name="signPassword">
                       </div>
                     </div>
                     <div class="sign-up__mailing">
@@ -158,19 +160,19 @@
                     </div>
                     <div class="sign-up__go-to-payment">
                           <div class="button">
-                            <div class="button__wraper-rich">
+                            <div class="button__wrapper-rich">
                               <div class="button__arrow"><i class="material-icons js-material-icons">arrow_forward</i>
                               </div>
                               <div class="button__text">перейти к оплате</div>
-                              <input class="button__wraper-rich_rich" type="submit" name="goToPayment" value="перейти к оплате">
+                              <input class="button__wrapper-rich_rich" type="submit" name="goToPayment" value="перейти к оплате">
                             </div>
                           </div>
                     </div>
                     <div class="sign-up__go-to-sign-in">
-                      <div class="sign-up__sign-in-text body">Уже есть аккаунт на Toxin</div>
+                      <div class="sign-up__sign-in-text">Уже есть аккаунт на Toxin</div>
                       <div class="sign-up__sign-in-button">
                             <div class="button">
-                              <button class="button__wraper">           <a class="button__wraper_bordered" href="/moke">войти</a></button>
+                              <div class="button__wrapper"><a class="button__wrapper_bordered" href="/moke">войти</a></div>
                             </div>
                       </div>
                     </div>
@@ -179,7 +181,7 @@
           </div>
           <div class="cards__content-center">
                 <div class="room-price js-room-price">
-                  <form class="room-price__form" action="/moke"> 
+                  <form class="room-price__form" action="/moke">
                     <div class="room-price__header">
                       <div class="room-price__room-number">
                         <div class="room-price__room-number-text-number">№</div>
@@ -188,26 +190,26 @@
                       </div>
                       <div class="room-price__price">
                         <div class="room-price__price-sum js-room-price__price-sum">9 990₽</div>
-                        <div class="room-price__price-sum-per-day"> в сутки</div>
+                        <div class="room-price__price-sum-per-day">в сутки</div>
                       </div>
                     </div>
                     <div class="room-price__date">
                           <section class="date-dropdown js-date-dropdown">
-                            <div class="date-dropdown__wrapper-filtred">
+                            <div class="date-dropdown__wrapper-filtered">
                               <div class="date-dropdown__wrapper-from">
-                                <h3 class="date-dropdown__start-text h3">прибытие</h3>
+                                <h3 class="date-dropdown__start-text">прибытие</h3>
                                 <div class="date-dropdown__input-wrapper">
                                   <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                                   </div>
-                                  <input class="date-dropdown__input js-date-dropdown__input date-dropdown__input-from js-date-dropdown__input-from" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ">
+                                  <input class="date-dropdown__input-from js-date-dropdown__input-from" type="text" readonly placeholder="ДД.ММ.ГГГГ">
                                 </div>
                               </div>
                               <div class="date-dropdown__wrapper-to">
-                                <h3 class="date-dropdown__finish-text h3">выезд</h3>
+                                <h3 class="date-dropdown__finish-text">выезд</h3>
                                 <div class="date-dropdown__input-wrapper">
                                   <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                                   </div>
-                                  <input class="date-dropdown__input-to js-date-dropdown__input-to" type="text" readonly="true" placeholder="ДД.ММ.ГГГГ">
+                                  <input class="date-dropdown__input-to js-date-dropdown__input-to" type="text" readonly placeholder="ДД.ММ.ГГГГ">
                                 </div>
                               </div>
                             </div>
@@ -215,7 +217,7 @@
                     </div>
                     <div class="room-price__guests">
                           <div class="label label_margin-bottom-5">
-                            <h3 class="label__text h3">гости</h3>
+                            <h3 class="label__text">гости</h3>
                             <div class="label__caption"></div>
                           </div>
                           <section class="dropdown js-dropdown">
@@ -225,52 +227,52 @@
                               <div class="dropdown__select js-dropdown__select"><span class="dropdown__text js-dropdown__text">Сколько гостей</span></div>
                               <div class="dropdown__options js-dropdown__options">
                                     <section class="dropdown-option js-dropdown-option">
-                                      <h3 class="dropdown-option__text js-dropdown-option__text h3">взрослые</h3>
+                                      <h3 class="dropdown-option__text js-dropdown-option__text">взрослые</h3>
                                       <div class="dropdown-option__button-block">
                                         <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
-                                        <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
                                         <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                                       </div>
                                     </section>
                                     <section class="dropdown-option js-dropdown-option">
-                                      <h3 class="dropdown-option__text js-dropdown-option__text h3">дети</h3>
+                                      <h3 class="dropdown-option__text js-dropdown-option__text">дети</h3>
                                       <div class="dropdown-option__button-block">
                                         <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
-                                        <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
                                         <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                                       </div>
                                     </section>
                                     <section class="dropdown-option js-dropdown-option">
-                                      <h3 class="dropdown-option__text js-dropdown-option__text h3">младенцы</h3>
+                                      <h3 class="dropdown-option__text js-dropdown-option__text">младенцы</h3>
                                       <div class="dropdown-option__button-block">
                                         <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
-                                        <h3 class="dropdown-option__number js-dropdown-option__number h3">0</h3>
+                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
                                         <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
                                       </div>
                                     </section>
                                     <div class="dropdown-option-button js-dropdown-option-button">
-                                      <button class="dropdown-option-button__drop js-dropdown-option-button__drop">очистить</button>
-                                      <button class="dropdown-option-button__apply js-dropdown-option-button__apply">применить</button>
+                                      <button class="dropdown-option-button__drop js-dropdown-option-button__drop" type="button">очистить</button>
+                                      <button class="dropdown-option-button__apply js-dropdown-option-button__apply" type="button">применить</button>
                                     </div>
                               </div>
                             </div>
                           </section>
                     </div>
-                    <div class="room-price__calculate js-room-price__calculate body">
+                    <div class="room-price__calculate js-room-price__calculate">
                       <div class="room-price__for-room">
-                        <div class="room-price__for-room-discription js-room-price__for-room-discription">9 990₽ x 0 суток</div>
+                        <div class="room-price__for-room-description js-room-price__for-room-description">9 990₽ x 0 суток</div>
                         <div class="room-price__for-room-price js-room-price__for-room-price">0₽</div>
                       </div>
                       <div class="room-price__for-services">
                         <div class="room-price__for-services-left-wrapper">
-                          <div class="room-price__for-services-discription">Сбор за услуги: скидка 2179₽</div>
+                          <div class="room-price__for-services-description">Сбор за услуги: скидка 2179₽</div>
                           <div class="room-price__for-services-info">i</div>
                         </div>
                         <div class="room-price__for-services-price js-room-price__for-services-price">0₽</div>
                       </div>
                       <div class="room-price__for-addservices">
                         <div class="room-price__for-addservices-left-wrapper">
-                          <div class="room-price__for-addservices-discription">Сбор за дополнительные услуги</div>
+                          <div class="room-price__for-addservices-description">Сбор за дополнительные услуги</div>
                           <div class="room-price__for-addservices-info">i</div>
                         </div>
                         <div class="room-price__for-addservices-price js-room-price__for-addservices-price">300₽</div>
@@ -283,11 +285,11 @@
                     </div>
                     <div class="room-price__book-a-room">
                           <div class="button">
-                            <div class="button__wraper-rich">
+                            <div class="button__wrapper-rich">
                               <div class="button__arrow"><i class="material-icons js-material-icons">arrow_forward</i>
                               </div>
                               <div class="button__text">забронировать</div>
-                              <input class="button__wraper-rich_rich" type="submit" name="bookARoom" value="забронировать">
+                              <input class="button__wrapper-rich_rich" type="submit" name="bookARoom" value="забронировать">
                             </div>
                           </div>
                     </div>
@@ -296,28 +298,28 @@
             <div class="cards__separator"></div>
                 <div class="sign-in-form">
                   <form class="sign-in-form__form" action="/moke">
-                    <h1 class="sign-in-form__header h1">Войти</h1>
-                    <div class="sign-in-form__email">               
-                          <input class="js-text-field text-field" type="text" placeholder="Email" id="signInEmail">
+                    <h1 class="sign-in-form__header">Войти</h1>
+                    <div class="sign-in-form__email">
+                          <input class="text-field  js-text-field" type="text" placeholder="Email" name="signInEmail">
                     </div>
                     <div class="sign-in-form__password">
-                          <input class="js-text-field text-field" type="password" placeholder="Пароль" id="signInPassword">
+                          <input class="text-field  js-text-field" type="password" placeholder="Пароль" name="signInPassword">
                     </div>
-                    <div class="sign-in-form__button">               
+                    <div class="sign-in-form__button">
                           <div class="button">
-                            <div class="button__wraper-rich">
+                            <div class="button__wrapper-rich">
                               <div class="button__arrow"><i class="material-icons js-material-icons">arrow_forward</i>
                               </div>
                               <div class="button__text">войти</div>
-                              <input class="button__wraper-rich_rich" type="submit" name="singIn" value="войти">
+                              <input class="button__wrapper-rich_rich" type="submit" name="singIn" value="войти">
                             </div>
                           </div>
                     </div>
                     <div class="sign-in-form__sign-up">
-                      <div class="sign-in-form__sign-up-text body">Нет аккаунта на Toxin?</div>
+                      <div class="sign-in-form__sign-up-text">Нет аккаунта на Toxin?</div>
                       <div class="sign-in-form__sign-up-button">
                             <div class="button">
-                              <button class="button__wraper">           <a class="button__wraper_bordered" href="/moke">создать</a></button>
+                              <div class="button__wrapper"><a class="button__wrapper_bordered" href="/moke">создать</a></div>
                             </div>
                       </div>
                     </div>
@@ -328,27 +330,27 @@
             <div class="cards__calendar-moke"></div>
             <div class="cards__separator"></div>
                 <div class="room-preview">
-                  <div class="room-preview__carusel">
-                        <figure class="carusel js-carusel">
-                          <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room888.png" alt="room #888"><img class="carusel__img" src="./img/room888.png" alt="room #888"><img class="carusel__img" src="./img/room888.png" alt="room #888"><img class="carusel__img" src="./img/room888.png" alt="room #888">
+                  <div class="room-preview__carousel">
+                        <figure class="carousel js-carousel">
+                          <div class="carousel__wrapper owl-carousel"><img class="carousel__img" src="./img/room888.png" alt="room #888"><img class="carousel__img" src="./img/room888.png" alt="room #888"><img class="carousel__img" src="./img/room888.png" alt="room #888"><img class="carousel__img" src="./img/room888.png" alt="room #888">
                           </div>
                         </figure>
                   </div>
-                  <div class="room-preview__discripton-wrapper">
-                    <div class="room-preview__discripton-top">
-                      <div class="room-preview__discripton-top-wrapper-num">
-                        <div class="room-preview__discripton-top-number">№</div>
-                        <div class="room-preview__discripton-top-num">888</div>
-                        <div class="room-preview__discripton-top-luxe">люкс</div>
+                  <div class="room-preview__description-wrapper">
+                    <div class="room-preview__description-top">
+                      <div class="room-preview__description-top-wrapper-num">
+                        <div class="room-preview__description-top-number">№</div>
+                        <div class="room-preview__description-top-num">888</div>
+                        <div class="room-preview__description-top-luxe">люкс</div>
                       </div>
-                      <div class="room-preview__discripton-top-wrapper-price">
-                        <div class="room-preview__discripton-top-price">9 990₽</div>
-                        <div class="room-preview__discripton-top-price-per-day">в сутки</div>
+                      <div class="room-preview__description-top-wrapper-price">
+                        <div class="room-preview__description-top-price">9 990₽</div>
+                        <div class="room-preview__description-top-price-per-day">в сутки</div>
                       </div>
                     </div>
                     <div class="room-preview__separator"></div>
-                    <div class="room-preview__discripton-bot">
-                      <div class="room-preview__discripton-bot-rate">
+                    <div class="room-preview__description-bot">
+                      <div class="room-preview__description-bot-rate">
                             <figure class="rate-button">
                               <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                               </div>
@@ -362,36 +364,36 @@
                               </div>
                             </figure>
                       </div>
-                      <div class="room-preview__discripton-bot-wrapper-comment">
-                        <div class="room-preview__discripton-bot-comment-num">145</div>
-                        <div class="room-preview__discripton-bot-comment">Отзывов</div>
+                      <div class="room-preview__description-bot-wrapper-comment">
+                        <div class="room-preview__description-bot-comment-num">145</div>
+                        <div class="room-preview__description-bot-comment">Отзывов</div>
                       </div>
                     </div>
                   </div>
                 </div>
-            <div class="cards__separator"></div>
+            <div class="cards__separator_margin-bottom-38"></div>
                 <div class="room-preview">
-                  <div class="room-preview__carusel">
-                        <figure class="carusel js-carusel">
-                          <div class="carusel__wrapper owl-carousel"><img class="carusel__img" src="./img/room840.png" alt="room #840"><img class="carusel__img" src="./img/room840.png" alt="room #840"><img class="carusel__img" src="./img/room840.png" alt="room #840"><img class="carusel__img" src="./img/room840.png" alt="room #840">
+                  <div class="room-preview__carousel">
+                        <figure class="carousel js-carousel">
+                          <div class="carousel__wrapper owl-carousel"><img class="carousel__img" src="./img/room840.png" alt="room #840"><img class="carousel__img" src="./img/room840.png" alt="room #840"><img class="carousel__img" src="./img/room840.png" alt="room #840"><img class="carousel__img" src="./img/room840.png" alt="room #840">
                           </div>
                         </figure>
                   </div>
-                  <div class="room-preview__discripton-wrapper">
-                    <div class="room-preview__discripton-top">
-                      <div class="room-preview__discripton-top-wrapper-num">
-                        <div class="room-preview__discripton-top-number">№</div>
-                        <div class="room-preview__discripton-top-num">840</div>
-                        <div class="room-preview__discripton-top-luxe">люкс</div>
+                  <div class="room-preview__description-wrapper">
+                    <div class="room-preview__description-top">
+                      <div class="room-preview__description-top-wrapper-num">
+                        <div class="room-preview__description-top-number">№</div>
+                        <div class="room-preview__description-top-num">840</div>
+                        <div class="room-preview__description-top-luxe">люкс</div>
                       </div>
-                      <div class="room-preview__discripton-top-wrapper-price">
-                        <div class="room-preview__discripton-top-price">9 990₽</div>
-                        <div class="room-preview__discripton-top-price-per-day">в сутки</div>
+                      <div class="room-preview__description-top-wrapper-price">
+                        <div class="room-preview__description-top-price">9 990₽</div>
+                        <div class="room-preview__description-top-price-per-day">в сутки</div>
                       </div>
                     </div>
                     <div class="room-preview__separator"></div>
-                    <div class="room-preview__discripton-bot">
-                      <div class="room-preview__discripton-bot-rate">
+                    <div class="room-preview__description-bot">
+                      <div class="room-preview__description-bot-rate">
                             <figure class="rate-button">
                               <div class="rate-button__star"><i class="material-icons js-material-icons">star</i>
                               </div>
@@ -405,9 +407,9 @@
                               </div>
                             </figure>
                       </div>
-                      <div class="room-preview__discripton-bot-wrapper-comment">
-                        <div class="room-preview__discripton-bot-comment-num">65</div>
-                        <div class="room-preview__discripton-bot-comment">Отзывов</div>
+                      <div class="room-preview__description-bot-wrapper-comment">
+                        <div class="room-preview__description-bot-comment-num">65</div>
+                        <div class="room-preview__description-bot-comment">Отзывов</div>
                       </div>
                     </div>
                   </div>
