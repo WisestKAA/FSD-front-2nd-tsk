@@ -1,11 +1,11 @@
 {
   "searchRoomData": {
     "dates": {
-      "label": { "text": "даты пребывания в отеле", "marginBottom": "5" },
+      "label": { "text": "даты пребывания в отеле" },
       "item": { "isFiltred": true }
     },
     "guests": {
-      "label": { "text": "гости", "marginBottom": "5" },
+      "label": { "text": "гости" },
       "item": {
         "text": "Сколько гостей",
         "options": [
@@ -17,38 +17,38 @@
     },
     "priceRange": { "label": "диапазон цены" },
     "checkboxButtons": {
-      "label": { "text": "Checkbox Buttons", "marginBottom": "17" },
+      "label": { "text": "Checkbox Buttons" },
       "items": [
         { "text": "Можно курить", "name": "smoking" },
-        { 
-          "text": "Можно с питомцами", 
-          "name": "pets", 
-          "isChecked": true 
+        {
+          "text": "Можно с питомцами",
+          "name": "pets",
+          "isChecked": true
         },
-        { 
-          "text": "Можно пригласить гостей (до 10 человек)", 
-          "name": "guests", 
-          "isChecked": true 
+        {
+          "text": "Можно пригласить гостей (до 10 человек)",
+          "name": "guests",
+          "isChecked": true
         }
       ]
     },
     "availability": {
-      "label": { "text": "доступность", "marginBottom": "16" },
+      "label": { "text": "доступность" },
       "items": [
-        { 
-          "text": "Ширина коридоров в номере не менее 91 см.", 
-          "name": "width", 
-          "header": "Широкий коридор" 
+        {
+          "text": "Ширина коридоров в номере не менее 91 см.",
+          "name": "width",
+          "header": "Широкий коридор"
         },
-        { 
-          "text": "На 1 этаже вас встретит специалист и проводит до номера.", 
-          "name": "help", 
-          "header": "Помощник для инвалидов" 
+        {
+          "text": "На 1 этаже вас встретит специалист и проводит до номера.",
+          "name": "help",
+          "header": "Помощник для инвалидов"
         }
       ]
     },
     "amenities": {
-      "label": { "text": "удобства номера", "marginBottom": "5" },
+      "label": { "text": "удобства номера" },
       "item": {
         "text": "",
         "options": [
@@ -61,7 +61,7 @@
       }
     },
     "addAmenities": {
-      "header": "дополнительные удобства", 
+      "header": "дополнительные удобства",
       "checkboxes": [
           { "text": "Завтрак", "isChecked": false },
           { "text": "Письменный стол", "isChecked": true },
@@ -80,11 +80,11 @@
           { "src":"./img/room888.png", "alt":"room #888" },
           { "src":"./img/room888.png", "alt":"room #888" },
           { "src":"./img/room888.png", "alt":"room #888" }
-        ], 
-        "number": 888, 
-        "isLuxe": true, 
-        "price": "9 990", 
-        "rate": 5, 
+        ],
+        "number": 888,
+        "isLuxe": true,
+        "price": "9 990",
+        "rate": 5,
         "comments": 145,
         "isWithMargin": true
       },
@@ -94,11 +94,11 @@
           { "src":"./img/room840.png", "alt":"room #840" },
           { "src":"./img/room840.png", "alt":"room #840" },
           { "src":"./img/room840.png", "alt":"room #840" }
-        ], 
-        "number": 840, 
-        "isLuxe": false, 
-        "price": "9 990", 
-        "rate": 4, 
+        ],
+        "number": 840,
+        "isLuxe": false,
+        "price": "9 990",
+        "rate": 4,
         "comments": 65,
         "isWithMargin": true
       },
@@ -108,11 +108,11 @@
           { "src":"./img/room980.png", "alt":"room #980" },
           { "src":"./img/room980.png", "alt":"room #980" },
           { "src":"./img/room980.png", "alt":"room #980" }
-        ], 
-        "number": 980, 
-        "isLuxe": true, 
-        "price": "8 500", 
-        "rate": 3, 
+        ],
+        "number": 980,
+        "isLuxe": true,
+        "price": "8 500",
+        "rate": 3,
         "comments": 35,
         "isWithMargin": true
       },
@@ -122,11 +122,11 @@
           { "src":"./img/room856.png", "alt":"room #856" },
           { "src":"./img/room856.png", "alt":"room #856" },
           { "src":"./img/room856.png", "alt":"room #856" }
-        ], 
-        "number": 856, 
-        "isLuxe": false, 
-        "price": "7 300", 
-        "rate": 5, 
+        ],
+        "number": 856,
+        "isLuxe": false,
+        "price": "7 300",
+        "rate": 5,
         "comments": 195,
         "isWithMargin": true
       },
@@ -136,11 +136,11 @@
           { "src":"./img/room740.png", "alt":"room #740" },
           { "src":"./img/room740.png", "alt":"room #740" },
           { "src":"./img/room740.png", "alt":"room #740" }
-        ], 
-        "number": 740, 
-        "isLuxe": false, 
-        "price": "6 000", 
-        "rate": 4, 
+        ],
+        "number": 740,
+        "isLuxe": false,
+        "price": "6 000",
+        "rate": 4,
         "comments": 44,
         "isWithMargin": true
       },
@@ -150,11 +150,11 @@
           { "src":"./img/room982.png", "alt":"room #982" },
           { "src":"./img/room982.png", "alt":"room #982" },
           { "src":"./img/room982.png", "alt":"room #982" }
-        ], 
-        "number": 982, 
-        "isLuxe": false, 
-        "price": "5 800", 
-        "rate": 3, 
+        ],
+        "number": 982,
+        "isLuxe": false,
+        "price": "5 800",
+        "rate": 3,
         "comments": 56,
         "isWithMargin": true
       },
@@ -164,11 +164,11 @@
           { "src":"./img/room678.png", "alt":"room #678" },
           { "src":"./img/room678.png", "alt":"room #678" },
           { "src":"./img/room678.png", "alt":"room #678" }
-        ], 
-        "number": 678, 
-        "isLuxe": false, 
-        "price": "5 500", 
-        "rate": 5, 
+        ],
+        "number": 678,
+        "isLuxe": false,
+        "price": "5 500",
+        "rate": 5,
         "comments": 45,
         "isWithMargin": true
       },
@@ -178,11 +178,11 @@
           { "src":"./img/room450.png", "alt":"room #450" },
           { "src":"./img/room450.png", "alt":"room #450" },
           { "src":"./img/room450.png", "alt":"room #450" }
-        ], 
-        "number": 450, 
-        "isLuxe": false, 
-        "price": "5 300", 
-        "rate": 4, 
+        ],
+        "number": 450,
+        "isLuxe": false,
+        "price": "5 300",
+        "rate": 4,
         "comments": 39,
         "isWithMargin": true
       },
@@ -192,11 +192,11 @@
           { "src":"./img/room350.png", "alt":"room #350" },
           { "src":"./img/room350.png", "alt":"room #350" },
           { "src":"./img/room350.png", "alt":"room #350" }
-        ], 
-        "number": 350, 
-        "isLuxe": false, 
-        "price": "5 000", 
-        "rate": 3, 
+        ],
+        "number": 350,
+        "isLuxe": false,
+        "price": "5 000",
+        "rate": 3,
         "comments": 77,
         "isWithMargin": true
       },
@@ -206,11 +206,11 @@
           { "src":"./img/room666.png", "alt":"room #666" },
           { "src":"./img/room666.png", "alt":"room #666" },
           { "src":"./img/room666.png", "alt":"room #666" }
-        ], 
-        "number": 666, 
-        "isLuxe": false, 
-        "price": "5 000", 
-        "rate": 5, 
+        ],
+        "number": 666,
+        "isLuxe": false,
+        "price": "5 000",
+        "rate": 5,
         "comments": 25,
         "isWithMargin": true
       },
@@ -220,11 +220,11 @@
           { "src":"./img/room444.png", "alt":"room #444" },
           { "src":"./img/room444.png", "alt":"room #444" },
           { "src":"./img/room444.png", "alt":"room #444" }
-        ], 
-        "number": 444, 
-        "isLuxe": false, 
-        "price": "5 000", 
-        "rate": 3, 
+        ],
+        "number": 444,
+        "isLuxe": false,
+        "price": "5 000",
+        "rate": 3,
         "comments": 15,
         "isWithMargin": true
       },
@@ -234,11 +234,11 @@
           { "src":"./img/room352.png", "alt":"room #352" },
           { "src":"./img/room352.png", "alt":"room #352" },
           { "src":"./img/room352.png", "alt":"room #352" }
-        ], 
-        "number": 352, 
-        "isLuxe": false, 
-        "price": "5 000", 
-        "rate": 3, 
+        ],
+        "number": 352,
+        "isLuxe": false,
+        "price": "5 000",
+        "rate": 3,
         "comments": 55,
         "isWithMargin": true
       }

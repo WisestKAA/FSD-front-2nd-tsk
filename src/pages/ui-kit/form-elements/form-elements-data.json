@@ -3,38 +3,33 @@
     "textFields": {
       "commonLabel": {
         "text": "Text Field",
-        "marginBottom": "5",
         "caption": "Default",
-        "marginCaption": "3"
+        "isSmall": true
       },
       "commonTextField": { "placeholder": "Email" },
       "hoverLabel": {
         "text": "Text Field",
-        "marginBottom": "5",
         "caption": "Hover / Focus"
       },
       "hoverTextField": { "placeholder": "Email", "text": "This is pretty awesome" },
       "maskedLabel": {
         "text": "masked text field",
-        "marginBottom": "5",
         "caption": "Default",
-        "marginCaption": "3"
+        "isSmall": true
       },
       "maskedTextField": { "isMasked": true }
     },
     "dropdowns": {
       "commonLabel": {
         "text": "Dropdown",
-        "marginBottom": "5",
         "caption": "Default"
       },
       "shortLabel": {
         "text": "Dropdown",
-        "marginBottom": "5",
         "caption": "Default",
         "isShort": true
       },
-      "labelWithoutCaption": { "text": "Dropdown", "marginBottom": "5" },
+      "labelWithoutCaption": { "text": "Dropdown" },
       "commonDropdown": {
         "text": "Сколько гостей",
         "options": [
@@ -59,15 +54,15 @@
         "startText": "date Dropdown",
         "finishText": "date Dropdown"
       },
-      "filteredLabel": { "text": "filter date dropdown", "marginBottom": "5" },
+      "filteredLabel": { "text": "filter date dropdown" },
       "filteredDateDropDown": { "isFiltred": true }
     },
     "subscriptionTextField": {
-      "label": { "text": "subscription text field", "marginBottom": "5" },
+      "label": { "text": "subscription text field" },
       "item": {  "value": "Email" }
     },
     "checkboxButtons": {
-      "label": { "text": "Checkbox Buttons", "marginBottom": "17" },
+      "label": { "text": "Checkbox Buttons" },
       "items": [
         { "text": "Можно курить", "name": "smoking" },
         {
@@ -83,7 +78,7 @@
       ]
     },
     "radioButtons": {
-      "label": { "text": "Radio Buttons", "marginBottom": "16" },
+      "label": { "text": "Radio Buttons" },
       "item": {
         "name": "radioButtons",
         "radioButtons": [
@@ -101,7 +96,7 @@
       }
     },
     "toggles": {
-      "label": {  "text": "Toggle", "marginBottom": "15" },
+      "label": {  "text": "Toggle" },
       "items": [
         {
           "name": "togen",
@@ -116,21 +111,21 @@
       ]
     },
     "likeButtons": {
-      "label": { "text": "like button", "marginBottom": "16" },
+      "label": { "text": "like button" },
       "items": [
         { "number": "2", "isClicked": false },
         { "number": "12", "isClicked": true }
       ]
     },
     "rateButtons": {
-      "label": { "text": "rate button", "marginBottom": "16" },
+      "label": { "text": "rate button" },
       "items": [
         { "rate": "4" },
         { "rate": "5" }
       ]
     },
     "buttons": {
-      "label": { "text": "buttons", "marginBottom": "16" },
+      "label": { "text": "buttons" },
       "gradientButton": {
         "type": "gradient-background",
         "name": "default",
@@ -157,7 +152,7 @@
       }
     },
     "pagination": {
-      "label": { "text": "pagination", "marginBottom": "16" },
+      "label": { "text": "pagination" },
       "item": {
         "links" : [
           {
@@ -218,7 +213,7 @@
       }
     },
     "richCheckboxButtons": {
-      "label": { "text": "Rich Checkbox Buttons", "marginBottom": "16" },
+      "label": { "text": "Rich Checkbox Buttons" },
       "items": [
         {
           "text": "Ширина коридоров в номере не менее 91 см.",
@@ -233,7 +228,7 @@
       ]
     },
     "bulletList": {
-      "label": { "text": "bullet list", "marginBottom": "13" },
+      "label": { "text": "bullet list" },
       "item": {
         "list": [
           "Нельзя с питомцами",

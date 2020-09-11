@@ -34,12 +34,14 @@ block template
             .search-room__price-caption="Стоимость за сутки пребывания в номере"
           .search-room__checkbox-buttons
             +label(searchRoomData.checkboxButtons.label)
-            each checkboxBatton in searchRoomData.checkboxButtons.items
-              +checkbox-button(checkboxBatton)
+            .search-room__checkbox-buttons-wrapper
+              each checkboxBatton in searchRoomData.checkboxButtons.items
+                +checkbox-button(checkboxBatton)
           .search-room__availability
             +label(searchRoomData.availability.label)
-            each availability in searchRoomData.availability.items
-              +checkbox-button(availability)
+            .search-room__availability-wrapper
+              each availability in searchRoomData.availability.items
+                +checkbox-button(availability)
           .search-room__amenities
             +label(searchRoomData.amenities.label)
             +dropdown(searchRoomData.amenities.item)

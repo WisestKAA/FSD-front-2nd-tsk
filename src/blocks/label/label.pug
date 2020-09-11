@@ -1,9 +1,9 @@
 
-mixin label({ text, marginBottom, caption, marginCaption, isShort=false }={})
+mixin label({ text, marginBottom, caption, isSmall = false, isShort = false }={})
   -
-    const marginTop = marginCaption === 3 ? 'label__caption_margin-top-3' : ''
+    const smallClass = isSmall && 'label__caption_small'
     const short = isShort ? ' label_short' : ''
 
-  .label(class=`label_margin-bottom-${marginBottom}${short}`)
+  .label(class=short)
     h3.label__text=text
-    .label__caption(class=marginTop)=caption
+    .label__caption(class=smallClass)=caption

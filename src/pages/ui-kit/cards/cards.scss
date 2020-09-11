@@ -47,13 +47,13 @@
   &__separator {
     margin-bottom: 2.8571rem;
 
-    &_margin-bottom-38{
+    &_small{
       margin-bottom: 2.7143rem;
     }
   }
 
   &__separator,
-  &__separator_margin-bottom-38{
+  &__separator_small{
     @media (max-width: 1110px) {
       margin-bottom: 0.7143rem;
     }

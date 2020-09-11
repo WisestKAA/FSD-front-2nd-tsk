@@ -1,12 +1,12 @@
-@import '../../scss/fonts/Montserrat/Montserrat.scss';
-@import '../../scss/fonts/OpenSans/OpenSans.scss';
-@import '../../scss/fonts/Quicksand/Quicksand.scss';
-@import '../../scss/mixins/body.scss';
 @import '../date-dropdown/date-dropdown.scss';
 @import '../label/label.scss';
 @import '../dropdown/dropdown.scss';
 @import '../button/button.scss';
-
+@import '../../scss/fonts/Montserrat/Montserrat.scss';
+@import '../../scss/fonts/OpenSans/OpenSans.scss';
+@import '../../scss/fonts/Quicksand/Quicksand.scss';
+@import '../../scss/mixins/body.scss';
+@import '../../scss/mixins/label.scss';
 .room-price {
   max-width: 27.1429rem;
   border: 0.0714rem solid rgba(0, 0, 0, 0.12);
@@ -104,6 +104,7 @@
     margin-bottom: 1.4286rem;
   }
   &__guests {
+    @include label(4.5rem);
     margin-bottom: 1.2857rem;
   }
 

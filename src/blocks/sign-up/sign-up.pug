@@ -24,15 +24,16 @@ mixin sign-up({ header, actionLink='/moke' }={})
         })
 
       .sign-up__birthday
-        +label({ text: 'дата рождения', marginBottom: '5' })
+        +label({ text: 'дата рождения' })
         +text-field({ isMasked: true, name: 'birthday' })
 
       .sign-up__authorization-data
-        +label({ text: 'данные для входа в сервис', marginBottom: '5' })
-        .sign-up__e-mail
-          +text-field({ placeholder: 'Email', name: 'singEmail' })
-        .sign-up__password
-          +text-field({ placeholder: 'Пароль', type: 'password', name: 'signPassword' })
+        +label({ text: 'данные для входа в сервис' })
+        .sign-up__authorization-data-inputs
+          .sign-up__e-mail
+            +text-field({ placeholder: 'Email', name: 'singEmail' })
+          .sign-up__password
+            +text-field({ placeholder: 'Пароль', type: 'password', name: 'signPassword' })
 
       .sign-up__mailing
         +toggle({ name: 'mailing', text: 'Получать спецпредложения', isChecked: false })

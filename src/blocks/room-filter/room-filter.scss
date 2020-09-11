@@ -3,6 +3,7 @@
 @import '../dropdown/dropdown.scss';
 @import '../button/button.scss';
 @import '../../scss/mixins/h1.scss';
+@import '../../scss/mixins/label.scss';
 
 .room-filter {
   max-width: 27.1429rem;
@@ -14,7 +15,7 @@
   background-color: white;
 
   &__date {
-    margin-bottom: 1.4286rem;
+    margin-bottom: 1.5rem;
   }
 
   &__header {
@@ -24,6 +25,7 @@
   }
 
   &__guests {
+    @include label(4.5rem);
     margin-bottom: 2.2143rem;
   }
 }

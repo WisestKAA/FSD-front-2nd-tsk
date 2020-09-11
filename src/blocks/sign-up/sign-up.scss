@@ -6,6 +6,7 @@
 @import '../button/button.scss';
 @import '../../scss/mixins/body.scss';
 @import '../../scss/mixins/h1.scss';
+@import '../../scss/mixins/label.scss';
 
 .sign-up {
   max-width: 27.1429rem;
@@ -22,11 +23,16 @@
   }
 
   &__birthday{
+    @include label(4.5rem);
     margin-bottom: 1.5rem;
   }
 
   &__surname{
     margin-bottom: 0.7857rem;
+  }
+
+  &__authorization-data{
+    @include label(8.3571rem);
   }
 
   &__name,

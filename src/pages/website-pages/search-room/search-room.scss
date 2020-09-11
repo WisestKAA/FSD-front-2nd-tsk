@@ -1,5 +1,6 @@
 @import '../../../scss/colors.scss';
 @import '../../../scss/mixins/h1.scss';
+@import '../../../scss/mixins/label.scss';
 
 @import '../website-pages-template.scss';
 
@@ -68,18 +69,22 @@
   }
 
   &__dates{
+    @include label(4.5rem);
     margin-bottom: 1.5rem;
   }
 
   &__checkbox-buttons{
+    @include label(9.8571rem);
     margin-bottom: 1.5714rem;
   }
 
   &__availability {
+    @include label(11rem);
     margin-bottom: 1.5rem;
   }
 
   &__guests {
+    @include label(4.5rem);
     margin-bottom: 2.1429rem;
   }
 
@@ -98,6 +103,7 @@
   }
 
   &__amenities {
+    @include label(4.5rem);
     margin-bottom: 1.2857rem;
   }
 

@@ -24,13 +24,13 @@
       "color": "dark5",
       "text": "Dark Shade 5%",
       "code": "#1F2041",
-      "marginTopText": "6"
+      "isWithMarginTopText": true
     },
     {
       "color": "purple",
       "text": "Purple",
       "code": "#BC9CFF",
-      "marginTopText": "6"
+      "isWithMarginTopText": true
     },
     {
       "color": "green",
@@ -62,7 +62,7 @@
       "fontSize": "12",
       "color": "dark100",
       "fontWeight": "bold",
-      "marginBottom": 51
+      "isBigMarginBottom": true
     },
     {
       "tag": "Body",

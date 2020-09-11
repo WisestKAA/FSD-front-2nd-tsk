@@ -1,5 +1,6 @@
 @import '../../../scss/colors.scss';
 @import '../../../scss/main.scss';
+@import '../../../scss/mixins/label.scss';
 
 @import '../ui-kit-template.scss';
 
@@ -56,7 +57,7 @@
     padding: 0.9286rem 0.4286rem 0.3571rem 0.3571rem;
   }
 
-  &__content-left_margin-left-1 {
+  &__content-left_with-margin-left {
     margin-left: 0.0714rem;
   }
 
@@ -73,110 +74,143 @@
     }
   }
 
-  &__item {
-    &_margin-bottom-20 {
-      margin-bottom: 1.4286rem;
-    }
+  &__common-text-field{
+    @include label(4.5rem);
+    margin-bottom: 1.5rem;
+  }
 
-    &_margin-bottom-21 {
-      margin-bottom: 1.5rem;
-    }
+  &__hover-text-field{
+    @include label(4.5rem);
+    margin-bottom: 1.5rem;
+  }
 
-    &_margin-bottom-24 {
-      margin-bottom: 1.7143rem;
-    }
-
-    &_margin-bottom-38 {
-      margin-bottom: 2.7143rem;
-    }
-
-    &_margin-bottom-40 {
-      margin-bottom: 2.8571rem;
-    }
-
-    &_margin-bottom-41 {
-      margin-bottom: 2.9286rem;
-    }
-
-    &_margin-bottom-42 {
-      margin-bottom: 3rem;
-    }
-
-    &_margin-bottom-43 {
-      margin-bottom: 3.0714rem;
-    }
-
-    &_margin-bottom-45 {
-      margin-bottom: 3.2143rem;
-    }
-
-    &_margin-left-1{
-      margin-left: 0.0714rem;
-    }
+  &__common-dropdown{
+    @include label(4.5rem);
+    margin-bottom: 1.7143rem;
   }
 
   &__masked-text-field {
-    padding-top: 0.2143rem;
+    @include label(4.5rem);
+    margin-bottom: 2.8571rem;
+  }
+
+  &__common-date-dropdown{
+    margin-bottom: 2.9286rem;
+  }
+
+  &__filtered-date-dropdown{
+    @include label(4.5rem);
+    margin-bottom: 3rem;
   }
 
   &__subscription-text-field{
-    padding-top: 0.0714rem;
+    @include label(4.5rem);
+  }
+
+  &__checkbox-buttons{
+    @include label(9.0714rem);
+    margin-bottom: 3.0714rem;
+  }
+
+  &__radio-buttons{
+    @include label(3.3571rem);
+    margin-bottom: 3.2143rem;
+  }
+
+  &__toggles{
+    @include label(6.0714rem);
+    margin-bottom: 3.1429rem;
   }
 
   &__like-buttons {
-    display: flex;
-    justify-content: space-between;
-    max-width: 6.4286rem;
-    width: 100%;
-    flex-direction: row;
+    @include label(3.5714rem);
+    margin-bottom: 2.9286rem;
+
+    &-wrapper{
+      display: flex;
+      justify-content: space-between;
+      max-width: 6.4286rem;
+      width: 100%;
+      flex-direction: row;
+    }
   }
 
   &__rate-buttons {
-    display: flex;
-    justify-content: space-between;
-    max-width: 18.5714rem;
-    width: 100%;
+    @include label(4.1429rem);
+
+    &-wrapper{
+      display: flex;
+      justify-content: space-between;
+      max-width: 18.5714rem;
+      width: 100%;
+    }
   }
 
   &__range-slider {
     margin-bottom: 2.4286rem;
   }
 
+  &__buttons {
+    @include label(19.1429rem);
+    margin-bottom: 2.9286rem;
+  }
+
+  &__pagination{
+    @include label(7.2857rem);
+    margin-left: 0.0714rem;
+  }
+
+  &__short-dropdown{
+    @include label(4.5rem);
+  }
+
+  &__rich-checkbox-buttons{
+    @include label(10.4286rem);
+    margin-top: 0.9286rem;
+  }
+
+  &__expandable-checkbox-list{
+    &_closed{
+      margin-left: 0.0714rem;
+      margin-bottom: 1.7143rem;
+    }
+  }
+
   &__button-wrapper {
     margin-bottom: 2.1429rem;
     margin-left: 0.0714rem;
 
-    &_margin-left-0 {
+    &_without-margin-left {
       margin-left: 0;
     }
 
-    &_margin-bottom-31{
+    &_margin-bottom-small{
       margin-bottom: 2.2143rem;
     }
   }
 
   &__separator {
-    &_margin-19 {
+    &_small-size {
       margin-bottom: 1.3571rem;;
     }
 
-    &_margin-91 {
+    &_middle-size {
       margin-bottom: 6.5rem;
 
       @media (max-width: 870px) {
         margin-bottom: 1.4286rem;
       }
     }
-    &_margin-234 {
-      margin-bottom: 16.7143rem;
+    &_big-size {
+      margin-bottom: 15rem;
       @media (max-width: 870px) {
         margin-bottom: 1.4286rem;
       }
     }
   }
 
-  &__rich-checkbox-buttons,
   &__bullet-list{
+    @include label(10.2143rem);
     margin-top: 0.9286rem;
   }
 

@@ -1,0 +1,6 @@
+@mixin label($minHeight) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: $minHeight;
+}

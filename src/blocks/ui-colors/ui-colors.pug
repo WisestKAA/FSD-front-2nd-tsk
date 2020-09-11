@@ -1,6 +1,6 @@
 
-mixin ui-colors({ color, text, code, marginTopText='' })
-  - const marginTop = marginTopText === '' ? '' : `ui-colors__text_margin-top-${marginTopText}`
+mixin ui-colors({ color, text, code, isWithMarginTopText=false })
+  - const marginTop = isWithMarginTopText && 'ui-colors__text_with-margin-top'
 
   .ui-colors
     .ui-colors__color(class=`ui-colors__color_${color}`)

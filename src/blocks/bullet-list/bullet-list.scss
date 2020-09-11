@@ -19,7 +19,7 @@
     text-align: unset;
 
     &:last-child,
-    &_margin-bottom-0{
+    &_without-margin-bottom{
         margin-bottom: 0;
     }
   }
@@ -68,7 +68,7 @@
     box-sizing:border-box;
     max-width: 18.2143rem;
 
-    &_padding-left-5{
+    &_with-padding-left{
       padding-left: 1.0714rem;
     }
   }

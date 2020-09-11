@@ -10,7 +10,7 @@ mixin room-filter({ header, actionLink = '/moke' }={})
       .room-filter__date
         +date-dropdown({ isFiltered: false,  startText: 'прибытие', finishText: 'выезд'})
       .room-filter__guests
-        +label({ text: 'гости', marginBottom: '6'})
+        +label({ text: 'гости' })
         +dropdown({
           text: 'Сколько гостей',
           options: [

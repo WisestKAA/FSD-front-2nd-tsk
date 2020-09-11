@@ -29,22 +29,22 @@ block template
   main.form-elements
     .form-elements__main-wrapper
       .form-elements__main
-          section.form-elements__content-left.form-elements__content-left_margin-left-1
-            .form-elements__item_margin-bottom-21
+          section.form-elements__content-left.form-elements__content-left_with-margin-left
+            .form-elements__common-text-field
               +label(formElementsData.textFields.commonLabel)
               +text-field(formElementsData.textFields.commonTextField)
-            .form-elements__item_margin-bottom-21
+            .form-elements__hover-text-field
               +label(formElementsData.textFields.hoverLabel)
               +text-field(formElementsData.textFields.hoverTextField)
-            .form-elements__item_margin-bottom-20
+            .form-elements__common-dropdown
               +label(formElementsData.dropdowns.commonLabel)
               +dropdown(formElementsData.dropdowns.commonDropdown)
-            .form-elements__item_margin-bottom-41.form-elements__masked-text-field
+            .form-elements__masked-text-field
               +label(formElementsData.textFields.maskedLabel)
               +text-field(formElementsData.textFields.maskedTextField)
-            .form-elements__item_margin-bottom-41
+            .form-elements__common-date-dropdown
               +date-dropdown(formElementsData.dateDropDowns.commonDateDropDown)
-            .form-elements__item.form-elements__item_margin-bottom-41
+            .form-elements__filtered-date-dropdown
               +label(formElementsData.dateDropDowns.filteredLabel)
               +date-dropdown(formElementsData.dateDropDowns.filteredDateDropDown)
             .form-elements__subscription-text-field
@@ -53,74 +53,82 @@ block template
 
           .form-elements__content-right-wrapper
             section.form-elements__content-center
-              .form-elements__item_margin-bottom-43
+              .form-elements__checkbox-buttons
                 +label(formElementsData.checkboxButtons.label)
-                each checkbox in formElementsData.checkboxButtons.items
-                  +checkbox-button(checkbox)
-              .form-elements__item_margin-bottom-45.form-elements__radio-buttons
+                .form-elements__checkbox-buttons-wrapper
+                  each checkbox in formElementsData.checkboxButtons.items
+                    +checkbox-button(checkbox)
+              .form-elements__radio-buttons
                 +label(formElementsData.radioButtons.label)
                 +radio-buttons(formElementsData.radioButtons.item)
-              .form-elements__item_margin-bottom-45
+              .form-elements__toggles
                 +label(formElementsData.toggles.label)
-                each toggle in formElementsData.toggles.items
-                  +toggle(toggle)
-              .form-elements__item_margin-bottom-41.form-elements__like-button
+                .form-elements__toggles-wrapper
+                  each toggle in formElementsData.toggles.items
+                    +toggle(toggle)
+              .form-elements__like-buttons
                 +label(formElementsData.likeButtons.label)
-                .form-elements__like-buttons
+                .form-elements__like-buttons-wrapper
                   each likeButton in formElementsData.likeButtons.items
                     +like-button(likeButton)
-              .form-elements__item_margin-bottom-40
+              .form-elements__rate-buttons
                 +label(formElementsData.rateButtons.label)
-                .form-elements__rate-buttons
+                .form-elements__rate-buttons-wrapper
                   each rateButton in formElementsData.rateButtons.items
                     +rate-button(rateButton)
 
             section.form-elements__content-right
-              .form-elements__item_margin-bottom-40.form-elements__range-slider
+              .form-elements__range-slider
                 +range-slider({})
-              .form-elements__item_margin-bottom-41
+              .form-elements__buttons
                 +label(formElementsData.buttons.label)
-                .form-elements__button-wrapper
-                  +button(formElementsData.buttons.gradientButton)
-                .form-elements__button-wrapper.form-elements__button-wrapper_margin-left-0
-                  +button(formElementsData.buttons.borderedButton)
-                .form-elements__button-wrapper.form-elements__button-wrapper_margin-bottom-31
-                  +button(formElementsData.buttons.emptyButton)
-                .form-elements__button-wrapper_margin-left-0
-                  +button(formElementsData.buttons.richButton)
-              .form-elements__item_margin-bottom-40.form-elements__item_margin-left-1
+                .form-elements__buttons-wrapper
+                  .form-elements__button-wrapper
+                    +button(formElementsData.buttons.gradientButton)
+                  .form-elements__button-wrapper.form-elements__button-wrapper_without-margin-left
+                    +button(formElementsData.buttons.borderedButton)
+                  .form-elements__button-wrapper.form-elements__button-wrapper_margin-bottom-small
+                    +button(formElementsData.buttons.emptyButton)
+                  .form-elements__button-wrapper_without-margin-left
+                    +button(formElementsData.buttons.richButton)
+              .form-elements__pagination
                 +label(formElementsData.pagination.label)
                 +pagination(formElementsData.pagination.item)
-    .form-elements__separator_margin-91
+    .form-elements__separator_middle-size
 
     .form-elements__main-wrapper
       .form-elements__main
         section.form-elements__content-left
-          +label(formElementsData.dropdowns.shortLabel)
-          +dropdown(formElementsData.dropdowns.shortDropDown)
+          .form-elements__short-dropdown
+            +label(formElementsData.dropdowns.shortLabel)
+            +dropdown(formElementsData.dropdowns.shortDropDown)
         .form-elements__content-right-wrapper
           section.form-elements__content-center
-            +label(formElementsData.dropdowns.labelWithoutCaption)
-            +dropdown(formElementsData.dropdowns.commonDropdown)
+            .form-elements__common-dropdown
+              +label(formElementsData.dropdowns.labelWithoutCaption)
+              +dropdown(formElementsData.dropdowns.commonDropdown)
           section.form-elements__content-right
+    .form-elements__separator_big-size
 
-    .form-elements__separator_margin-234
     .form-elements__main-wrapper
       .form-elements__main
           section.form-elements__content-left
-            .form-elements__item_margin-bottom-24.form-elements__expandable-checkbox-list.form-elements__item_margin-left-1
+            .form-elements__expandable-checkbox-list.form-elements__expandable-checkbox-list_closed
               +expandable-checkbox-list(formElementsData.expandableCheckboxLists.closed)
             .form-elements__expandable-checkbox-list
               +expandable-checkbox-list(formElementsData.expandableCheckboxLists.expanded)
           .form-elements__content-right-wrapper
-            section.form-elements__content-center.form-elements__rich-checkbox-buttons
-              +label(formElementsData.richCheckboxButtons.label)
-              each richCheckbox in formElementsData.richCheckboxButtons.items
-                +checkbox-button(richCheckbox)
-            section.form-elements__content-right.form-elements__bullet-list
-              +label(formElementsData.bulletList.label)
-              +bullet-list(formElementsData.bulletList.item)
-    .form-elements__separator_margin-19
+            section.form-elements__content-center
+              .form-elements__rich-checkbox-buttons
+                +label(formElementsData.richCheckboxButtons.label)
+                .form-elements__rich-checkbox-buttons-wrapper
+                  each richCheckbox in formElementsData.richCheckboxButtons.items
+                    +checkbox-button(richCheckbox)
+            section.form-elements__content-right
+              .form-elements__bullet-list
+                +label(formElementsData.bulletList.label)
+                +bullet-list(formElementsData.bulletList.item)
+    .form-elements__separator_small-size
 
     .form-elements__main-wrapper
       .form-elements__main

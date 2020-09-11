@@ -1,6 +1,6 @@
 
-mixin ui-types({ tag, text, font, fontSize, color, fontWeight, marginBottom=0}={})
-  - const marginBot = marginBottom === 0 ? '' : `ui-types__margin-bottom-${marginBottom}`
+mixin ui-types({ tag, text, font, fontSize, color, fontWeight, isBigMarginBottom=false}={})
+  - const marginBot = isBigMarginBottom && 'ui-types_big-margin-bottom'
 
   .ui-types(class = marginBot)
     .ui-types__tag(class=`ui-types__tag_font-size-${fontSize}`)=tag
