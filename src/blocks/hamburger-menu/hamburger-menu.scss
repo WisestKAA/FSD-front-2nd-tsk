@@ -1,0 +1,124 @@
+@import '../../scss/fonts/Montserrat/Montserrat.scss';
+
+.hamburger-menu{
+  display: block;
+  position: relative;
+  max-width: 30px;
+  max-height: 30px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  &__toggle{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+
+    &:checked ~ .hamburger-menu__hamburger > .hamburger-menu__lines{
+      transform: rotate(45deg);
+    }
+
+    &:checked ~ .hamburger-menu__hamburger > .hamburger-menu__lines::before{
+      display: none;
+    }
+
+    &:checked ~ .hamburger-menu__hamburger > .hamburger-menu__lines::after{
+      top: 0;
+      transform: rotate(90deg);
+    }
+
+    &:checked ~ .hamburger-menu__items {
+      visibility: visible;
+    }
+  }
+
+  &__hamburger{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+
+  &__lines{
+    width: 100%;
+    height: 100%;
+
+    & ,
+    &::before,
+    &::after{
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: $dark75;
+    }
+
+    &::before{
+      content: '';
+      top: 8px;
+    }
+
+    &::after{
+      content: '';
+      bottom: 8px;
+    }
+  }
+
+  &__items{
+    position: fixed;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f680;
+  }
+
+  &__item{
+    list-style: none;
+    margin: 0;
+    padding: .2rem 0;
+    display: flex;
+    justify-content: center;
+
+    &:hover{
+      width: 100%;
+      background-color: darken($color: (#f4f4f6), $amount: 20%);
+    }
+
+    &-link{
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1.2143rem;
+      color: $dark50;
+      text-decoration: none;
+
+      &_current{
+        text-decoration: underline;
+      }
+
+      &:visited,
+      &:hover,
+      &:active{
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+
+
+}
