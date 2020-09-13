@@ -5,9 +5,9 @@ block content
   include ../../blocks/footer-with-copyright/footer-with-copyright.pug
 
   - const { headerData, footerData } = require('@pages/website-pages/website-pages-template-data.json');
-
-  +header(headerData)
-
-  block template
-
-  +footer-with-copyright(footerData)
+  .website-pages-template
+    .website-pages-template__content
+      +header(headerData)
+      block template
+    .website-pages-template__footer
+      +footer-with-copyright(footerData)
