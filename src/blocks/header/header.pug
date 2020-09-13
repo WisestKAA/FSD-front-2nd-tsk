@@ -2,6 +2,7 @@
 include ../logo/logo.pug
 include ../button/button.pug
 include ../dropdown-menu/dropdown-menu.pug
+include ../hamburger-menu/hamburger-menu.pug
 
 mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButtonText, signupButtonText}={})
   -
@@ -26,6 +27,15 @@ mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButto
                 a(href=link, class=`${current} ${shortMenu}`).header__navigation-link=text
               else
                 a(href=link class=shortMenu).header__navigation-link=text
+        .header__hamburger-menu
+          -
+            const menuItems = !isLogged
+              ? navOptions.concat([
+                { text: loginButtonText, link: './login', isCurrent: false },
+                { text: signupButtonText, link: './sign-up', isCurrent: false }
+              ])
+              : navOptions
+          +hamburger-menu({menuItems: menuItems})
 
         .header__sign
           .header__unlogged(class=unlogged)

@@ -1,6 +1,7 @@
 @import '../../scss/fonts/Montserrat/Montserrat.scss';
 @import '../dropdown-menu/dropdown-menu.scss';
 @import '../button/button.scss';
+@import '../hamburger-menu/hamburger-menu.scss';
 
 .header {
   width: 100%;
@@ -10,6 +11,7 @@
   display: flex;
   justify-content: center;
   box-shadow: 0 0.7143rem 1.4286rem $dark05;
+  min-width: 22.8571rem;
 
   @media (max-width: 870px) {
     height: auto;
@@ -23,13 +25,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 0.3571rem;
-
-    @media (max-width: 880px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
   }
 
   &__logo {
@@ -44,13 +39,6 @@
   &__navigation-wrapper {
     display: flex;
     justify-content: space-between;
-
-    @media (max-width: 780px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
   }
 
   &__navigation {
@@ -58,16 +46,12 @@
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 780px) {
-      margin-bottom: 0.7143rem;
+    @media (max-width: 910px){
+      display: none;
     }
 
-    @media (max-width: 580px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0.7143rem;
+    @media (max-width: 780px) {
+      margin-bottom: 0.7143rem;
     }
 
     &-link,
@@ -111,6 +95,10 @@
     justify-content: space-between;
     max-height: 2.4286rem;
     height: 100%;
+
+    @media (max-width: 910px){
+      display: none;
+    }
   }
 
   &__sign-up-button {
@@ -137,15 +125,24 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: 760px) {
-      padding-left: 0;
-      border-left: none;
-      border-top: 0.0714rem solid $dark10;
+    @media (max-width: 910px) {
+      padding-left: .5rem;
     }
   }
 
   &__logged_hide,
   &__unlogged_hide {
     display: none;
+  }
+
+  &__hamburger-menu{
+    display: none;
+
+    @media (max-width: 910px){
+      display: block;
+      width: 2.1429rem;
+      height: 2.1429rem;
+      margin-right: .5rem;
+    }
   }
 }
