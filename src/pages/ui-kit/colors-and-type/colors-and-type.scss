@@ -6,6 +6,8 @@
 
 
 .colors-and-type {
+  min-width: 22.8571rem;
+
   &__colors {
     max-width: 20rem;
     width: 100%;
@@ -20,14 +22,25 @@
 
   &__content {
     margin-top: 4.1429rem;
-    max-width: 82.1429rem;
+    max-width: 111.4286rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
 
+
+    @media (max-width: 1920px){
+      width: 81.25%;
+    }
+
+    @media (max-width: 1440px){
+      max-width: 82.1429rem;
+      width: 100%;
+    }
+
     @media (max-width: 740px) {
       display: flex;
       flex-direction: column;
+      align-items: center;
       margin-top: 2.1429rem;
     }
   }

@@ -12,6 +12,7 @@
 
 .room-details {
   justify-content: center;
+  min-width: 22.8571rem;
 
   &__wrapper {
 
@@ -20,11 +21,14 @@
       justify-content: center;
       width: 100%;
       overflow: hidden;
-      max-height: 34.6429rem;
       margin-block-start: unset;
       margin-block-end: unset;
       margin-inline-start: unset;
       margin-inline-end: unset;
+
+      @media (max-width: 1440px){
+        max-height: 34.6429rem;
+      }
 
       @media (max-width: 1350px) {
         flex-direction: column;
@@ -96,15 +100,25 @@
       display: flex;
       justify-content: center;
       height: auto;
+      width: 100%;
 
       &-img {
+        max-width: 93.4286rem;
         width: 100%;
         height: auto;
+
+        @media (max-width: 1920px){
+          min-width: 68.13%;
+        }
+
+        @media (max-width: 1350px){
+          max-width: unset;
+        }
+
       }
 
       @media (max-width: 1350px) {
         min-height: 0;
-        width: auto;
         height: auto;
         flex-direction: column;
       }
@@ -114,9 +128,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      max-width: 43.7143rem;
+      width: 100%;
 
       @media (max-width: 1350px) {
         flex-direction: row;
+        max-width: unset;
       }
 
       @media (max-width: 460px) {
@@ -124,10 +141,20 @@
       }
 
       &-img {
-        min-height: 17.1429rem;
-        min-width: 32.8571rem;
-        height: auto;
         overflow: hidden;
+        max-height: 647px;
+        height: 100%;
+
+        @media(max-width: 1920px){
+          min-width: 31.97%;
+          height: 50%;
+          width: 100%;
+        }
+
+        @media(max-width: 1440px){
+          min-height: 17.1429rem;
+          min-width: 32.8571rem;
+        }
 
         @media (max-width: 1350px) {
           width: 50%;
@@ -148,9 +175,18 @@
   &__main {
     display: flex;
     justify-content: space-between;
-    max-width: 84rem;
+    max-width: 112rem;
     width: 100%;
     margin: 4.6429rem 0 4.7857rem 0;
+
+    @media (max-width: 1920px){
+      width: 81.67%;
+    }
+
+    @media (max-width: 1440px){
+      max-width: 84rem;
+      width: 100%;
+    }
 
     @media (max-width: 1023px) {
       flex-direction: column;
@@ -161,9 +197,18 @@
   &__datails {
     display: flex;
     flex-direction: column;
-    max-width: 50.7143rem;
+    max-width: 68.5714rem;
     width: 100%;
     padding: 0.3571rem;
+
+    @media(max-width: 1920px){
+      width: 61.22%;
+    }
+
+    @media(max-width: 1440px){
+      max-width: 50.7143rem;
+      width: 100%;
+    }
   }
 
   &__info,

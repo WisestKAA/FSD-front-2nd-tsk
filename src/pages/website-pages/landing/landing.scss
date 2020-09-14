@@ -18,7 +18,7 @@
   }
 
   &__wrapper {
-    max-width: 84.4286rem;
+    max-width: 112.5714rem;
     width: 100%;
     height: auto;
     display: flex;
@@ -32,6 +32,15 @@
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
+    }
+
+    @media (max-width: 1920px){
+      width: 82.08%;
+    }
+
+    @media (max-width: 1440px){
+      max-width: 84.4286rem;
+      width: 100%;
     }
   }
 

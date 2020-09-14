@@ -4,6 +4,7 @@
 @import '../social-icons/social-icons.scss';
 
 .footer-with-copyright {
+  min-width: 22.8571rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,8 +22,18 @@
 
     &-main,
     &-bottom {
-      max-width: 83.5714rem;
+      max-width: 111.4286rem;
+      width: 100%;
       padding: 0 0.3571rem;
+
+      @media (max-width: 1920px){
+        width: 81.25%;
+      }
+
+      @media (max-width: 1440px){
+        max-width: 83.5714rem;
+        width: 100%;
+      }
     }
 
     &-bottom {
@@ -55,8 +66,17 @@
     }
 
     &-right {
-      max-width: 61.4286rem;
+      max-width: 81.8571rem;
       margin-top: 0.3571rem;
+
+      @media (max-width: 1920px){
+        width: 73.5%;
+      }
+
+      @media (max-width: 1440px){
+        max-width: 61.4286rem;
+        width: 100%;
+      }
 
       @media (max-width: 780px) {
         display: flex;
@@ -107,6 +127,7 @@
 
   &__description {
     @include body;
+    white-space: normal;
 
     @media (max-width: 1060px) {
       margin-bottom: 0.7143rem;
@@ -120,9 +141,18 @@
   &__menu {
     display: flex;
     justify-content: space-between;
-    max-width: 39.2857rem;
-    width: 100%;
     box-sizing: border-box;
+    max-width: 52.0714rem;
+    width: 100%;
+
+    @media (max-width: 1920px){
+      width: 63.95%;
+    }
+
+    @media (max-width: 1440px){
+      max-width: 39.2857rem;
+      width: 100%;
+    }
 
     @media (max-width: 780px) {
       margin-bottom: 0.7143rem;
@@ -165,6 +195,7 @@
     display: flex;
     flex-direction: column;
     max-width: 18.5714rem;
+    width: 100%;
     box-sizing: border-box;
 
     @media (max-width: 780px) {
