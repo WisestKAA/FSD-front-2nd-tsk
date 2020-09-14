@@ -14,354 +14,377 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   <link href="./styles/room-details.min.css" rel="stylesheet"></head>
-  <body class="pages" bgcolor="#FFFFFF">
-        <header class="header">
-          <div class="header__wrapper">
-            <figure class="header__logo"><img class="logo" src="./img/Logosite.svg" alt="logo">
-            </figure>
-            <nav class="header__navigation-wrapper">
-              <div class="header__navigation"><a class="header__navigation-link_short header__navigation-link" href="/about-us">О нас</a>
-                    <div class="dropdown-menu">
-                      <div class="dropdown-menu__text">Услуги</div>
-                      <div class="dropdown-menu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
-                      </div>
-                      <div class="dropdown-menu__links"><a class="dropdown-menu__link" href="/service/1">Service1</a><a class="dropdown-menu__link" href="/service/2">Service2</a><a class="dropdown-menu__link" href="/service/3">Service3</a>
-                      </div>
-                    </div><a class="header__navigation-link_short header__navigation-link" href="/vacancies">Вакансии</a><a class="header__navigation-link_short header__navigation-link" href="/news">Новости</a>
-                    <div class="dropdown-menu">
-                      <div class="dropdown-menu__text">Соглашения</div>
-                      <div class="dropdown-menu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
-                      </div>
-                      <div class="dropdown-menu__links"><a class="dropdown-menu__link" href="/agreements/1">agreements1</a><a class="dropdown-menu__link" href="/agreements/2">agreements2</a><a class="dropdown-menu__link" href="/agreements/3">agreements3</a>
-                      </div>
-                    </div>
-              </div>
-              <div class="header__sign">
-                <div class="header__unlogged">
-                  <div class="header__login-button">
-                        <div class="button">
-                          <div class="button__wrapper-short"><a class="button__wrapper-short_bordered" href="/moke">войти</a></div>
-                        </div>
-                  </div>
-                  <div class="header__sign-up-button">
-                        <div class="button">
-                          <div class="button__wrapper-short"><a class="button__wrapper-short_gradient-background" href="/moke">зарегистрироваться</a></div>
-                        </div>
-                  </div>
-                </div>
-                <div class="header__logged header__logged_hide">
-                  <div class="header__username"></div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </header>
-    <main class="room-details">
-      <figure class="room-details__wrapper-pic">
-        <div class="room-details__pic-main"><img class="room-details__pic-main-img" src="./img/mainpic.png" alt="room view">
-          <div class="room-details__pic-right"><img class="room-details__pic-right-img" src="./img/rtop.png" alt="room view"><img class="room-details__pic-right-img" src="./img/rbot.png" alt="room view"></div>
-        </div>
-      </figure>
-      <div class="room-details__wrapper-main">
-        <div class="room-details__main">
-          <div class="room-details__datails">
-            <div class="room-details__wrapper-info">
-              <article class="room-details__info">
-                <h2 class="room-details__info-header">Сведения о номере</h2>
-                    <figure class="icon-text-list">
-                      <div class="icon-text-list__wrapper icon-text-list__wrapper_without-lust-border">
-                        <div class="icon-text-list__icon"><i class="material-icons js-material-icons material-icons_font-size-48">insert_emoticon</i>
-                        </div>
-                        <div class="icon-text-list__content">
-                          <div class="icon-text-list__header">Комфорт</div>
-                          <div class="icon-text-list__text">Шумопоглощающие стены</div>
-                        </div>
-                      </div>
-                      <div class="icon-text-list__wrapper icon-text-list__wrapper_without-lust-border">
-                        <div class="icon-text-list__icon"><i class="material-icons js-material-icons material-icons_font-size-48">location_city</i>
-                        </div>
-                        <div class="icon-text-list__content">
-                          <div class="icon-text-list__header">Удобство</div>
-                          <div class="icon-text-list__text">Окно в каждой из спален</div>
-                        </div>
-                      </div>
-                      <div class="icon-text-list__wrapper icon-text-list__wrapper_without-lust-border">
-                        <div class="icon-text-list__icon"><i class="material-icons js-material-icons material-icons_font-size-48">whatshot</i>
-                        </div>
-                        <div class="icon-text-list__content">
-                          <div class="icon-text-list__header">Уют</div>
-                          <div class="icon-text-list__text">Номер оснащён камином</div>
-                        </div>
-                      </div>
-                    </figure>
-              </article>
-              <article class="room-details__feeling">
-                <h2 class="room-details__feeling-header">Впечатления от номера</h2>
-                <div class="room-details__wrapper-feeling">
-                  <div class="room-details__feeling-chart">
-                        <figure class="donut-chart js-donut-chart"></figure>
-                  </div>
-                  <div class="room-details__feeling-descriptions">
-                        <ul class="bullet-list">
-                          <li class="bullet-list__wrapper bullet-list__wrapper_margin-bottom-0">
-                            <div class="bullet-list__li bullet-list__li_bg-color-orange"></div>
-                            <div class="bullet-list__text bullet-list__text_padding-left-5">Великолепно</div>
-                          </li>
-                          <li class="bullet-list__wrapper bullet-list__wrapper_margin-bottom-0">
-                            <div class="bullet-list__li bullet-list__li_bg-color-green"></div>
-                            <div class="bullet-list__text bullet-list__text_padding-left-5">Хорошо</div>
-                          </li>
-                          <li class="bullet-list__wrapper bullet-list__wrapper_margin-bottom-0">
-                            <div class="bullet-list__li bullet-list__li_bg-color-purple"></div>
-                            <div class="bullet-list__text bullet-list__text_padding-left-5">Удовлетворительно</div>
-                          </li>
-                          <li class="bullet-list__wrapper bullet-list__wrapper_margin-bottom-0">
-                            <div class="bullet-list__li bullet-list__li_bg-color-dark"></div>
-                            <div class="bullet-list__text bullet-list__text_padding-left-5">Разочарован</div>
-                          </li>
-                        </ul>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <article class="room-details__wrapper-comments">
-              <div class="room-details__wrapper-comments-header">
-                <h2 class="room-details__comments-header">Отзывы посетителей номера</h2>
-                <div class="room-details__comments-total">2 отзыва</div>
-              </div>
-              <div class="room-details__comments">
-                    <article class="comment">
-                      <div class="comment__head"><img class="comment__avatar" src="./img/avatar1.png" alt="Мурад Сарафанов">
-                        <div class="comment__avatar-text">
-                          <div class="comment__avatar-name">Мурад Сарафанов</div>
-                          <div class="comment__avatar-date">5 дней назад</div>
-                        </div>
-                      </div>
-                      <div class="comment__body">
-                        <div class="comment__like">
-                              <figure class="like-button js-like-button like-button_active">
-                                <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite</i>
-                                </div>
-                                <div class="like-button__number">12</div>
-                              </figure>
-                        </div>
-                        <div class="comment__content">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей</div>
-                      </div>
-                    </article>
-              </div>
-              <div class="room-details__comments">
-                    <article class="comment">
-                      <div class="comment__head"><img class="comment__avatar" src="./img/avatar2.png" alt="Патрисия Стёклышкова">
-                        <div class="comment__avatar-text">
-                          <div class="comment__avatar-name">Патрисия Стёклышкова</div>
-                          <div class="comment__avatar-date">Неделю назад</div>
-                        </div>
-                      </div>
-                      <div class="comment__body">
-                        <div class="comment__like">
-                              <figure class="like-button js-like-button">
-                                <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite_border</i>
-                                </div>
-                                <div class="like-button__number">2</div>
-                              </figure>
-                        </div>
-                        <div class="comment__content">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент</div>
-                      </div>
-                    </article>
-              </div>
-            </article>
-            <div class="room-details__wrapper-rulles">
-              <article class="room-details__rulles">
-                <h2 class="room-details__rulles-header">Правила</h2>
-                    <ul class="bullet-list">
-                      <li class="bullet-list__wrapper">
-                        <div class="bullet-list__li"></div>
-                        <div class="bullet-list__text">Нельзя с питомцами</div>
-                      </li>
-                      <li class="bullet-list__wrapper">
-                        <div class="bullet-list__li"></div>
-                        <div class="bullet-list__text">Без вечеринок и мероприятий</div>
-                      </li>
-                      <li class="bullet-list__wrapper">
-                        <div class="bullet-list__li"></div>
-                        <div class="bullet-list__text">Время прибытия — после 13:00, а выезд до 12:00</div>
-                      </li>
-                    </ul>
-              </article>
-              <article class="room-details__cancel">
-                <h2 class="room-details__cancel-header">Отмена</h2>
-                <div class="room-details__cancel-text">Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</div>
-              </article>
-            </div>
-          </div>
-          <div class="room-details__price">
-                <div class="room-price js-room-price">
-                  <form class="room-price__form" action="/moke">
-                    <div class="room-price__header">
-                      <div class="room-price__room-number">
-                        <div class="room-price__room-number-text-number">№</div>
-                        <div class="room-price__room-number-text">888</div>
-                        <div class="room-price__room-number-luxe">люкс</div>
-                      </div>
-                      <div class="room-price__price">
-                        <div class="room-price__price-sum js-room-price__price-sum">9 990₽</div>
-                        <div class="room-price__price-sum-per-day">в сутки</div>
-                      </div>
-                    </div>
-                    <div class="room-price__date">
-                          <section class="date-dropdown js-date-dropdown">
-                            <div class="date-dropdown__wrapper-filtered">
-                              <div class="date-dropdown__wrapper-from">
-                                <h3 class="date-dropdown__start-text">прибытие</h3>
-                                <div class="date-dropdown__input-wrapper">
-                                  <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
-                                  </div>
-                                  <input class="date-dropdown__input-from js-date-dropdown__input-from" type="text" readonly placeholder="ДД.ММ.ГГГГ">
-                                </div>
-                              </div>
-                              <div class="date-dropdown__wrapper-to">
-                                <h3 class="date-dropdown__finish-text">выезд</h3>
-                                <div class="date-dropdown__input-wrapper">
-                                  <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
-                                  </div>
-                                  <input class="date-dropdown__input-to js-date-dropdown__input-to" type="text" readonly placeholder="ДД.ММ.ГГГГ">
-                                </div>
-                              </div>
-                            </div>
-                          </section>
-                    </div>
-                    <div class="room-price__guests">
-                          <div class="label label_margin-bottom-5">
-                            <h3 class="label__text">гости</h3>
-                            <div class="label__caption"></div>
-                          </div>
-                          <section class="dropdown js-dropdown">
-                            <div class="dropdown__wrapper">
-                              <div class="dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
-                              </div>
-                              <div class="dropdown__select js-dropdown__select"><span class="dropdown__text js-dropdown__text">Сколько гостей</span></div>
-                              <div class="dropdown__options js-dropdown__options">
-                                    <section class="dropdown-option js-dropdown-option">
-                                      <h3 class="dropdown-option__text js-dropdown-option__text">взрослые</h3>
-                                      <div class="dropdown-option__button-block">
-                                        <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
-                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
-                                        <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
-                                      </div>
-                                    </section>
-                                    <section class="dropdown-option js-dropdown-option">
-                                      <h3 class="dropdown-option__text js-dropdown-option__text">дети</h3>
-                                      <div class="dropdown-option__button-block">
-                                        <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
-                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
-                                        <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
-                                      </div>
-                                    </section>
-                                    <section class="dropdown-option js-dropdown-option">
-                                      <h3 class="dropdown-option__text js-dropdown-option__text">младенцы</h3>
-                                      <div class="dropdown-option__button-block">
-                                        <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
-                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
-                                        <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
-                                      </div>
-                                    </section>
-                                    <div class="dropdown-option-button js-dropdown-option-button">
-                                      <button class="dropdown-option-button__drop js-dropdown-option-button__drop" type="button">очистить</button>
-                                      <button class="dropdown-option-button__apply js-dropdown-option-button__apply" type="button">применить</button>
-                                    </div>
-                              </div>
-                            </div>
-                          </section>
-                    </div>
-                    <div class="room-price__calculate js-room-price__calculate">
-                      <div class="room-price__for-room">
-                        <div class="room-price__for-room-description js-room-price__for-room-description">9 990₽ x 0 суток</div>
-                        <div class="room-price__for-room-price js-room-price__for-room-price">0₽</div>
-                      </div>
-                      <div class="room-price__for-services">
-                        <div class="room-price__for-services-left-wrapper">
-                          <div class="room-price__for-services-description">Сбор за услуги: скидка 2179₽</div>
-                          <div class="room-price__for-services-info">i</div>
-                        </div>
-                        <div class="room-price__for-services-price js-room-price__for-services-price">0₽</div>
-                      </div>
-                      <div class="room-price__for-addservices">
-                        <div class="room-price__for-addservices-left-wrapper">
-                          <div class="room-price__for-addservices-description">Сбор за дополнительные услуги</div>
-                          <div class="room-price__for-addservices-info">i</div>
-                        </div>
-                        <div class="room-price__for-addservices-price js-room-price__for-addservices-price">300₽</div>
-                      </div>
-                    </div>
-                    <div class="room-price__total">
-                      <div class="room-price__total-text">Итого</div>
-                      <div class="room-price__total-separator"></div>
-                      <div class="room-price__total-price js-room-price__total-price">0₽</div>
-                    </div>
-                    <div class="room-price__book-a-room">
-                          <div class="button">
-                            <div class="button__wrapper-rich">
-                              <div class="button__arrow"><i class="material-icons js-material-icons">arrow_forward</i>
-                              </div>
-                              <div class="button__text">забронировать</div>
-                              <input class="button__wrapper-rich_rich" type="submit" name="bookARoom" value="забронировать">
-                            </div>
-                          </div>
-                    </div>
-                  </form>
-                </div>
-          </div>
-        </div>
-      </div>
-    </main>
-        <footer class="footer-with-copyright">
-          <div class="footer-with-copyright__wrapper-shadow-top">
-            <div class="footer-with-copyright__wrapper-main">
-              <div class="footer-with-copyright__logo-and-description">
-                <figure class="footer-with-copyright__logo"><img class="logo" src="./img/Logosite.svg" alt="logo">
+  <body class="pages">
+    <div class="website-pages-template">
+      <div class="website-pages-template__content">
+            <header class="header">
+              <div class="header__wrapper">
+                <figure class="header__logo"><img class="logo" src="./img/Logosite.svg" alt="logo">
                 </figure>
-                <div class="footer-with-copyright__description">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
-              </div>
-              <div class="footer-with-copyright__wrapper-right">
-                <div class="footer-with-copyright__menu">
-                  <div class="footer-with-copyright__menu-item">
-                    <h3 class="footer-with-copyright__menu-item-header">навигация</h3><a class="footer-with-copyright__menu-item-option" href="/about-us">О нас</a><a class="footer-with-copyright__menu-item-option" href="/news">Новости</a><a class="footer-with-copyright__menu-item-option" href="/support-service">Служба поддержки</a><a class="footer-with-copyright__menu-item-option" href="/services">Услуги</a>
-                  </div>
-                  <div class="footer-with-copyright__menu-item">
-                    <h3 class="footer-with-copyright__menu-item-header">о нас</h3><a class="footer-with-copyright__menu-item-option" href="/about-us/about-service">О сервисе</a><a class="footer-with-copyright__menu-item-option" href="/about-us/our-team">Наша команда</a><a class="footer-with-copyright__menu-item-option" href="/about-us/vacancies">Вакансии</a><a class="footer-with-copyright__menu-item-option" href="/about-us/investors">Инвесторы</a>
-                  </div>
-                  <div class="footer-with-copyright__menu-item">
-                    <h3 class="footer-with-copyright__menu-item-header">Служба поддержки</h3><a class="footer-with-copyright__menu-item-option" href="/support-service/agreements">Соглашения</a><a class="footer-with-copyright__menu-item-option" href="/support-service/socials">Сообщества</a><a class="footer-with-copyright__menu-item-option" href="/support-service/contact">Связь с нами</a>
-                  </div>
-                </div>
-                <div class="footer-with-copyright__subscribe">
-                  <h3 class="footer-with-copyright__subscribe-header">Подписка</h3>
-                  <div class="footer-with-copyright__subscribe-description">Получайте специальные предложения и новости сервиса</div>
-                  <div class="footer-with-copyright__subscribe-field">
-                        <div class="subscription-text-field">
-                          <div class="subscription-text-field__button-wrapper">
-                            <div class="subscription-text-field__button-arrow"><i class="material-icons js-material-icons">arrow_forward</i>
-                            </div>
-                            <input class="subscription-text-field__button" type="button" name="footerSubscribe" value="footerSubscribe">
+                <nav class="header__navigation-wrapper">
+                  <div class="header__navigation"><a class="header__navigation-link_short header__navigation-link" href="/about-us">О нас</a>
+                        <div class="dropdown-menu">
+                          <div class="dropdown-menu__text">Услуги</div>
+                          <div class="dropdown-menu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
                           </div>
-                          <div class="subscription-text-field__text-field">
-                                <input class="text-field  js-text-field text-field_addPaddingRight" type="email" placeholder="Email" name="footerSubscribe">
+                          <div class="dropdown-menu__links"><a class="dropdown-menu__link" href="/service/1">Service1</a><a class="dropdown-menu__link" href="/service/2">Service2</a><a class="dropdown-menu__link" href="/service/3">Service3</a>
+                          </div>
+                        </div><a class="header__navigation-link_short header__navigation-link" href="/vacancies">Вакансии</a><a class="header__navigation-link_short header__navigation-link" href="/news">Новости</a>
+                        <div class="dropdown-menu">
+                          <div class="dropdown-menu__text">Соглашения</div>
+                          <div class="dropdown-menu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
+                          </div>
+                          <div class="dropdown-menu__links"><a class="dropdown-menu__link" href="/agreements/1">agreements1</a><a class="dropdown-menu__link" href="/agreements/2">agreements2</a><a class="dropdown-menu__link" href="/agreements/3">agreements3</a>
                           </div>
                         </div>
                   </div>
+                  <div class="header__hamburger-menu">
+                        <nav class="hamburger-menu">
+                          <input class="hamburger-menu__toggle" type="checkbox">
+                          <div class="hamburger-menu__hamburger">
+                            <div class="hamburger-menu__lines"></div>
+                          </div>
+                          <ul class="hamburger-menu__items">
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="/about-us">О нас</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="/services">Услуги</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="/vacancies">Вакансии</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="/news">Новости</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="/agreements">Соглашения</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="./login">войти</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="./sign-up">зарегистрироваться</a></li>
+                          </ul>
+                        </nav>
+                  </div>
+                  <div class="header__sign">
+                    <div class="header__unlogged">
+                      <div class="header__login-button">
+                            <div class="button">
+                              <div class="button__wrapper-short"><a class="button__wrapper-short_bordered" href="/moke">войти</a></div>
+                            </div>
+                      </div>
+                      <div class="header__sign-up-button">
+                            <div class="button">
+                              <div class="button__wrapper-short"><a class="button__wrapper-short_gradient-background" href="/moke">зарегистрироваться</a></div>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="header__logged header__logged_hide">
+                      <div class="header__username"></div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </header>
+        <main class="room-details">
+          <figure class="room-details__wrapper-pic">
+            <div class="room-details__pic-main"><img class="room-details__pic-main-img" src="./img/mainpic.png" alt="room view">
+              <div class="room-details__pic-right"><img class="room-details__pic-right-img" src="./img/rtop.png" alt="room view"><img class="room-details__pic-right-img" src="./img/rbot.png" alt="room view"></div>
+            </div>
+          </figure>
+          <div class="room-details__wrapper-main">
+            <div class="room-details__main">
+              <div class="room-details__datails">
+                <div class="room-details__wrapper-info">
+                  <article class="room-details__info">
+                    <h2 class="room-details__info-header">Сведения о номере</h2>
+                            <figure class="icon-text-list">
+                              <div class="icon-text-list__wrapper icon-text-list__wrapper_without-lust-border">
+                                <div class="icon-text-list__icon"><i class="material-icons js-material-icons material-icons_font-size-48">insert_emoticon</i>
+                                </div>
+                                <div class="icon-text-list__content">
+                                  <div class="icon-text-list__header">Комфорт</div>
+                                  <div class="icon-text-list__text">Шумопоглощающие стены</div>
+                                </div>
+                              </div>
+                              <div class="icon-text-list__wrapper icon-text-list__wrapper_without-lust-border">
+                                <div class="icon-text-list__icon"><i class="material-icons js-material-icons material-icons_font-size-48">location_city</i>
+                                </div>
+                                <div class="icon-text-list__content">
+                                  <div class="icon-text-list__header">Удобство</div>
+                                  <div class="icon-text-list__text">Окно в каждой из спален</div>
+                                </div>
+                              </div>
+                              <div class="icon-text-list__wrapper icon-text-list__wrapper_without-lust-border">
+                                <div class="icon-text-list__icon"><i class="material-icons js-material-icons material-icons_font-size-48">whatshot</i>
+                                </div>
+                                <div class="icon-text-list__content">
+                                  <div class="icon-text-list__header">Уют</div>
+                                  <div class="icon-text-list__text">Номер оснащён камином</div>
+                                </div>
+                              </div>
+                            </figure>
+                  </article>
+                  <article class="room-details__feeling">
+                    <h2 class="room-details__feeling-header">Впечатления от номера</h2>
+                    <div class="room-details__wrapper-feeling">
+                      <div class="room-details__feeling-chart">
+                                <figure class="donut-chart js-donut-chart"></figure>
+                      </div>
+                      <div class="room-details__feeling-descriptions">
+                                <ul class="bullet-list">
+                                  <li class="bullet-list__wrapper bullet-list__wrapper_without-margin-bottom">
+                                    <div class="bullet-list__li bullet-list__li_bg-color-orange"></div>
+                                    <div class="bullet-list__text bullet-list__text_with-padding-left">Великолепно</div>
+                                  </li>
+                                  <li class="bullet-list__wrapper bullet-list__wrapper_without-margin-bottom">
+                                    <div class="bullet-list__li bullet-list__li_bg-color-green"></div>
+                                    <div class="bullet-list__text bullet-list__text_with-padding-left">Хорошо</div>
+                                  </li>
+                                  <li class="bullet-list__wrapper bullet-list__wrapper_without-margin-bottom">
+                                    <div class="bullet-list__li bullet-list__li_bg-color-purple"></div>
+                                    <div class="bullet-list__text bullet-list__text_with-padding-left">Удовлетворительно</div>
+                                  </li>
+                                  <li class="bullet-list__wrapper bullet-list__wrapper_without-margin-bottom">
+                                    <div class="bullet-list__li bullet-list__li_bg-color-dark"></div>
+                                    <div class="bullet-list__text bullet-list__text_with-padding-left">Разочарован</div>
+                                  </li>
+                                </ul>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <article class="room-details__wrapper-comments">
+                  <div class="room-details__wrapper-comments-header">
+                    <h2 class="room-details__comments-header">Отзывы посетителей номера</h2>
+                    <div class="room-details__comments-total">2 отзыва</div>
+                  </div>
+                  <div class="room-details__comments">
+                            <article class="comment">
+                              <div class="comment__head"><img class="comment__avatar" src="./img/avatar1.png" alt="Мурад Сарафанов">
+                                <div class="comment__avatar-text">
+                                  <div class="comment__avatar-name">Мурад Сарафанов</div>
+                                  <div class="comment__avatar-date">5 дней назад</div>
+                                </div>
+                              </div>
+                              <div class="comment__body">
+                                <div class="comment__like">
+                                          <figure class="like-button js-like-button like-button_active">
+                                            <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite</i>
+                                            </div>
+                                            <div class="like-button__number">12</div>
+                                          </figure>
+                                </div>
+                                <div class="comment__content">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей</div>
+                              </div>
+                            </article>
+                  </div>
+                  <div class="room-details__comments">
+                            <article class="comment">
+                              <div class="comment__head"><img class="comment__avatar" src="./img/avatar2.png" alt="Патрисия Стёклышкова">
+                                <div class="comment__avatar-text">
+                                  <div class="comment__avatar-name">Патрисия Стёклышкова</div>
+                                  <div class="comment__avatar-date">Неделю назад</div>
+                                </div>
+                              </div>
+                              <div class="comment__body">
+                                <div class="comment__like">
+                                          <figure class="like-button js-like-button">
+                                            <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite_border</i>
+                                            </div>
+                                            <div class="like-button__number">2</div>
+                                          </figure>
+                                </div>
+                                <div class="comment__content">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент</div>
+                              </div>
+                            </article>
+                  </div>
+                </article>
+                <div class="room-details__wrapper-rulles">
+                  <article class="room-details__rulles">
+                    <h2 class="room-details__rulles-header">Правила</h2>
+                            <ul class="bullet-list">
+                              <li class="bullet-list__wrapper">
+                                <div class="bullet-list__li"></div>
+                                <div class="bullet-list__text">Нельзя с питомцами</div>
+                              </li>
+                              <li class="bullet-list__wrapper">
+                                <div class="bullet-list__li"></div>
+                                <div class="bullet-list__text">Без вечеринок и мероприятий</div>
+                              </li>
+                              <li class="bullet-list__wrapper">
+                                <div class="bullet-list__li"></div>
+                                <div class="bullet-list__text">Время прибытия — после 13:00, а выезд до 12:00</div>
+                              </li>
+                            </ul>
+                  </article>
+                  <article class="room-details__cancel">
+                    <h2 class="room-details__cancel-header">Отмена</h2>
+                    <div class="room-details__cancel-text">Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</div>
+                  </article>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="footer-with-copyright__wrapper-shadow-bottom">
-            <div class="footer-with-copyright__wrapper-bottom">
-              <div class="footer-with-copyright__copyright">Copyright © 2018 Toxin отель. Все права зачищены.</div>
-              <div class="footer-with-copyright__social">
-                    <figure class="social-icons"><a class="social-icons__ico" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/twitter.png" alt="Twitter"></a><a class="social-icons__ico" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/facebook.png" alt="Facebook"></a><a class="social-icons__ico" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/instagram.png" alt="Instagram"></a>
-                    </figure>
+              <div class="room-details__price">
+                        <div class="room-price js-room-price">
+                          <form class="room-price__form" action="/moke">
+                            <div class="room-price__header">
+                              <div class="room-price__room-number">
+                                <div class="room-price__room-number-text-number">№</div>
+                                <div class="room-price__room-number-text">888</div>
+                                <div class="room-price__room-number-luxe">люкс</div>
+                              </div>
+                              <div class="room-price__price">
+                                <div class="room-price__price-sum js-room-price__price-sum">9 990₽</div>
+                                <div class="room-price__price-sum-per-day">в сутки</div>
+                              </div>
+                            </div>
+                            <div class="room-price__date">
+                                      <section class="date-dropdown js-date-dropdown">
+                                        <div class="date-dropdown__wrapper-filtered">
+                                          <div class="date-dropdown__wrapper-from">
+                                            <h3 class="date-dropdown__start-text">прибытие</h3>
+                                            <div class="date-dropdown__input-wrapper">
+                                              <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
+                                              </div>
+                                              <input class="date-dropdown__input-from js-date-dropdown__input-from" type="text" readonly placeholder="ДД.ММ.ГГГГ">
+                                            </div>
+                                          </div>
+                                          <div class="date-dropdown__wrapper-to">
+                                            <h3 class="date-dropdown__finish-text">выезд</h3>
+                                            <div class="date-dropdown__input-wrapper">
+                                              <div class="date-dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
+                                              </div>
+                                              <input class="date-dropdown__input-to js-date-dropdown__input-to" type="text" readonly placeholder="ДД.ММ.ГГГГ">
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </section>
+                            </div>
+                            <div class="room-price__guests">
+                                      <div class="label">
+                                        <h3 class="label__text">гости</h3>
+                                        <div class="label__caption"></div>
+                                      </div>
+                                      <section class="dropdown js-dropdown">
+                                        <div class="dropdown__wrapper">
+                                          <div class="dropdown__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
+                                          </div>
+                                          <div class="dropdown__select js-dropdown__select"><span class="dropdown__text js-dropdown__text">Сколько гостей</span></div>
+                                          <div class="dropdown__options js-dropdown__options">
+                                                    <section class="dropdown-option js-dropdown-option">
+                                                      <h3 class="dropdown-option__text js-dropdown-option__text">взрослые</h3>
+                                                      <div class="dropdown-option__button-block">
+                                                        <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
+                                                        <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
+                                                      </div>
+                                                    </section>
+                                                    <section class="dropdown-option js-dropdown-option">
+                                                      <h3 class="dropdown-option__text js-dropdown-option__text">дети</h3>
+                                                      <div class="dropdown-option__button-block">
+                                                        <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
+                                                        <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
+                                                      </div>
+                                                    </section>
+                                                    <section class="dropdown-option js-dropdown-option">
+                                                      <h3 class="dropdown-option__text js-dropdown-option__text">младенцы</h3>
+                                                      <div class="dropdown-option__button-block">
+                                                        <div class="dropdown-option__circle js-dropdown-option__circle">-</div>
+                                                        <h3 class="dropdown-option__number js-dropdown-option__number">0</h3>
+                                                        <div class="dropdown-option__circle js-dropdown-option__circle">+</div>
+                                                      </div>
+                                                    </section>
+                                                    <div class="dropdown-option-button js-dropdown-option-button">
+                                                      <button class="dropdown-option-button__drop js-dropdown-option-button__drop" type="button">очистить</button>
+                                                      <button class="dropdown-option-button__apply js-dropdown-option-button__apply" type="button">применить</button>
+                                                    </div>
+                                          </div>
+                                        </div>
+                                      </section>
+                            </div>
+                            <div class="room-price__calculate js-room-price__calculate">
+                              <div class="room-price__for-room">
+                                <div class="room-price__for-room-description js-room-price__for-room-description">9 990₽ x 0 суток</div>
+                                <div class="room-price__for-room-price js-room-price__for-room-price">0₽</div>
+                              </div>
+                              <div class="room-price__for-services">
+                                <div class="room-price__for-services-left-wrapper">
+                                  <div class="room-price__for-services-description">Сбор за услуги: скидка 2179₽</div>
+                                  <div class="room-price__for-services-info">i</div>
+                                </div>
+                                <div class="room-price__for-services-price js-room-price__for-services-price">0₽</div>
+                              </div>
+                              <div class="room-price__for-addservices">
+                                <div class="room-price__for-addservices-left-wrapper">
+                                  <div class="room-price__for-addservices-description">Сбор за дополнительные услуги</div>
+                                  <div class="room-price__for-addservices-info">i</div>
+                                </div>
+                                <div class="room-price__for-addservices-price js-room-price__for-addservices-price">300₽</div>
+                              </div>
+                            </div>
+                            <div class="room-price__total">
+                              <div class="room-price__total-text">Итого</div>
+                              <div class="room-price__total-separator"></div>
+                              <div class="room-price__total-price js-room-price__total-price">0₽</div>
+                            </div>
+                            <div class="room-price__book-a-room">
+                                      <div class="button">
+                                        <div class="button__wrapper-rich">
+                                          <div class="button__arrow"><i class="material-icons js-material-icons">arrow_forward</i>
+                                          </div>
+                                          <div class="button__text">забронировать</div>
+                                          <input class="button__wrapper-rich_rich" type="submit" name="bookARoom" value="забронировать">
+                                        </div>
+                                      </div>
+                            </div>
+                          </form>
+                        </div>
               </div>
             </div>
           </div>
-        </footer>
+        </main>
+      </div>
+      <div class="website-pages-template__footer">
+            <footer class="footer-with-copyright">
+              <div class="footer-with-copyright__wrapper-shadow-top">
+                <div class="footer-with-copyright__wrapper-main">
+                  <div class="footer-with-copyright__logo-and-description">
+                    <figure class="footer-with-copyright__logo"><img class="logo" src="./img/Logosite.svg" alt="logo">
+                    </figure>
+                    <div class="footer-with-copyright__description">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
+                  </div>
+                  <div class="footer-with-copyright__wrapper-right">
+                    <div class="footer-with-copyright__menu">
+                      <div class="footer-with-copyright__menu-item">
+                        <h3 class="footer-with-copyright__menu-item-header">навигация</h3><a class="footer-with-copyright__menu-item-option" href="/about-us">О нас</a><a class="footer-with-copyright__menu-item-option" href="/news">Новости</a><a class="footer-with-copyright__menu-item-option" href="/support-service">Служба поддержки</a><a class="footer-with-copyright__menu-item-option" href="/services">Услуги</a>
+                      </div>
+                      <div class="footer-with-copyright__menu-item">
+                        <h3 class="footer-with-copyright__menu-item-header">о нас</h3><a class="footer-with-copyright__menu-item-option" href="/about-us/about-service">О сервисе</a><a class="footer-with-copyright__menu-item-option" href="/about-us/our-team">Наша команда</a><a class="footer-with-copyright__menu-item-option" href="/about-us/vacancies">Вакансии</a><a class="footer-with-copyright__menu-item-option" href="/about-us/investors">Инвесторы</a>
+                      </div>
+                      <div class="footer-with-copyright__menu-item">
+                        <h3 class="footer-with-copyright__menu-item-header">Служба поддержки</h3><a class="footer-with-copyright__menu-item-option" href="/support-service/agreements">Соглашения</a><a class="footer-with-copyright__menu-item-option" href="/support-service/socials">Сообщества</a><a class="footer-with-copyright__menu-item-option" href="/support-service/contact">Связь с нами</a>
+                      </div>
+                    </div>
+                    <div class="footer-with-copyright__subscribe">
+                      <h3 class="footer-with-copyright__subscribe-header">Подписка</h3>
+                      <div class="footer-with-copyright__subscribe-description">Получайте специальные предложения и новости сервиса</div>
+                      <div class="footer-with-copyright__subscribe-field">
+                            <div class="subscription-text-field">
+                              <div class="subscription-text-field__button-wrapper">
+                                <div class="subscription-text-field__button-arrow"><i class="material-icons js-material-icons">arrow_forward</i>
+                                </div>
+                                <input class="subscription-text-field__button" type="button" name="footerSubscribe" value="footerSubscribe">
+                              </div>
+                              <div class="subscription-text-field__text-field">
+                                    <input class="text-field  js-text-field text-field_addPaddingRight" type="email" placeholder="Email" name="footerSubscribe">
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-with-copyright__wrapper-shadow-bottom">
+                <div class="footer-with-copyright__wrapper-bottom">
+                  <div class="footer-with-copyright__copyright">Copyright © 2018 Toxin отель. Все права зачищены.</div>
+                  <div class="footer-with-copyright__social">
+                        <figure class="social-icons"><a class="social-icons__ico" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/twitter.png" alt="Twitter"></a><a class="social-icons__ico" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/facebook.png" alt="Facebook"></a><a class="social-icons__ico" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/instagram.png" alt="Instagram"></a>
+                        </figure>
+                  </div>
+                </div>
+              </div>
+            </footer>
+      </div>
+    </div>
   <script type="text/javascript" src="./scripts/room-details.js"></script></body>
 </html>

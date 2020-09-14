@@ -14,174 +14,199 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   <link href="./styles/registration.min.css" rel="stylesheet"></head>
-  <body class="pages" bgcolor="#FFFFFF">
-        <header class="header">
-          <div class="header__wrapper">
-            <figure class="header__logo"><img class="logo" src="./img/Logosite.svg" alt="logo">
-            </figure>
-            <nav class="header__navigation-wrapper">
-              <div class="header__navigation"><a class="header__navigation-link_short header__navigation-link" href="/about-us">О нас</a>
-                    <div class="dropdown-menu">
-                      <div class="dropdown-menu__text">Услуги</div>
-                      <div class="dropdown-menu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
+  <body class="pages">
+    <div class="website-pages-template">
+      <div class="website-pages-template__content">
+            <header class="header">
+              <div class="header__wrapper">
+                <figure class="header__logo"><img class="logo" src="./img/Logosite.svg" alt="logo">
+                </figure>
+                <nav class="header__navigation-wrapper">
+                  <div class="header__navigation"><a class="header__navigation-link_short header__navigation-link" href="/about-us">О нас</a>
+                        <div class="dropdown-menu">
+                          <div class="dropdown-menu__text">Услуги</div>
+                          <div class="dropdown-menu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
+                          </div>
+                          <div class="dropdown-menu__links"><a class="dropdown-menu__link" href="/service/1">Service1</a><a class="dropdown-menu__link" href="/service/2">Service2</a><a class="dropdown-menu__link" href="/service/3">Service3</a>
+                          </div>
+                        </div><a class="header__navigation-link_short header__navigation-link" href="/vacancies">Вакансии</a><a class="header__navigation-link_short header__navigation-link" href="/news">Новости</a>
+                        <div class="dropdown-menu">
+                          <div class="dropdown-menu__text">Соглашения</div>
+                          <div class="dropdown-menu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
+                          </div>
+                          <div class="dropdown-menu__links"><a class="dropdown-menu__link" href="/agreements/1">agreements1</a><a class="dropdown-menu__link" href="/agreements/2">agreements2</a><a class="dropdown-menu__link" href="/agreements/3">agreements3</a>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="header__hamburger-menu">
+                        <nav class="hamburger-menu">
+                          <input class="hamburger-menu__toggle" type="checkbox">
+                          <div class="hamburger-menu__hamburger">
+                            <div class="hamburger-menu__lines"></div>
+                          </div>
+                          <ul class="hamburger-menu__items">
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="/about-us">О нас</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="/services">Услуги</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="/vacancies">Вакансии</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="/news">Новости</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="/agreements">Соглашения</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="./login">войти</a></li>
+                            <li class="hamburger-menu__item"><a class="hamburger-menu__item-link" href="./sign-up">зарегистрироваться</a></li>
+                          </ul>
+                        </nav>
+                  </div>
+                  <div class="header__sign">
+                    <div class="header__unlogged">
+                      <div class="header__login-button">
+                            <div class="button">
+                              <div class="button__wrapper-short"><a class="button__wrapper-short_bordered" href="/moke">войти</a></div>
+                            </div>
                       </div>
-                      <div class="dropdown-menu__links"><a class="dropdown-menu__link" href="/service/1">Service1</a><a class="dropdown-menu__link" href="/service/2">Service2</a><a class="dropdown-menu__link" href="/service/3">Service3</a>
-                      </div>
-                    </div><a class="header__navigation-link_short header__navigation-link" href="/vacancies">Вакансии</a><a class="header__navigation-link_short header__navigation-link" href="/news">Новости</a>
-                    <div class="dropdown-menu">
-                      <div class="dropdown-menu__text">Соглашения</div>
-                      <div class="dropdown-menu__arrow"><i class="material-icons js-material-icons">keyboard_arrow_down</i>
-                      </div>
-                      <div class="dropdown-menu__links"><a class="dropdown-menu__link" href="/agreements/1">agreements1</a><a class="dropdown-menu__link" href="/agreements/2">agreements2</a><a class="dropdown-menu__link" href="/agreements/3">agreements3</a>
+                      <div class="header__sign-up-button">
+                            <div class="button">
+                              <div class="button__wrapper-short"><a class="button__wrapper-short_gradient-background" href="/moke">зарегистрироваться</a></div>
+                            </div>
                       </div>
                     </div>
+                    <div class="header__logged header__logged_hide">
+                      <div class="header__username"></div>
+                    </div>
+                  </div>
+                </nav>
               </div>
-              <div class="header__sign">
-                <div class="header__unlogged">
-                  <div class="header__login-button">
-                        <div class="button">
-                          <div class="button__wrapper-short"><a class="button__wrapper-short_bordered" href="/moke">войти</a></div>
+            </header>
+        <main class="registration">
+          <div class="registration__form">
+                    <div class="sign-up">
+                      <h1 class="sign-up__header">Регистрация аккаунта</h1>
+                      <form class="sign-up__form" action="/moke">
+                        <div class="sign-up__name">
+                                  <input class="text-field  js-text-field" type="text" placeholder="Имя" name="signUpName">
                         </div>
-                  </div>
-                  <div class="header__sign-up-button">
-                        <div class="button">
-                          <div class="button__wrapper-short"><a class="button__wrapper-short_gradient-background" href="/moke">зарегистрироваться</a></div>
+                        <div class="sign-up__surname">
+                                  <input class="text-field  js-text-field" type="text" placeholder="Фамилия" name="signUpSurname">
                         </div>
-                  </div>
-                </div>
-                <div class="header__logged header__logged_hide">
-                  <div class="header__username"></div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </header>
-    <main class="registration">
-      <div class="registration__form">
-            <div class="sign-up">
-              <h1 class="sign-up__header">Регистрация аккаунта</h1>
-              <form class="sign-up__form" action="/moke">
-                <div class="sign-up__name">
-                      <input class="text-field  js-text-field" type="text" placeholder="Имя" name="signUpName">
-                </div>
-                <div class="sign-up__surname">
-                      <input class="text-field  js-text-field" type="text" placeholder="Фамилия" name="signUpSurname">
-                </div>
-                <div class="sign-up__sex">
-                      <section class="radio-buttons">
-                        <label class="radio-buttons__label">
-                          <input class="radio-buttons__input" type="radio" name="radioButtons" value="men" checked>
-                          <div class="radio-buttons__text">
-                            <div class="radio-buttons__content">Мужчина</div>
-                          </div>
-                        </label>
-                        <label class="radio-buttons__label">
-                          <input class="radio-buttons__input" type="radio" name="radioButtons" value="women">
-                          <div class="radio-buttons__text">
-                            <div class="radio-buttons__content">Женщина</div>
-                          </div>
-                        </label>
-                      </section>
-                </div>
-                <div class="sign-up__birthday">
-                      <div class="label label_margin-bottom-5">
-                        <h3 class="label__text">дата рождения</h3>
-                        <div class="label__caption"></div>
-                      </div>
-                      <input class="text-field  js-text-field text-field_masked js-text-field_masked" type="text" placeholder="ДД.ММ.ГГГГ" name="birthday">
-                </div>
-                <div class="sign-up__authorization-data">
-                      <div class="label label_margin-bottom-5">
-                        <h3 class="label__text">данные для входа в сервис</h3>
-                        <div class="label__caption"></div>
-                      </div>
-                  <div class="sign-up__e-mail">
-                        <input class="text-field  js-text-field" type="text" placeholder="Email" name="singEmail">
-                  </div>
-                  <div class="sign-up__password">
-                        <input class="text-field  js-text-field" type="password" placeholder="Пароль" name="signPassword">
-                  </div>
-                </div>
-                <div class="sign-up__mailing">
-                      <div class="toggle">
-                        <label class="toggle__label">
-                          <input class="toggle__input" type="checkbox" name="mailing">
-                          <div class="toggle__text">
-                            <div class="toggle__content">Получать спецпредложения</div>
-                          </div>
-                        </label>
-                      </div>
-                </div>
-                <div class="sign-up__go-to-payment">
-                      <div class="button">
-                        <div class="button__wrapper-rich">
-                          <div class="button__arrow"><i class="material-icons js-material-icons">arrow_forward</i>
-                          </div>
-                          <div class="button__text">перейти к оплате</div>
-                          <input class="button__wrapper-rich_rich" type="submit" name="goToPayment" value="перейти к оплате">
+                        <div class="sign-up__sex">
+                                  <section class="radio-buttons">
+                                    <label class="radio-buttons__label">
+                                      <input class="radio-buttons__input" type="radio" name="radioButtons" value="men" checked>
+                                      <div class="radio-buttons__text">
+                                        <div class="radio-buttons__content">Мужчина</div>
+                                      </div>
+                                    </label>
+                                    <label class="radio-buttons__label">
+                                      <input class="radio-buttons__input" type="radio" name="radioButtons" value="women">
+                                      <div class="radio-buttons__text">
+                                        <div class="radio-buttons__content">Женщина</div>
+                                      </div>
+                                    </label>
+                                  </section>
                         </div>
-                      </div>
-                </div>
-                <div class="sign-up__go-to-sign-in">
-                  <div class="sign-up__sign-in-text">Уже есть аккаунт на Toxin</div>
-                  <div class="sign-up__sign-in-button">
-                        <div class="button">
-                          <div class="button__wrapper"><a class="button__wrapper_bordered" href="/moke">войти</a></div>
+                        <div class="sign-up__birthday">
+                                  <div class="label">
+                                    <h3 class="label__text">дата рождения</h3>
+                                    <div class="label__caption"></div>
+                                  </div>
+                                  <input class="text-field  js-text-field text-field_masked js-text-field_masked" type="text" placeholder="ДД.ММ.ГГГГ" name="birthday">
                         </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-      </div>
-    </main>
-        <footer class="footer-with-copyright">
-          <div class="footer-with-copyright__wrapper-shadow-top">
-            <div class="footer-with-copyright__wrapper-main">
-              <div class="footer-with-copyright__logo-and-description">
-                <figure class="footer-with-copyright__logo"><img class="logo" src="./img/Logosite.svg" alt="logo">
-                </figure>
-                <div class="footer-with-copyright__description">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
-              </div>
-              <div class="footer-with-copyright__wrapper-right">
-                <div class="footer-with-copyright__menu">
-                  <div class="footer-with-copyright__menu-item">
-                    <h3 class="footer-with-copyright__menu-item-header">навигация</h3><a class="footer-with-copyright__menu-item-option" href="/about-us">О нас</a><a class="footer-with-copyright__menu-item-option" href="/news">Новости</a><a class="footer-with-copyright__menu-item-option" href="/support-service">Служба поддержки</a><a class="footer-with-copyright__menu-item-option" href="/services">Услуги</a>
-                  </div>
-                  <div class="footer-with-copyright__menu-item">
-                    <h3 class="footer-with-copyright__menu-item-header">о нас</h3><a class="footer-with-copyright__menu-item-option" href="/about-us/about-service">О сервисе</a><a class="footer-with-copyright__menu-item-option" href="/about-us/our-team">Наша команда</a><a class="footer-with-copyright__menu-item-option" href="/about-us/vacancies">Вакансии</a><a class="footer-with-copyright__menu-item-option" href="/about-us/investors">Инвесторы</a>
-                  </div>
-                  <div class="footer-with-copyright__menu-item">
-                    <h3 class="footer-with-copyright__menu-item-header">Служба поддержки</h3><a class="footer-with-copyright__menu-item-option" href="/support-service/agreements">Соглашения</a><a class="footer-with-copyright__menu-item-option" href="/support-service/socials">Сообщества</a><a class="footer-with-copyright__menu-item-option" href="/support-service/contact">Связь с нами</a>
-                  </div>
-                </div>
-                <div class="footer-with-copyright__subscribe">
-                  <h3 class="footer-with-copyright__subscribe-header">Подписка</h3>
-                  <div class="footer-with-copyright__subscribe-description">Получайте специальные предложения и новости сервиса</div>
-                  <div class="footer-with-copyright__subscribe-field">
-                        <div class="subscription-text-field">
-                          <div class="subscription-text-field__button-wrapper">
-                            <div class="subscription-text-field__button-arrow"><i class="material-icons js-material-icons">arrow_forward</i>
+                        <div class="sign-up__authorization-data">
+                                  <div class="label">
+                                    <h3 class="label__text">данные для входа в сервис</h3>
+                                    <div class="label__caption"></div>
+                                  </div>
+                          <div class="sign-up__authorization-data-inputs">
+                            <div class="sign-up__e-mail">
+                                      <input class="text-field  js-text-field" type="text" placeholder="Email" name="singEmail">
                             </div>
-                            <input class="subscription-text-field__button" type="button" name="footerSubscribe" value="footerSubscribe">
-                          </div>
-                          <div class="subscription-text-field__text-field">
-                                <input class="text-field  js-text-field text-field_addPaddingRight" type="email" placeholder="Email" name="footerSubscribe">
+                            <div class="sign-up__password">
+                                      <input class="text-field  js-text-field" type="password" placeholder="Пароль" name="signPassword">
+                            </div>
                           </div>
                         </div>
+                        <div class="sign-up__mailing">
+                                  <div class="toggle">
+                                    <label class="toggle__label">
+                                      <input class="toggle__input" type="checkbox" name="mailing">
+                                      <div class="toggle__text">
+                                        <div class="toggle__content">Получать спецпредложения</div>
+                                      </div>
+                                    </label>
+                                  </div>
+                        </div>
+                        <div class="sign-up__go-to-payment">
+                                  <div class="button">
+                                    <div class="button__wrapper-rich">
+                                      <div class="button__arrow"><i class="material-icons js-material-icons">arrow_forward</i>
+                                      </div>
+                                      <div class="button__text">перейти к оплате</div>
+                                      <input class="button__wrapper-rich_rich" type="submit" name="goToPayment" value="перейти к оплате">
+                                    </div>
+                                  </div>
+                        </div>
+                        <div class="sign-up__go-to-sign-in">
+                          <div class="sign-up__sign-in-text">Уже есть аккаунт на Toxin</div>
+                          <div class="sign-up__sign-in-button">
+                                    <div class="button">
+                                      <div class="button__wrapper"><a class="button__wrapper_bordered" href="/moke">войти</a></div>
+                                    </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+          </div>
+        </main>
+      </div>
+      <div class="website-pages-template__footer">
+            <footer class="footer-with-copyright">
+              <div class="footer-with-copyright__wrapper-shadow-top">
+                <div class="footer-with-copyright__wrapper-main">
+                  <div class="footer-with-copyright__logo-and-description">
+                    <figure class="footer-with-copyright__logo"><img class="logo" src="./img/Logosite.svg" alt="logo">
+                    </figure>
+                    <div class="footer-with-copyright__description">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
+                  </div>
+                  <div class="footer-with-copyright__wrapper-right">
+                    <div class="footer-with-copyright__menu">
+                      <div class="footer-with-copyright__menu-item">
+                        <h3 class="footer-with-copyright__menu-item-header">навигация</h3><a class="footer-with-copyright__menu-item-option" href="/about-us">О нас</a><a class="footer-with-copyright__menu-item-option" href="/news">Новости</a><a class="footer-with-copyright__menu-item-option" href="/support-service">Служба поддержки</a><a class="footer-with-copyright__menu-item-option" href="/services">Услуги</a>
+                      </div>
+                      <div class="footer-with-copyright__menu-item">
+                        <h3 class="footer-with-copyright__menu-item-header">о нас</h3><a class="footer-with-copyright__menu-item-option" href="/about-us/about-service">О сервисе</a><a class="footer-with-copyright__menu-item-option" href="/about-us/our-team">Наша команда</a><a class="footer-with-copyright__menu-item-option" href="/about-us/vacancies">Вакансии</a><a class="footer-with-copyright__menu-item-option" href="/about-us/investors">Инвесторы</a>
+                      </div>
+                      <div class="footer-with-copyright__menu-item">
+                        <h3 class="footer-with-copyright__menu-item-header">Служба поддержки</h3><a class="footer-with-copyright__menu-item-option" href="/support-service/agreements">Соглашения</a><a class="footer-with-copyright__menu-item-option" href="/support-service/socials">Сообщества</a><a class="footer-with-copyright__menu-item-option" href="/support-service/contact">Связь с нами</a>
+                      </div>
+                    </div>
+                    <div class="footer-with-copyright__subscribe">
+                      <h3 class="footer-with-copyright__subscribe-header">Подписка</h3>
+                      <div class="footer-with-copyright__subscribe-description">Получайте специальные предложения и новости сервиса</div>
+                      <div class="footer-with-copyright__subscribe-field">
+                            <div class="subscription-text-field">
+                              <div class="subscription-text-field__button-wrapper">
+                                <div class="subscription-text-field__button-arrow"><i class="material-icons js-material-icons">arrow_forward</i>
+                                </div>
+                                <input class="subscription-text-field__button" type="button" name="footerSubscribe" value="footerSubscribe">
+                              </div>
+                              <div class="subscription-text-field__text-field">
+                                        <input class="text-field  js-text-field text-field_addPaddingRight" type="email" placeholder="Email" name="footerSubscribe">
+                              </div>
+                            </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="footer-with-copyright__wrapper-shadow-bottom">
-            <div class="footer-with-copyright__wrapper-bottom">
-              <div class="footer-with-copyright__copyright">Copyright © 2018 Toxin отель. Все права зачищены.</div>
-              <div class="footer-with-copyright__social">
-                    <figure class="social-icons"><a class="social-icons__ico" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/twitter.png" alt="Twitter"></a><a class="social-icons__ico" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/facebook.png" alt="Facebook"></a><a class="social-icons__ico" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/instagram.png" alt="Instagram"></a>
-                    </figure>
+              <div class="footer-with-copyright__wrapper-shadow-bottom">
+                <div class="footer-with-copyright__wrapper-bottom">
+                  <div class="footer-with-copyright__copyright">Copyright © 2018 Toxin отель. Все права зачищены.</div>
+                  <div class="footer-with-copyright__social">
+                        <figure class="social-icons"><a class="social-icons__ico" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/twitter.png" alt="Twitter"></a><a class="social-icons__ico" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/facebook.png" alt="Facebook"></a><a class="social-icons__ico" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img class="social-icons__img" src="./img/instagram.png" alt="Instagram"></a>
+                        </figure>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </footer>
+            </footer>
+      </div>
+    </div>
   <script type="text/javascript" src="./scripts/registration.js"></script></body>
 </html>
