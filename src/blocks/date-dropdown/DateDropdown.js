@@ -30,10 +30,15 @@ class DateDropdown {
   }
 
   _addEvents() {
-    !this._isFiltered && this._inputTo.addEventListener('click', this._handleShowDatePiker);
+    !this._isFiltered && this._inputTo.addEventListener('click', this._handleInputToClick);
 
     this._$applyButton[0].addEventListener('click', this._handleApplyButtonClick);
     this._$clearButton[0].addEventListener('click', this._handleClearButtonClick);
+
+    const arrows = this._dateDropdown.querySelectorAll('.js-date-dropdown__arrow');
+    arrows.forEach((val) => {
+      val.addEventListener('click', this._handleArrowClick);
+    });
   }
 
   _datePikerInit(datePiker, dateDropdown, isFiltered = false, inptFrom, inptTo) {
@@ -102,6 +107,12 @@ class DateDropdown {
       .data('datepicker').$datepicker.find('.datepicker--button');
   }
 
+  _showDatePicker() {
+    $(this._datePiker).datepicker()
+      .data('datepicker')
+      .show();
+  }
+
   @boundMethod
   _handleApplyButtonClick() {
     $(this._datePiker).datepicker()
@@ -110,10 +121,8 @@ class DateDropdown {
   }
 
   @boundMethod
-  _handleShowDatePiker() {
-    $(this._datePiker).datepicker()
-      .data('datepicker')
-      .show();
+  _handleInputToClick() {
+    this._showDatePicker();
   }
 
   @boundMethod
@@ -121,6 +130,11 @@ class DateDropdown {
     if (!this._isFiltered) {
       this._inputTo.value = '';
     }
+  }
+
+  @boundMethod
+  _handleArrowClick() {
+    this._showDatePicker();
   }
 }
 
