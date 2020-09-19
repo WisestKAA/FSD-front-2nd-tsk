@@ -22,6 +22,9 @@ class Dropdown {
   _addEvents() {
     this._select.addEventListener('click', this._handleSelectClick);
     this._options.addEventListener('DOMSubtreeModified', this._handleOptionsModified);
+    if(this._applyButton){
+      this._applyButton.addEventListener('click', this._handleApplyClick);
+    }
   }
 
   _initSelect() {
@@ -52,12 +55,18 @@ class Dropdown {
         this._selectText,
         this._optionsListObj
       );
+      this._applyButton = optionButton.querySelector('.js-dropdown-option-button__apply');
     }
   }
 
   @boundMethod
   _handleSelectClick() {
     this._select.classList.contains('dropdown__select_active') ? this._hideDropdown() : this._showDropdown();
+  }
+
+  @boundMethod
+  _handleApplyClick(){
+    this._hideDropdown();
   }
 
   _showDropdown() {

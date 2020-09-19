@@ -21,6 +21,7 @@
     padding: 0.5714rem 1rem;
     border: 0.0714rem solid $dark25;
     border-radius: 0.2857rem;
+    cursor: pointer;
 
     &_active {
       border: 0.0714rem solid $dark50;
@@ -59,6 +60,7 @@
     line-height: 1.7143rem;
     color: $dark50;
     margin-top: 0.0714rem;
+    cursor: pointer;
 
     &_dark {
       color: $dark75;
