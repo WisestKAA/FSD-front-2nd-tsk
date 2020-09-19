@@ -1,10 +1,10 @@
 @import '../../scss/fonts/Montserrat/Montserrat.scss';
 
 .checkbox-button {
-  display: inline-block;
+  display: flex;
   white-space: nowrap;
   min-height: 1.4286rem;
-  width: 100%;
+  width: fit-content;
   max-width: 18.5714rem;
   margin-bottom: 0.7857rem;
   box-sizing: border-box;
@@ -28,6 +28,7 @@
     position: relative;
     padding-left: 2.1429rem;
     cursor: pointer;
+    user-select: none;
   }
 
   &__header {
@@ -37,6 +38,7 @@
     font-size: 1rem;
     line-height: 1.4286rem;
     color: $dark75;
+    user-select: none;
   }
 
   &__content {
@@ -48,6 +50,8 @@
     line-height: 1.2857rem;
     color: $dark50;
     max-width: 13.7143rem;
+    user-select: none;
+
     &_rich {
       font-size: 0.8571rem;
       line-height: 1rem;
