@@ -113,7 +113,7 @@ class Dropdown {
     if (this._isShort) {
       this._selectText.textContent = this._getRightTextShort(this._optionText);
     } else {
-      this._selectText.textContent = babies === 0
+      this._selectText.textContent = babies === '0'
         ? this._getRightText(this._optionText.guest, this._sum)
         : `${this._getRightText(this._optionText.guest, this._sum)}, ${this._getRightText(this._optionText.baby, babies)}`;
     }
