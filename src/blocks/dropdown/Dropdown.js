@@ -22,7 +22,7 @@ class Dropdown {
   _addEvents() {
     this._select.addEventListener('click', this._handleSelectClick);
     this._options.addEventListener('DOMSubtreeModified', this._handleOptionsModified);
-    if(this._applyButton){
+    if (this._applyButton) {
       this._applyButton.addEventListener('click', this._handleApplyClick);
     }
   }
@@ -65,7 +65,7 @@ class Dropdown {
   }
 
   @boundMethod
-  _handleApplyClick(){
+  _handleApplyClick() {
     this._hideDropdown();
   }
 

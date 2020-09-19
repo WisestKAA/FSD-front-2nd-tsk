@@ -1,4 +1,3 @@
-
 import { boundMethod } from 'autobind-decorator';
 
 class LikeButton {
