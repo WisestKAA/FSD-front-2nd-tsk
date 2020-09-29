@@ -85,10 +85,13 @@ block template
                 .form-elements__buttons-wrapper
                   .form-elements__button-wrapper
                     +button(formElementsData.buttons.gradientButton)
-                  .form-elements__button-wrapper.form-elements__button-wrapper_without-margin-left
+                    +button(formElementsData.buttons.gradientButtonDemo)
+                  .form-elements__button-wrapper.form-elements__button-wrapper_without-margin-left.form-elements__button-wrapper_big
                     +button(formElementsData.buttons.borderedButton)
-                  .form-elements__button-wrapper.form-elements__button-wrapper_margin-bottom-small
+                    +button(formElementsData.buttons.borderedButtonDemo)
+                  .form-elements__button-wrapper.form-elements__button-wrapper_small.form-elements__button-wrapper_margin-bottom-small
                     +button(formElementsData.buttons.emptyButton)
+                    +button(formElementsData.buttons.emptyDarkButton)
                   .form-elements__button-wrapper_without-margin-left
                     +button(formElementsData.buttons.richButton)
               .form-elements__pagination

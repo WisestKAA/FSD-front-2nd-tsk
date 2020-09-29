@@ -197,6 +197,7 @@
   }
 
   &__button-wrapper {
+    display: flex;
     margin-bottom: 2.1429rem;
     margin-left: 0.0714rem;
 
@@ -206,6 +207,15 @@
 
     &_margin-bottom-small{
       margin-bottom: 2.2143rem;
+    }
+
+    .button:first-child {
+      margin-right: 20px;
+      max-width: 7.0714rem;
+    }
+
+    &_small{
+      max-width: 10.1429rem;
     }
   }
 

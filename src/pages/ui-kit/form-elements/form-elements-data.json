@@ -132,15 +132,35 @@
         "value": "CLICK ME",
         "actionLink": "/#moke"
       },
+      "gradientButtonDemo": {
+        "type": "gradient-background",
+        "name": "default-demo",
+        "value": "CLICK ME",
+        "actionLink": "/#moke",
+        "isDemo": true
+      },
       "borderedButton": {
         "type": "bordered",
         "name": "bordered",
         "value": "CLICK ME",
         "actionLink": "/#moke"
       },
+      "borderedButtonDemo": {
+        "type": "bordered",
+        "name": "bordered-demo",
+        "value": "CLICK ME",
+        "actionLink": "/#moke",
+        "isDemo": true
+      },
       "emptyButton": {
         "type": "empty",
         "name": "empty",
+        "value": "CLICK ME",
+        "actionLink": "/#moke"
+      },
+      "emptyDarkButton": {
+        "type": "empty-dark",
+        "name": "empty-dark",
         "value": "CLICK ME",
         "actionLink": "/#moke"
       },

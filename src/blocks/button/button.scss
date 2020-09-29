@@ -85,10 +85,6 @@
       border: none;
       text-decoration: none;
     }
-
-    &:hover {
-      opacity: 0.5;
-    }
   }
 
   &__wrapper-short {
@@ -164,10 +160,27 @@
       text-decoration: none;
       text-transform: uppercase;
 
-      &:hover {
+      &-dark {
         color: $dark50;
+        text-decoration: none;
       }
     }
+  }
+
+  &__wrapper {
+    &-rich,
+    &-empty,
+    &-short {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &:hover,
+    &-demo {
+      opacity: 0.5;
+    }
+
   }
 
   &__text {
