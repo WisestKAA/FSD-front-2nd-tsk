@@ -2,23 +2,33 @@
 
 .like-button {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   min-width: 2.8571rem;
   min-height: 1.4286rem;
   width: min-content;
   height: min-content;
   box-sizing: border-box;
-  background: #FFFFFF;
-  border: 0.0714rem solid $dark25;
+  background: $dark25;
   box-sizing: border-box;
-  border-radius: 0.7143rem;
+  border-radius: 0.6429rem;
   color: $dark25;
-  text-overflow: nowrap;
   cursor: pointer;
   margin-block-start: unset;
   margin-block-end: unset;
   margin-inline-start: unset;
   margin-inline-end: unset;
+
+  &__content{
+    display: flex;
+    flex-direction: row;
+    min-width: 2.7143rem;
+    min-height: 1.2857rem;
+    width: min-content;
+    height: min-content;
+    background: #FFFFFF;
+    border-radius: 0.7143rem;
+  }
 
   &__icon {
     display: flex;
@@ -53,6 +63,6 @@
 
   &_active {
     color: $purple;
-    border-color: $purple;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);;
   }
 }
