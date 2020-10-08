@@ -1,17 +1,6 @@
 include ../material-icons/material-icons.pug
 
-mixin pagination ({ firstPage = 1, lastPage = 12, links = [] }={})
-  .pagination
-    ul.pagination__container
-      each link in links
-        - const { href, isActive, number, } = link
-        if (href.length === 0)
-          li.pagination__item
-            .pagination__ellipsis ...
-        else
-          li.pagination__item(class = isActive && 'pagination__item_active')
-            a.pagination__link(href=href, class = isActive && 'pagination__link_active')=number
-      li.pagination__next
-        a.pagination__link_next(href="/to-do")
-          +material-icons({type: 'arrow_forward'})
-    .pagination__caption=`${firstPage} – ${lastPage} из 100+ вариантов аренды`
+mixin pagination (data={})
+  .pagination.js-pagination&attributes(data)
+    ul.pagination__container.js-pagination__container
+    .pagination__caption.js-pagination__caption=`1 – 12 из 100+ вариантов аренды`

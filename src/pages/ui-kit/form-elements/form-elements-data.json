@@ -174,33 +174,8 @@
     "pagination": {
       "label": { "text": "pagination" },
       "item": {
-        "links" : [
-          {
-            "href": "/page1",
-            "isActive": true,
-            "number": 1
-          },
-          {
-            "href": "/page2",
-            "isActive": false,
-            "number": 2
-          },
-          {
-            "href": "/page3",
-            "isActive": false,
-            "number": 3
-          },
-          {
-            "href": "",
-            "isActive": false,
-            "number": 0
-          },
-          {
-            "href": "/page15",
-            "isActive": false,
-            "number": 15
-          }
-        ]
+        "data-page-count": "15",
+        "data-items-on-page": "12"
       }
     },
     "expandableCheckboxLists": {

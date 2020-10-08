@@ -1,5 +1,5 @@
 @import '../../scss/fonts/Montserrat/Montserrat.scss';
-@import '../material-icons/material-icons.scss';
+@import '../../scss/fonts/MaterialIcons/material-icons.scss';
 
 .pagination {
   &__container {
@@ -15,15 +15,18 @@
     font-weight: normal;
     font-size: 0.8571rem;
     line-height: 1.0714rem;
+    color: $dark50;
 
     &_active {
       border-radius: 1.5714rem;
+      color: white;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
   }
 
   &__item,
-  &__next {
+  &__next,
+  &__pre {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,29 +34,19 @@
     min-height: 2.8571rem;
     width: min-content;
     height: min-content;
+    cursor: pointer;
   }
 
-  &__link {
-    height: min-content;
-    color: $dark50;
-    text-decoration: none;
-
-    &_next,
-    &_active {
-      color: white;
-    }
-
-    &_next {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-    }
-  }
-
-  &__next {
+  &__next,
+  &__pre {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border-radius: 1.5714rem;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.7143rem;
+    line-height: 1.4286rem;
+    color: white;
   }
 
   &__caption {
@@ -68,11 +61,29 @@
   }
 
   &__ellipsis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 2.8571rem;
+    min-height: 2.8571rem;
+    width: min-content;
+    height: min-content;
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 0.8571rem;
     line-height: 1.0714rem;
     color: $dark50;
+    cursor: default;
+  }
+
+  &__item,
+  &__next,
+  &__pre,
+  &__ellipsis {
+    user-select: none;
+    &_hide{
+      display: none;
+    }
   }
 }
