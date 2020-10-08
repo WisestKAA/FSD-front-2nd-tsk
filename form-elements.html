@@ -225,14 +225,18 @@
                     </div>
                 <div class="form-elements__like-buttons-wrapper">
                       <figure class="like-button js-like-button">
-                        <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite_border</i>
+                        <div class="like-button__content">
+                          <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite_border</i>
+                          </div>
+                          <div class="like-button__number">2</div>
                         </div>
-                        <div class="like-button__number">2</div>
                       </figure>
                       <figure class="like-button js-like-button like-button_active">
-                        <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite</i>
+                        <div class="like-button__content">
+                          <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite</i>
+                          </div>
+                          <div class="like-button__number">12</div>
                         </div>
-                        <div class="like-button__number">12</div>
                       </figure>
                 </div>
               </div>
@@ -291,15 +295,24 @@
                         <div class="button">
                           <div class="button__wrapper"><a class="button__wrapper_gradient-background" href="/#moke">CLICK ME</a></div>
                         </div>
+                        <div class="button">
+                          <div class="button__wrapper button__wrapper-demo"><a class="button__wrapper_gradient-background" href="/#moke">CLICK ME</a></div>
+                        </div>
                   </div>
-                  <div class="form-elements__button-wrapper form-elements__button-wrapper_without-margin-left">
+                  <div class="form-elements__button-wrapper form-elements__button-wrapper_without-margin-left form-elements__button-wrapper_big">
                         <div class="button">
                           <div class="button__wrapper"><a class="button__wrapper_bordered" href="/#moke">CLICK ME</a></div>
                         </div>
+                        <div class="button">
+                          <div class="button__wrapper button__wrapper-demo"><a class="button__wrapper_bordered" href="/#moke">CLICK ME</a></div>
+                        </div>
                   </div>
-                  <div class="form-elements__button-wrapper form-elements__button-wrapper_margin-bottom-small">
+                  <div class="form-elements__button-wrapper form-elements__button-wrapper_small form-elements__button-wrapper_margin-bottom-small">
                         <div class="button">
                           <div class="button__wrapper-empty"><a class="button__wrapper-empty_empty" href="/#moke">CLICK ME</a></div>
+                        </div>
+                        <div class="button">
+                          <div class="button__wrapper-empty"><a class="button__wrapper-empty_empty-dark" href="/#moke">CLICK ME</a></div>
                         </div>
                   </div>
                   <div class="form-elements__button-wrapper_without-margin-left">
@@ -319,18 +332,9 @@
                       <h3 class="label__text">pagination</h3>
                       <div class="label__caption"></div>
                     </div>
-                    <div class="pagination">
-                      <ul class="pagination__container">
-                        <li class="pagination__item pagination__item_active"><a class="pagination__link pagination__link_active" href="/page1">1</a></li>
-                        <li class="pagination__item"><a class="pagination__link" href="/page2">2</a></li>
-                        <li class="pagination__item"><a class="pagination__link" href="/page3">3</a></li>
-                        <li class="pagination__item">
-                          <div class="pagination__ellipsis">...</div>
-                        </li>
-                        <li class="pagination__item"><a class="pagination__link" href="/page15">15</a></li>
-                        <li class="pagination__next"><a class="pagination__link_next" href="/to-do"><i class="material-icons js-material-icons">arrow_forward</i></a></li>
-                      </ul>
-                      <div class="pagination__caption">1 – 12 из 100+ вариантов аренды</div>
+                    <div class="pagination js-pagination" data-page-count="15" data-items-on-page="12">
+                      <ul class="pagination__container js-pagination__container"></ul>
+                      <div class="pagination__caption js-pagination__caption">1 – 12 из 100+ вариантов аренды</div>
                     </div>
               </div>
             </section>
@@ -718,9 +722,11 @@
                   <div class="comment__body">
                     <div class="comment__like">
                           <figure class="like-button js-like-button">
-                            <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite_border</i>
+                            <div class="like-button__content">
+                              <div class="like-button__icon"><i class="material-icons js-material-icons material-icons_font-size-10">favorite_border</i>
+                              </div>
+                              <div class="like-button__number">11</div>
                             </div>
-                            <div class="like-button__number">11</div>
                           </figure>
                     </div>
                     <div class="comment__content">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей</div>
