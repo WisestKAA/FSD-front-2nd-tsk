@@ -52,6 +52,8 @@
       min-height: 3.1429rem;
       height: min-content;
       width: min-content;
+      position: relative;
+      z-index: 1;
     }
 
     &-prev {
@@ -103,6 +105,14 @@
 
     &-dots .active {
       background-color: white;
+    }
+
+    &-nav {
+      display: none;
+    }
+
+    &-carousel:hover .owl-nav {
+      display: block;
     }
   }
 
