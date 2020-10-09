@@ -58,7 +58,6 @@
     background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
     box-sizing: border-box;
     text-transform: uppercase;
-    cursor: pointer;
   }
 
   &__wrapper,
@@ -136,6 +135,7 @@
       max-width: 22.8571rem;
       min-height: 3.1429rem;
       height: min-content;
+      cursor: pointer;
     }
 
     &_rich::before {
@@ -156,7 +156,6 @@
 
     &_empty {
       color: $purple;
-      cursor: pointer;
       text-decoration: none;
       text-transform: uppercase;
 
@@ -171,16 +170,20 @@
     &-rich,
     &-empty,
     &-short {
+      cursor: pointer;
       &:hover {
+        opacity: 0.5;
+      }
+
+      &_demo {
         opacity: 0.5;
       }
     }
 
     &:hover,
-    &-demo {
+    &_demo{
       opacity: 0.5;
     }
-
   }
 
   &__text {

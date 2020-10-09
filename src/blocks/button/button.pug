@@ -6,28 +6,28 @@ mixin button({ type, name, value, actionLink, isDemo = false }={})
     case type
       when 'rich'
         - typeClass = `button__wrapper-rich_${type}`
-        .button__wrapper-rich(class = isDemo && 'button__wrapper-demo')
+        .button__wrapper-rich(class = isDemo && 'button__wrapper-rich_demo')
           .button__arrow
             +material-icons({type: "arrow_forward"})
           .button__text=value
           input(type="submit", name=name, value=value, class=typeClass)
       when 'empty'
         - typeClass = `button__wrapper-empty_${type}`
-        .button__wrapper-empty(class = isDemo && 'button__wrapper-demo')
+        .button__wrapper-empty(class = isDemo && 'button__wrapper-empty_demo')
           a(href=actionLink, class=typeClass)=value
       when 'empty-dark'
         - typeClass = `button__wrapper-empty_${type}`
-        .button__wrapper-empty(class = isDemo && 'button__wrapper-demo')
+        .button__wrapper-empty(class = isDemo && 'button__wrapper-empty_demo')
           a(href=actionLink, class=typeClass)=value
       when 'short-gradient-background'
         - typeClass = 'button__wrapper-short_gradient-background'
-        .button__wrapper-short(class = isDemo && 'button__wrapper-demo')
+        .button__wrapper-short(class = isDemo && 'button__wrapper-short_demo')
           a(href=actionLink, class=typeClass)=value
       when 'short-bordered'
         - typeClass = 'button__wrapper-short_bordered'
-        .button__wrapper-short(class = isDemo && 'button__wrapper-demo')
+        .button__wrapper-short(class = isDemo && 'button__wrapper-short_demo')
           a(href=actionLink, class=typeClass)=value
       default
         - typeClass = `button__wrapper_${type}`
-        .button__wrapper(class = isDemo && 'button__wrapper-demo')
+        .button__wrapper(class = isDemo && 'button__wrapper_demo')
           a(href=actionLink, class=typeClass)=value
