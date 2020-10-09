@@ -102,10 +102,9 @@
     font-style: normal;
     font-weight: bold;
     font-size: 0.8571rem;
-    line-height: 1.0714rem;
+    line-height: 1.2143rem;
     color: $purple;
-    padding: 1.4286rem;
-    height: 3.9286rem;
+    padding: 1.4286rem 1.4286rem 1.2857rem 1.4286rem;
     width: 50%;
     text-align: right;
     box-sizing: border-box;
@@ -132,7 +131,7 @@
     padding: 0;
 
     &-action {
-      max-width: 4.5714rem;
+      max-width: 4.5rem;
       width: 100%;
     }
 
@@ -178,6 +177,7 @@
   &--content {
     box-sizing: border-box;
     padding: 0;
+    margin-top: 0.5714rem;
   }
 
   &--cells-days {
@@ -311,8 +311,7 @@
     font-size: 0.8571rem;
     line-height: 1.0714rem;
     color: $dark50;
-    padding: 1.4286rem;
-    height: 3.9286rem;
+    padding: 1.4286rem 1.4286rem 1.2857rem 1.4286rem;
     width: 50%;
     box-sizing: border-box;
   }

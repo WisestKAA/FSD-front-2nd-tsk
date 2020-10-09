@@ -6,6 +6,7 @@
 @import '../../../blocks/sign-in-form/sign-in-form.scss';
 @import '../../../blocks/sign-up/sign-up.scss';
 @import '../../../blocks/room-preview/room-preview.scss';
+@import '../../../blocks/date-dropdown/date-dropdown.scss';
 
 .cards {
   min-width: 22.8571rem;
@@ -84,14 +85,14 @@
     }
   }
 
-  &__calendar-moke {
-    max-width: 22.8571rem;
+  &__calendar {
+    max-width: 322px;
     width: 100%;
-    min-height: 26.3571rem;
-    border: 0.0714rem solid rgba(0, 0, 0, 0.12);
+    // min-height: 26.3571rem;
+    // border: 0.0714rem solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     box-shadow: 0 0 1.7857rem rgba(0, 0, 0, 0.2);
-    border-radius: 0.2857rem;
+    // border-radius: 0.2857rem;
     background-color: white;
   }
 }
