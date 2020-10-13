@@ -10,6 +10,14 @@ mixin footer-with-copyright({ descriptionText, menuItems=[], subscribeHeader, su
           figure.footer-with-copyright__logo
             +logo()
           .footer-with-copyright__description=descriptionText
+          .footer-with-copyright__social-top
+            +social-icons({
+              icons: [
+                { link: 'https://twitter.com/', img: './img/twitter.png', alt: 'Twitter' },
+                { link: 'https://www.facebook.com/', img: './img/facebook.png', alt: 'Facebook' },
+                { link: 'https://www.instagram.com/', img: './img/instagram.png', alt: 'Instagram' },
+              ]
+            })
 
         .footer-with-copyright__wrapper-right
           .footer-with-copyright__menu
