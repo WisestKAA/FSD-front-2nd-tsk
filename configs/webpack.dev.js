@@ -9,7 +9,7 @@ const config = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          { loader: 'style-loader'},
+          { loader: 'style-loader' },
           {
             loader: 'css-loader',
             options: {
@@ -18,17 +18,17 @@ const config = {
             }
           },
           { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'resolve-url-loader', },
-          { loader: 'sass-loader', options: { sourceMap: true } },
-        ],
-      },
+          { loader: 'resolve-url-loader' },
+          { loader: 'sass-loader', options: { sourceMap: true } }
+        ]
+      }
     ]
   },
   devServer: {
     contentBase: './out'
-  },
-}
+  }
+};
 
 module.exports = async () => {
   return merge(common, config);
-}
+};

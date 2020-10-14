@@ -13,7 +13,7 @@ const config = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-                publicPath: '../',
+              publicPath: '../'
             }
           },
           {
@@ -24,10 +24,10 @@ const config = {
             }
           },
           { loader: 'postcss-loader', options: { sourceMap: false } },
-          { loader: 'resolve-url-loader', },
-          { loader: 'sass-loader', options: { sourceMap: true } },
-        ],
-      },
+          { loader: 'resolve-url-loader' },
+          { loader: 'sass-loader', options: { sourceMap: true } }
+        ]
+      }
     ]
   },
   devServer: {
@@ -35,12 +35,12 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].min.css',
-    }),
-  ],
-}
+      filename: 'styles/[name].min.css'
+    })
+  ]
+};
 
 module.exports = async () => {
   config.plugins.concat(common.plugins);
   return merge(common, config);
-}
+};
