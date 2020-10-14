@@ -135,13 +135,13 @@
   }
 
   &__radio-buttons{
-    @include label(3.3571rem);
-    margin-bottom: 3.2143rem;
+    @include label(3.5rem);
+    margin-bottom: 3.0714rem;
   }
 
   &__toggles{
-    @include label(6.0714rem);
-    margin-bottom: 3.1429rem;
+    @include label(6rem);
+    margin-bottom: 3.2143rem;
   }
 
   &__like-buttons {
