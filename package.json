@@ -1,8 +1,7 @@
 {
-  "name": "test",
+  "name": "FSD-front-2nd-tsk",
   "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "webpack": "webpack -w --config ./configs/webpack.dev.js",
     "start": "webpack-dev-server --config ./configs/webpack.dev.js",
