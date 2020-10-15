@@ -6,8 +6,7 @@ module.exports = {
   entry: pagesData.entry,
   output: {
     filename: 'scripts/[name].js',
-    path: path.join(__dirname, '../out'),
-    publicPath: './'
+    path: path.join(__dirname, '../out')
   },
   module: {
     rules: [

@@ -1,5 +1,6 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
+const path = require('path');
 
 const config = {
   mode: 'development',
@@ -25,7 +26,8 @@ const config = {
     ]
   },
   devServer: {
-    contentBase: './out'
+    contentBase: path.resolve(__dirname, '../out'),
+    inline: true
   }
 };
 
