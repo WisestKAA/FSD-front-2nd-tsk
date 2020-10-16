@@ -5,7 +5,7 @@
       { "icon": "location_city", "header": "Удобство", "content": "Окно в каждой из спален" },
       { "icon": "whatshot", "header": "Уют", "content": "Номер оснащён камином" }
     ],
-    "isLustHaveBorder": false
+    "isLastHaveBorder": false
   },
   "feelingDescriptionsData": {
     "isColored": true,
