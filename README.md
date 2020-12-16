@@ -1,14 +1,18 @@
 # FSD-front-2nd-tsk
 ### Выполнено для Fullstack Development Frontend 2nd task
+## Описание проекта
+
+Сверстанные макеты страниц для сайта бронирования номеров Toxin.
+
 ---
 ## Установка
 
 Для установки и развертывания проекта необходимо установить [Node.js](https://nodejs.org/).
 
-1. Загрузите исходные файлы удобнгым способом:
+1. Загрузите исходные файлы удобным способом:
 
   * [Скачайте архив](https://github.com/WisestKAA/FSD-front-2nd-tsk/archive/master.zip) и распакуйте его в удобном месте
-  * Колинруйте репазиторий с помощью git:
+  * Клонируйте репозиторий с помощью git:
   > $ git clone https://github.com/WisestKAA/FSD-front-2nd-tsk.git
  
  2. Установите необходимые node_module's:
@@ -40,7 +44,8 @@
 
 [ion-rangeslider](https://github.com/IonDen/ion.rangeSlider)
 
-[OwlCarousel2](https://github.com/OwlCarousel2/OwlCarousel2)
+[OwlCarusel2](https://github.com/OwlCarousel2/OwlCarousel2)
+
 ---
 ## UI kit
 [Colors and type](https://wisestkaa.github.io/FSD-front-2nd-tsk/colors-and-type.html)
