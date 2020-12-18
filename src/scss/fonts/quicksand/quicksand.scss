@@ -1,4 +1,4 @@
 @import '../../mixins/font-face.scss';
 
-@include font-face('Quicksand', 'quicksand', 'Regular');
-@include font-face('Quicksand', 'quicksand', 'Bold', bold);
+@include font-face('Quicksand', 'quicksand', 'regular');
+@include font-face('Quicksand', 'quicksand', 'bold', bold);
