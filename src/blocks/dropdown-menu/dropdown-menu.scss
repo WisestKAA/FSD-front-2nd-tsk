@@ -44,14 +44,19 @@
     display: none;
     background-color: white;
     margin-top: 1.2143rem;
+
+    &_displayed {
+      display: flex;
+      flex-direction: column;
+
+    }
   }
 
   &__link {
-    padding: 0.7143 0.7143;
-  }
+    padding: 1rem;
 
-  &:hover &__links {
-    display: flex;
-    flex-direction: column;
+    &:hover {
+      background-color: $dark05;
+    }
   }
 }
