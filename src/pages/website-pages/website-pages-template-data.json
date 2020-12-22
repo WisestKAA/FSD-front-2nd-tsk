@@ -3,29 +3,29 @@
     "navOptions": [
       {
         "text": "О нас",
-        "link": "/about-us",
+        "link": "/change-me",
         "isCurrent": false
       },
       {
         "text": "Услуги",
-        "link": "/services",
+        "link": "/change-me",
         "isCurrent": false,
         "sublinks": [
-          { "textLink": "Service1", "link": "/service/1" },
-          { "textLink": "Service2", "link": "/service/2" },
-          { "textLink": "Service3", "link": "/service/3" }
+          { "textLink": "Service1", "link": "/change-me" },
+          { "textLink": "Service2", "link": "/change-me" },
+          { "textLink": "Service3", "link": "/change-me" }
         ]
       },
-      { "text": "Вакансии", "link": "/vacancies", "isCurrent": false },
-      { "text": "Новости", "link": "/news", "isCurrent": false },
+      { "text": "Вакансии", "link": "/change-me", "isCurrent": false },
+      { "text": "Новости", "link": "/change-me", "isCurrent": false },
       {
         "text": "Соглашения",
-        "link": "/agreements",
+        "link": "/change-me",
         "isCurrent": false,
         "sublinks": [
-          { "textLink": "agreements1", "link": "/agreements/1" },
-          { "textLink": "agreements2", "link": "/agreements/2" },
-          { "textLink": "agreements3", "link": "/agreements/3" }
+          { "textLink": "agreements1", "link": "/change-me" },
+          { "textLink": "agreements2", "link": "/change-me" },
+          { "textLink": "agreements3", "link": "/change-me" }
         ]
       }
     ],
@@ -41,27 +41,27 @@
       {
         "header": "навигация",
         "options": [
-          { "text": "О нас", "link": "/about-us" },
-          { "text": "Новости", "link": "/news" },
-          { "text": "Служба поддержки", "link": "/support-service" },
-          { "text": "Услуги", "link": "/services" }
+          { "text": "О нас", "link": "/change-me" },
+          { "text": "Новости", "link": "/change-me" },
+          { "text": "Служба поддержки", "link": "/change-me" },
+          { "text": "Услуги", "link": "/change-me" }
         ]
       },
       {
         "header": "о нас",
         "options": [
-          { "text": "О сервисе", "link": "/about-us/about-service" },
-          { "text": "Наша команда", "link": "/about-us/our-team" },
-          { "text": "Вакансии", "link": "/about-us/vacancies" },
-          { "text": "Инвесторы", "link": "/about-us/investors" }
+          { "text": "О сервисе", "link": "/change-me" },
+          { "text": "Наша команда", "link": "/change-me" },
+          { "text": "Вакансии", "link": "/change-me" },
+          { "text": "Инвесторы", "link": "/change-me" }
         ]
       },
       {
         "header": "Служба поддержки",
         "options": [
-          { "text": "Соглашения", "link": "/support-service/agreements" },
-          { "text": "Сообщества", "link": "/support-service/socials" },
-          { "text": "Связь с нами", "link": "/support-service/contact" }
+          { "text": "Соглашения", "link": "/change-me" },
+          { "text": "Сообщества", "link": "/change-me" },
+          { "text": "Связь с нами", "link": "/change-me" }
         ]
       }
     ],

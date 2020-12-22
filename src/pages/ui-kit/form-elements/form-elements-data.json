@@ -130,45 +130,45 @@
         "type": "gradient-background",
         "name": "default",
         "value": "CLICK ME",
-        "actionLink": "/#moke"
+        "actionLink": "/change-me"
       },
       "gradientButtonDemo": {
         "type": "gradient-background",
         "name": "default-demo",
         "value": "CLICK ME",
-        "actionLink": "/#moke",
+        "actionLink": "/change-me",
         "isDemo": true
       },
       "borderedButton": {
         "type": "bordered",
         "name": "bordered",
         "value": "CLICK ME",
-        "actionLink": "/#moke"
+        "actionLink": "/change-me"
       },
       "borderedButtonDemo": {
         "type": "bordered",
         "name": "bordered-demo",
         "value": "CLICK ME",
-        "actionLink": "/#moke",
+        "actionLink": "/change-me",
         "isDemo": true
       },
       "emptyButton": {
         "type": "empty",
         "name": "empty",
         "value": "CLICK ME",
-        "actionLink": "/#moke"
+        "actionLink": "/change-me"
       },
       "emptyDarkButton": {
         "type": "empty-dark",
         "name": "empty-dark",
         "value": "CLICK ME",
-        "actionLink": "/#moke"
+        "actionLink": "/change-me"
       },
       "richButton": {
         "type": "rich",
         "name": "default",
         "value": "перейти к оплате",
-        "actionLink": "/#moke"
+        "actionLink": "/change-me"
       }
     },
     "pagination": {
