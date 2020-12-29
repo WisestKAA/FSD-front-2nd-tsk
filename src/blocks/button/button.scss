@@ -172,17 +172,17 @@
     &-short {
       cursor: pointer;
       &:hover {
-        opacity: 0.5;
+        background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
       }
 
       &_demo {
-        opacity: 0.5;
+        background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
       }
     }
 
     &:hover,
     &_demo{
-      opacity: 0.5;
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
     }
   }
 
