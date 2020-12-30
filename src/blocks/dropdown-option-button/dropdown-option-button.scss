@@ -15,7 +15,7 @@
 
   &__drop {
     display: inline-block;
-    color: $dark50;
+    color: $purple;
     padding-left: 1rem;
     justify-content: center;
     align-items: center;
@@ -53,5 +53,10 @@
     border-style: unset;
     border-color: unset;
     outline: none;
+
+    &:hover {
+      color: $dark50;
+      background: none;
+    }
   }
 }
