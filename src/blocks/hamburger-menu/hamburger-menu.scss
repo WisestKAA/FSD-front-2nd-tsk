@@ -18,8 +18,21 @@
     z-index: 4;
     cursor: pointer;
 
+    &:checked {
+      position: fixed;
+      top: 2.1429rem;
+      right: .8571rem;
+      width: 2.1429rem;
+      height: 2.1429rem;
+    }
+
     &:checked ~ .hamburger-menu__hamburger > .hamburger-menu__lines{
       transform: rotate(45deg);
+      width: .2857rem;
+      height: 2.1429rem;
+      position: fixed;
+      top: 2.1429rem;
+      right: 1.7857rem;
     }
 
     &:checked ~ .hamburger-menu__hamburger > .hamburger-menu__lines::before{
@@ -29,6 +42,9 @@
     &:checked ~ .hamburger-menu__hamburger > .hamburger-menu__lines::after{
       top: 0;
       transform: rotate(90deg);
+      width: .2857rem;
+      height: 2.1429rem;
+      position: fixed;
     }
 
     &:checked ~ .hamburger-menu__hamburger{
