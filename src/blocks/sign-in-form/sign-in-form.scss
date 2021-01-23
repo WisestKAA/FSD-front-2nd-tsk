@@ -12,6 +12,10 @@
   padding: 2.7857rem 2.0714rem 2.0714rem 2.0714rem;
   background-color: white;
 
+  @media (max-width: 365px) {
+    padding: .5rem;
+  }
+
   &__header {
     @include h1;
     margin-bottom: 1.4286rem;
