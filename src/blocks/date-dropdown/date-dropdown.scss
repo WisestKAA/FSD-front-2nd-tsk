@@ -213,6 +213,13 @@
     }
   }
 
+  .-range {
+    &-to-,
+    &-from- {
+      border: unset;
+    }
+  }
+
   .-other-month- {
     color: $dark25;
 
