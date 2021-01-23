@@ -42,10 +42,22 @@
       max-width: 84.4286rem;
       width: 100%;
     }
+
+    @media (max-width: 404px) {
+      align-items: center;
+    }
+
+    @media (max-width: 330px) {
+      padding: .0714rem;
+    }
   }
 
   &__room-filter {
     padding-left: 0.4286rem;
+
+    @media (max-width: 404px) {
+      padding: unset;
+    }
   }
 
   &__description {
