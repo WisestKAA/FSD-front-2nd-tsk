@@ -1,6 +1,7 @@
 .social-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   width: fit-content;
   margin-block-start: unset;
   margin-block-end: unset;
@@ -8,7 +9,7 @@
   margin-inline-end: unset;
   align-items: baseline;
   padding-top: 0.0714rem;
-
+  max-width: 15rem;
 
   &__ico {
     margin-right: 1.5714rem;
