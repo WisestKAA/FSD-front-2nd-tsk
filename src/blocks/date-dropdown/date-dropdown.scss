@@ -36,6 +36,10 @@
       width: 100%;
     }
 
+    &-from {
+      margin-right: .5rem;
+    }
+
     &-from,
     &to {
       max-width: 10.7143rem;
@@ -190,6 +194,10 @@
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+
+    & .-other-month-:hover {
+      color: #ffffff;
+    }
   }
 
   &--cell {
@@ -210,6 +218,13 @@
       line-height: 1.0714rem;
       text-align: center;
       color: $dark50;
+    }
+  }
+
+  .-range {
+    &-to-,
+    &-from- {
+      border: unset;
     }
   }
 
@@ -296,6 +311,14 @@
 
   .-range-from-::after {
     border-radius: 50% 0 0 50%;
+  }
+
+  .-selected-.-focus-.datepicker--cell-day.-other-month- {
+    background: linear-gradient(180deg,#bc9cff,#8ba4f9);
+  }
+
+  .-in-range-.datepicker--cell-day.-other-month-{
+    background-color: unset;
   }
 
   &--buttons {

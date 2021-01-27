@@ -91,6 +91,7 @@ class Dropdown {
   _handleOptionsModified() {
     this._sum = 0;
     let babies = 0;
+    let hasAdults;
     this._optionsList.forEach((val)=>{
       const num = val.querySelector('.js-dropdown-option__number');
       if (val.querySelector('.js-dropdown-option__text').textContent === 'младенцы') {
@@ -98,9 +99,13 @@ class Dropdown {
       } else {
         this._sum += parseInt(num.textContent, 10);
       }
+
+      if (val.querySelector('.js-dropdown-option__text').textContent === 'взрослые') {
+        hasAdults = num.textContent === '0';
+      }
     });
 
-    if (this._sum === 0) {
+    if (hasAdults) {
       this._selectText.textContent = this._defaultSelectText;
       if (this._optionButtons) {
         this._optionButtons.hideDrop();
