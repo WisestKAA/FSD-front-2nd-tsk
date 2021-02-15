@@ -8,7 +8,6 @@ mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButto
   -
     const unlogged = isLogged && 'header__unlogged_hide'
     const logged = !isLogged && 'header__logged_hide'
-    const navigationLogged = isLogged && 'header__navigation_with-margin-bottom'
     const shortMenu = isShortMenu && 'header__navigation-link_short'
     const current = 'header__navigation-link_font-weight-bold'
 
@@ -17,7 +16,7 @@ mixin header({ navOptions=[], isShortMenu=false,  isLogged, username, loginButto
       figure.header__logo
         +logo()
       nav.header__navigation-wrapper
-        .header__navigation(class=navigationLogged)
+        .header__navigation
           each navigationOption in navOptions
             - const {text, link, isCurrent, sublinks} = navigationOption
             if (sublinks)

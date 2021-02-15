@@ -45,15 +45,11 @@
     margin-inline-end: unset
   }
 
-  &__navigation-wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__navigation {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0 1rem 1rem;
 
     @media (max-width: 910px){
       display: none;
@@ -61,6 +57,11 @@
 
     @media (max-width: 780px) {
       margin-bottom: 0.7143rem;
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
     }
 
     &-link,
@@ -74,6 +75,7 @@
       margin-right: 2.1429rem;
       text-decoration: none;
       letter-spacing: -0.0135em;
+      white-space: nowrap;
 
       &_font-weight-bold {
         font-weight: bold;
@@ -87,10 +89,6 @@
       @media (max-width: 580px) {
         margin-right: 0;
       }
-    }
-
-    &_with-margin-bottom {
-      margin-bottom: 0.0714rem;
     }
   }
 
