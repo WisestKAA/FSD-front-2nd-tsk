@@ -51,6 +51,9 @@
     @include h3;
     max-width: 10.7143rem;
     margin-bottom: 0.4286rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   &__input {
