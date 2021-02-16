@@ -27,7 +27,8 @@
 
   &__wrapper,
   &__wrapper-short,
-  &__wrapper-empty {
+  &__wrapper-empty,
+  &__default-text {
     appearance: unset;
     text-rendering: unset;
     color: unset;
@@ -76,13 +77,25 @@
     }
 
     &_bordered {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-color: #FFFFFF;
       color: $purple;
       border: none;
       text-decoration: none;
+      display: inline-block;
+      vertical-align: middle;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+      max-width: 20rem;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        min-height: inherit;
+        height: 100%;
+        vertical-align: middle;
+      }
     }
   }
 
@@ -96,10 +109,27 @@
     &_bordered {
       border-radius: 1.0714rem;
       width: max-content;
-      min-height: 2.0714rem;
+      min-height: 2.1429rem;
       height: min-content;
       margin: 0 0.1429rem;
       padding: 0 1.2857rem 0.0714rem 1.2857rem;
+      display: inline-block;
+      vertical-align: middle;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+      max-width: 20rem;
+      min-width: 3.9286rem;
+      padding: 0 1rem;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        min-height: inherit;
+        height: 100%;
+        vertical-align: middle;
+      }
     }
 
     &_gradient-background {
@@ -110,10 +140,10 @@
 
   &__wrapper {
     &_bordered {
+      width: 95%;
       border-radius: 1.4286rem;
       min-width: 6.7857rem;
       min-height: 2.8571rem;
-      width: min-content;
       height: min-content;
     }
   }
@@ -195,5 +225,26 @@
     text-align: center;
     color: #FFFFFF;
     padding: .5rem 2.5rem;
+  }
+
+  &__default-text{
+    text-decoration: none;
+    width: fit-content;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: -webkit-fill-available;
+    padding: 0 .5rem;
+    font-weight: bold;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      min-height: inherit;
+      height: 100%;
+      vertical-align: middle;
+    }
   }
 }

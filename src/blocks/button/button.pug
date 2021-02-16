@@ -30,4 +30,5 @@ mixin button({ type, name, value, actionLink, isDemo = false }={})
       default
         - typeClass = `button__wrapper_${type}`
         .button__wrapper(class = isDemo && 'button__wrapper_demo')
-          a(href=actionLink, class=typeClass)=value
+          div(class=typeClass)
+            a.button__default-text(href=actionLink)=value
