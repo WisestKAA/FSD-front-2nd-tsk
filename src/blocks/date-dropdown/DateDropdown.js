@@ -45,8 +45,10 @@ class DateDropdown {
     const dateForm = isFiltered ? 'dd.mm.yyyy' : 'dd M';
     let inputFrom = inptFrom;
     let inputTo = inptTo;
+    this._$datePicker = $(datePiker);
+    const that = this;
 
-    $(datePiker).datepicker({
+    this._$datePicker.datepicker({
       minDate: new Date(),
       range: true,
       multipleDatesSeparator: ' - ',
@@ -88,6 +90,7 @@ class DateDropdown {
             inputTo.value = formattedDate.substring(13, 23);
           }
         }
+        that._handleSelectedDate();
       },
       'onHide'() {
         if (isFiltered) {
@@ -105,6 +108,8 @@ class DateDropdown {
 
     this._$clearButton = $(this._datePiker).datepicker()
       .data('datepicker').$datepicker.find('.datepicker--button');
+
+    this._$clearButton.addClass('date-dropdown__clear-button_hidden');
   }
 
   _showDatePicker() {
@@ -130,11 +135,21 @@ class DateDropdown {
     if (!this._isFiltered) {
       this._inputTo.value = '';
     }
+
+    this._$clearButton.addClass('date-dropdown__clear-button_hidden');
+    this._isClearCall = true;
   }
 
   @boundMethod
   _handleArrowClick() {
     this._showDatePicker();
+  }
+
+  @boundMethod
+  _handleSelectedDate() {
+    this._isClearCall
+      ? this._isClearCall = false
+      : this._$clearButton.removeClass('date-dropdown__clear-button_hidden');
   }
 }
 

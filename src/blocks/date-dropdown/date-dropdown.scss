@@ -121,6 +121,10 @@
       background: none;
     }
   }
+
+  &__clear-button_hidden {
+    visibility: hidden;
+  }
 }
 
 .datepicker {
