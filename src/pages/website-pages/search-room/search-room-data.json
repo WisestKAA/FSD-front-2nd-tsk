@@ -68,8 +68,6 @@
           { "text": "Стул для кормления", "isChecked": true },
           { "text": "Кроватка", "isChecked": true },
           { "text": "Телевизор", "isChecked": false },
-          { "text": "Шампунь", "isChecked": false },
-          { "text": "Телевизор", "isChecked": false },
           { "text": "Шампунь", "isChecked": false }
       ]
     },
