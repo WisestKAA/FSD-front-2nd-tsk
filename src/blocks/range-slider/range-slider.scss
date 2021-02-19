@@ -14,6 +14,10 @@
     @include h3;
     display: flex;
     line-height: 1.0714rem;
+    max-width: 50%;
+    display: inline;
+    overflow: hidden;
+    text-overflow: clip;
   }
 
   &__price {
