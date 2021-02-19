@@ -3,7 +3,7 @@ include ../carousel/carousel.pug
 
 mixin room-preview({ imgLinks=[], number, isLuxe=false, price, rate, comments, isWithMargin=false }={})
   -
-    const luxe = !isLuxe && '.room-preview__description-top-luxe_hide'
+    const luxe = !isLuxe && 'room-preview__description-top-luxe_hide'
     const withMarginStyle = isWithMargin  && 'room-preview_with-margin'
 
   .room-preview(class=withMarginStyle)
