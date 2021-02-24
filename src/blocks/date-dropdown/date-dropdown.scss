@@ -139,7 +139,7 @@
   }
 
   &--nav {
-    height: 4.5714rem;
+    height: 4.5rem;
     border-bottom: none;
     box-sizing: border-box;
     padding: 0;
@@ -151,7 +151,7 @@
 
     &-title,
     &-title i {
-      font-family: 'Quicksand', 'Open Sans', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 1.3571rem;
@@ -191,7 +191,7 @@
   &--content {
     box-sizing: border-box;
     padding: 0;
-    margin-top: 0.5714rem;
+    margin-top: .7143rem;
   }
 
   &--cells-days {
@@ -335,7 +335,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.4286rem 1.4286rem 1.2857rem 1.3571rem;
+    padding: 1.3571rem 1.4286rem 1.2857rem 1.3571rem;
   }
 
   &--button {

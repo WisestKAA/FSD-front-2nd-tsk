@@ -3,8 +3,6 @@
 @import '../dropdown/dropdown.scss';
 @import '../button/button.scss';
 @import '../../scss/fonts/montserrat/montserrat.scss';
-@import '../../scss/fonts/open-sans/open-sans.scss';
-@import '../../scss/fonts/quicksand/quicksand.scss';
 @import '../../scss/mixins/body.scss';
 @import '../../scss/mixins/label.scss';
 .room-price {
@@ -40,27 +38,26 @@
     }
 
     &-text-number {
-      font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 1rem;
-      line-height: 1.2143rem;
+      line-height: 1.4286rem;
       color: $dark100;
       margin-right: 0.2857rem;
       padding-bottom: 0.1429rem;
     }
 
     &-text {
-      font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 1.7143rem;
-      line-height: 2.1429rem;
+      line-height: 2.2143rem;
       color: $dark100;
     }
 
     &-luxe {
-      margin-left: 0.3571rem;
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
@@ -182,6 +179,10 @@
 
     &-text {
       margin-left: 0.0714rem;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 23px;
     }
 
     &-price {
@@ -191,7 +192,7 @@
 
     &-text,
     &-price {
-      font-family: 'Quicksand', 'OpenSans', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 1.3571rem;

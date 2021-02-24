@@ -122,6 +122,7 @@
       max-width: 20rem;
       min-width: 3.9286rem;
       padding: 0 1rem;
+      line-height: 2.0814rem;
 
       &::before {
         content: "";
@@ -134,7 +135,7 @@
 
     &_gradient-background {
       width: max-content;
-      padding: 0 1.5rem 0.0714rem 1.3571rem;
+      padding: 0 1.5rem 0 1.3571rem;
     }
   }
 
@@ -225,6 +226,10 @@
     text-align: center;
     color: #FFFFFF;
     padding: .5rem 2.5rem;
+
+    &_with-shift {
+      padding: .5rem 2.5rem .5rem 2.1429rem;
+    }
   }
 
   &__default-text{

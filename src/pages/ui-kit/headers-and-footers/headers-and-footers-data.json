@@ -2,132 +2,129 @@
   "unloggedHeaderData": {
     "navOptions": [
       {
-        "text": "Home",
-        "link": "/",
+        "text": "О нас",
+        "link": "/change-me",
         "isCurrent": true,
         "sublinks": ""
       },
       {
-        "text": "About Us",
-        "link": "/change-me",
-        "isCurrent": false,
-        "sublinks": ""
-      },
-      {
-        "text": "Services",
+        "text": "Услуги",
         "link": "/change-me",
         "isCurrent": false,
         "sublinks": [
-          { "textLink": "Service1", "link": "/change-me" },
-          { "textLink": "Service2", "link": "/change-me" },
-          { "textLink": "Service3", "link": "/change-me" }
+          { "textLink": "Услуга 1", "link": "/change-me" },
+          { "textLink": "Услуга 2", "link": "/change-me" },
+          { "textLink": "Услуга 3", "link": "/change-me" }
         ]
       },
       {
-        "text": "Careers",
+        "text": "Вакансии",
         "link": "/change-me",
         "isCurrent": false,
         "sublinks": ""
       },
       {
-        "text": "News",
+        "text": "Новости",
         "link": "/change-me",
         "isCurrent": false,
         "sublinks": ""
       },
       {
-        "text": "Documentation",
+        "text": "Соглашения",
         "link": "/change-me",
         "isCurrent": false,
-        "sublinks": "" }
+        "sublinks": [
+          { "textLink": "Соглашения 1", "link": "/change-me" },
+          { "textLink": "Соглашения 2", "link": "/change-me" },
+          { "textLink": "Соглашения 3", "link": "/change-me" }
+        ]
+      }
     ],
     "isLogged": false,
     "username": "",
-    "loginButtonText": "Login",
-    "signupButtonText": "REGISTER"
+    "loginButtonText": "войти",
+    "signupButtonText": "зарегистрироваться"
   },
   "loggedHeaderData": {
     "navOptions": [
       {
-        "text": "Home",
-        "link": "/",
+        "text": "О нас",
+        "link": "/change-me",
         "isCurrent": true,
         "sublinks": ""
       },
       {
-        "text": "About Us",
-        "link": "/change-me",
-        "isCurrent": false,
-        "sublinks": ""
-      },
-      {
-        "text": "Services",
+        "text": "Услуги",
         "link": "/change-me",
         "isCurrent": false,
         "sublinks": [
-          { "textLink": "Service1", "link": "/change-me" },
-          { "textLink": "Service2", "link": "/change-me" },
-          { "textLink": "Service3", "link": "/change-me" }
+          { "textLink": "Услуга 1", "link": "/change-me" },
+          { "textLink": "Услуга 2", "link": "/change-me" },
+          { "textLink": "Услуга 3", "link": "/change-me" }
         ]
       },
       {
-        "text": "Careers",
+        "text": "Вакансии",
         "link": "/change-me",
         "isCurrent": false,
         "sublinks": ""
       },
       {
-        "text": "News",
+        "text": "Новости",
         "link": "/change-me",
         "isCurrent": false,
         "sublinks": ""
       },
       {
-        "text": "Documentation",
+        "text": "Соглашения",
         "link": "/change-me",
         "isCurrent": false,
-        "sublinks": ""
+        "sublinks": [
+          { "textLink": "Соглашения 1", "link": "/change-me" },
+          { "textLink": "Соглашения 2", "link": "/change-me" },
+          { "textLink": "Соглашения 3", "link": "/change-me" }
+        ]
       }
     ],
     "isLogged": true,
-    "username": "Cosmin Negoita",
-    "loginButtonText": "Login",
-    "signupButtonText": "REGISTER"
+    "username": "Юлий Цезарь",
+    "loginButtonText": "войти",
+    "signupButtonText": "зарегистрироваться"
   },
   "footerWithCopyrightData": {
-    "descriptionText": "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+    "descriptionText": "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
     "menuItems": [
       {
-        "header": "Navigation",
+        "header": "навигация",
         "options": [
-          { "text": "About Us", "link": "/change-me" },
-          { "text": "News", "link": "/change-me" },
-          { "text": "Support", "link": "/change-me" },
-          { "text": "Products", "link": "/change-me" }
+          { "text": "О нас", "link": "/change-me" },
+          { "text": "Новости", "link": "/change-me" },
+          { "text": "Служба поддержки", "link": "/change-me" },
+          { "text": "Услуги", "link": "/change-me" }
         ]
       },
       {
-        "header": "ABOUT US",
+        "header": "о нас",
         "options": [
-          { "text": "Who we are", "link": "/change-me" },
-          { "text": "Our team", "link": "/change-me" },
-          { "text": "Careers", "link": "/change-me" },
-          { "text": "Investors", "link": "/change-me" }
+          { "text": "О сервисе", "link": "/change-me" },
+          { "text": "Наша команда", "link": "/change-me" },
+          { "text": "Вакансии", "link": "/change-me" },
+          { "text": "Инвесторы", "link": "/change-me" }
         ]
       },
       {
-        "header": "Support",
+        "header": "Служба поддержки",
         "options": [
-          { "text": "Documentation", "link": "/change-me" },
-          { "text": "Community", "link": "/change-me" },
-          { "text": "Get in Touch", "link": "/change-me" }
+          { "text": "Соглашения", "link": "/change-me" },
+          { "text": "Сообщества", "link": "/change-me" },
+          { "text": "Связь с нами", "link": "/change-me" }
         ]
       }
     ],
-    "subscribeHeader": "Subscribe to our newsletter",
-    "subscribeDescription": "Receive our latest news and promotions in your inbox!",
-    "subscribePlaceholder": "Your email address",
-    "copyrightText": "Copyright © 2018 Toxin UI Kit. All rights reserved."
+    "subscribeHeader": "Подписка",
+    "subscribeDescription": "Получайте специальные предложения и новости сервиса",
+    "subscribePlaceholder": "Email",
+    "copyrightText": "Copyright © 2018 Toxin отель. Все права зачищены."
   },
-  "footerData": { "descriptionText": "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis." }
+  "footerData": { "descriptionText": "Copyright © 2018 Toxin отель. Все права зачищены." }
 }

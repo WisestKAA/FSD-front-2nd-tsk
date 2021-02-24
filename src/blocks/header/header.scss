@@ -50,6 +50,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 1rem 0 1rem 1rem;
+    padding-top: 2px;
 
     @media (max-width: 910px){
       display: none;
@@ -72,9 +73,9 @@
       font-size: 1rem;
       line-height: 1.2143rem;
       color: $dark50;
-      margin-right: 2.1429rem;
+      margin-right: 1.5rem;
       text-decoration: none;
-      letter-spacing: -0.0135em;
+      // letter-spacing: -0.0135em;
       white-space: nowrap;
 
       &_font-weight-bold {
@@ -125,10 +126,10 @@
     font-size: 1rem;
     line-height: 1.2143rem;
     color: $dark50;
-    max-height: 2.1429rem;
-    height: 100%;
+    min-height: 2rem;
     border-left: 0.0714rem solid $dark10;
-    padding-left: 2.1429rem;
+    padding-left: 1.3571rem;
+    padding-top: .0714rem;
     display: flex;
     align-items: center;
 

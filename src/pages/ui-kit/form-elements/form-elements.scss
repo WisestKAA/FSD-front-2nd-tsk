@@ -135,8 +135,8 @@
   }
 
   &__radio-buttons{
-    @include label(3.5rem);
-    margin-bottom: 3.0714rem;
+    @include label(3.3571rem);
+    margin-bottom: 3.2143rem;
   }
 
   &__toggles{
@@ -227,7 +227,7 @@
 
   &__separator {
     &_small-size {
-      margin-bottom: 1.3571rem;;
+      margin-bottom: 5.7143rem;;
     }
 
     &_middle-size {

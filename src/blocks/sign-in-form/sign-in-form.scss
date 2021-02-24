@@ -17,8 +17,14 @@
   }
 
   &__header {
-    @include h1;
-    margin-bottom: 1.4286rem;
+    font-family: 'Montserrat', Arial, sans-serif;;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7143rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+    color: $dark100;
+    margin-block-start: 0;
   }
 
   &__email {

@@ -1,6 +1,6 @@
 @import '../../../scss/colors.scss';
-@import '../../../scss/mixins/h1.scss';
 @import '../../../scss/mixins/label.scss';
+@import '../../../scss/fonts/montserrat/montserrat.scss';
 
 @import '../website-pages-template.scss';
 
@@ -131,9 +131,15 @@
   }
 
   &__preview-header {
-    @include h1;
+    font-family: 'Montserrat', 'OpenSans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
     margin-bottom: 0.7857rem;
     padding: 0.2857rem 0.3571rem;
+    margin-block-start: 0;
+    color: $dark100;
 
     @media (max-width: 1116px) {
       text-align: center;

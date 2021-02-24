@@ -7,7 +7,7 @@
 @import '../../../blocks/footer/footer.scss';
 
 .headers-and-footers {
-  margin-top: 4.8571rem;
+  margin-top: 4.1429rem;
   min-width: 22.8571rem;
 
   &__header {
@@ -20,6 +20,8 @@
 
   &__footer {
     margin-bottom: 9.2857rem;
+    display: flex;
+    justify-content: center;
   }
 }
 

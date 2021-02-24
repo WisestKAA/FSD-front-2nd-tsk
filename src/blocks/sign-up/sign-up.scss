@@ -5,8 +5,8 @@
 @import '../toggle/toggle.scss';
 @import '../button/button.scss';
 @import '../../scss/mixins/body.scss';
-@import '../../scss/mixins/h1.scss';
 @import '../../scss/mixins/label.scss';
+@import '../../scss/fonts/montserrat/montserrat.scss';
 
 .sign-up {
   max-width: 27.1429rem;
@@ -22,8 +22,14 @@
   }
 
   &__header{
-    @include h1;
-    margin-bottom: 1.4286rem;
+    font-family: 'Montserrat', Arial, sans-serif;;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7143rem;
+    line-height: 2.0716rem;
+    margin-block-start: 0;
+    color: $dark100;
+    margin-bottom: 1.5rem;
   }
 
   &__birthday{

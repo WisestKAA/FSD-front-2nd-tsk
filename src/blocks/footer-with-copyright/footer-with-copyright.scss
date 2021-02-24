@@ -242,6 +242,7 @@
 
   &__copyright {
     @include body;
+    padding-top: .0714rem;
 
     @media (max-width: 580px) {
       text-align: center;

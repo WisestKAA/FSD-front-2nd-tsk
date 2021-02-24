@@ -10,7 +10,7 @@ mixin room-price({ actionLink='/moke', number, isLuxe=false, pricePerDay=0, serv
     let servicePriceCalc = 0
     if(discountForService) {
       service += ` скидка ${discountForService}₽`
-      servicePriceCalc = servicePrice - discountForService
+      servicePriceCalc = servicePrice - discountForService.replace(/\s+/g, '')
     }
 
   .room-price.js-room-price
@@ -61,4 +61,4 @@ mixin room-price({ actionLink='/moke', number, isLuxe=false, pricePerDay=0, serv
         .room-price__total-price.js-room-price__total-price 0₽
 
       .room-price__book-a-room
-        +button({ type: 'rich', name: 'bookARoom', value: 'забронировать' })
+        +button({ type: 'rich', name: 'bookARoom', value: 'забронировать', hasShift: true })
