@@ -5,12 +5,20 @@
   min-height: 1.4286rem;
   width: fit-content;
   max-width: 17.5rem;
-  margin-bottom: 0.7857rem;
+  margin-bottom: .7143em;
   box-sizing: border-box;
 
+  &:first-child {
+    margin-bottom: .7857rem;
+  }
+
   &_rich {
-    margin-bottom: 0.6429rem;
+    margin-bottom: .6429rem;
     max-width: 18.5rem;
+
+    &:first-child {
+      margin-bottom: .6429em;
+    }
   }
 
   &__input {
@@ -45,7 +53,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 1rem;
-    line-height: 1.2857rem;
+    line-height: 1.2859rem;
     color: $dark50;
     user-select: none;
     display: block;
@@ -97,5 +105,9 @@
 
   &__input:checked + &__text::after {
     display: inline-block;
+  }
+
+  &_rich &__text::before {
+    margin-top: .0714rem;
   }
 }
