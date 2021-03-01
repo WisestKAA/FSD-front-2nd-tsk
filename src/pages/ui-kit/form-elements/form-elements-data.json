@@ -14,15 +14,13 @@
       "hoverTextField": { "placeholder": "Email", "text": "This is pretty awesome" },
       "maskedLabel": {
         "text": "masked text field",
-        "caption": "Default",
         "isSmall": true
       },
       "maskedTextField": { "isMasked": true }
     },
     "dropdowns": {
       "commonLabel": {
-        "text": "Dropdown",
-        "caption": "Default"
+        "text": "Dropdown"
       },
       "shortLabel": {
         "text": "Dropdown",
