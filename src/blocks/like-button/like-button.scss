@@ -1,3 +1,4 @@
+@import '../../scss/fonts/montserrat/montserrat.scss';
 @import '../material-icons/material-icons.scss';
 
 .like-button {
@@ -12,6 +13,7 @@
   background: $dark25;
   box-sizing: border-box;
   border-radius: 0.6429rem;
+  padding: .0714rem;
   color: $dark25;
   cursor: pointer;
   margin-block-start: unset;
@@ -53,12 +55,14 @@
     vertical-align: middle;
     justify-content: left;
     align-items: center;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 0.7143rem;
-    line-height: 0.8571rem;
-    padding-bottom: 0.0714rem;
-    padding-left: 0.2143rem;
+    font-size: .7143rem;
+    line-height: .8571rem;
+    padding-bottom: .0714rem;
+    padding-left: .1429rem;
+    padding-right: .1429rem;
   }
 
   &_active {
