@@ -41,6 +41,11 @@
       height: min-content;
       align-items: center;
 
+      &_with-padding {
+        padding-right: .4286rem;
+        padding-left: .2857rem;
+      }
+
       @media (max-width: 580px) {
         flex-direction: column;
         align-items: center;

@@ -29,7 +29,6 @@
         ]
       }
     ],
-    "isShortMenu": true,
     "isLogged": false,
     "username": "",
     "loginButtonText": "войти",
@@ -68,6 +67,7 @@
     "subscribeHeader": "Подписка",
     "subscribeDescription": "Получайте специальные предложения и новости сервиса",
     "subscribePlaceholder": "Email",
-    "copyrightText": "Copyright © 2018 Toxin отель. Все права зачищены."
+    "copyrightText": "Copyright © 2018 Toxin отель. Все права зачищены.",
+    "whithBottomPadding": true
   }
 }
