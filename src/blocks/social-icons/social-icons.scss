@@ -11,12 +11,24 @@
   padding-top: 0.0714rem;
   max-width: 15rem;
 
+  &__ico:first-of-type &__img{
+    padding-bottom: .0714rem;
+  }
+
+  &_small &__ico:first-of-type &__img{
+    padding-bottom: .2143rem;
+  }
+
   &__ico {
-    margin-right: 1.5714rem;
-    display: flex;
+    margin-right: 1.4286rem;
+    display: inline-block;
+    min-width: 1.7143rem;
+    min-height: 1.7143rem;
+    padding-top: .3571rem;
 
     &:last-child{
-      margin-right: 0.0714rem;
+      margin-right: 0;
+      min-width: 1.6429rem;
     }
 
     &:first-of-type{

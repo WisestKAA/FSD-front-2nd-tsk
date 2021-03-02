@@ -1,5 +1,5 @@
-mixin social-icons({ icons }={})
-  figure.social-icons
+mixin social-icons({ icons=[], isForSmallFooter=false }={})
+  figure.social-icons(class= isForSmallFooter && 'social-icons_small')
     each icon in icons
       -
         const { link, img, alt } = icon
