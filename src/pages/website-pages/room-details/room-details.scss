@@ -211,6 +211,12 @@
     }
   }
 
+  &__info {
+    @media(max-width: 379px){
+      margin-bottom: 2.2857rem;
+    }
+  }
+
   &__info,
   &__feeling {
     &-header {
@@ -322,6 +328,10 @@
     width: 100%;
     padding: 0.3571rem;
     margin-right: 0.2143rem;
+
+    @media(max-width: 1023px){
+      margin-top: 2.2857rem;
+    }
   }
 }
 
