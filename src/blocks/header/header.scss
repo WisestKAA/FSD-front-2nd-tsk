@@ -75,16 +75,11 @@
       color: $dark50;
       margin-right: 1.5rem;
       text-decoration: none;
-      // letter-spacing: -0.0135em;
       white-space: nowrap;
 
       &_font-weight-bold {
         font-weight: bold;
         color: $dark75;
-      }
-
-      &_short {
-        margin-right: 1.6429rem;
       }
 
       @media (max-width: 580px) {
