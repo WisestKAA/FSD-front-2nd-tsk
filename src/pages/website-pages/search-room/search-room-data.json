@@ -17,7 +17,7 @@
     },
     "priceRange": { "label": "диапазон цены" },
     "checkboxButtons": {
-      "label": { "text": "Checkbox Buttons" },
+      "label": { "text": "правила дома" },
       "items": [
         { "text": "Можно курить", "name": "smoking" },
         {
@@ -125,7 +125,7 @@
         "isLuxe": false,
         "price": "7 300",
         "rate": 5,
-        "comments": 195,
+        "comments": 19,
         "isWithMargin": true
       },
       {
