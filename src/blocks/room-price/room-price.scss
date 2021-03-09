@@ -23,7 +23,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.4286rem;
+    margin-bottom: 1.3571rem;
   }
 
   &__room-number {
@@ -61,11 +61,12 @@
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 0.8571rem;
+      font-size: .8571rem;
       line-height: 1.0714rem;
       text-transform: uppercase;
       color: $purple;
-      padding-bottom: 0.2143rem;
+      padding-bottom: .2857rem;
+      margin-left: .5714rem;
 
       &_hide {
         display: none;
@@ -90,13 +91,13 @@
     &-sum {
       font-weight: bold;
       font-size: 1rem;
-      padding-bottom: 0.1429rem;
+      padding-bottom: .2143rem;
 
       &-per-day {
         font-weight: normal;
-        font-size: 0.8571rem;
-        margin-left: 0.2857rem;
-        padding-bottom: 0.0714rem;
+        font-size: .8571rem;
+        margin-left: .3571rem;
+        padding-bottom: .2143rem;
       }
     }
   }
@@ -113,8 +114,7 @@
     @include body;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2.1429rem;
-    margin-left: 0.0714rem;
+    margin: 0 .0714rem 3.2857rem .0714rem;
   }
 
   &__for-room,
@@ -146,7 +146,7 @@
     }
 
     &-description {
-      width: 15.3571rem;
+      width: fit-content;
     }
 
     &-left-wrapper {
@@ -154,6 +154,15 @@
       flex-direction: row;
       justify-content: flex-start;
     }
+  }
+
+  &__for-services-info {
+    margin-left: .5714rem;
+    margin-top: .0714rem;
+  }
+
+  &__for-addservices-info {
+    margin-left: .5714rem;
   }
 
   &__for-room {
@@ -178,7 +187,6 @@
     flex-wrap: nowrap;
 
     &-text {
-      margin-left: 0.0714rem;
       font-style: normal;
       font-weight: bold;
       font-size: 19px;
