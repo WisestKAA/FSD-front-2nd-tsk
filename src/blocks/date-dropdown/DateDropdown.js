@@ -90,7 +90,7 @@ class DateDropdown {
             inputTo.value = formattedDate.substring(13, 23);
           }
         }
-        that._handleSelectedDate();
+        that._handleSelectedDate(formattedDate);
       },
       'onHide'() {
         if (isFiltered) {
@@ -146,10 +146,11 @@ class DateDropdown {
   }
 
   @boundMethod
-  _handleSelectedDate() {
+  _handleSelectedDate(formattedDate) {
     this._isClearCall
       ? this._isClearCall = false
       : this._$clearButton.removeClass('date-dropdown__clear-button_hidden');
+    if(formattedDate.length === 0) this._$clearButton.addClass('date-dropdown__clear-button_hidden');
   }
 }
 
