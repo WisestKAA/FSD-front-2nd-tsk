@@ -125,13 +125,13 @@
     "buttons": {
       "label": { "text": "buttons" },
       "gradientButton": {
-        "type": "gradient-background",
+        "type": "with-gradient-background",
         "name": "default",
         "value": "CLICK ME",
         "actionLink": "/change-me"
       },
       "gradientButtonDemo": {
-        "type": "gradient-background",
+        "type": "with-gradient-background",
         "name": "default-demo",
         "value": "CLICK ME",
         "actionLink": "/change-me",
