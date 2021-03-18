@@ -5,30 +5,35 @@ mixin button({ type, name, value, actionLink, isDemo = false, hasShift=false }={
   .button
     case type
       when 'rich'
-        - typeClass = `button__wrapper-rich_${type}`
-        .button__wrapper-rich(class = isDemo && 'button__wrapper-rich_demo')
+        - typeClass = `button__content_${type}`
+        .button__wrapper.button__wrapper_rich
           .button__arrow
             +material-icons({type: "arrow_forward"})
-          .button__text(class = hasShift && 'button__text_with-shift')=value
+          .button__content(class = hasShift && 'button__content_with-shift')=value
           input(type="submit", name=name, value=value, class=typeClass)
       when 'empty'
-        - typeClass = `button__wrapper-empty_${type}`
-        .button__wrapper-empty(class = isDemo && 'button__wrapper-empty_demo')
-          a(href=actionLink, class=typeClass)=value
+        - typeClass = `button__content_${type}`
+        .button__wrapper.button__wrapper_empty(class = isDemo && 'button__wrapper_demo')
+          a.button__content(href=actionLink, class=typeClass)=value
       when 'empty-dark'
-        - typeClass = `button__wrapper-empty_${type}`
-        .button__wrapper-empty(class = isDemo && 'button__wrapper-empty_demo')
-          a(href=actionLink, class=typeClass)=value
-      when 'short-gradient-background'
-        - typeClass = 'button__wrapper-short_gradient-background'
-        .button__wrapper-short(class = isDemo && 'button__wrapper-short_demo')
-          a(href=actionLink, class=typeClass)=value
-      when 'short-bordered'
-        - typeClass = 'button__wrapper-short_bordered'
-        .button__wrapper-short(class = isDemo && 'button__wrapper-short_demo')
-          a(href=actionLink, class=typeClass)=value
-      default
-        - typeClass = `button__wrapper_${type}`
+        - typeClass = `button__content_${type}`
+        .button__wrapper.button__wrapper_empty(class = isDemo && 'button__wrapper_demo')
+          a.button__content(href=actionLink, class=typeClass)=value
+      when 'with-gradient-background'
+        - typeClass = `button__content_${type}`
         .button__wrapper(class = isDemo && 'button__wrapper_demo')
-          div(class=typeClass)
-            a.button__default-text(href=actionLink)=value
+          a.button__content(href=actionLink, class=typeClass)=value
+      when 'with-gradient-background-small'
+        - typeClass = `button__content_${type}`
+        .button__wrapper.button__wrapper_small(class = isDemo && 'button__wrapper_demo')
+          a.button__content(href=actionLink, class=typeClass)=value
+      when 'bordered'
+        - typeClass = `button__content_${type}`
+        .button__wrapper.button__wrapper_bordered(class = isDemo && 'button__wrapper_demo')
+          .button__wrapper-border
+            a.button__content(href=actionLink, class=typeClass)=value
+      when 'bordered-small'
+        - typeClass = `button__content_${type}`
+        .button__wrapper.button__wrapper_bordered-small(class = isDemo && 'button__wrapper_demo')
+          .button__wrapper-border
+            a.button__content(href=actionLink, class=typeClass)=value

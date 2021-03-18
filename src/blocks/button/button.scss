@@ -25,10 +25,7 @@
     color: white;
   }
 
-  &__wrapper,
-  &__wrapper-short,
-  &__wrapper-empty,
-  &__default-text {
+  &__wrapper{
     appearance: unset;
     text-rendering: unset;
     color: unset;
@@ -46,39 +43,24 @@
     border-style: unset;
     border-color: unset;
     border-image: unset;
-    width: 100%;
     font: inherit;
-  }
 
-  &__wrapper,
-  &__wrapper-short,
-  &__wrapper-rich {
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
     box-sizing: border-box;
     text-transform: uppercase;
-  }
-
-  &__wrapper,
-  &__wrapper-short {
-    max-width: 7.0714rem;
+    width: 100%;
     min-height: 3.1429rem;
     height: min-content;
     border-radius: 1.5714rem;
+    cursor: pointer;
 
-    &_gradient-background {
-      display: flex;
-      color: #FFFFFF;
-      justify-content: center;
-      padding-right: 0.1429rem;
-      text-decoration: none;
-    }
-
-    &_bordered {
-      background-color: #FFFFFF;
-      color: $purple;
+    &-border {
+      border-radius: 1.4286rem;
+      background-color: #fff;
+      color: #bc9cff;
       border: none;
       text-decoration: none;
       display: inline-block;
@@ -88,75 +70,53 @@
       text-overflow: ellipsis;
       text-align: center;
       max-width: 20rem;
-
-      &::before {
-        content: "";
-        display: inline-block;
-        min-height: inherit;
-        height: 100%;
-        vertical-align: middle;
-      }
+      width: 100%;
     }
-  }
 
-  &__wrapper-short {
-    max-width: fit-content;
-    width: max-content;
-    min-height: 2.4286rem;
-    height: min-content;
-    border-radius: 1.2143rem;
+    &:hover,
+    &_demo {
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+    }
 
-    &_bordered {
-      border-radius: 1.0714rem;
+    &_rich {
+      max-width: 22.8571rem;
+      margin: 0;
+      position: relative;
+    }
+
+    &_empty {
+      padding-top: 0.0714rem;
       width: max-content;
-      min-height: 2.1429rem;
-      height: min-content;
-      margin: 0 0.1429rem;
-      padding: 0 1.2857rem 0.0714rem 1.2857rem;
-      display: inline-block;
-      vertical-align: middle;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: center;
-      max-width: 20rem;
-      min-width: 3.9286rem;
-      padding: 0 1rem;
-      line-height: 2.0814rem;
-
-      &::before {
-        content: "";
-        display: inline-block;
-        min-height: inherit;
-        height: 100%;
-        vertical-align: middle;
-      }
+      background: unset;
+      min-height: unset;
     }
 
-    &_gradient-background {
-      width: max-content;
-      padding: 0 1.5rem 0 1.3571rem;
-    }
-  }
-
-  &__wrapper {
+    &_short,
     &_bordered {
-      width: 95%;
-      border-radius: 1.4286rem;
-      min-width: 6.7857rem;
-      min-height: 2.8571rem;
-      height: min-content;
+      // max-width: fit-content;
+      width: 100%;
+      min-height: 2.4286rem;
+      border-radius: 1.5714rem;
+    }
+
+    &_bordered,
+    &_bordered-small {
+      padding: .1429rem;
+    }
+
+    &_small,
+    &_bordered-small {
+      min-height: 2.4286rem;
+      border-radius: 1.2143rem;
     }
   }
 
-  &__wrapper-rich {
-    max-width: 22.8571rem;
-    width: 100%;
-    min-height: 3.1429rem;
-    height: min-content;
-    border-radius: 1.5714rem;
-    margin: 0;
-    position: relative;
+  &__content {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 .5rem;
+    text-decoration: none;
+    text-transform: uppercase;
 
     &_rich {
       position: absolute;
@@ -169,87 +129,54 @@
       cursor: pointer;
     }
 
-    &_rich::before {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      max-width: 22.8571rem;
-      min-height: 3.1429rem;
-      height: min-content;
+    &_with-shift {
+      padding: .5rem 2.5rem .5rem 2.1429rem;
     }
-  }
-
-  &__wrapper-empty {
-    display: flex;
-    width: max-content;
-    padding-top: 0.0714rem;
 
     &_empty {
       color: $purple;
-      text-decoration: none;
-      text-transform: uppercase;
+      padding: unset;
 
       &-dark {
         color: $dark50;
         text-decoration: none;
-      }
-    }
-  }
-
-  &__wrapper {
-    &-rich,
-    &-empty,
-    &-short {
-      cursor: pointer;
-      &:hover {
-        background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-      }
-
-      &_demo {
-        background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+        padding: unset;
       }
     }
 
-    &:hover,
-    &_demo{
-      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-    }
-  }
-
-  &__text {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.8571rem;
-    line-height: 1.0714rem;
-    text-align: center;
-    color: #FFFFFF;
-    padding: .5rem 2.5rem;
-
-    &_with-shift {
-      padding: .5rem 2.5rem .5rem 2.1429rem;
-    }
-  }
-
-  &__default-text{
-    text-decoration: none;
-    width: fit-content;
-    display: inline-block;
-    vertical-align: middle;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: -webkit-fill-available;
-    padding: 0 .5rem;
-    font-weight: bold;
-
-    &::before {
-      content: "";
+    &_bordered,
+    &_bordered-small {
+      width: max-content;
+      height: min-content;
+      padding: 0 1.2857rem 0 1.2143rem;
       display: inline-block;
-      min-height: inherit;
-      height: 100%;
       vertical-align: middle;
+      text-align: center;
+      max-width: 25rem;
+      min-width: 3.9286rem;
+      line-height: 2.0814rem;
+      color: inherit;
+      text-decoration: unset;
+      border-radius: 1.4286rem;
+      min-height: 2.8571rem;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        min-height: inherit;
+        height: 100%;
+        vertical-align: middle;
+      }
+    }
+
+    &_bordered-small {
+      border-radius: 1.0714rem;
+      min-height: 2.1429rem;
+      padding: 0 1rem;
+    }
+
+    &_with-gradient-background-small {
+      padding: 0 1.4286rem;
     }
   }
 }
