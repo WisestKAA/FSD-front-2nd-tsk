@@ -2,7 +2,7 @@ include ../text-field/text-field.pug
 include ../button/button.pug
 
 
-mixin sign-in-form({ actionLink='/moke', header }={})
+mixin sign-in-form({ actionLink='/change-me', header }={})
   .sign-in-form
     form(action=actionLink).sign-in-form__form
       h1.sign-in-form__header=header
@@ -15,4 +15,4 @@ mixin sign-in-form({ actionLink='/moke', header }={})
       .sign-in-form__sign-up
         .sign-in-form__sign-up-text="Нет аккаунта на Toxin?"
         .sign-in-form__sign-up-button
-          +button({ type: 'bordered', name: 'singIn', value: 'создать', actionLink: '/changeMe' })
+          +button({ type: 'bordered', name: 'singIn', value: 'создать', actionLink: '/change-me' })

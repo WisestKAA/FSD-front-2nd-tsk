@@ -3,7 +3,7 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 include ../label/label.pug
 
-mixin room-price({ actionLink='/moke', number, isLuxe=false, pricePerDay=0, servicePrice=0, discountForService='', serviceInfo, addServicePrice=0, addServiceInfo, addservices = 'Сбор за доп. услуги' }={})
+mixin room-price({ actionLink='/change-me', number, isLuxe=false, pricePerDay=0, servicePrice=0, discountForService='', serviceInfo, addServicePrice=0, addServiceInfo, addservices = 'Сбор за доп. услуги' }={})
   -
     const luxe = !isLuxe && 'room-price__room-number-luxe_hide'
     let service = 'Сбор за услуги:'
