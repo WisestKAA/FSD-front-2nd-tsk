@@ -42,7 +42,8 @@
     margin-block-start: unset;
     margin-block-end: unset;
     margin-inline-start: unset;
-    margin-inline-end: unset
+    margin-inline-end: unset;
+    margin-right: 1rem;
   }
 
   &__navigation {
@@ -51,6 +52,10 @@
     flex-wrap: wrap;
     margin: 1rem 0 1rem 1rem;
     padding-top: 2px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
 
     @media (max-width: 910px){
       display: none;
@@ -97,16 +102,18 @@
   &__unlogged {
     display: flex;
     justify-content: space-between;
-    max-height: 2.4286rem;
+    align-items: center;
     height: 100%;
+    margin-bottom: 1rem 0;
 
     @media (max-width: 910px){
       display: none;
     }
   }
 
-  &__sign-up-button {
-    margin-left: 1.4286rem;
+  &__login-button {
+    margin-right: 1.4286rem;
+    min-width: 6.2143rem;
   }
 
   &__logged {

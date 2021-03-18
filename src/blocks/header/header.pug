@@ -38,8 +38,8 @@ mixin header({ navOptions=[], isLogged, username, loginButtonText, signupButtonT
         .header__sign
           .header__unlogged(class=unlogged)
             .header__login-button
-              +button({ type: 'short-bordered', name: 'headerLogin', value: loginButtonText, actionLink: '/moke' })
+              +button({ type: 'bordered-small', name: 'headerLogin', value: loginButtonText, actionLink: '/moke' })
             .header__sign-up-button
-              +button({ type: 'short-gradient-background', name: 'headerSignUp', value: signupButtonText, actionLink: '/moke' })
+              +button({ type: 'with-gradient-background-small', name: 'headerSignUp', value: signupButtonText, actionLink: '/moke' })
           .header__logged(class=logged)
             .header__username=username

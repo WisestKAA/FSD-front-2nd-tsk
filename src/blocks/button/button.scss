@@ -69,7 +69,6 @@
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: center;
-      max-width: 20rem;
       width: 100%;
     }
 
@@ -93,7 +92,6 @@
 
     &_short,
     &_bordered {
-      // max-width: fit-content;
       width: 100%;
       min-height: 2.4286rem;
       border-radius: 1.5714rem;
@@ -146,19 +144,24 @@
 
     &_bordered,
     &_bordered-small {
-      width: max-content;
+      width: 100%;
+      max-width: fit-content;
+      box-sizing: border-box;
       height: min-content;
       padding: 0 1.2857rem 0 1.2143rem;
       display: inline-block;
       vertical-align: middle;
       text-align: center;
-      max-width: 25rem;
       min-width: 3.9286rem;
       line-height: 2.0814rem;
       color: inherit;
       text-decoration: unset;
       border-radius: 1.4286rem;
       min-height: 2.8571rem;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: fit-content;
 
       &::before {
         content: "";
