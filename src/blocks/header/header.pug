@@ -2,7 +2,6 @@
 include ../logo/logo.pug
 include ../button/button.pug
 include ../dropdown-menu/dropdown-menu.pug
-include ../hamburger-menu/hamburger-menu.pug
 
 mixin header({ navOptions=[], isLogged, username, loginButtonText, signupButtonText}={})
   -
@@ -15,26 +14,21 @@ mixin header({ navOptions=[], isLogged, username, loginButtonText, signupButtonT
       figure.header__logo
         +logo()
       nav.header__navigation-wrapper
-        .header__navigation
-          each navigationOption in navOptions
-            - const {text, link, isCurrent, sublinks} = navigationOption
-            if (sublinks)
-              +dropdown-menu({ text: text, navOptions: sublinks })
-            else
-              if (isCurrent)
-                a(href=link, class=`${current} ${shortMenu}`).header__navigation-link=text
-              else
-                a(href=link class=shortMenu).header__navigation-link=text
         .header__hamburger-menu
-          -
-            const menuItems = !isLogged
-              ? navOptions.concat([
-                { text: loginButtonText, link: './login', isCurrent: false },
-                { text: signupButtonText, link: './sign-up', isCurrent: false }
-              ])
-              : navOptions
-          +hamburger-menu({menuItems: menuItems})
-
+          input.header__hamburger-menu-toggle(type="checkbox")
+          .header__hamburger-menu-hamburger
+            .header__hamburger-menu-lines
+          .header__navigation
+            each navigationOption in navOptions
+              - const {text, link, isCurrent, sublinks} = navigationOption
+              if (sublinks)
+                .header__navigation-link
+                  +dropdown-menu({ text: text, navOptions: sublinks })
+              else
+                if (isCurrent)
+                  a(href=link, class=`${current} ${shortMenu}`).header__navigation-link=text
+                else
+                  a(href=link class=shortMenu).header__navigation-link=text
         .header__sign
           .header__unlogged(class=unlogged)
             .header__login-button
