@@ -24,7 +24,7 @@ class RangeSlider {
     const { from, to } = data;
     const fromVal = from.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, ' $1');
     const toVal = to.toString().replace(/(\d{1,3})(?=((\d{3})*)$)/g, ' $1');
-    $price.val(`${fromVal}₽ - ${toVal}₽`);
+    $price.html(`${fromVal}₽ - ${toVal}₽`);
   }
 }
 

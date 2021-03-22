@@ -8,13 +8,13 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__label {
     @include h3;
     display: flex;
     line-height: 1.1429rem;
-    max-width: 50%;
     display: inline;
     overflow: hidden;
     text-overflow: clip;
@@ -23,12 +23,11 @@
   &__price {
     display: flex;
     width: auto;
-    max-width: 50%;
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 0.8571rem;
-    line-height: 1rem;
+    line-height: 1.143rem;
     text-align: right;
     text-transform: uppercase;
     color: $dark50;

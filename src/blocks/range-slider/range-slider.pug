@@ -2,8 +2,8 @@
 mixin range-slider({ label = 'Range Slider', type = 'double', min = 765, max = 14800, step = 1, from = 5000, to = 10000, isMinMaxHidden = true, isFromToHidden = true, }={})
   section.range-slider.js-range-slider
     .range-slider__header
-      h3.range-slider__label=label
-      input(type="text" readonly).range-slider__price.js-range-slider__price
+      span.range-slider__label=label
+      span.range-slider__price.js-range-slider__price
     .range-slider__slider-wrapper
       -
         const attr = {
