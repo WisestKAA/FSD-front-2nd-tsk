@@ -3,6 +3,7 @@ import { boundMethod } from 'autobind-decorator';
 class DropDownMenu {
   constructor(elem) {
     this._elem = elem;
+    this._$elem = $(elem);
     this._init();
     this._addEvents();
   }
@@ -12,19 +13,21 @@ class DropDownMenu {
   }
 
   _addEvents() {
-    this._elem.addEventListener('mouseover', this._menuMouseOverHandler);
-
-    this._elem.addEventListener('mouseout', this._menuMouseOutHandler);
+    this._elem.addEventListener('click', this._menuMouseOverHandler);
   }
 
   @boundMethod
   _menuMouseOverHandler() {
+    document.addEventListener('click', this._documentClickHandler);
     this._showMenu();
   }
 
   @boundMethod
-  _menuMouseOutHandler() {
-    this._hideMenu();
+  _documentClickHandler(event) {
+    if (this._$elem.has(event.target).length === 0) {
+      this._hideMenu();
+      document.removeEventListener('click', this._documentClickHandler);
+    }
   }
 
   _showMenu() {
