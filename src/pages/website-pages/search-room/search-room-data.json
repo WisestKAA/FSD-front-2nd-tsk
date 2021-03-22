@@ -74,10 +74,10 @@
     "roomPreviews": [
       {
         "imgLinks": [
-          { "src":"./img/room888.png", "alt":"room #888" },
-          { "src":"./img/room888.png", "alt":"room #888" },
-          { "src":"./img/room888.png", "alt":"room #888" },
-          { "src":"./img/room888.png", "alt":"room #888" }
+          { "src":"./img/room-888.png", "alt":"room #888" },
+          { "src":"./img/room-888.png", "alt":"room #888" },
+          { "src":"./img/room-888.png", "alt":"room #888" },
+          { "src":"./img/room-888.png", "alt":"room #888" }
         ],
         "number": 888,
         "isLuxe": true,
@@ -88,10 +88,10 @@
       },
       {
         "imgLinks": [
-          { "src":"./img/room840.png", "alt":"room #840" },
-          { "src":"./img/room840.png", "alt":"room #840" },
-          { "src":"./img/room840.png", "alt":"room #840" },
-          { "src":"./img/room840.png", "alt":"room #840" }
+          { "src":"./img/room-840.png", "alt":"room #840" },
+          { "src":"./img/room-840.png", "alt":"room #840" },
+          { "src":"./img/room-840.png", "alt":"room #840" },
+          { "src":"./img/room-840.png", "alt":"room #840" }
         ],
         "number": 840,
         "isLuxe": false,
@@ -102,10 +102,10 @@
       },
       {
         "imgLinks": [
-          { "src":"./img/room980.png", "alt":"room #980" },
-          { "src":"./img/room980.png", "alt":"room #980" },
-          { "src":"./img/room980.png", "alt":"room #980" },
-          { "src":"./img/room980.png", "alt":"room #980" }
+          { "src":"./img/room-980.png", "alt":"room #980" },
+          { "src":"./img/room-980.png", "alt":"room #980" },
+          { "src":"./img/room-980.png", "alt":"room #980" },
+          { "src":"./img/room-980.png", "alt":"room #980" }
         ],
         "number": 980,
         "isLuxe": true,
@@ -116,10 +116,10 @@
       },
       {
         "imgLinks": [
-          { "src":"./img/room856.png", "alt":"room #856" },
-          { "src":"./img/room856.png", "alt":"room #856" },
-          { "src":"./img/room856.png", "alt":"room #856" },
-          { "src":"./img/room856.png", "alt":"room #856" }
+          { "src":"./img/room-856.png", "alt":"room #856" },
+          { "src":"./img/room-856.png", "alt":"room #856" },
+          { "src":"./img/room-856.png", "alt":"room #856" },
+          { "src":"./img/room-856.png", "alt":"room #856" }
         ],
         "number": 856,
         "isLuxe": false,
@@ -130,10 +130,10 @@
       },
       {
         "imgLinks": [
-          { "src":"./img/room740.png", "alt":"room #740" },
-          { "src":"./img/room740.png", "alt":"room #740" },
-          { "src":"./img/room740.png", "alt":"room #740" },
-          { "src":"./img/room740.png", "alt":"room #740" }
+          { "src":"./img/room-740.png", "alt":"room #740" },
+          { "src":"./img/room-740.png", "alt":"room #740" },
+          { "src":"./img/room-740.png", "alt":"room #740" },
+          { "src":"./img/room-740.png", "alt":"room #740" }
         ],
         "number": 740,
         "isLuxe": false,
@@ -144,10 +144,10 @@
       },
       {
         "imgLinks": [
-          { "src":"./img/room982.png", "alt":"room #982" },
-          { "src":"./img/room982.png", "alt":"room #982" },
-          { "src":"./img/room982.png", "alt":"room #982" },
-          { "src":"./img/room982.png", "alt":"room #982" }
+          { "src":"./img/room-982.png", "alt":"room #982" },
+          { "src":"./img/room-982.png", "alt":"room #982" },
+          { "src":"./img/room-982.png", "alt":"room #982" },
+          { "src":"./img/room-982.png", "alt":"room #982" }
         ],
         "number": 982,
         "isLuxe": false,
@@ -158,10 +158,10 @@
       },
       {
         "imgLinks": [
-          { "src":"./img/room678.png", "alt":"room #678" },
-          { "src":"./img/room678.png", "alt":"room #678" },
-          { "src":"./img/room678.png", "alt":"room #678" },
-          { "src":"./img/room678.png", "alt":"room #678" }
+          { "src":"./img/room-678.png", "alt":"room #678" },
+          { "src":"./img/room-678.png", "alt":"room #678" },
+          { "src":"./img/room-678.png", "alt":"room #678" },
+          { "src":"./img/room-678.png", "alt":"room #678" }
         ],
         "number": 678,
         "isLuxe": false,
@@ -172,10 +172,10 @@
       },
       {
         "imgLinks": [
-          { "src":"./img/room450.png", "alt":"room #450" },
-          { "src":"./img/room450.png", "alt":"room #450" },
-          { "src":"./img/room450.png", "alt":"room #450" },
-          { "src":"./img/room450.png", "alt":"room #450" }
+          { "src":"./img/room-450.png", "alt":"room #450" },
+          { "src":"./img/room-450.png", "alt":"room #450" },
+          { "src":"./img/room-450.png", "alt":"room #450" },
+          { "src":"./img/room-450.png", "alt":"room #450" }
         ],
         "number": 450,
         "isLuxe": false,
@@ -186,10 +186,10 @@
       },
       {
         "imgLinks": [
-          { "src":"./img/room350.png", "alt":"room #350" },
-          { "src":"./img/room350.png", "alt":"room #350" },
-          { "src":"./img/room350.png", "alt":"room #350" },
-          { "src":"./img/room350.png", "alt":"room #350" }
+          { "src":"./img/room-350.png", "alt":"room #350" },
+          { "src":"./img/room-350.png", "alt":"room #350" },
+          { "src":"./img/room-350.png", "alt":"room #350" },
+          { "src":"./img/room-350.png", "alt":"room #350" }
         ],
         "number": 350,
         "isLuxe": false,
@@ -200,10 +200,10 @@
       },
       {
         "imgLinks": [
-          { "src":"./img/room666.png", "alt":"room #666" },
-          { "src":"./img/room666.png", "alt":"room #666" },
-          { "src":"./img/room666.png", "alt":"room #666" },
-          { "src":"./img/room666.png", "alt":"room #666" }
+          { "src":"./img/room-666.png", "alt":"room #666" },
+          { "src":"./img/room-666.png", "alt":"room #666" },
+          { "src":"./img/room-666.png", "alt":"room #666" },
+          { "src":"./img/room-666.png", "alt":"room #666" }
         ],
         "number": 666,
         "isLuxe": false,
@@ -214,10 +214,10 @@
       },
       {
         "imgLinks":[
-          { "src":"./img/room444.png", "alt":"room #444" },
-          { "src":"./img/room444.png", "alt":"room #444" },
-          { "src":"./img/room444.png", "alt":"room #444" },
-          { "src":"./img/room444.png", "alt":"room #444" }
+          { "src":"./img/room-444.png", "alt":"room #444" },
+          { "src":"./img/room-444.png", "alt":"room #444" },
+          { "src":"./img/room-444.png", "alt":"room #444" },
+          { "src":"./img/room-444.png", "alt":"room #444" }
         ],
         "number": 444,
         "isLuxe": false,
@@ -228,10 +228,10 @@
       },
       {
         "imgLinks":[
-          { "src":"./img/room352.png", "alt":"room #352" },
-          { "src":"./img/room352.png", "alt":"room #352" },
-          { "src":"./img/room352.png", "alt":"room #352" },
-          { "src":"./img/room352.png", "alt":"room #352" }
+          { "src":"./img/room-352.png", "alt":"room #352" },
+          { "src":"./img/room-352.png", "alt":"room #352" },
+          { "src":"./img/room-352.png", "alt":"room #352" },
+          { "src":"./img/room-352.png", "alt":"room #352" }
         ],
         "number": 352,
         "isLuxe": false,

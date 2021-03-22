@@ -18,7 +18,7 @@
   },
   "commentsData": [
     {
-      "avatarSrc": "./img/avatar1.png",
+      "avatarSrc": "./img/avatar-1.png",
       "avatarName": "Мурад Сарафанов",
       "avatarDate": "5 дней назад",
       "likeNumber": 12,
@@ -26,7 +26,7 @@
       "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"
     },
     {
-      "avatarSrc": "./img/avatar2.png",
+      "avatarSrc": "./img/avatar-2.png",
       "avatarName": "Патрисия Стёклышкова",
       "avatarDate": "Неделю назад",
       "likeNumber": 2,
