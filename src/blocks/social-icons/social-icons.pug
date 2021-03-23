@@ -1,5 +1,5 @@
 mixin social-icons({ icons=[], isForSmallFooter=false }={})
-  figure.social-icons(class= isForSmallFooter && 'social-icons_small')
+  aside.social-icons(class= isForSmallFooter && 'social-icons_small')
     each icon in icons
       -
         const { link, img, alt } = icon
@@ -7,7 +7,7 @@ mixin social-icons({ icons=[], isForSmallFooter=false }={})
           href: link,
           target: '_blank',
           rel: 'noopener noreferrer',
-          class: 'social-icons__ico',
+          class: 'social-icons__icon',
         }
       a&attributes(linkAttr)
         img.social-icons__img&attributes({src: img, alt})
