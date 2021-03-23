@@ -1,18 +1,43 @@
 include ../logo/logo.pug
+include ../subscription-text-field/subscription-text-field.pug
 include ../social-icons/social-icons.pug
 
-mixin footer({ descriptionText })
-  footer.footer
-    .footer__wrapper
-      figure.footer__icon
-        +logo()
-      .footer__description=descriptionText
-      .footer__social
-        +social-icons({
-          icons: [
-            { link: 'https://twitter.com/', img: './img/twitter.png', alt: 'Twitter' },
-            { link: 'https://www.facebook.com/', img: './img/facebook.png', alt: 'Facebook' },
-            { link: 'https://www.instagram.com/', img: './img/instagram.png', alt: 'Instagram' },
-          ],
-          isForSmallFooter: true
-        })
+mixin footer({ descriptionText, menuItems=[], subscribeHeader, subscribeDescription, subscribePlaceholder, copyrightText, whithBottomPadding=false, isDemo=false } = {})
+  footer.footer(class = isDemo && 'footer_demo')
+    .footer__wrapper-main(class = isDemo && 'footer__wrapper-main_demo')
+      .footer__wrapper-content(class = isDemo && 'footer__wrapper-content_demo')
+        .footer__info(class = isDemo && 'footer__info_demo')
+          figure.footer__logo(class = isDemo && 'footer__logo_demo')
+            +logo()
+          .footer__description(class = isDemo && 'footer__description_demo')=descriptionText
+
+        .footer__wrapper-navigation(class = isDemo && 'footer__wrapper-navigation_demo')
+          .footer__menu
+            each item in menuItems
+              .footer__menu-item
+                - const { header, options } = item
+                h3.footer__menu-item-header=header
+                each option in options
+                  - const { text, link } = option
+                  a(href=link).footer__menu-item-option=text
+
+          .footer__subscribe
+            h3.footer__subscribe-header=subscribeHeader
+            .footer__subscribe-description=subscribeDescription
+            .footer__subscribe-field
+              +subscription-text-field({ name: 'footerSubscribe', value: 'footerSubscribe', placeholder: subscribePlaceholder })
+
+    .footer__wrapper-copyright(class = isDemo && 'footer__wrapper-copyright_demo')
+      -
+        let wrapperCopyrightContentClasses = whithBottomPadding && 'footer__wrapper-bottom_with-padding'
+        if (isDemo) wrapperCopyrightContentClasses += ' footer__wrapper-copyright-content_demo'
+      .footer__wrapper-copyright-content(class = wrapperCopyrightContentClasses)
+        .footer__copyright=copyrightText
+        .footer__social-icons
+          +social-icons({
+            icons: [
+              { link: 'https://twitter.com/', img: './img/twitter.png', alt: 'Twitter' },
+              { link: 'https://www.facebook.com/', img: './img/facebook.png', alt: 'Facebook' },
+              { link: 'https://www.instagram.com/', img: './img/instagram.png', alt: 'Instagram' },
+            ]
+          })

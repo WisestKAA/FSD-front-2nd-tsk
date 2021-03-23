@@ -7,15 +7,14 @@ block variables
 
 block template
   include ../../../blocks/header/header.pug
-  include ../../../blocks/footer-with-copyright/footer-with-copyright.pug
   include ../../../blocks/footer/footer.pug
 
   -
     const {
       unloggedHeaderData,
       loggedHeaderData,
-      footerWithCopyrightData,
-      footerData
+      footerData,
+      mobileFooterData
     } = require('@pages/ui-kit/headers-and-footers/headers-and-footers-data.json')
 
   .headers-and-footers
@@ -23,7 +22,7 @@ block template
       +header(unloggedHeaderData)
     .headers-and-footers__header
       +header(loggedHeaderData)
-    .headers-and-footers__footer-with-copyright
-      +footer-with-copyright(footerWithCopyrightData)
     .headers-and-footers__footer
       +footer(footerData)
+    .headers-and-footers__mobile-footer
+      +footer(mobileFooterData)

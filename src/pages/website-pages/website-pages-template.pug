@@ -2,7 +2,7 @@ extends ../index
 
 block content
   include ../../blocks/header/header.pug
-  include ../../blocks/footer-with-copyright/footer-with-copyright.pug
+  include ../../blocks/footer/footer.pug
 
   - const { headerData, footerData } = require('@pages/website-pages/website-pages-template-data.json');
   .website-pages-template
@@ -10,4 +10,4 @@ block content
       +header(headerData)
       block template
     .website-pages-template__footer
-      +footer-with-copyright(footerData)
+      +footer(footerData)

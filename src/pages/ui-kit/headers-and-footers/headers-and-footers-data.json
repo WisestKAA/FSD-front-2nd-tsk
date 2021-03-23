@@ -91,7 +91,7 @@
     "loginButtonText": "войти",
     "signupButtonText": "зарегистрироваться"
   },
-  "footerWithCopyrightData": {
+  "footerData": {
     "descriptionText": "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
     "menuItems": [
       {
@@ -126,5 +126,41 @@
     "subscribePlaceholder": "Email",
     "copyrightText": "Copyright © 2018 Toxin отель. Все права зачищены."
   },
-  "footerData": { "descriptionText": "Copyright © 2018 Toxin отель. Все права зачищены." }
+
+  "mobileFooterData": {
+    "descriptionText": "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+    "menuItems": [
+      {
+        "header": "навигация",
+        "options": [
+          { "text": "О нас", "link": "/change-me" },
+          { "text": "Новости", "link": "/change-me" },
+          { "text": "Служба поддержки", "link": "/change-me" },
+          { "text": "Услуги", "link": "/change-me" }
+        ]
+      },
+      {
+        "header": "о нас",
+        "options": [
+          { "text": "О сервисе", "link": "/change-me" },
+          { "text": "Наша команда", "link": "/change-me" },
+          { "text": "Вакансии", "link": "/change-me" },
+          { "text": "Инвесторы", "link": "/change-me" }
+        ]
+      },
+      {
+        "header": "Служба поддержки",
+        "options": [
+          { "text": "Соглашения", "link": "/change-me" },
+          { "text": "Сообщества", "link": "/change-me" },
+          { "text": "Связь с нами", "link": "/change-me" }
+        ]
+      }
+    ],
+    "subscribeHeader": "Подписка",
+    "subscribeDescription": "Получайте специальные предложения и новости сервиса",
+    "subscribePlaceholder": "Email",
+    "copyrightText": "Copyright © 2018 Toxin отель. Все права зачищены.",
+    "isDemo": true
+  }
 }

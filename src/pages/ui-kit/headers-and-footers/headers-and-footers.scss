@@ -3,7 +3,6 @@
 @import '../ui-kit-template.scss';
 
 @import '../../../blocks/header/header.scss';
-@import '../../../blocks/footer-with-copyright/footer-with-copyright.scss';
 @import '../../../blocks/footer/footer.scss';
 
 .headers-and-footers {
@@ -14,11 +13,11 @@
     margin-bottom: 2.8571rem;
   }
 
-  &__footer-with-copyright {
+  &__footer {
     margin-bottom: 2.8571rem;
   }
 
-  &__footer {
+  &__mobile-footer {
     margin-bottom: 9.2857rem;
     display: flex;
     justify-content: center;
