@@ -12,7 +12,7 @@ mixin footer({ descriptionText, menuItems=[], subscribeHeader, subscribeDescript
           .footer__description(class = isDemo && 'footer__description_demo')=descriptionText
 
         .footer__wrapper-navigation(class = isDemo && 'footer__wrapper-navigation_demo')
-          .footer__menu
+          nav.footer__menu
             each item in menuItems
               .footer__menu-item
                 - const { header, options } = item
